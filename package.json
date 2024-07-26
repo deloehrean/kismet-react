@@ -1,5 +1,6 @@
 {
   "name": "@mdm/client",
+  "homepage": "https://kismet-ux.com",
   "version": "1.0.0",
   "private": true,
   "packageManager": "yarn@4.1.1",
