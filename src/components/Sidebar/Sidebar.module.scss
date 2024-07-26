@@ -1,0 +1,11 @@
+.root {
+  background: var(--background-elevation-5);
+  border-inline-end: 1px solid var(--divider);
+  height: 100vh;
+  padding: var(--size-1) var(--size-2);
+  width: 100%;
+
+  .logo {
+    height: 50px;
+  }
+}

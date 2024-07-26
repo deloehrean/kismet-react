@@ -1,0 +1,11 @@
+.root {
+  color: var(--link-primary);
+
+  &:hover {
+    color: var(--link-primary-hover);
+  }
+
+  &.active {
+    color: var(--link-primary-hover);
+  }
+}

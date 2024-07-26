@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  font-family: var(--font-serif), serif;
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  touch-action: manipulation;
+}
+
+html,
+body {
+  background-color: var(--background-default);
+  color: var(--text-primary);
+  font-family: var(--font-serif), serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  min-height: 100%;
+  position: relative;
+}
+
+body.loading * {
+  opacity: 0;
+}
+
+main {
+  padding: var(--size-4) var(--size-3);
+  display: flex;
+  max-height: var(--main-body-max-height);
+  flex-direction: column;
+  gap: var(--size-4);
+  overflow-x: scroll;
+}
+
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+select,
+a {
+  text-decoration: none;
+  text-transform: none;
+}
+
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  -webkit-appearance: button;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+}
+
+[role='button'],
+button,
+label,
+[type='checkbox'],
+[type='radio'] {
+  cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 9999s ease-in-out 0s;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+
+.flex {
+  display: flex;
+
+  &.column {
+    flex-direction: column;
+  }
+
+  &.row {
+    flex-direction: row;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  &.center {
+    align-items: center;
+  }
+
+  &.bottom {
+    align-items: end;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

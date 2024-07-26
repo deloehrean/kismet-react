@@ -1,0 +1,373 @@
+@import 'material';
+
+/*******************
+PALLET - LIGHT MODE
+*******************/
+
+:root {
+  // Text
+  --text-primary: #{$slate-900};
+  --text-secondary: #{$slate-700};
+  --text-contrast: #{$white-100};
+  --text-disabled: #{$slate-300};
+  --text-focus: #{$slate-200};
+  --text-focus-visible: #{$slate-200};
+  --text-hover: #{$slate-100};
+  --text-outlined-border: #{$slate-700};
+  --text-selected: #{$slate-75};
+
+  // Primary
+  --primary-main: #{$blue-500};
+  --primary-dark: #{$blue-700};
+  --primary-light: #{$blue-300};
+  --primary-contrast: #{$white-100};
+  --primary-focus: #{$blue-500-24};
+  --primary-focus-visible: #{$blue-500-32};
+  --primary-hover: #{$blue-500-16};
+  --primary-outlined-border: #{$blue-500-72};
+  --primary-selected: #{$blue-500-12};
+
+  // Secondary
+  --secondary-main: #{$orange-500};
+  --secondary-dark: #{$orange-700};
+  --secondary-light: #{$orange-200};
+  --secondary-contrast: #{$white-100};
+  --secondary-focus: #{$orange-500-24};
+  --secondary-focus-visible: #{$orange-500-32};
+  --secondary-hover: #{$orange-500-16};
+  --secondary-outlined-border: #{$orange-500-72};
+  --secondary-selected: #{$orange-500-8};
+
+  // Error
+  --error-main: #{$red-600};
+  --error-dark: #{$red-800};
+  --error-light: #{$red-400};
+  --error-contrast: #{$white-100};
+  --error-focus: #{$red-600-24};
+  --error-focus-visible: #{$red-600-32};
+  --error-hover: #{$red-600-16};
+  --error-outlined-border: #{$red-600-72};
+  --error-selected: #{$red-600-8};
+
+  // Warning
+  --warning-main: #{$orange-700};
+  --warning-dark: #{$orange-900};
+  --warning-light: #{$orange-500};
+  --warning-contrast: #{$white-100};
+  --warning-focus: #{$orange-700-24};
+  --warning-focus-visible: #{$orange-700-32};
+  --warning-hover: #{$orange-700-16};
+  --warning-outlined-border: #{$orange-700-72};
+  --warning-selected: #{$orange-700-8};
+
+  // Info
+  --info-main: #{$blue-200};
+  --info-dark: #{$blue-300};
+  --info-light: #{$blue-100};
+  --info-contrast: #{$white-100};
+  --info-focus: #{$blue-300-24};
+  --info-focus-visible: #{$blue-300-32};
+  --info-hover: #{$blue-300-16};
+  --info-outlined-border: #{$blue-300-72};
+  --info-selected: #{$blue-300-8};
+
+  // Success
+  --success-main: #{$green-700};
+  --success-dark: #{$green-900};
+  --success-light: #{$green-500};
+  --success-contrast: #{$white-100};
+  --success-focus: #{$green-700-24};
+  --success-focus-visible: #{$green-700-32};
+  --success-hover: #{$green-700-16};
+  --success-outlined-border: #{$green-700-72};
+  --success-selected: #{$green-700-8};
+
+  // Action
+  --action-active: #{$slate-900-72};
+  --action-disabled: #{$slate-500-32};
+  --action-disabled-background: #{$slate-500-16};
+  --action-focus: #{$slate-500-48};
+  --action-hover: #{$slate-500-32};
+  --action-selected: #{$slate-500-24};
+
+  // Common/Black
+  --common-black-main: #{$slate-900};
+  --common-black-focus: #{$slate-900-24};
+  --common-black-focus-visible: #{$slate-900-32};
+  --common-black-hover: #{$slate-900-16};
+  --common-black-outlined-border: #{$slate-900-72};
+  --common-black-selected: #{$slate-900-8};
+
+  // Common/White
+  --common-white-main: #{$white-100};
+  --common-white-focus: #{$white-24};
+  --common-white-focus-visible: #{$white-32};
+  --common-white-hover: #{$white-16};
+  --common-white-outlined-border: #{$white-72};
+  --common-white-selected: #{$white-8};
+
+  // Background
+  --background-default: #{$white-100};
+  --background-darker-25: #{$slate-25};
+  --background-darker-50: #{$slate-50};
+  --background-darker-75: #{$slate-75};
+  --background-elevation-0: #{$white-100};
+  --background-elevation-1: #{$white-100};
+  --background-elevation-2: #{$white-100};
+  --background-elevation-3: #{$white-100};
+  --background-elevation-4: #{$white-100};
+  --background-elevation-5: #{$white-100};
+  --background-elevation-6: #{$white-100};
+  --background-elevation-7: #{$white-100};
+  --background-elevation-8: #{$white-100};
+  --background-elevation-9: #{$white-100};
+  --background-elevation-10: #{$white-100};
+  --background-elevation-11: #{$white-100};
+  --background-elevation-12: #{$white-100};
+  --background-elevation-13: #{$white-100};
+  --background-elevation-14: #{$white-100};
+  --background-elevation-15: #{$white-100};
+  --background-elevation-16: #{$white-100};
+  --background-elevation-17: #{$white-100};
+  --background-elevation-18: #{$white-100};
+  --background-elevation-19: #{$white-100};
+  --background-elevation-20: #{$white-100};
+  --background-elevation-21: #{$white-100};
+  --background-elevation-22: #{$white-100};
+  --background-elevation-23: #{$white-100};
+  --background-elevation-24: #{$white-100};
+  --shadow-elevation-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-elevation-2: 0px 3px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-3: 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-4: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-5: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 8px rgba(0, 0, 0, 0.14), 0px 1px 14px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-6: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-7: 0px 4px 5px rgba(0, 0, 0, 0.2), 0px 7px 10px rgba(0, 0, 0, 0.14), 0px 2px 16px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-8: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-9: 0px 5px 6px rgba(0, 0, 0, 0.2), 0px 9px 12px rgba(0, 0, 0, 0.14), 0px 3px 16px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-10: 0px 6px 6px rgba(0, 0, 0, 0.2), 0px 10px 14px rgba(0, 0, 0, 0.14), 0px 4px 18px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-11: 0px 6px 7px rgba(0, 0, 0, 0.2), 0px 11px 15px rgba(0, 0, 0, 0.14), 0px 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-12: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-13: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 13px 19px rgba(0, 0, 0, 0.14), 0px 5px 24px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-14: 0px 7px 9px rgba(0, 0, 0, 0.2), 0px 14px 21px rgba(0, 0, 0, 0.14), 0px 5px 26px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-15: 0px 8px 9px rgba(0, 0, 0, 0.2), 0px 15px 22px rgba(0, 0, 0, 0.14), 0px 6px 28px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-16: 0px 8px 10px rgba(0, 0, 0, 0.2), 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-17: 0px 8px 11px rgba(0, 0, 0, 0.2), 0px 17px 26px rgba(0, 0, 0, 0.14), 0px 6px 32px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-18: 0px 9px 11px rgba(0, 0, 0, 0.2), 0px 18px 28px rgba(0, 0, 0, 0.14), 0px 7px 34px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-19: 0px 9px 12px rgba(0, 0, 0, 0.2), 0px 19px 29px rgba(0, 0, 0, 0.14), 0px 7px 36px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-20: 0px 10px 13px rgba(0, 0, 0, 0.2), 0px 20px 31px rgba(0, 0, 0, 0.14), 0px 8px 38px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-21: 0px 10px 13px rgba(0, 0, 0, 0.2), 0px 21px 33px rgba(0, 0, 0, 0.14), 0px 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-22: 0px 10px 14px rgba(0, 0, 0, 0.2), 0px 22px 35px rgba(0, 0, 0, 0.14), 0px 8px 42px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-23: 0px 11px 14px rgba(0, 0, 0, 0.2), 0px 23px 36px rgba(0, 0, 0, 0.14), 0px 9px 44px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-24: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12);
+  --background-contrast: #{$slate-900};
+  --elevation-outlined: var(--components-divider);
+  --elevation-outlined-dark: var(--components-divider-dark);
+  --background-gradient-primary: linear-gradient(90deg, #e74a09 11%, #ff9900 100%);
+  --background-gradient-primary-45: linear-gradient(37.19deg, #e74a09 21%, #ff9900 89%);
+  --background-gradient-green: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
+  --background-gradient-blue: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
+  --background-gradient-purple: linear-gradient(91.1deg, #fc5c7d 0%, #9e50ff 100%);
+
+  // Component Specific
+  //--alert-error-background: var(--error-focus-visible);
+  //--alert-error-color: var(--error-dark);
+  //--alert-info-background: var(--blue-blue-50);
+  //--alert-info-color: var(--blue-blue-700);
+  //--alert-success-background: var(--success-focus);
+  //--alert-success-color: var(--success-dark);
+  //--alert-warning-background: var(--warning-selected);
+  //--alert-warning-color: var(--warning-dark);
+  --appbar-default-fill: var(--background-default);
+  //--avatar-fill: var(--slate-slate-400);
+  //--backdrop-fill: #292a3366;
+  //--breadcrumbs-collapse-fill: var(--background-paper-darker-50);
+  //--chip-default-close-fill: var(--text-contrast);
+  //--chip-default-enabled-border: var(--slate-slate-300);
+  //--chip-default-fill: var(--slate-slate-50);
+  //--chip-default-focus-fill: var(--slate-slate-200);
+  //--chip-default-hover-fill: var(--slate-slate-100);
+  --divider: #{$slate-100};
+  --divider-dark: #{$slate-200};
+  //--input-filled-enabled-fill: var(--action-selected);
+  //--input-filled-hover-fill: var(--action-hover);
+  //--input-outlined-enabled-border: #{$slate-200};
+  //--input-outlined-hover-border: #{$slate-400};
+  //--input-standard-enabled-border: #{$slate-200};
+  //--input-standard-hover-border: #{$slate-400};
+  --link-primary: var(--primary-main);
+  --link-primary-hover: var(--primary-dark);
+  --logo-fill: #{$blue-700};
+  //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
+  //--pagination-default-fill: var(--slate-slate-50);
+  //--snackbar-fill: #323232;
+  //--stepper-connector: var(--slate-slate-400);
+  //--switch-knob-fill-disabled: var(--slate-slate-50);
+  //--switch-knob-fill-enabled: var(--slate-slate-100);
+  //--switch-slide-fill: var(--slate-slate-900);
+  //--table-odd: #{$slate-50};
+  //--tooltip-fill: #616161e5;
+
+  // Sizing (
+  --size-1: 0.5rem;
+  --size-2: 1rem;
+  --size-3: 1.5rem;
+  --size-4: 2rem;
+  --size-5: 2.5rem;
+  --size-6: 3rem;
+  --size-7: 3.5rem;
+  --size-8: 4rem;
+  --size-9: 4.5rem;
+  --size-10: 5rem;
+  --size-11: 5.5rem;
+  --size-12: 6rem;
+
+  --appbar-height: 56px;
+  --footer-height: 54px;
+  --main-body-max-height: calc(100vh - var(--appbar-height) - var(--footer-height));
+
+  // Fonts
+  --font-serif: 'Foro Rounded', Helvetica, Arial;
+  --font-sans: 'Montserrat', Helvetica, Arial;
+}
+
+/*******************
+PALLET - DARK MODE
+*******************/
+
+[data-theme="dark-theme"] {
+
+  // Text
+  --text-primary: #{$white-100};
+  --text-secondary: #{$white-80};
+  --text-contrast: #{$slate-900};
+  --text-disabled: var(--action-disabled);
+  --text-focus: #{$white-24};
+  --text-focus-visible: #{$white-32};
+  --text-hover: #{$white-16};
+  --text-outlined-border: #{$white-72};
+  --text-selected: #{$white-12};
+
+  // Primary
+  --primary-main: #{$blue-300};
+  --primary-dark: #{$blue-400};
+  --primary-light: #{$blue-100};
+  --primary-focus: #{$blue-300-24};
+  --primary-focus-visible: #{$blue-300-32};
+  --primary-hover: #{$blue-300-24};
+  --primary-outlined-border: #{$blue-300-72};
+  --primary-selected: #{$blue-300-16};
+
+  // Secondary
+  --secondary-dark: #{$orange-800};
+  --secondary-light: #{$orange-300};
+  --secondary-outlined-border: #{$orange-500-56};
+
+  // Error
+  --error-main: #{$red-500};
+  --error-dark: #{$red-700};
+  --error-light: #{$red-300};
+  --error-focus: #{$red-500-24};
+  --error-focus-visible: #{$red-500-32};
+  --error-hover: #{$red-500-16};
+  --error-outlined-border: #{$red-500-56};
+  --error-selected: #{$red-500-8};
+
+  // Warning
+  --warning-outlined-border: #{$orange-700-56};
+
+  // Info
+  --info-main: #{$blue-100};
+  --info-dark: #{$blue-200};
+  --info-light: #{$blue-50};
+  --info-contrast: #{$blue-900};
+  --info-focus: #{$blue-100-24};
+  --info-focus-visible: #{$blue-100-32};
+  --info-hover: #{$blue-100-16};
+  --info-outlined-border: #{$blue-100-56};
+  --info-selected: #{$blue-100-8};
+
+  // Success
+  --success-main: #{$green-600};
+  --success-dark: #{$green-800};
+  --success-light: #{$green-400};
+  --success-contrast: #{$slate-900};
+  --success-focus-visible: #{$green-700-40};
+
+  // Action
+  --action-active: #{$white-88};
+  --action-disabled: #{$white-32};
+  --action-disabled-background: #{$white-8};
+  --action-focus: #{$white-24};
+  --action-hover: #{$white-16};
+  --action-selected: #{$white-12};
+
+  // Background
+  --background-default: #{$slate-900};
+  --background-darker-25: #{$slate-700};
+  --background-darker-50: #{$slate-800};
+  --background-darker-75: #{$slate-800};
+  --background-elevation-0: #{$slate-900};
+  --background-elevation-1: #{$slate-900};
+  --background-elevation-2: #{$slate-900};
+  --background-elevation-3: #{$slate-900};
+  --background-elevation-4: #{$slate-900};
+  --background-elevation-5: #{$slate-800};
+  --background-elevation-6: #{$slate-800};
+  --background-elevation-7: #{$slate-800};
+  --background-elevation-8: #{$slate-800};
+  --background-elevation-9: #{$slate-800};
+  --background-elevation-10: #{$slate-700};
+  --background-elevation-11: #{$slate-700};
+  --background-elevation-12: #{$slate-700};
+  --background-elevation-13: #{$slate-700};
+  --background-elevation-14: #{$slate-700};
+  --background-elevation-15: #{$slate-600};
+  --background-elevation-16: #{$slate-600};
+  --background-elevation-17: #{$slate-600};
+  --background-elevation-18: #{$slate-600};
+  --background-elevation-19: #{$slate-600};
+  --background-elevation-20: #{$slate-500};
+  --background-elevation-21: #{$slate-500};
+  --background-elevation-22: #{$slate-500};
+  --background-elevation-23: #{$slate-500};
+  --background-elevation-24: #{$slate-500};
+  --background-contrast: #{$slate-900};
+
+  // Component Specific
+  //--alert-error-background: var(--error-focus-visible);
+  //--alert-error-color: var(--error-dark);
+  //--alert-info-background: var(--blue-blue-50);
+  //--alert-info-color: var(--blue-blue-700);
+  //--alert-success-background: var(--success-focus);
+  //--alert-success-color: var(--success-dark);
+  //--alert-warning-background: var(--warning-selected);
+  //--alert-warning-color: var(--warning-dark);
+  //--app-bar-default-fill: var(--background-default);
+  //--avatar-fill: var(--slate-slate-400);
+  //--backdrop-fill: #292a3366;
+  //--breadcrumbs-collapse-fill: var(--background-darker-50);
+  //--chip-default-close-fill: var(--text-contrast);
+  //--chip-default-enabled-border: var(--slate-slate-300);
+  //--chip-default-fill: var(--slate-slate-50);
+  //--chip-default-focus-fill: var(--slate-slate-200);
+  //--chip-default-hover-fill: var(--slate-slate-100);
+  --divider: #{$white-16};
+  --divider-dark: #{$white-24};
+  //--input-filled-enabled-fill: var(--action-selected);
+  //--input-filled-hover-fill: var(--action-hover);
+  //--input-outlined-enabled-border: #{$slate-200};
+  //--input-outlined-hover-border: #{$slate-400};
+  //--input-standard-enabled-border: #{$slate-200};
+  //--input-standard-hover-border: #{$slate-400};
+  --logo-fill: #{$white-100};
+  //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
+  //--pagination-default-fill: var(--slate-slate-50);
+  //--snackbar-fill: #323232;
+  //--stepper-connector: var(--slate-slate-400);
+  //--switch-knob-fill-disabled: var(--slate-slate-50);
+  //--switch-knob-fill-enabled: var(--slate-slate-100);
+  //--switch-slide-fill: var(--slate-slate-900);
+  //--table-odd: #{$slate-50};
+  //--tooltip-fill: #616161e5;
+}

@@ -1,0 +1,62 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: var(--size-1);
+  padding: 10px var(--size-1);
+  border-radius: var(--size-1);
+  overflow: hidden;
+  transition: all 0.2s ease;
+
+  &.isCollapsed {
+    background: none;
+
+    .expand-btn {
+      transform: rotate(180deg);
+    }
+
+    & + ul {
+      max-height: 0;
+      padding-block: 0 !important;
+      opacity: 0;
+    }
+  }
+
+  > div {
+    align-items: center;
+  }
+
+  &.dense {
+    padding: calc(var(--size-1) / 2) var(--size-1);
+  }
+
+  .content {
+    display: flex;
+    align-items: center;
+
+    .titles {
+      flex: 1;
+    }
+  }
+
+  a {
+    color: var(--text-primary);
+    flex: 1;
+
+    &:hover {
+      color: var(--text-primary);
+    }
+  }
+
+  &.active {
+    background: var(--action-selected);
+
+    a {
+      color: var(--text-primary);
+    }
+  }
+
+  &:hover {
+    background: var(--action-hover);
+  }
+}

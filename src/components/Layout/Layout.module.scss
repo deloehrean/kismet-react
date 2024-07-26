@@ -1,0 +1,18 @@
+.root {
+  display: flex;
+  flex-direction: row;
+
+  .sidebarWrap {
+    width: 240px;
+  }
+
+  .pageWrap {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    main {
+      flex: 1;
+    }
+  }
+}

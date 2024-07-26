@@ -1,0 +1,22 @@
+.root {
+  border-block-end: 1px solid var(--divider);
+  background: var(--appbar-default-fill);
+  display: flex;
+  flex-direction: row;
+  height: var(--appbar-height);
+  padding-inline: 24px;
+  width: 100%;
+
+  .breadCrumb {
+    display: flex;
+
+    ul {
+      display: flex;
+      gap: 8px;
+    }
+  }
+
+  .account-options {
+    gap: 6px;
+  }
+}

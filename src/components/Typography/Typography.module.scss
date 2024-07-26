@@ -1,0 +1,160 @@
+.root {
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+
+  &.h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  &.h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+  }
+
+  &.h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  &.h4 {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 1.375rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &.h5 {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+
+  &.h6 {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+
+  &.subtitle1 {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &.subtitle2 {
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &.body1 {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  &.body2 {
+    font-size: 0.875rem;
+  }
+
+  &.overline {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &.caption {
+    font-family: var(--font-sans), sans-serif;
+    font-size: 0.75rem;
+    line-height: 1.65;
+    text-transform: uppercase;
+  }
+
+  &.code {
+    background: var(--action-selected);
+    border-radius: 5px;
+    font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: 0.75rem;
+    line-height: 1.2rem;
+    padding: 4px var(--size-1);
+  }
+
+  &.tooltip {
+    font-family: var(--font-sans), sans-serif;
+    text-transform: uppercase;
+    font-size: 0.625rem;
+    font-weight: 200;
+  }
+
+  &.menuPrimary {
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &.menuPrimaryDense {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  &.primary {
+    color: var(--text-primary);
+  }
+
+  &.secondary {
+    color: var(--text-secondary);
+  }
+
+  &.info {
+    color: var(--info-main);
+  }
+
+  &.success {
+    color: var(--success-main);
+  }
+
+  &.warning {
+    color: var(--warning-main);
+  }
+
+  &.error {
+    color: var(--error-main);
+  }
+
+  &.left {
+    text-align: left;
+  }
+
+  &.right {
+    text-align: right;
+  }
+
+  &.center {
+    text-align: center;
+  }
+
+  &.justify {
+    text-align: justify;
+  }
+
+  &.lowercase {
+    text-transform: lowercase;
+  }
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.capitalize {
+    text-transform: capitalize;
+  }
+
+  &.gutter {
+    margin-block-end: var(--size-1);
+  }
+}
