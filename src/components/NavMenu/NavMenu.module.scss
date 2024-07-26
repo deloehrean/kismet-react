@@ -1,6 +1,9 @@
 .root {
   border-radius: var(--size-1);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
 
   .list-wrap {
     border-radius: var(--size-1);

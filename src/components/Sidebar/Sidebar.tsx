@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-  ClearACALogo,
+  KismetLogo,
   SidebarStyles as s,
   ThemeToggle,
   LinkStyled,
@@ -16,7 +16,7 @@ const Sidebar: React.FC = () => {
     <Column className={s.root} gap={4}>
       <Container className={s.logo}>
         <LinkStyled to="/">
-          <ClearACALogo />
+          <KismetLogo />
         </LinkStyled>
       </Container>
       <NavMenu routes={routes} />
