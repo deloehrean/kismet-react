@@ -1,36 +1,24 @@
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense } from 'react';
 
 import { Appbar, LayoutStyles as s, Footer } from 'src/components';
 import { routes } from 'src/lib/routes/routes';
 import { RoutesRenderer } from 'src/lib/routes/RoutesRenderer';
-import { useActiveRoutePaths } from 'src/lib/routes/useActiveRoutePaths';
 
 function Loader() {
   return <div>Loading...</div>;
 }
 
 const Layout = ({ children }) => {
-  const activeRoutePaths = useActiveRoutePaths(routes);
-  const activeRouterColors = activeRoutePaths.filter(route => route.definition.color);
-  const parentRouterColor = activeRouterColors[0]?.definition.color || 'rust';
-  const [currentColor, setCurrentColor] = useState('rust');
-
-  useEffect(() => {
-    if (parentRouterColor !== currentColor) {
-      setCurrentColor(parentRouterColor);
-    }
-  }, [parentRouterColor, currentColor]);
-
   return (
     <div className={s.root}>
       <div className={s.pageWrap}>
-        <Appbar />
-        <main className={s[`${currentColor}`]}>
+        <Appbar breadcrumbs />
+        <main>
           <Suspense fallback={<Loader />}>
             <RoutesRenderer routes={routes} />
           </Suspense>
         </main>
-        <Footer color={currentColor} />
+        <Footer />
       </div>
     </div>
   );

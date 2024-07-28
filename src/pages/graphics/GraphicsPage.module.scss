@@ -1,0 +1,74 @@
+.graphics-panel {
+  background: #72765B;
+  position: relative;
+  top: auto;
+  bottom: auto;
+  height: 100%;
+
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .subnav-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @media screen and (min-width: 767px) {
+      flex-direction: row;
+
+      .page-title {
+        margin-bottom: 0;
+      }
+    }
+
+    .subnav {
+      align-items: center;
+      column-gap: 6px;
+      display: flex;
+      justify-content: center;
+
+      @media screen and (max-width: 768px) {
+        flex-flow: wrap;
+      }
+
+      li {
+        display: block;
+
+        &:not(:last-child) {
+          border-right: 1px solid #FFFFFF;
+          padding-right: 6px;
+        }
+
+        button {
+          border: none;
+          background: none;
+          color: #FFFFFF;
+          cursor: pointer;
+          display: block;
+          font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
+          font-size: 1.1em;
+          margin: 0;
+          padding: 0;
+          transition: all 0.2s ease-in-out;
+
+          &:hover {
+            color: #CED798;
+          }
+
+          &.active {
+            color: #FFFFFF;
+            text-shadow: 0 0 8px #FFFFFF;
+          }
+
+          @media screen and (min-width: 767px) {
+            font-size: 1.1vw;
+          }
+        }
+      }
+    }
+  }
+}

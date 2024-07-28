@@ -1,22 +1,10 @@
 import React from 'react';
 
-import cn from 'clsx';
+import { Container, Divider, FooterStyles as s, Typography, LinkStyled } from 'src/components';
 
-import {
-  Container,
-  Divider,
-  FooterStyles as s,
-  Typography,
-  LinkStyled,
-  ThemeToggle,
-} from 'src/components';
-
-export interface FooterProps {
-  color: string;
-}
-const Footer = ({ color }: FooterProps) => {
+const Footer: React.FC = () => {
   return (
-    <footer className={cn(s.root, s[`${color}`])}>
+    <footer className={s.root}>
       <nav className={s.links}>
         <ul>
           <li>
@@ -34,9 +22,6 @@ const Footer = ({ color }: FooterProps) => {
       </nav>
       <Container>
         <Typography variant={'caption'}>© 2024 Kismet</Typography>{' '}
-      </Container>
-      <Container>
-        <ThemeToggle />
       </Container>
     </footer>
   );
