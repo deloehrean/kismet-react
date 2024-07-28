@@ -1,22 +1,35 @@
 .root {
   border-block-end: 1px solid var(--divider);
-  background: var(--appbar-default-fill);
+  background: var(--background-gradient-primary);
   display: flex;
   flex-direction: row;
   height: var(--appbar-height);
   padding-inline: 24px;
   width: 100%;
 
-  .breadCrumb {
-    display: flex;
+  .logo {
+    width: 300px;
 
-    ul {
-      display: flex;
-      gap: 8px;
+    a {
+      display:flex;
+      color: var(--common-white-main);
+      align-items: center;
     }
   }
 
-  .account-options {
-    gap: 6px;
+  .nav {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: end;
+    gap: var(--size-2);
+    height: 100%;
+
+    a {
+      background: var(--primary-main);
+      padding: var(--size-2) var(--size-3);
+      color: var(--common-white-main);
+    }
   }
 }

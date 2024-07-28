@@ -60,9 +60,11 @@ module.exports = {
     ],
     'no-use-before-define': 'off',
     'no-unsafe-optional-chaining': 'warn',
+    'no-unused-variables': 'off',
     'no-promise-executor-return': 'warn',
     'no-continue': 'off',
     'no-await-in-loop': 'off',
+
 
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
@@ -71,7 +73,7 @@ module.exports = {
     '@typescript-eslint/no-empty-function': 'warn',
     '@typescript-eslint/no-unnecessary-type-constraint': 'warn',
     '@typescript-eslint/no-unused-vars': [
-      'warn',
+      'error',
       {
         argsIgnorePattern: '^_[\\w]+$',
         varsIgnorePattern: '^_[\\w]+$',
@@ -90,6 +92,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
     'react/require-default-props': 'off',
+    'react/jsx-curly-brace-presence': 'off',
     'react/jsx-key': 'warn',
     'react/no-unescaped-entities': 'warn',
     'react/jsx-fragments': ['warn', 'element'],
@@ -97,7 +100,7 @@ module.exports = {
     'react/function-component-definition': 'off',
     'react/no-unstable-nested-components': 'warn',
     'react/jsx-no-useless-fragment': ['warn', {allowExpressions: true}],
-    'react/no-array-index-key': 'warn',
+    'react/no-array-index-key': 'off',
     'react/destructuring-assignment': 'warn',
     'react/no-unused-prop-types': 'warn',
     'react/no-this-in-sfc': 'off',
@@ -109,12 +112,13 @@ module.exports = {
     'import/no-extraneous-dependencies': [
       'error',
       {
-        devDependencies: ['**/*.config.ts', '**/*.test.ts', '**/*.test.tsx'],
+        devDependencies: true,
       },
     ],
     'import/prefer-default-export': 'warn',
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
+
     'import/named': 'warn',
     'import/default': 'off',
     'import/newline-after-import': 'warn',

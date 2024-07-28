@@ -8,11 +8,13 @@
 
   .pageWrap {
     display: flex;
+    height: 100vh;
     flex: 1;
     flex-direction: column;
 
     main {
       flex: 1;
+      overflow-x: scroll;
     }
   }
 }

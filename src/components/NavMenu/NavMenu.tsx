@@ -10,7 +10,7 @@ export interface NavMenuProps {
 const NavMenu = ({ routes }: NavMenuProps) => {
   const renderLinks = mapDefinitionToMenu(routes);
   // const renderTrackingLinks = mapDefinitionToMenu(
-  //   routes.filter(route => route.tree === 'tracking'),
+  //   routes.filter(route => route.tree === 'graphics'),
   // );
 
   return (

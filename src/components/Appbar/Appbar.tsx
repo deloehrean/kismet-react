@@ -1,40 +1,45 @@
 import React, { FC } from 'react';
 
+import { useRoutes } from 'react-router-dom';
+
 import {
   AppbarStyles as s,
   Column,
   Container,
-  Icon,
-  Typography,
   Breadcrumbs,
+  KismetLogo,
+  Typography,
+  LinkStyled,
 } from 'src/components';
 import { routes } from 'src/lib/routes/routes';
 
 type AppbarProps = {
-  searchbar?: boolean;
   breadcrumbs?: boolean;
 };
 
-const renderSearchbar = () => {
-  return <Typography>Searchbar here</Typography>;
-};
-
-const Appbar: FC<AppbarProps> = ({ searchbar, breadcrumbs }) => {
+const Appbar: FC<AppbarProps> = ({ breadcrumbs }) => {
   return (
     <header className={s.root}>
-      <Container direction={'row'} align={'center'} full>
-        {breadcrumbs && <Breadcrumbs routes={routes} />}
-        {searchbar && renderSearchbar()}
-      </Container>
-
-      <Container direction={'row'} align={'center'} className={s['account-options']}>
-        <Icon name="starIcon" size="medium" />
-        <Column>
-          <Typography variant={'subtitle1'} gutter>
-            Person Human
-          </Typography>
-          <Typography variant={'tooltip'}>Good morning!</Typography>
+      <Container direction="row" align="center" full>
+        <Column className={s.logo}>
+          <LinkStyled to={'/'}>
+            <KismetLogo />
+          </LinkStyled>
         </Column>
+        <nav className={s.nav}>
+          <LinkStyled to={'/graphics'}>
+            <Typography variant={'subtitle1'}>Graphics</Typography>
+          </LinkStyled>
+          <LinkStyled to={'/websites'}>
+            <Typography variant={'subtitle1'}>Web Dev</Typography>
+          </LinkStyled>
+          <LinkStyled to={'/branding'}>
+            <Typography variant={'subtitle1'}>Branding</Typography>
+          </LinkStyled>
+          <LinkStyled to={'/ecommerce'}>
+            <Typography variant={'subtitle1'}>eCommerce</Typography>
+          </LinkStyled>
+        </nav>
       </Container>
     </header>
   );

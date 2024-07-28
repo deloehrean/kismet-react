@@ -1,31 +1,41 @@
 import React, { lazy } from 'react';
 
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
+import TeesPage from 'src/pages/graphics/tees/TeesPage';
+import AlucardTees from 'src/pages/graphics/tees/AlucardTees';
+import AndrewLoehrTees from 'src/pages/graphics/tees/AndrewLoehrTees';
+import AsecondtoolateTees from 'src/pages/graphics/tees/AsecondtoolateTees';
+import EightSecondsUpsideDownTees from 'src/pages/graphics/tees/EightSecondsUpsideDownTees';
+import ElephantomTees from 'src/pages/graphics/tees/ElephantomTees';
+import HotnessTees from 'src/pages/graphics/tees/HotnessTees';
+import NightAwayTees from 'src/pages/graphics/tees/NightAwayTees';
+import PoppyTees from 'src/pages/graphics/tees/PoppyTees';
+import RosesdeadTees from 'src/pages/graphics/tees/RosesdeadTees';
+import RoydenTees from 'src/pages/graphics/tees/RoydenTees';
+import ShowcaseTees from 'src/pages/graphics/tees/ShowcaseTees';
+import SkinThreadClothingTees from 'src/pages/graphics/tees/SkinThreadClothingTees';
+import StopTheRevolutionTees from 'src/pages/graphics/tees/StopTheRevolutionTees';
+import TeamGoldieTees from 'src/pages/graphics/tees/TeamGoldieTees';
+import WeakendTees from 'src/pages/graphics/tees/WeakendTees';
+import WhatHappenedInVegasTees from 'src/pages/graphics/tees/WhatHappenedInVegasTees';
+import WebsitesPage from 'src/pages/websites/WebsitesPage';
+import AlucardAlbum from 'src/pages/graphics/albums/AlucardAlbum';
+import EightSecondsUpsideDownAlbum from 'src/pages/graphics/albums/EightSecondsUpsideDownAlbum';
+import ElephantomAlbum from 'src/pages/graphics/albums/ElephantomAlbum';
+import ElleAndTheFontsAlbum from 'src/pages/graphics/albums/ElleAndTheFontsAlbum';
+import RoydenAlbum from 'src/pages/graphics/albums/RoydenAlbum';
+import WeakendAlbum from 'src/pages/graphics/albums/WeakendHEREAVVTape';
+import WoodwardAlbum from 'src/pages/graphics/albums/WoodwardAlbum';
 
 const Homepage = lazy(() => import('src/pages/Home'));
 const ThemePage = lazy(() => import('src/pages/Theme'));
-const TrackingPage = lazy(() => import('src/pages/tracking/TrackingPage'));
-const TrackingDashboard = lazy(() => import('src/pages/tracking/TrackingDashboard'));
-const TrackingReports = lazy(() => import('src/pages/tracking/TrackingReports'));
-const AllTrackedEmployees = lazy(
-  () => import('src/pages/tracking/tracking-reports/AllTrackedEmployees'),
-);
-const MeasuredEmployees = lazy(
-  () => import('src/pages/tracking/tracking-reports/MeasuredEmployees'),
-);
-const DesignatedFullTime = lazy(
-  () => import('src/pages/tracking/tracking-reports/DesignatedFullTime'),
-);
-const MeasurementData = lazy(() => import('src/pages/tracking/tracking-reports/MeasurementData'));
-const EmployeesInMultipleCompanies = lazy(
-  () => import('src/pages/tracking/tracking-reports/EmployeesInMultipleCompanies'),
-);
-const TerminationRehire = lazy(
-  () => import('src/pages/tracking/tracking-reports/TerminationRehire'),
-);
-const TrackingSetup = lazy(() => import('src/pages/tracking/TrackingSetup'));
-const TrackingAllEmployees = lazy(() => import('src/pages/tracking/AllEmployees'));
+const GraphicsPage = lazy(() => import('src/pages/graphics/GraphicsPage'));
+const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
+
+function ASundialAlbum() {
+  return null;
+}
 
 export const routes: RoutePathDefinition[] = [
   { path: '/', element: <Homepage />, title: 'Home', index: true },
@@ -33,76 +43,183 @@ export const routes: RoutePathDefinition[] = [
   { path: '/home', element: <Homepage />, title: 'Home', index: true },
   { path: '/theme', element: <ThemePage />, title: 'Theme', nav: true },
   {
-    path: '/tracking/',
-    element: <TrackingPage />,
-    title: 'Tracking',
-    tree: 'tracking',
+    path: '/graphics/',
+    element: <GraphicsPage />,
+    title: 'Graphics',
+    tree: 'graphics',
     nav: true,
     startIcon: 'targetIcon',
     children: [
       {
-        path: 'tracking-dashboard',
-        element: <TrackingDashboard />,
-        title: 'Tracking Dashboard',
+        path: 'albums',
+        element: <AlbumsPage />,
+        title: 'Albums',
         nav: true,
-      },
-      {
-        path: 'all-employees',
-        element: <TrackingAllEmployees />,
-        title: 'All Employees',
-        nav: true,
-      },
-      {
-        path: 'tracking-reports',
-        element: <TrackingReports />,
-        title: 'Tracking Reports',
-        nav: true,
-        tree: 'tracking-reports',
+        tree: 'albums',
         children: [
           {
-            path: 'all-tracked-employees',
-            element: <AllTrackedEmployees />,
-            title: 'All Tracked Employees',
+            path: 'alucard',
+            element: <AlucardAlbum />,
+            title: 'Alucard',
             nav: true,
           },
           {
-            path: 'measured-employees',
-            element: <MeasuredEmployees />,
-            title: 'Measured Employees',
+            path: 'a-sundial',
+            element: <ASundialAlbum />,
+            title: 'A Sundial',
             nav: true,
           },
           {
-            path: 'designated-full-time',
-            element: <DesignatedFullTime />,
-            title: 'Designated Full-Time',
+            path: 'eight-seconds-upside-down',
+            element: <EightSecondsUpsideDownAlbum />,
+            title: 'Eight Seconds Upside Down',
             nav: true,
           },
           {
-            path: 'measurement-data',
-            element: <MeasurementData />,
-            title: 'Measurement Data',
+            path: 'elephantom',
+            element: <ElephantomAlbum />,
+            title: 'Elephantom',
             nav: true,
           },
           {
-            path: 'employees-in-multiple-companies',
-            element: <EmployeesInMultipleCompanies />,
-            title: 'Employees in Multiple Companies',
+            path: 'elle-and-the-fonts',
+            element: <ElleAndTheFontsAlbum />,
+            title: 'Elle and the Fonts',
             nav: true,
           },
           {
-            path: 'termination-rehire',
-            element: <TerminationRehire />,
-            title: 'Termination Rehire',
+            path: 'Royden',
+            element: <RoydenAlbum />,
+            title: 'Royden',
+            nav: true,
+          },
+          {
+            path: 'the-weakend',
+            element: <WeakendAlbum />,
+            title: 'The Weakend',
+            nav: true,
+          },
+          {
+            path: 'woodward',
+            element: <WoodwardAlbum />,
+            title: 'Woodward',
             nav: true,
           },
         ],
       },
       {
-        path: 'tracking-setup',
-        element: <TrackingSetup />,
-        title: 'Tracking Setup',
+        path: 'tees',
+        element: <TeesPage />,
+        title: 'Tees',
         nav: true,
+        tree: 'tees',
+        children: [
+          {
+            path: 'alucard',
+            element: <AlucardTees />,
+            title: 'Alucard',
+            nav: true,
+          },
+          {
+            path: 'andrew-loehr',
+            element: <AndrewLoehrTees />,
+            title: 'Andrew Loehr',
+            nav: true,
+          },
+          {
+            path: 'asecondtoolate',
+            element: <AsecondtoolateTees />,
+            title: 'asecondtoolate',
+            nav: true,
+          },
+          {
+            path: 'eight-seconds-too-late',
+            element: <EightSecondsUpsideDownTees />,
+            title: 'Eight Seconds Too Late',
+            nav: true,
+          },
+          {
+            path: 'elephantom',
+            element: <ElephantomTees />,
+            title: 'Elephantom',
+            nav: true,
+          },
+          {
+            path: 'hotness',
+            element: <HotnessTees />,
+            title: 'Hotness',
+            nav: true,
+          },
+          {
+            path: 'night-away',
+            element: <NightAwayTees />,
+            title: 'Night Away',
+            nav: true,
+          },
+          {
+            path: 'poppy',
+            element: <PoppyTees />,
+            title: 'The Poppy',
+            nav: true,
+          },
+          {
+            path: 'rosesdead',
+            element: <RosesdeadTees />,
+            title: 'Rosesdead',
+            nav: true,
+          },
+          {
+            path: 'royden',
+            element: <RoydenTees />,
+            title: 'Royden',
+            nav: true,
+          },
+          {
+            path: 'showcase',
+            element: <ShowcaseTees />,
+            title: 'Showcase',
+            nav: true,
+          },
+          {
+            path: 'skin-thread-clothing',
+            element: <SkinThreadClothingTees />,
+            title: 'Skin Thread Clothing',
+            nav: true,
+          },
+          {
+            path: 'stop-the-revolution',
+            element: <StopTheRevolutionTees />,
+            title: 'Stop the Revolution',
+            nav: true,
+          },
+          {
+            path: 'team-goldie',
+            element: <TeamGoldieTees />,
+            title: 'Team Goldie',
+            nav: true,
+          },
+          {
+            path: 'the-weakend',
+            element: <WeakendTees />,
+            title: 'The Weakend',
+            nav: true,
+          },
+          {
+            path: 'what-happened-in-vegas',
+            element: <WhatHappenedInVegasTees />,
+            title: 'What Happened in Vegas',
+            nav: true,
+          },
+        ],
       },
     ],
+  },
+  {
+    path: '/websites/',
+    element: <WebsitesPage />,
+    title: 'Websites',
+    tree: 'websites',
+    nav: true,
+    startIcon: 'targetIcon',
   },
 ];

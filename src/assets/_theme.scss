@@ -107,7 +107,7 @@ PALLET - LIGHT MODE
   --common-white-selected: #{$white-8};
 
   // Background
-  --background-default: #{$white-100};
+  --background-default: #{$green-700};
   --background-darker-25: #{$slate-25};
   --background-darker-50: #{$slate-50};
   --background-darker-75: #{$slate-75};
@@ -222,7 +222,7 @@ PALLET - LIGHT MODE
   --size-11: 5.5rem;
   --size-12: 6rem;
 
-  --appbar-height: 56px;
+  --appbar-height: auto;
   --footer-height: 54px;
   --main-body-max-height: calc(100vh - var(--appbar-height) - var(--footer-height));
 

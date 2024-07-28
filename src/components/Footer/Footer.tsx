@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { Container, Divider, FooterStyles as s, Typography, LinkStyled } from 'src/components';
 
 const Footer: React.FC = () => {
@@ -7,26 +8,20 @@ const Footer: React.FC = () => {
       <nav className={s.links}>
         <ul>
           <li>
-            <LinkStyled to="/">
-              <Typography variant={'caption'}>Privacy Policy</Typography>
+            <LinkStyled to={'mailto: andrew@kismet-ux.com'}>
+              <Typography variant={'caption'}>andrew@kismet-ux.com</Typography>
             </LinkStyled>
           </li>
           <Divider direction={'vertical'} />
           <li>
-            <LinkStyled to="/">
-              <Typography variant={'caption'}>Terms of Service</Typography>
-            </LinkStyled>
-          </li>
-          <Divider direction={'vertical'} />
-          <li>
-            <LinkStyled to="/">
-              <Typography variant={'caption'}>Support/Contact Us</Typography>
+            <LinkStyled to={'tel: 1-313-354-2265'}>
+              <Typography variant={'caption'}>(313) 354-2265</Typography>
             </LinkStyled>
           </li>
         </ul>
       </nav>
       <Container>
-        <Typography variant={'caption'}>© 2024 HRlogics ACA</Typography>{' '}
+        <Typography variant={'caption'}>© 2024 Kismet</Typography>{' '}
       </Container>
     </footer>
   );
