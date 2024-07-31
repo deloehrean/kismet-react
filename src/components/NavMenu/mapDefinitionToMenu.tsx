@@ -4,7 +4,7 @@ import cn from 'clsx';
 import { generatePath, useResolvedPath, useMatch } from 'react-router-dom';
 
 import { Typography, NavMenuStyles as s, ListItem } from 'src/components';
-import { concatPaths } from 'src/lib/routes/routeHelpters';
+import { concatPaths } from 'src/lib/routes/routeHelpers';
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
 // eslint-disable-next-line import/prefer-default-export

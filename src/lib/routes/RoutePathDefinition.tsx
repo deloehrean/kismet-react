@@ -5,8 +5,10 @@ export type RoutePathDefinition = RouteObject & {
   path: string;
   subtitle?: string;
   nav?: boolean;
+  color?: 'olive' | 'dusk' | 'aqua' | 'rust' | 'plum';
   startIcon?: string;
   endIcon?: string;
   tree?: string;
+  parent?: string;
   children?: RoutePathDefinition[];
 };

@@ -3,7 +3,7 @@ import {
   concatPaths,
   matchPatternInPath,
   isPathActiveForLocation,
-} from 'src/lib/routes/routeHelpters';
+} from 'src/lib/routes/routeHelpers';
 import { ActiveRoutePath } from './ActiveRoutePath';
 import { RoutePathDefinition } from './RoutePathDefinition';
 

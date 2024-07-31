@@ -19,7 +19,12 @@ const Sidebar: React.FC = () => {
           <KismetLogo />
         </LinkStyled>
       </Container>
-      <NavMenu routes={routes} />
+      {/* <NavMenu */}
+      {/*  updateHoverColor={''} */}
+      {/*  hoverColor={'olive'} */}
+      {/*  routes={routes} */}
+      {/*  variant={'sidebar-nav'} */}
+      {/* /> */}
       <ThemeToggle />
     </Column>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import cn from 'clsx';
 import { Outlet } from 'react-router-dom';
 
-import { Container, Divider, Typography } from 'src/components';
+import { Container, Divider, LinkStyled, Typography } from 'src/components';
 
 import s from './GraphicsPage.module.scss';
 
@@ -16,14 +16,14 @@ function GraphicsPage() {
         </Typography>
         <ul className={s.subnav}>
           <li>
-            <button type={'button'} className={s['subnav-btn']}>
+            <LinkStyled to={'/graphics/albums'} className={s['subnav-btn']}>
               Album Artwork
-            </button>
+            </LinkStyled>
           </li>
           <li>
-            <button type={'button'} className={s['subnav-btn']} id="tees">
+            <LinkStyled to={'/graphics/tees'} className={s['subnav-btn']} id="tees">
               Tee Shirt Designs
-            </button>
+            </LinkStyled>
           </li>
           <li>
             <button type={'button'} className={s['subnav-btn']} id="print">

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
+
 import { Container, Row, Column } from 'src/components';
 
 const ThemeToggle: React.FC = () => {
-  const [isDarkChecked, setIsDarkChecked] = useState(false);
-  const [isUseSystem, setIsUseSystem] = useState(true);
+  const [isDarkChecked, setIsDarkChecked] = useState(true);
+  const [isUseSystem, setIsUseSystem] = useState(false);
   const [isSystemDark, setIsSystemDark] = useState(false);
-  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia('(prefers-color-scheme: dark)');
@@ -15,10 +15,8 @@ const ThemeToggle: React.FC = () => {
     }
 
     if ((isUseSystem && isSystemDark) || (!isUseSystem && isDarkChecked)) {
-      setIsDark(true);
       document.documentElement.setAttribute('data-theme', 'dark-theme');
     } else {
-      setIsDark(false);
       document.documentElement.setAttribute('data-theme', '');
     }
 
@@ -27,8 +25,8 @@ const ThemeToggle: React.FC = () => {
   }, [isDarkChecked, isSystemDark, isUseSystem]);
 
   return (
-    <Container styled rounded variant={'outline'}>
-      <Column gap={1}>
+    <Container>
+      <Row gap={3}>
         <Row gap={1}>
           <label htmlFor="dark-mode">Dark Mode?</label>
           <input
@@ -48,7 +46,7 @@ const ThemeToggle: React.FC = () => {
             onChange={({ target }) => setIsUseSystem(target.checked)}
           />
         </Row>
-      </Column>
+      </Row>
     </Container>
   );
 };

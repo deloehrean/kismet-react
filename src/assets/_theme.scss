@@ -17,70 +17,77 @@ PALLET - LIGHT MODE
   --text-selected: #{$slate-75};
 
   // Primary
-  --primary-main: #{$blue-500};
-  --primary-dark: #{$blue-700};
-  --primary-light: #{$blue-300};
+  --primary-main: #{$rust-500};
+  --primary-dark: #{$rust-700};
+  --primary-light: #{$rust-300};
   --primary-contrast: #{$white-100};
-  --primary-focus: #{$blue-500-24};
-  --primary-focus-visible: #{$blue-500-32};
-  --primary-hover: #{$blue-500-16};
-  --primary-outlined-border: #{$blue-500-72};
-  --primary-selected: #{$blue-500-12};
+  --primary-focus: #{$rust-500-24};
+  --primary-focus-visible: #{$rust-500-32};
+  --primary-hover: #{$rust-500-16};
+  --primary-outlined-border: #{$rust-500-72};
+  --primary-selected: #{$rust-500-12};
 
   // Secondary
-  --secondary-main: #{$orange-500};
-  --secondary-dark: #{$orange-700};
-  --secondary-light: #{$orange-200};
+  --secondary-main: #{$dusk-500};
+  --secondary-dark: #{$dusk-700};
+  --secondary-light: #{$dusk-200};
   --secondary-contrast: #{$white-100};
-  --secondary-focus: #{$orange-500-24};
-  --secondary-focus-visible: #{$orange-500-32};
-  --secondary-hover: #{$orange-500-16};
-  --secondary-outlined-border: #{$orange-500-72};
-  --secondary-selected: #{$orange-500-8};
+  --secondary-focus: #{$dusk-500-24};
+  --secondary-focus-visible: #{$dusk-500-32};
+  --secondary-hover: #{$dusk-500-16};
+  --secondary-outlined-border: #{$dusk-500-72};
+  --secondary-selected: #{$dusk-500-8};
 
   // Error
-  --error-main: #{$red-600};
-  --error-dark: #{$red-800};
-  --error-light: #{$red-400};
+  --error-main: #{$plum-600};
+  --error-dark: #{$plum-800};
+  --error-light: #{$plum-400};
   --error-contrast: #{$white-100};
-  --error-focus: #{$red-600-24};
-  --error-focus-visible: #{$red-600-32};
-  --error-hover: #{$red-600-16};
-  --error-outlined-border: #{$red-600-72};
-  --error-selected: #{$red-600-8};
+  --error-focus: #{$plum-600-24};
+  --error-focus-visible: #{$plum-600-32};
+  --error-hover: #{$plum-600-16};
+  --error-outlined-border: #{$plum-600-72};
+  --error-selected: #{$plum-600-8};
 
   // Warning
-  --warning-main: #{$orange-700};
-  --warning-dark: #{$orange-900};
-  --warning-light: #{$orange-500};
+  --warning-main: #{$rust-700};
+  --warning-dark: #{$rust-900};
+  --warning-light: #{$rust-500};
   --warning-contrast: #{$white-100};
-  --warning-focus: #{$orange-700-24};
-  --warning-focus-visible: #{$orange-700-32};
-  --warning-hover: #{$orange-700-16};
-  --warning-outlined-border: #{$orange-700-72};
-  --warning-selected: #{$orange-700-8};
+  --warning-focus: #{$rust-700-24};
+  --warning-focus-visible: #{$rust-700-32};
+  --warning-hover: #{$rust-700-16};
+  --warning-outlined-border: #{$rust-700-72};
+  --warning-selected: #{$rust-700-8};
 
   // Info
-  --info-main: #{$blue-200};
-  --info-dark: #{$blue-300};
-  --info-light: #{$blue-100};
+  --info-main: #{$dusk-200};
+  --info-dark: #{$dusk-300};
+  --info-light: #{$dusk-100};
   --info-contrast: #{$white-100};
-  --info-focus: #{$blue-300-24};
-  --info-focus-visible: #{$blue-300-32};
-  --info-hover: #{$blue-300-16};
-  --info-outlined-border: #{$blue-300-72};
-  --info-selected: #{$blue-300-8};
+  --info-focus: #{$dusk-300-24};
+  --info-focus-visible: #{$dusk-300-32};
+  --info-hover: #{$dusk-300-16};
+  --info-outlined-border: #{$dusk-300-72};
+  --info-selected: #{$dusk-300-8};
 
   // Success
-  --success-main: #{$green-700};
-  --success-dark: #{$green-900};
-  --success-light: #{$green-500};
+  --success-main: #{$aqua-700};
+  --success-dark: #{$aqua-900};
+  --success-light: #{$aqua-500};
   --success-contrast: #{$white-100};
-  --success-focus: #{$green-700-24};
-  --success-focus-visible: #{$green-700-32};
-  --success-hover: #{$green-700-16};
-  --success-outlined-border: #{$green-700-72};
-  --success-selected: #{$green-700-8};
+  --success-focus: #{$aqua-700-24};
+  --success-focus-visible: #{$aqua-700-32};
+  --success-hover: #{$aqua-700-16};
+  --success-outlined-border: #{$aqua-700-72};
+  --success-selected: #{$aqua-700-8};
+
+  // Tabbed Nav Page Colors
+  --home-page-color: #{$rust-800};
+  --graphics-page-color: #{$olive-700};
+  --webdev-page-color: #{$dusk-500};
+  --branding-page-color: #{$aqua-500};
+  --ecommerce-page-color: #{$plum-700};
 
   // Action
   --action-active: #{$slate-900-72};
@@ -107,7 +114,7 @@ PALLET - LIGHT MODE
   --common-white-selected: #{$white-8};
 
   // Background
-  --background-default: #{$green-700};
+  --background-default: #{$aqua-700};
   --background-darker-25: #{$slate-25};
   --background-darker-50: #{$slate-50};
   --background-darker-75: #{$slate-75};
@@ -163,17 +170,17 @@ PALLET - LIGHT MODE
   --background-contrast: #{$slate-900};
   --elevation-outlined: var(--components-divider);
   --elevation-outlined-dark: var(--components-divider-dark);
-  --background-gradient-primary: linear-gradient(90deg, #e74a09 11%, #ff9900 100%);
-  --background-gradient-primary-45: linear-gradient(37.19deg, #e74a09 21%, #ff9900 89%);
-  --background-gradient-green: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
-  --background-gradient-blue: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
+  --background-gradient-primary: linear-gradient(90deg, var(--primary-main) 11%, var(--primary-dark) 100%);
+  --background-gradient-primary-45: linear-gradient(37.19deg, var(--primary-main) 21%, var(--primary-dark) 89%);
+  --background-gradient-aqua: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
+  --background-gradient-dusk: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
   --background-gradient-purple: linear-gradient(91.1deg, #fc5c7d 0%, #9e50ff 100%);
 
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);
   //--alert-error-color: var(--error-dark);
-  //--alert-info-background: var(--blue-blue-50);
-  //--alert-info-color: var(--blue-blue-700);
+  //--alert-info-background: var(--dusk-dusk-50);
+  //--alert-info-color: var(--dusk-dusk-700);
   //--alert-success-background: var(--success-focus);
   //--alert-success-color: var(--success-dark);
   //--alert-warning-background: var(--warning-selected);
@@ -197,7 +204,7 @@ PALLET - LIGHT MODE
   //--input-standard-hover-border: #{$slate-400};
   --link-primary: var(--primary-main);
   --link-primary-hover: var(--primary-dark);
-  --logo-fill: #{$blue-700};
+  --logo-fill: #{$dusk-700};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);
   //--snackbar-fill: #323232;
@@ -222,13 +229,15 @@ PALLET - LIGHT MODE
   --size-11: 5.5rem;
   --size-12: 6rem;
 
-  --appbar-height: auto;
+  --appbar-height: 126px;
   --footer-height: 54px;
   --main-body-max-height: calc(100vh - var(--appbar-height) - var(--footer-height));
 
   // Fonts
   --font-serif: 'Foro Rounded', Helvetica, Arial;
   --font-sans: 'Montserrat', Helvetica, Arial;
+  --font-compact: 'Rustic Youth', Impact, Arial;
+  --font-fancy: 'Kaoly', sans-serif;
 }
 
 /*******************
@@ -249,50 +258,50 @@ PALLET - DARK MODE
   --text-selected: #{$white-12};
 
   // Primary
-  --primary-main: #{$blue-300};
-  --primary-dark: #{$blue-400};
-  --primary-light: #{$blue-100};
-  --primary-focus: #{$blue-300-24};
-  --primary-focus-visible: #{$blue-300-32};
-  --primary-hover: #{$blue-300-24};
-  --primary-outlined-border: #{$blue-300-72};
-  --primary-selected: #{$blue-300-16};
+  --primary-main: #{$rust-800};
+  --primary-dark: #{$rust-900};
+  --primary-light: #{$rust-700};
+  --primary-focus: #{$rust-300-24};
+  --primary-focus-visible: #{$rust-300-32};
+  --primary-hover: #{$rust-300-24};
+  --primary-outlined-border: #{$rust-300-72};
+  --primary-selected: #{$rust-300-16};
 
   // Secondary
-  --secondary-dark: #{$orange-800};
-  --secondary-light: #{$orange-300};
-  --secondary-outlined-border: #{$orange-500-56};
+  --secondary-dark: #{$dusk-800};
+  --secondary-light: #{$dusk-300};
+  --secondary-outlined-border: #{$dusk-500-56};
 
   // Error
-  --error-main: #{$red-500};
-  --error-dark: #{$red-700};
-  --error-light: #{$red-300};
-  --error-focus: #{$red-500-24};
-  --error-focus-visible: #{$red-500-32};
-  --error-hover: #{$red-500-16};
-  --error-outlined-border: #{$red-500-56};
-  --error-selected: #{$red-500-8};
+  --error-main: #{$plum-500};
+  --error-dark: #{$plum-700};
+  --error-light: #{$plum-300};
+  --error-focus: #{$plum-500-24};
+  --error-focus-visible: #{$plum-500-32};
+  --error-hover: #{$plum-500-16};
+  --error-outlined-border: #{$plum-500-56};
+  --error-selected: #{$plum-500-8};
 
   // Warning
-  --warning-outlined-border: #{$orange-700-56};
+  --warning-outlined-border: #{$rust-700-56};
 
   // Info
-  --info-main: #{$blue-100};
-  --info-dark: #{$blue-200};
-  --info-light: #{$blue-50};
-  --info-contrast: #{$blue-900};
-  --info-focus: #{$blue-100-24};
-  --info-focus-visible: #{$blue-100-32};
-  --info-hover: #{$blue-100-16};
-  --info-outlined-border: #{$blue-100-56};
-  --info-selected: #{$blue-100-8};
+  --info-main: #{$dusk-100};
+  --info-dark: #{$dusk-200};
+  --info-light: #{$dusk-50};
+  --info-contrast: #{$dusk-900};
+  --info-focus: #{$dusk-100-24};
+  --info-focus-visible: #{$dusk-100-32};
+  --info-hover: #{$dusk-100-16};
+  --info-outlined-border: #{$dusk-100-56};
+  --info-selected: #{$dusk-100-8};
 
   // Success
-  --success-main: #{$green-600};
-  --success-dark: #{$green-800};
-  --success-light: #{$green-400};
+  --success-main: #{$aqua-600};
+  --success-dark: #{$aqua-800};
+  --success-light: #{$aqua-400};
   --success-contrast: #{$slate-900};
-  --success-focus-visible: #{$green-700-40};
+  --success-focus-visible: #{$aqua-700-40};
 
   // Action
   --action-active: #{$white-88};
@@ -337,8 +346,8 @@ PALLET - DARK MODE
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);
   //--alert-error-color: var(--error-dark);
-  //--alert-info-background: var(--blue-blue-50);
-  //--alert-info-color: var(--blue-blue-700);
+  //--alert-info-background: var(--dusk-dusk-50);
+  //--alert-info-color: var(--dusk-dusk-700);
   //--alert-success-background: var(--success-focus);
   //--alert-success-color: var(--success-dark);
   //--alert-warning-background: var(--warning-selected);
