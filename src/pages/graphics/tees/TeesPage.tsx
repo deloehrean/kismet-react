@@ -2,14 +2,15 @@ import React from 'react';
 
 import { Outlet } from 'react-router-dom';
 
-import { Typography } from 'src/components';
+import { Container, Typography } from 'src/components';
 
 function TeesPage() {
   return (
-    <React.Fragment>
-      <Typography variant="body1">Tees Page</Typography>
+    <Container>
+      <Typography variant={'h3'}>Tees Page</Typography>
+      <Typography variant={'overline'}>Coming Soon</Typography>
       <Outlet />
-    </React.Fragment>
+    </Container>
   );
 }
 
