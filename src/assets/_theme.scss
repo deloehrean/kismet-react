@@ -1,10 +1,17 @@
 @import 'material';
-
-/*******************
-PALLET - LIGHT MODE
-*******************/
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
+  // Fonts
+  --font-serif: 'Foro Rounded', Helvetica, Arial;
+  --font-sans: 'Urbanist', Helvetica, Arial;
+  --font-compact: 'Restless Youth', serif;
+  --font-fancy: 'Kaoly', serif;
+
+  /*******************
+  PALLET - LIGHT MODE
+  *******************/
+
   // Text
   --text-primary: #{$slate-900};
   --text-secondary: #{$slate-700};
@@ -232,12 +239,6 @@ PALLET - LIGHT MODE
   --appbar-height: 126px;
   --footer-height: 54px;
   --main-body-max-height: calc(100vh - var(--appbar-height) - var(--footer-height));
-
-  // Fonts
-  --font-serif: 'Foro Rounded', Helvetica, Arial;
-  --font-sans: 'Montserrat', Helvetica, Arial;
-  --font-compact: 'Rustic Youth', Impact, Arial;
-  --font-fancy: 'Kaoly', sans-serif;
 }
 
 /*******************
