@@ -2,7 +2,7 @@
 *::before,
 *::after {
   box-sizing: inherit;
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-sans), sans-serif;
 }
 html {
   box-sizing: border-box;
@@ -18,7 +18,7 @@ html,
 body {
   background-color: var(--background-default);
   color: var(--text-primary);
-  font-family: var(--font-serif), serif;
+  font-family: var(--font-sans), sans-serif;
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   font-weight: var(--font-weight);
