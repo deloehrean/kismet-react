@@ -1,6 +1,8 @@
-import cn from 'clsx';
 import React, { FC, useEffect } from 'react';
+
+import cn from 'clsx';
 import { To, useResolvedPath, useMatch } from 'react-router-dom';
+
 import { ListItemStyles as s, Divider, Typography, LinkStyled, Icon, Row } from 'src/components';
 
 interface ListItemProps {
@@ -10,6 +12,7 @@ interface ListItemProps {
   href?: string;
   divider?: boolean;
   dense?: boolean;
+  color?: 'olive' | 'dusk' | 'aqua' | 'rust' | 'plum' | null;
   startIcon?: any;
   endIcon?: any;
   expandBtn?: boolean;
@@ -22,15 +25,16 @@ const ListItem: FC<ListItemProps> = ({
   href,
   divider = false,
   dense = false,
+  color,
   startIcon,
   endIcon,
   expandBtn = false,
 }) => {
-  const rootClassName = cn(className, s.root, dense && s.dense);
+  const rootClassName = cn(className, s.root, dense && s.dense, color && s[color]);
 
   const [isCollapsed, setIsCollapsed] = React.useState(true);
 
-  const resolved = useResolvedPath(href ? href : '');
+  const resolved = useResolvedPath(href || '');
   const match = useMatch({ path: resolved.pathname, end: false });
   const matchEnd = useMatch({ path: resolved.pathname, end: true });
 
@@ -68,17 +72,19 @@ const ListItem: FC<ListItemProps> = ({
 
   const renderLink = (href: To) => {
     return (
-      <>
-        <LinkStyled to={href} onMouseUp={() => matchEnd && collapseToggle()}>
-          {renderTitles(title, subtitle)}
-        </LinkStyled>
-      </>
+      <LinkStyled to={href} onMouseUp={() => matchEnd && collapseToggle()}>
+        {renderTitles(title, subtitle)}
+      </LinkStyled>
     );
   };
 
   const renderArrow = () => {
     return (
-      <button className={cn(s['expand-btn'], isCollapsed && s.isCollapsed)}>
+      <button
+        aria-label={'down-arrow'}
+        type={'button'}
+        className={cn(s['expand-btn'], isCollapsed && s.isCollapsed)}
+      >
         <Icon name={'chevronDownIcon'} />
       </button>
     );

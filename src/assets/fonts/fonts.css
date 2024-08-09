@@ -69,3 +69,21 @@
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'Kaoly';
+  src: url('kaoly_demo-regular-webfont.woff2') format('woff2'),
+  url('kaoly_demo-regular-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Restless Youth';
+  src: url('restlessyouthsmallcaps-regular-webfont.woff2') format('woff2'),
+  url('restlessyouthsmallcaps-regular-webfont.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}

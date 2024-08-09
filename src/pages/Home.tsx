@@ -1,11 +1,13 @@
+import React from 'react';
+
 import { PageHeading, Typography } from 'src/components';
 
 function HomePage() {
   return (
-    <>
-      <PageHeading title={'Clear ACA Home'} subtitle={'heyo'} divider />
-      <Typography variant={'body1'}>Home Page</Typography>
-    </>
+    <React.Fragment>
+      <PageHeading title="Kismet" subtitle="Multi-Disciplined Design & Development" divider />
+      <Typography variant="body1">Home Page</Typography>
+    </React.Fragment>
   );
 }
 

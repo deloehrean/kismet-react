@@ -3,10 +3,23 @@
   flex-direction: column;
   justify-items: center;
   gap: var(--size-1);
-  padding: 10px var(--size-1);
   border-radius: var(--size-1);
-  overflow: hidden;
   transition: all 0.2s ease;
+  height: 48px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: black;
+    height: 0;
+    top: 126px;
+    left: 0;
+    right: 100vw;
+    width: 100vw;
+    z-index: 2;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
 
   &.isCollapsed {
     background: none;
@@ -26,7 +39,7 @@
     align-items: center;
   }
 
-  &.dense {
+  &.dense a {
     padding: calc(var(--size-1) / 2) var(--size-1);
   }
 
@@ -40,6 +53,7 @@
   }
 
   a {
+    padding: 10px var(--size-1);
     color: var(--text-primary);
     flex: 1;
 
@@ -48,15 +62,48 @@
     }
   }
 
+  &:hover {
+    background: var(--action-hover);
+
+    &::after {
+      opacity: 1;
+      height: 12px;
+      z-index: 3;
+    }
+  }
+
   &.active {
     background: var(--action-selected);
+
+    &::after {
+      height: 60vh;
+      opacity: 0;
+      pointer-events: none;
+      z-index: 4;
+    }
 
     a {
       color: var(--text-primary);
     }
   }
 
-  &:hover {
-    background: var(--action-hover);
+  &.rust, &.rust::after {
+    background: var(--home-page-color);
+  }
+
+  &.olive, &.olive::after {
+    background: var(--graphics-page-color);
+  }
+
+  &.dusk, &.dusk::after {
+    background: var(--webdev-page-color);
+  }
+
+  &.aqua, &.aqua::after {
+    background: var(--branding-page-color);
+  }
+
+  &.plum, &.plum::after {
+    background: var(--ecommerce-page-color);
   }
 }

@@ -8,11 +8,34 @@
 
   .pageWrap {
     display: flex;
+    height: 100vh;
     flex: 1;
     flex-direction: column;
 
     main {
       flex: 1;
+      overflow-x: scroll;
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+      &.rust {
+        background: var(--home-page-color);
+      }
+
+      &.olive {
+        background: var(--graphics-page-color);
+      }
+
+      &.dusk {
+        background: var(--webdev-page-color);
+      }
+
+      &.aqua {
+        background: var(--branding-page-color);
+      }
+
+      &.plum {
+        background: var(--ecommerce-page-color);
+      }
     }
   }
 }

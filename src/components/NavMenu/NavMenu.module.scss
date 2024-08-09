@@ -1,6 +1,5 @@
 .root {
   border-radius: var(--size-1);
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   gap: var(--size-2);
@@ -38,19 +37,32 @@
   .list {
     overflow: hidden;
     padding: var(--size-1) calc(var(--size-1) / 2);
-    max-height: 400px;
+    max-height: 500px;
     gap: 1px;
 
     .list {
       padding: calc(var(--size-1) / 2);
 
       li {
-        padding: calc(var(--size-1) / 4) var(--size-1);
-
         p {
           font-size: 13px;
         }
       }
+    }
+  }
+
+  &.tabs {
+    flex-direction: row;
+    border-radius: 0;
+
+    p {
+
+      font-family: var(--font-fancy), sans-serif;
+    }
+
+    .tabs {
+      border-radius: 0;
+      padding: calc(var(--size-1)/2) var(--size-2);
     }
   }
 }

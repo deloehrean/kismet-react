@@ -1,5 +1,7 @@
-import clsx from 'clsx';
 import React from 'react';
+
+import cn from 'clsx';
+
 import { TypographyStyles as s } from 'src/components';
 
 interface TypographyProps {
@@ -24,6 +26,7 @@ interface TypographyProps {
   align?: 'inherit' | 'left' | 'right' | 'center' | 'justify';
   transform?: 'none' | 'lowercase' | 'uppercase' | 'capitalize';
   gutter?: boolean;
+  className?: string;
   children?: React.ReactNode;
 }
 
@@ -52,6 +55,7 @@ const Typography: React.FC<TypographyProps> = ({
   align = 'inherit',
   transform = 'none',
   gutter = false,
+  className,
   children,
   ...props
 }) => {
@@ -59,7 +63,8 @@ const Typography: React.FC<TypographyProps> = ({
 
   return (
     <Component
-      className={clsx(
+      className={cn(
+        className,
         s.root,
         variant && s[variant],
         color && s[color],

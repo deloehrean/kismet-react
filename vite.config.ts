@@ -56,6 +56,9 @@ const config = defineConfig(({ command, mode }) => {
         generateScopedName: '[folder]_[local]_[hash:base64:5]',
       },
     },
+    optimizeDeps: {
+      exclude: 'eslint > vite',
+    }
   };
 });
 
