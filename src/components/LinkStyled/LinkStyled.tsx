@@ -1,14 +1,16 @@
-import cn from 'clsx';
 import React from 'react';
-import { LinkProps, Link, useMatch, useResolvedPath } from 'react-router-dom';
+
+import cn from 'clsx';
+import { Link, LinkProps, useMatch, useResolvedPath } from 'react-router-dom';
+
 import { LinkStyledStyles as s } from 'src/components';
 
-const LinkStyled: React.FC<LinkProps> = ({ to, children, ...props }) => {
-  let resolved = useResolvedPath(to);
-  let match = useMatch({ path: resolved.pathname, end: true });
+const LinkStyled: React.FC<LinkProps> = ({ className, to, children, ...props }) => {
+  const resolved = useResolvedPath(to);
+  const match = useMatch({ path: resolved.pathname, end: true });
 
   return (
-    <Link className={cn(s.root, match && s.active)} to={to} {...props}>
+    <Link className={cn(s.root, match && s.active, className)} to={to} {...props}>
       {children}
     </Link>
   );

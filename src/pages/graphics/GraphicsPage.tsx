@@ -26,24 +26,24 @@ function GraphicsPage() {
             </LinkStyled>
           </li>
           <li>
-            <button type={'button'} className={s['subnav-btn']} id="print">
+            <LinkStyled to={'/graphics'} className={s['subnav-btn']} id="tees">
               Print
-            </button>
+            </LinkStyled>
           </li>
           <li>
-            <button type={'button'} className={s['subnav-btn']} id="news">
+            <LinkStyled to={'/graphics'} className={s['subnav-btn']} id="tees">
               Newsletters
-            </button>
+            </LinkStyled>
           </li>
           <li>
-            <button type={'button'} className={s['subnav-btn']} id="logos">
+            <LinkStyled to={'/graphics'} className={s['subnav-btn']} id="tees">
               Logos
-            </button>
+            </LinkStyled>
           </li>
           <li>
-            <button type={'button'} className={s['subnav-btn']} id="adverts">
+            <LinkStyled to={'/graphics'} className={s['subnav-btn']} id="tees">
               Advertisements
-            </button>
+            </LinkStyled>
           </li>
         </ul>
       </div>

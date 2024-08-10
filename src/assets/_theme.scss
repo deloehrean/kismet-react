@@ -209,8 +209,8 @@
   //--input-outlined-hover-border: #{$slate-400};
   //--input-standard-enabled-border: #{$slate-200};
   //--input-standard-hover-border: #{$slate-400};
-  --link-primary: var(--primary-main);
-  --link-primary-hover: var(--primary-dark);
+  --link-primary: var(--action-active);
+  --link-primary-hover: var(--action-disabled);
   --logo-fill: #{$dusk-700};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);

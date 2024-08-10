@@ -19,7 +19,7 @@ function AlbumsPage() {
   return (
     <section id="albums-content" className={s['albums-content']}>
       <Container>
-        <Typography variant={'h3'} gutter>
+        <Typography variant={'h4'} gutter>
           Album Artwork
         </Typography>
       </Container>

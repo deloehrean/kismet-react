@@ -24,7 +24,6 @@
   "dependencies": {
     "@apollo/client": "3.10.6",
     "@auth0/auth0-react": "2.2.4",
-    "@fontsource/montserrat": "5.0.18",
     "@sentry/react": "8.11.0",
     "clsx": "^2.1.1",
     "exceljs": "4.4.0",

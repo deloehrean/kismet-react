@@ -6,7 +6,7 @@ function GraphicsDashboard() {
   return (
     <Container>
       <Column gap={4}>
-        <Typography variant={'h3'}>This is the graphics dashboard</Typography>
+        <Typography variant={'h4'}>This is the graphics dashboard</Typography>
         <Typography variant={'body1'}>
           Here you will find a small selection of the best items from each child category displayed.
           They will have links to go to the full category page.
