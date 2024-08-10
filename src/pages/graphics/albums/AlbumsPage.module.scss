@@ -1,0 +1,621 @@
+  .albums-content {
+    position: relative;
+  }
+
+  .expand-close {
+    display: flex;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background: #333333;
+    color: #FFFFFF;
+    top: calc(50% - 20px);
+    left: calc(50% - 20px);
+    font-size: 30px;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    z-index: 20;
+    transform: translate3d(0,0,5vw);
+
+    &:hover {
+      transform: translate3d(0,0,12vw);
+    }
+  }
+
+  .content-frame-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    // ALBUMS STYLES
+    .album-group {
+      cursor: pointer;
+      position: relative;
+      width: 20%;
+      z-index: 1;
+
+      .active-reset {
+        position: relative;
+        transition: all 1s ease-in-out;
+        perspective: 104vw;
+        perspective-origin: center;
+        transform-style: preserve-3d;
+        height: 100%;
+
+        &:after {
+          content: " ";
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          height: 100%;
+          z-index: -1;
+          background: rgba(0, 0, 0, 0);
+          transition: all 1s ease-in-out;
+        }
+      }
+
+      .graphic-item {
+        position: absolute;
+        top: 0;
+        transition: all 0.2s ease-in-out;
+        filter: saturate(0.3) blur(2px) opacity(0.7);
+
+        picture {
+          display: flex;
+          box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.35);
+        }
+
+        &.album-cover,
+        &.album-face,
+        &.tape-face {
+          filter: saturate(1);
+          display: block;
+        }
+
+        &.album-cover {
+          position: relative;
+          transform: scale(0.75) translate3d(0, 0, 1vw) rotate3d(0, 0, 1, -6deg);
+        }
+
+        &.tape-face {
+        }
+
+        &.album-face {
+          position: absolute;
+          top: 0;
+          transform: scale(0.72) rotate3d(0, 0, 1, -60deg);
+
+          picture {
+            border-radius: 50%;
+          }
+        }
+
+        &.tray-in {
+          z-index: 2;
+          transform: translate3d(67%, -48%, -100vw) rotate3d(0, 0, 1, 8deg);
+        }
+
+        &.tray-out {
+          z-index: 2;
+          transform: translate3d(57%, 75%, -100vw) rotate3d(0, 0, 1, 18deg);
+        }
+
+        &.longboi1,
+        &.longboi2,
+        &.medboi1,
+        &.medboi2,
+        &.shortboi1,
+        &.shortboi2,
+        &.lonelyboi {
+          transform: translate3d(-3%, 102%, -21vw) rotate3d(0, 0, 1, 37deg);
+
+          picture {
+            transition: transform linear;
+            transition-duration: .7s;
+          }
+        }
+
+        &.longboi1 {
+
+        }
+
+        &.longboi2 {
+          transform: translate3d(-3%, 90%, -11vw) rotate3d(0, 0, 1, 38deg);
+        }
+
+        &.medboi1 {
+
+        }
+
+        &.medboi2 {
+          transform: translate3d(6%, 200%, -10vw) rotate3d(0, 0, 1, -8deg);
+        }
+
+        &.shortboi1 {
+          z-index: 1;
+          transform: translate3d(-12%, 66%, -2vw) rotate3d(0, 0, 1, -22deg);
+        }
+
+        &.shortboi2 {
+          z-index: 1;
+          transform: translate3d(13%, -15%, -22vw) rotate3d(0, 0, 1, 22deg);
+        }
+
+        &.lonelyboi {
+          z-index: 1;
+          transform: scale(1.05) translate3d(-4%, 27%, -2vw) rotate3d(0, 0, 1, 32deg);
+        }
+
+        &.tray-only {
+          z-index: 1;
+          transform: scale(0.85) translate3d(43%, 46%, -40vw) rotate3d(0, 0, 1, -11deg);
+        }
+      }
+
+      &:hover { // Album Group Hover
+        z-index: 2;
+
+        .expand-close {
+          opacity: 1;
+        }
+
+        .graphic-item {
+          filter: none
+        }
+
+        .album-cover {
+          transform: scale(0.75) translate3d(-39%, 20%, 2vw) rotate3d(0, 0, 1, -43deg);
+        }
+
+        .album-face {
+          transition: transform 0.45s ease;
+          transform: scale(0.72) translate3d(0%, -14%, 0vw);
+        }
+
+        .shortboi2 {
+          transform: translate3d(13%, -15%, -22vw) rotate3d(0, 0, 1, 16deg);
+        }
+
+        .tray-only {
+          transform: scale(0.85) translate3d(39%, 56%, -40vw) rotate3d(0, 0, 1, -15deg);
+        }
+
+        .tray-in {
+          transform: translate3d(65%, -46%, -100vw) rotate3d(0, 0, 1, 14deg);
+        }
+
+        .tray-out {
+          transform: translate3d(47%, 118%, -100vw) rotate3d(0, 0, 1, -12deg);
+        }
+
+        .longboi2,
+        .medboi2 {
+          transform: scale(1.1) translate3d(-3%, 176%, -2vw) rotate3d(0, 0, 1, -12deg);
+        }
+
+        .lonelyboi {
+          transform: scale(1.05) translate3d(-14%, 18%, -2vw) rotate3d(0, 0, 1, 52deg);
+        }
+      }
+
+      &.active { // Album Group Active Class
+        z-index: 50;
+
+        .expand-close {
+          opacity: 0;
+        }
+
+        > .active-reset > * {
+          filter: none !important;
+          transition: transform 2s ease-in-out;
+        }
+
+        // ALBUM COVER ACTIVE ANIMATION - CD
+        .album-cover {
+          transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
+          transform: translate3d(25%, 20%, 50vw) rotate3d(0.7, 4.5, -0.1, 20deg);
+        }
+
+        // ALBUM FACE ANIMATION
+        .album-face {
+          transition: all 1s ease-in-out;
+          transform: translate3d(105%, 20%, 50vw);
+          z-index: 4;
+          perspective: 100vw;
+          perspective-origin: center;
+          transform-style: preserve-3d;
+
+          picture {
+            animation: cdRock forwards 3s ease-in-out;
+          }
+        }
+
+        @keyframes cdRock {
+          0% {
+            transform: none;
+          }
+          2% {
+            transform: rotate3d(0, 1, 0, -20deg) rotate(0turn);
+          }
+          16.5% {
+            transform: translate3d(15%, 0, 0) rotate3d(0, 1, 0, -75deg) rotate(0.6turn);
+          }
+          33.4% {
+            transform: translate3d(30%, 0, 0) rotate3d(0, 1, 0, 10deg) rotate(1.175turn);
+          }
+          100% {
+            transform: rotate3d(0, 0, 0, 0deg) rotate(1turn);
+          }
+        }
+
+        .longboi1,
+        .longboi2,
+        .medboi1,
+        .medboi2,
+        .shortboi1,
+        .shortboi2,
+        .lonelyboi,
+        .tray-in,
+        .tray-out,
+        .tray-only {
+          display: block;
+        }
+
+        .tray-in {
+          transition-duration: 1.15s;
+          transform: translate3d(226%, 5%, 37vw) rotate3d(1, 30, 1, -69deg);
+        }
+
+        .tray-out {
+          transition-duration: 1.65s;
+          transform: translate3d(218%, 95%, 40vw) rotate3d(-3, 30, -1, -75deg);
+        }
+
+        .tray-only {
+          transform: translate3d(200%, 32%, 46vw) rotate3d(0.1, 20, 0.1, -78deg);
+        }
+
+        .longboi1,
+        .longboi2,
+        .medboi1,
+        .medboi2 {
+          transform: scale(2) translate3d(50%, 270%, 38vw) rotate3d(2, 0.7, -0.6, 58deg);
+          perspective: 3vw;
+          perspective-origin: center;
+          transform-style: preserve-3d;
+        }
+
+        .longboi2 {
+          transform: scale(2) translate3d(70%, 330%, 35vw) rotate3d(2.5, 0.5, -0.8, 71deg);
+        }
+
+        .medboi1 {
+          transform: scale(2) translate3d(100%, 276%, 23vw) rotate3d(1.6, 0.8, -0.9, 46deg);
+        }
+
+        .medboi2 {
+          transform: scale(2) translate3d(75%, 235%, 25vw) rotate3d(3.5, 0.7, -0.7, 56deg);
+        }
+
+        .shortboi1,
+        .shortboi2 {
+          transform: scale(1.5) translate3d(90%, 195%, 22vw) rotate3d(9.1, 1.3, -2.7, 50deg);
+          perspective: 3vw;
+          perspective-origin: center;
+          transform-style: preserve-3d;
+
+          picture {
+            transform: rotate3d(0.4, 1.1, -1.3, 5.7deg);
+          }
+        }
+
+        .shortboi2 {
+          transform: scale(1.5) translate3d(160%, 180%, 25vw) rotate3d(8.1, 2.3, -3.4, 60deg);
+        }
+
+        .lonelyboi {
+          animation: lonelyboi forwards 1.5s ease-in-out;
+        }
+
+        .active-reset {
+          perspective: 104vw;
+          perspective-origin: center;
+          transform-style: preserve-3d;
+        }
+
+        &:nth-child(1) .active-reset {
+          transform: translate3d(0%, 0%, 0vw);
+        }
+
+        &:nth-child(2) .active-reset {
+          transform: translate3d(-100%, 0%, 0vw);
+        }
+
+        &:nth-child(3) .active-reset {
+          transform: translate3d(-200%, 0%, 0vw);
+        }
+
+        &:nth-child(4) .active-reset {
+          transform: translate3d(-300%, 0%, 0vw);
+        }
+
+        &:nth-child(5) .active-reset {
+          transform: translate3d(-400%, 0%, 0vw);
+        }
+
+        &:nth-child(6) .active-reset {
+          transform: translate3d(0%, -100%, 0vw);
+        }
+
+        &:nth-child(7) .active-reset {
+          transform: translate3d(-100%, -100%, 0vw);
+        }
+
+        &:nth-child(8) .active-reset {
+          transform: translate3d(-200%, -100%, 0vw);
+        }
+
+        &:nth-child(9) .active-reset {
+          transform: translate3d(-300%, -100%, 0vw);
+        }
+
+        &:nth-child(10) .active-reset {
+          transform: translate3d(-400%, -100%, 0vw);
+        }
+      }
+
+      &.getouttahere {
+        z-index: 50;
+
+        .active-reset {
+          transition: transform 0.35s ease-in-out;
+        }
+
+        .graphic-item {
+          transition-duration: .45s;
+
+          &.album-cover {
+          }
+
+          &.album-face {
+            transition: transform 0.35s ease-in-out;
+          }
+
+          &.longboi1,
+          &.longboi2,
+          &.medboi1,
+          &.medboi2,
+          &.shortboi1,
+          &.shortboi2 {
+            picture {
+              transition-delay: 0.3s;
+            }
+          }
+        }
+      }
+
+      // SPECIALTY ALBUMS
+      &.vinyl {
+        .graphic-item {
+          &.album-cover {
+            transform: translate3d(0%, 0%, 1vw) rotate3d(0, 0, 1, -33deg);
+          }
+
+          &.album-face {
+            transform: translate3d(0%, 0%, 0vw) rotate3d(0, 0, 1, -90deg);
+          }
+        }
+
+        &:hover {
+          .album-cover {
+            transform: translate3d(-20%, 38%, 2vw) rotate3d(0, 0, 1, -65deg);
+          }
+
+          .album-face {
+            transform: translate3d(-5%, 5%, 0vw) rotate3d(0, 0, 1, -30deg);
+          }
+        }
+
+        &.active {
+          .album-cover {
+            transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
+            transform: translate3d(30%, 16%, 60vw) rotate3d(0.4, 1.3, 0, 20deg);
+          }
+
+          .album-face {
+            transition: all 1s ease-in-out;
+            transform: translate3d(110%, 18%, 60vw);
+            perspective: 100vw;
+            perspective-origin: center;
+            transform-style: preserve-3d;
+          }
+
+          .lonelyboi {
+            transform: translate3d(125%, 190%, 50vw) rotate3d(7.5, 1.1, -5.1, 30deg);
+
+            picture {
+              transform: scale(2);
+            }
+          }
+        }
+      }
+
+      &.cassette {
+        .graphic-item {
+          &.tape-face {
+            transform: translate3d(0, 16%, -20vw) rotate3d(0, 0, 1, 10deg);
+
+            picture {
+              border-radius: 6px;
+              background: rgba(0, 0, 0, 0.35);
+            }
+          }
+
+          &.album-cover {
+            transform: translate3d(0, 0, -25vw) rotate3d(0, 0, 1, -6deg);
+          }
+
+          &.lonelyboi {
+            transform: translate3d(0%, 0%, -40vw) rotate3d(0, 0, 1, -22deg);
+          }
+        }
+
+        &:hover {
+          .tape-face {
+            transform: translate3d(-15%, -14%, -20vw) rotate3d(0, 0, 1, -15deg);
+          }
+
+          .album-cover {
+            transform: translate3d(40%, -3%, -25vw) rotate3d(0, 0, 1, 17deg);
+          }
+
+          .lonelyboi {
+            transform: translate3d(-25%, 50%, -40vw) rotate3d(0, 0, 1, -22deg);
+          }
+        }
+
+        &.active {
+          .tape-face {
+            transition: transform 1s ease-in-out;
+            transform: translate3d(90%, 5%, 55vw) rotate3d(0, 0, 1, -8deg);
+          }
+
+          .album-cover {
+            transform: translate3d(155%, 50%, 50vw) rotate3d(1, -5, 0.1, 60deg);
+          }
+
+          .lonelyboi {
+            transition: transform 1.15s ease-in-out;
+            transform: translate3d(30%, 50%, 50vw) rotate3d(2, 10, 0.1, 20deg);
+          }
+        }
+      }
+
+      &.no-jacket {
+        &.active {
+          .album-cover {
+            transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
+            transform: translate3d(40%, 20%, 60vw) rotate3d(0.7, 4.5, -0.1, 9deg);
+
+            @media only screen and (min-width: 767px) {
+              transform: translate3d(25%, 38%, 50vw) rotate3d(0.7, 4.5, -0.1, 20deg);
+            }
+          }
+
+          .album-face {
+            transform: translate3d(132%, 20%, 60vw);
+
+            @media only screen and (min-width: 767px) {
+              transform: translate3d(105%, 40%, 50vw);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // TEES STYLES
+  .tee-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+
+    .single-tee {
+      cursor: pointer;
+      width: 80px;
+      transition: all 0.2s ease-in-out;
+
+      @media only screen and (min-width: 786px) {
+        width: 150px;
+      }
+
+      &.rotateNone { transform: rotate(0) }
+      &.rotateLeftLess { transform: rotate(-2.5deg) }
+      &.rotateRightLess { transform: rotate(2.5deg) }
+      &.rotateLeft { transform: rotate(-5deg) }
+      &.rotateRight { transform: rotate(5deg) }
+      &.rotateLeftMore { transform: rotate(-7.5deg) }
+      &.rotateRightMore { transform: rotate( 7.5deg) }
+
+      &:hover {
+        transform: scale(1.2) translateY(-30%);
+        z-index: 3;
+      }
+
+      img {
+        margin: 0 -15% -50%;
+        max-width: 130%;
+      }
+    }
+  }
+
+  .single-tee-hires-wrap,
+  .album-hires-wrap {
+    background: #222222EE;
+    position: fixed;
+    top: 50vh;
+    bottom: 50vh;
+    left: 0vw;
+    right: 0vw;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+
+    &.active {
+      top: 15vh;
+      bottom: 15vh;
+      opacity: 1;
+      z-index: 100;
+
+      .expand-close {
+        top: 10px;
+        left: 10px;
+        opacity: 1;
+        transform: rotate(45deg);
+
+        &:hover {
+          transform: rotate(45deg) scale(1.2);
+        }
+      }
+    }
+
+    .hires-img {
+      margin:0 auto;
+      max-height: 100%;
+
+      img {
+        max-height: 100%;
+      }
+    }
+  }
+
+  .album-hires-wrap {
+    position: absolute;
+    top: 50%;
+    bottom: 50%;
+
+    &.active {
+      top: 20%;
+      bottom: -20%;
+      z-index: 40;
+
+      .expand-close {
+        top: 10px;
+        left: 10px;
+        transform: rotate(45deg);
+        opacity: 1;
+        z-index: 55;
+        cursor: pointer;
+      }
+    }
+  }
