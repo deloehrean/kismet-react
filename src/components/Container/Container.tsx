@@ -1,5 +1,7 @@
-import cn from 'clsx';
 import React, { FC, useEffect, useState } from 'react';
+
+import cn from 'clsx';
+
 import { ContainerStyles as s } from 'src/components';
 
 interface ContainerProps {
@@ -14,6 +16,7 @@ interface ContainerProps {
   rounded?: boolean | 'extra';
   variant?: 'outline' | 'darkish' | 'green' | 'blue' | 'purple';
   elevation?: number;
+  onClick?: () => void;
 }
 
 const Container: FC<ContainerProps> = ({
@@ -28,17 +31,18 @@ const Container: FC<ContainerProps> = ({
   rounded,
   elevation,
   variant,
+  onClick = undefined,
 }) => {
   const rootClassName = cn(
     className,
     styled && s.styled,
     direction && s[direction],
-    align && s['align-' + align],
-    justify && s['justify-' + justify],
+    align && s[`align-${align}`],
+    justify && s[`justify-${justify}`],
     full && s.full,
     (styled && rounded === 'extra' && s['extra-rounded']) || (rounded && s.rounded),
     styled && variant && s[variant],
-    styled && elevation && s['elevation-' + elevation],
+    styled && elevation && s[`elevation-${elevation}`],
   );
 
   const [opacity, setOpacity] = useState(0);
@@ -54,14 +58,14 @@ const Container: FC<ContainerProps> = ({
   }, []);
 
   const animateOpacity = {
-    opacity: opacity,
-    transition: transition,
+    opacity,
+    transition,
   };
 
-  let Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
+  const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
 
   return (
-    <Component style={animateOpacity} className={rootClassName}>
+    <Component style={animateOpacity} className={rootClassName} onClick={onClick}>
       {children}
     </Component>
   );

@@ -89,6 +89,18 @@
   --success-outlined-border: #{$aqua-700-72};
   --success-selected: #{$aqua-700-8};
 
+  // Success
+  --slate-main: #{$slate-700};
+  --slate-dark: #{$slate-900};
+  --slate-light: #{$slate-500};
+  --slate-contrast: #{$white-100};
+  --slate-focus: #{$slate-700-24};
+  --slate-focus-visible: #{$slate-700-32};
+  --slate-hover: #{$slate-700-16};
+  --slate-outlined-border: #{$slate-700-72};
+  --slate-selected: #{$slate-700-8};
+
+
   // Tabbed Nav Page Colors
   --home-page-color: #{$rust-800};
   --graphics-page-color: #{$olive-700};

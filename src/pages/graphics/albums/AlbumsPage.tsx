@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import cn from 'clsx';
 
@@ -16,6 +16,74 @@ import WeakendTDTape from 'src/pages/graphics/albums/WeakendTDTape';
 import WoodwardAlbum from 'src/pages/graphics/albums/WoodwardAlbum';
 
 function AlbumsPage() {
+  // const [active, setActive] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [exit, setExit] = useState(false);
+
+  const albums = [
+    { content: <AlucardAlbum /> },
+    {
+      content: <AndrewLoehrAlbum />,
+      extra: 'vinyl',
+    },
+    { content: <RoydenAlbum /> },
+    { content: <ElephantomAlbum /> },
+    { content: <EightSecondsUpsideDownAlbum /> },
+    { content: <AsecondtoolateAlbum /> },
+    { content: <WoodwardAlbum /> },
+    { content: <ElleAndTheFontsAlbum /> },
+    {
+      content: <WeakendHEREAVVTape />,
+      extra: 'cassette',
+    },
+    {
+      content: <WeakendTDTape />,
+      extra: 'cassette',
+    },
+  ];
+
+  const activeAction = (index, activeIndex) => {
+    setExit(false);
+    if (activeIndex === index) {
+      setActiveIndex(null);
+      setExit(true);
+      setTimeout(() => {
+        setExit(false);
+      }, 1000);
+    } else {
+      setActiveIndex(index);
+    }
+  };
+
+  const renderedItems = albums.map((album, index) => {
+    const active = index === activeIndex ? 'active' : '';
+
+    return (
+      <React.Fragment key={index}>
+        <Container
+          className={cn(
+            s['album-group'],
+            active && s.active,
+            exit && s.getouttahere,
+            album.extra && s[`${album.extra}`],
+          )}
+          onClick={() => activeAction(index, activeIndex)}
+        >
+          <div className={s['active-reset']}>
+            {album.content}
+            <span
+              className={s['expand-close']}
+              onClick={() => {
+                activeIndex !== null ? activeAction(null, null) : '';
+              }}
+            >
+              +
+            </span>
+          </div>
+        </Container>
+      </React.Fragment>
+    );
+  });
   return (
     <section id="albums-content" className={s['albums-content']}>
       <Container>
@@ -23,71 +91,15 @@ function AlbumsPage() {
           Album Artwork
         </Typography>
       </Container>
-      <Row className={s['content-frame-container']}>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <AlucardAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={cn(s['album-group'], s.vinyl)}>
-          <div className={s['active-reset']}>
-            <AndrewLoehrAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <RoydenAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <ElephantomAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <EightSecondsUpsideDownAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <AsecondtoolateAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={s['album-group']}>
-          <div className={s['active-reset']}>
-            <WoodwardAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={cn(s['album-group'], s['no-jacket'])}>
-          <div className={s['active-reset']}>
-            <ElleAndTheFontsAlbum />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={cn(s['album-group'], s.cassette)}>
-          <div className={s['active-reset']}>
-            <WeakendHEREAVVTape />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-        <Container className={cn(s['album-group'], s.cassette)}>
-          <div className={s['active-reset']}>
-            <WeakendTDTape />
-          </div>
-          <span className={s['expand-close']}>+</span>
-        </Container>
-      </Row>
-      <div className={s['album-hires-wrap']}>
-        <span className={s['expand-close']}>+</span>
-      </div>
+
+      <Row className={s['content-frame-container']}>{renderedItems}</Row>
+
+      <div
+        className={cn(s['album-hires-wrap'], activeIndex !== null && s.active)}
+        onClick={() => {
+          activeAction(null, null);
+        }}
+      />
     </section>
   );
 }
