@@ -31,7 +31,7 @@ function GraphicsPage() {
             </LinkStyled>
           </li>
           <li>
-            <LinkStyled to={'/graphics'} className={s['subnav-btn']} id="tees">
+            <LinkStyled to={'/graphics'} aria-disabled className={s['subnav-btn']} id="tees">
               Newsletters
             </LinkStyled>
           </li>

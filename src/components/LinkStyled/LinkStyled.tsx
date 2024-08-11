@@ -8,10 +8,16 @@ import { LinkStyledStyles as s } from 'src/components';
 const LinkStyled: React.FC<LinkProps> = ({ className, to, children, ...props }) => {
   const resolved = useResolvedPath(to);
   const match = useMatch({ path: resolved.pathname, end: true });
+  const disabled = props['aria-disabled'];
 
   return (
-    <Link className={cn(s.root, match && s.active, className)} to={to} {...props}>
-      {children}
+    <Link
+      className={cn(s.root, match && s.active, className)}
+      to={to}
+      {...props}
+      onClick={event => disabled && event.preventDefault()}
+    >
+      <span>{children}</span>
     </Link>
   );
 };

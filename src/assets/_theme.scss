@@ -222,7 +222,8 @@
   //--input-standard-enabled-border: #{$slate-200};
   //--input-standard-hover-border: #{$slate-400};
   --link-primary: var(--action-active);
-  --link-primary-hover: var(--action-disabled);
+  --link-primary-hover: var(--action-hover);
+  --link-primary-disabled: var(--action-disabled);
   --logo-fill: #{$dusk-700};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);

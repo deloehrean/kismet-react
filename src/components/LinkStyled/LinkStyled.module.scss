@@ -8,4 +8,10 @@
   &.active {
     color: var(--link-primary-hover);
   }
+
+  &[aria-disabled="true"] {
+    color: var(--link-primary-disabled);
+    position: relative;
+    cursor: not-allowed;
+  }
 }
