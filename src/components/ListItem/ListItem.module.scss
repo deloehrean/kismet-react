@@ -76,7 +76,8 @@
     background: var(--action-selected);
 
     &::after {
-      height: 60vh;
+      transition: height 0.25s ease-in-out, opacity 2s ease-in-out;
+      height: 80vh;
       opacity: 0;
       pointer-events: none;
       z-index: 4;
