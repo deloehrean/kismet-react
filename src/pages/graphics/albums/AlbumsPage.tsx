@@ -74,7 +74,9 @@ function AlbumsPage() {
             <span
               className={s['expand-close']}
               onClick={() => {
-                activeIndex !== null ? activeAction(null, null) : '';
+                if (activeIndex !== null) {
+                  activeAction(null, null);
+                }
               }}
             >
               +

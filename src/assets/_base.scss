@@ -4,6 +4,7 @@
   box-sizing: inherit;
   font-family: var(--font-sans), sans-serif;
 }
+
 html {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -38,12 +39,16 @@ body.loading * {
 }
 
 main {
-  padding: var(--size-4) var(--size-3);
   display: flex;
   max-height: var(--main-body-max-height);
   flex-direction: column;
   gap: var(--size-4);
-  overflow-x: scroll;
+  overflow: hidden;
+
+  > div {
+    padding: var(--size-4) var(--size-3);
+    overflow-x: scroll;
+  }
 }
 
 a {
