@@ -17,6 +17,14 @@ export const routes: RoutePathDefinition[] = [
   { path: '/home', element: <Homepage />, title: 'Home', color: 'rust', index: true },
   { path: '/theme', element: <ThemePage />, title: 'Theme', color: 'rust', nav: true },
   {
+    path: '/websites',
+    element: <WebsitesPage />,
+    title: 'Web Dev',
+    tree: 'websites',
+    color: 'dusk',
+    nav: true,
+  },
+  {
     path: '/graphics',
     element: <GraphicsPage />,
     title: 'Graphics',
@@ -36,14 +44,6 @@ export const routes: RoutePathDefinition[] = [
         title: 'Tees',
       },
     ],
-  },
-  {
-    path: '/websites',
-    element: <WebsitesPage />,
-    title: 'Web Dev',
-    tree: 'websites',
-    color: 'dusk',
-    nav: true,
   },
   {
     path: '/branding',

@@ -86,6 +86,7 @@ function AlbumsPage() {
       </React.Fragment>
     );
   });
+
   return (
     <section id="albums-content" className={s['albums-content']}>
       <Container>

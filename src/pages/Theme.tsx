@@ -88,7 +88,7 @@ const renderTypographyAlign = () => {
 
 function ThemePage() {
   return (
-    <React.Fragment>
+    <Column gap={4}>
       <PageHeading title="Theme Page" subtitle="Just a place to show off components" divider />
 
       <Column gap={1}>
@@ -211,7 +211,7 @@ function ThemePage() {
           </Container>
         </Row>
       </Column>
-    </React.Fragment>
+    </Column>
   );
 }
 
