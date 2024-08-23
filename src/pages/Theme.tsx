@@ -135,7 +135,7 @@ function ThemePage() {
 
       <Column gap={1}>
         <Container>
-          <Typography variant="h4">Containers</Typography>
+          <Typography variant="h4">Styled Containers</Typography>
         </Container>
         <Row gap={2}>
           <Container styled rounded full>

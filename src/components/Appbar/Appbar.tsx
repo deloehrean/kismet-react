@@ -18,7 +18,8 @@ type AppbarProps = {
 const Appbar: FC<AppbarProps> = () => {
   return (
     <header className={s.root}>
-      <Container direction="row" align="center" full>
+      <div className={s['collage-carousel']} />
+      <Container direction="row" align="center" className={s.content} full>
         <Column className={s.logo}>
           <LinkStyled to={'/'}>
             <KismetLogo />

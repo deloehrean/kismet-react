@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container, Row, Column } from 'src/components';
+import { Container, Row } from 'src/components';
 
 const ThemeToggle: React.FC = () => {
   const [isDarkChecked, setIsDarkChecked] = useState(true);
-  const [isUseSystem, setIsUseSystem] = useState(false);
+  const [isUseSystem, setIsUseSystem] = useState(true);
   const [isSystemDark, setIsSystemDark] = useState(false);
 
   useEffect(() => {

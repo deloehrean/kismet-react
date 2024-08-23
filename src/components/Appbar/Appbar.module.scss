@@ -1,17 +1,41 @@
 .root {
-  background: var(--background-gradient-primary-45);
+  //background: var(--background-gradient-primary-45);
   display: flex;
   flex-direction: row;
   height: var(--appbar-height);
   padding-inline: 24px;
   width: 100%;
-  box-shadow: inset 0 -20px 40px rgba(0, 0, 0, 0.3);
+  position: relative;
+
+  .content {
+    position: relative;
+  }
+
+  .collage-carousel {
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: inset 0 -8px 10px rgba(0, 0, 0, .5), inset 0 -16px 24px rgba(0, 0, 0, .24), inset 0 -6px 32px rgba(0, 0, 0, .24);
+    background: url("/src/assets/images/homepage-collage.jpg") repeat center 40%;
+    background-size: 50%;
+    width: 100vw;
+    animation: bgSlide 240s linear infinite;
+    height: var(--appbar-height);
+  }
 
   .logo {
     width: 300px;
 
+    path {
+      -webkit-filter: drop-shadow(0 0 8px var(--text-contrast));
+      filter: drop-shadow(0 0 8px var(--text-contrast));
+    }
+
     a {
-      display:flex;
+      display: flex;
       color: var(--common-white-main);
       align-items: center;
     }
@@ -22,5 +46,15 @@
     flex: 1;
     justify-content: flex-end;
     align-items: end;
+  }
+}
+
+
+@keyframes bgSlide {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -100vw;
   }
 }

@@ -16,6 +16,7 @@
       flex: 1;
       overflow: visible;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-elevation-8);
 
       &.rust {
         background: var(--home-page-color);

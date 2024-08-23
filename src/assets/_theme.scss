@@ -133,7 +133,7 @@
   --common-white-selected: #{$white-8};
 
   // Background
-  --background-default: #{$aqua-700};
+  --background-default: #{$white-100};
   --background-darker-25: #{$slate-25};
   --background-darker-50: #{$slate-50};
   --background-darker-75: #{$slate-75};
@@ -355,7 +355,7 @@ PALLET - DARK MODE
   --background-elevation-22: #{$slate-500};
   --background-elevation-23: #{$slate-500};
   --background-elevation-24: #{$slate-500};
-  --background-contrast: #{$slate-900};
+  --background-contrast: #{$white-100};
 
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);

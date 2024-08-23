@@ -17,7 +17,7 @@ const LinkStyled: React.FC<LinkProps> = ({ className, to, children, ...props }) 
       {...props}
       onClick={event => disabled && event.preventDefault()}
     >
-      <span>{children}</span>
+      {children}
     </Link>
   );
 };

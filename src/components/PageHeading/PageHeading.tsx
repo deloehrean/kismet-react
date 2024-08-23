@@ -1,5 +1,6 @@
 import React from 'react';
-import { Divider, PageHeadingStyles as s, Typography } from 'src/components';
+
+import { Container, Divider, PageHeadingStyles as s, Typography } from 'src/components';
 
 type PageHeadingProps = {
   title: string | any;
@@ -9,19 +10,21 @@ type PageHeadingProps = {
 
 const PageHeading: React.FC<PageHeadingProps> = ({ title, divider, subtitle }) => {
   return (
-    <div className={s.root}>
-      <div className={'title'}>
-        <Typography variant={'h1'} gutter>
-          {title}
-        </Typography>
-        {subtitle && (
-          <Typography variant={'subtitle1'} color={'secondary'}>
-            {subtitle}
+    <React.Fragment>
+      <Container className={s.root}>
+        <div className={'title'}>
+          <Typography variant={'h1'} gutter>
+            {title}
           </Typography>
-        )}
-      </div>
-      {divider && <Divider />}
-    </div>
+          {subtitle && (
+            <Typography variant={'subtitle1'} color={'secondary'}>
+              {subtitle}
+            </Typography>
+          )}
+        </div>
+      </Container>
+      <Container>{divider && <Divider />}</Container>
+    </React.Fragment>
   );
 };
 export default PageHeading;

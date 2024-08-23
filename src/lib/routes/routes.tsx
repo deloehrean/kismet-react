@@ -2,7 +2,7 @@ import React, { lazy } from 'react';
 
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
-const Homepage = lazy(() => import('src/pages/Home'));
+const Homepage = lazy(() => import('src/pages/Home/HomePage'));
 const ThemePage = lazy(() => import('src/pages/Theme'));
 const GraphicsPage = lazy(() => import('src/pages/graphics/GraphicsPage'));
 const GraphicsDashboard = lazy(() => import('src/pages/graphics/GraphicsDashboard'));

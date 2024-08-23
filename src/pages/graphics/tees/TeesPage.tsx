@@ -116,7 +116,7 @@ function TeesPage() {
     <section id="tees-content" className={s['albums-content']}>
       <Container>
         <Typography variant={'h4'} gutter>
-          Album Artwork
+          Tee Shirt Designs
         </Typography>
       </Container>
 
