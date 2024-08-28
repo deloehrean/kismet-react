@@ -37,7 +37,7 @@ function HomePage() {
         </Typography>
         <div className={cn(s.resume, s['resume-plain'])}>
           <LinkStyled to="/images/andrew-loehr_web-resume-2024.pdf" target="_blank">
-            <img src={ResumeImg} />
+            <img src={ResumeImg} alt={'Andrew M Loehr Resume'} />
             <span>PDF Download</span>
           </LinkStyled>
         </div>
