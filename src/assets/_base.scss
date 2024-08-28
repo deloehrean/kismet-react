@@ -42,11 +42,11 @@ main {
   display: flex;
   max-height: var(--main-body-max-height);
   flex-direction: column;
-  overflow: hidden;
 
   > div {
     padding: var(--size-4) var(--size-3);
     overflow-x: scroll;
+    height: 100%;
   }
 }
 

@@ -2,7 +2,7 @@ import React, { lazy } from 'react';
 
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
-const Homepage = lazy(() => import('src/pages/Home/HomePage'));
+const Homepage = lazy(() => import('src/pages/home/HomePage'));
 const ThemePage = lazy(() => import('src/pages/Theme'));
 const GraphicsPage = lazy(() => import('src/pages/graphics/GraphicsPage'));
 const GraphicsDashboard = lazy(() => import('src/pages/graphics/GraphicsDashboard'));
@@ -12,9 +12,9 @@ const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 
 export const routes: RoutePathDefinition[] = [
-  { path: '/', element: <Homepage />, title: 'Home', color: 'rust', index: true },
+  { path: '/', element: <Homepage />, title: 'home', color: 'rust', index: true },
   { path: '*', element: <FourOhFourPage />, title: 'Not Found', color: 'rust' },
-  { path: '/home', element: <Homepage />, title: 'Home', color: 'rust', index: true },
+  { path: '/home', element: <Homepage />, title: 'home', color: 'rust', index: true },
   { path: '/theme', element: <ThemePage />, title: 'Theme', color: 'rust', nav: true },
   {
     path: '/websites',

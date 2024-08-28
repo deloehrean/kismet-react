@@ -1,14 +1,5 @@
 .graphics-panel {
   position: relative;
-  top: auto;
-  bottom: auto;
-  height: 100%;
-
-  -ms-overflow-style: none;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
 
   .subnav-container {
     align-items: center;
@@ -70,4 +61,18 @@
       }
     }
   }
+
+  .button {
+    background: var(--background-default);
+    padding: var(--size-1) var(--size-3);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: var(--size-1);
+
+    &:hover {
+      background: var(--background-darker-25);
+    }
+  }
 }
+

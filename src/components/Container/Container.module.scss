@@ -170,7 +170,7 @@
   flex: 1;
 }
 
-.justify-left {
+.justify-start {
   justify-content: start;
 }
 
@@ -178,11 +178,11 @@
   justify-content: center;
 }
 
-.justify-right {
+.justify-end {
   justify-content: end;
 }
 
-.align-top {
+.align-start {
   align-items: start;
 }
 
@@ -190,6 +190,6 @@
   align-items: center;
 }
 
-.align-bottom {
+.align-end {
   align-items: end;
 }

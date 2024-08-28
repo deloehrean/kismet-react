@@ -80,7 +80,7 @@
   }
 
   &.code {
-    background: var(--action-selected);
+    background: var(--action-disabled-background);
     border-radius: 5px;
     font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
     font-size: 0.75rem;

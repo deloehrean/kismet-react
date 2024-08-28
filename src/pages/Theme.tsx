@@ -175,14 +175,17 @@ function ThemePage() {
           <Container styled full rounded elevation={5} variant="outline">
             <Typography>Elevation: 5</Typography>
           </Container>
-          <Container styled full rounded elevation={10} variant="outline">
-            <Typography>Elevation: 10</Typography>
+          <Container styled full rounded elevation={9} variant="outline">
+            <Typography>Elevation: 9</Typography>
           </Container>
-          <Container styled full rounded elevation={15} variant="outline">
-            <Typography>Elevation: 15</Typography>
+          <Container styled full rounded elevation={13} variant="outline">
+            <Typography>Elevation: 13</Typography>
           </Container>
-          <Container styled full rounded elevation={20} variant="outline">
-            <Typography>Elevation: 20</Typography>
+          <Container styled full rounded elevation={17} variant="outline">
+            <Typography>Elevation: 17</Typography>
+          </Container>
+          <Container styled full rounded elevation={21} variant="outline">
+            <Typography>Elevation: 21</Typography>
           </Container>
           <Container styled full rounded elevation={24} variant="outline">
             <Typography>Elevation: 24</Typography>
@@ -190,24 +193,24 @@ function ThemePage() {
         </Row>
         <Row gap={2}>
           <Container styled rounded full justify="start" variant="darkish">
-            <Typography>Justify: Left</Typography>
+            <Typography>Justify: Start</Typography>
           </Container>
           <Container styled rounded full justify="center" variant="darkish">
             <Typography>Justify: Center</Typography>
           </Container>
           <Container styled rounded full justify="end" variant="darkish">
-            <Typography>Justify: Right</Typography>
+            <Typography>Justify: End</Typography>
           </Container>
         </Row>
         <Row gap={2}>
           <Container styled rounded full align="start" variant="darkish">
-            <Typography>Align: Left</Typography>
+            <Typography>Align: Start</Typography>
           </Container>
           <Container styled rounded full align="center" variant="darkish">
             <Typography>Align: Center</Typography>
           </Container>
           <Container styled rounded full align="end" variant="darkish">
-            <Typography>Align: Right</Typography>
+            <Typography>Align: End</Typography>
           </Container>
         </Row>
       </Column>
