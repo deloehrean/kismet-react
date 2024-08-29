@@ -2,16 +2,16 @@ import React from 'react';
 
 import cn from 'clsx';
 
-import { AxleWorkout, Column, Container, PageHeading } from 'src/components';
+import { AxleWorkout, Column, Container, Intel, PageHeading } from 'src/components';
 import { WebsitesPageStyles as s } from 'src/pages';
 
 function WebsitesPage() {
   return (
     <Column className={s['websites-panel']} gap={4}>
       <PageHeading title={'Websites'} subtitle={'Custom built solutions for any problem'} divider />
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/intel/intel.php'); ?> */}
-      {/* </div> */}
+      <div className="content-frame-container container">
+        <Intel />
+      </div>
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/lake-atitlan/lake-atitlan.php'); ?> */}
       {/* </div> */}

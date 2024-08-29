@@ -47,7 +47,7 @@ export const routes: RoutePathDefinition[] = [
   },
   {
     path: '/branding',
-    element: <WebsitesPage />,
+    element: <Homepage />,
     title: 'Branding',
     tree: 'branding',
     color: 'aqua',
@@ -55,7 +55,7 @@ export const routes: RoutePathDefinition[] = [
   },
   {
     path: '/ecommerce',
-    element: <WebsitesPage />,
+    element: <Homepage />,
     title: 'eCommerce',
     tree: 'ecommerce',
     color: 'plum',

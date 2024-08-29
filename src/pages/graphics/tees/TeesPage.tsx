@@ -2,49 +2,88 @@ import React, { useEffect, useState } from 'react';
 
 import cn from 'clsx';
 
+import ASundialMap from 'src/assets/images/tees/a-sundial-map-tee.png';
+import AlucardBlack from 'src/assets/images/tees/alucard-black-tee.png';
+import AlucardRed from 'src/assets/images/tees/alucard-red-tee.png';
+import CinematicSunriseRollercoaster from 'src/assets/images/tees/cinematic-sunrise-rollercoaster-tee.png';
+import CinematicSunriseSun from 'src/assets/images/tees/cinematic-sunrise-sun-tee.png';
+import CinematicSunriseTigers from 'src/assets/images/tees/cinematic-sunrise-tigers-tee.png';
+import EightSecondsCar from 'src/assets/images/tees/eight-seconds-upside-down-car-gauges-tee.png';
+import FineLineDog from 'src/assets/images/tees/fine-line-dog-thrift-tee.png';
+import FineLineGirl from 'src/assets/images/tees/fine-line-gun-girl-tee.png';
+import FineLineSwirl from 'src/assets/images/tees/fine-line-swirl-tee.png';
+import HotnessFairy from 'src/assets/images/tees/hotness-fairy-tee.png';
+import NightAwayWords from 'src/assets/images/tees/night-away-words-tee.png';
+import PoppyPints from 'src/assets/images/tees/poppy-pints-tee.png';
+import RosesdeadBloodyHands from 'src/assets/images/tees/rosesdead-bloody-hands-tee.png';
+import RosesdeadBuilding from 'src/assets/images/tees/rosesdead-building-tee.png';
+import RoydenBuildings from 'src/assets/images/tees/royden-buildings-tee.png';
+import RoydenMetal from 'src/assets/images/tees/royden-metal-tee.png';
+import RoydenSpike from 'src/assets/images/tees/royden-spike-tee.png';
+import ShowcaseSuicide from 'src/assets/images/tees/showcase-suicide-tee.png';
+import SkinThreadSkull from 'src/assets/images/tees/skin-thread-skull-tee.png';
+import SkinThreadTv from 'src/assets/images/tees/skin-thread-tv-tee.png';
+import SkinThreadUnicycle from 'src/assets/images/tees/skin-thread-unicycle-tee.png';
+import StopRevolutionTrex from 'src/assets/images/tees/stop-the-revolution-trex-tee.png';
+import TeamGoldieBoombox from 'src/assets/images/tees/team-goldie-boombox-tee.png';
+import WeakendArcher from 'src/assets/images/tees/weakend-archer-tee.png';
+import WeakendBronto from 'src/assets/images/tees/weakend-bronto-tee.png';
+import WeakendBTTF from 'src/assets/images/tees/weakend-bttf-tee.png';
+import WeakendBurningHouse from 'src/assets/images/tees/weakend-burning-house-tee.png';
+import WeakendButterflies from 'src/assets/images/tees/weakend-butterflies-tee.png';
+import WeakendCircleGirl from 'src/assets/images/tees/weakend-circle-girl-tee.png';
+import WeakendCowboy from 'src/assets/images/tees/weakend-cowboy-tee.png';
+import WeakendGriffins from 'src/assets/images/tees/weakend-griffins-mess-tee.png';
+import WeakendGunDismantle from 'src/assets/images/tees/weakend-gun-dismantle-tee.png';
+import WeakendRibcage from 'src/assets/images/tees/weakend-ribcage-tee.png';
+import WeakendSwirled from 'src/assets/images/tees/weakend-swirled-splotches-tee.png';
+import WeakendVoltron from 'src/assets/images/tees/weakend-voltron-tee.png';
+import WeakendZombies from 'src/assets/images/tees/weakend-zombies-tee.png';
+import WHIVLion from 'src/assets/images/tees/whiv-lion-tee.png';
+import WHIVRobot from 'src/assets/images/tees/whiv-robot-tee.png';
 import { Container, Typography } from 'src/components';
 import s from 'src/pages/graphics/tees/TeesPage.module.scss';
 
 const teeDesigns = [
-  '../src/assets/images/tees/a-sundial-map-tee.png',
-  '../src/assets/images/tees/alucard-black-tee.png',
-  '../src/assets/images/tees/alucard-red-tee.png',
-  '../src/assets/images/tees/cinematic-sunrise-rollercoaster-tee.png',
-  '../src/assets/images/tees/cinematic-sunrise-sun-tee.png',
-  '../src/assets/images/tees/cinematic-sunrise-tigers-tee.png',
-  '../src/assets/images/tees/eight-seconds-upside-down-car-gauges-tee.png',
-  '../src/assets/images/tees/fine-line-dog-thrift-tee.png',
-  '../src/assets/images/tees/fine-line-gun-girl-tee.png',
-  '../src/assets/images/tees/fine-line-swirl-tee.png',
-  '../src/assets/images/tees/hotness-fairy-tee.png',
-  '../src/assets/images/tees/night-away-words-tee.png',
-  '../src/assets/images/tees/poppy-pints-tee.png',
-  '../src/assets/images/tees/rosesdead-bloody-hands-tee.png',
-  '../src/assets/images/tees/rosesdead-building-tee.png',
-  '../src/assets/images/tees/royden-buildings-tee.png',
-  '../src/assets/images/tees/royden-metal-tee.png',
-  '../src/assets/images/tees/royden-spike-tee.png',
-  '../src/assets/images/tees/showcase-suicide-tee.png',
-  '../src/assets/images/tees/skin-thread-skull-tee.png',
-  '../src/assets/images/tees/skin-thread-tv-tee.png',
-  '../src/assets/images/tees/skin-thread-unicycle-tee.png',
-  '../src/assets/images/tees/stop-the-revolution-trex-tee.png',
-  '../src/assets/images/tees/team-goldie-boombox-tee.png',
-  '../src/assets/images/tees/weakend-archer-tee.png',
-  '../src/assets/images/tees/weakend-bronto-tee.png',
-  '../src/assets/images/tees/weakend-bttf-tee.png',
-  '../src/assets/images/tees/weakend-burning-house-tee.png',
-  '../src/assets/images/tees/weakend-butterflies-tee.png',
-  '../src/assets/images/tees/weakend-circle-girl-tee.png',
-  '../src/assets/images/tees/weakend-cowboy-tee.png',
-  '../src/assets/images/tees/weakend-griffins-mess-tee.png',
-  '../src/assets/images/tees/weakend-gun-dismantle-tee.png',
-  '../src/assets/images/tees/weakend-ribcage-tee.png',
-  '../src/assets/images/tees/weakend-swirled-splotches-tee.png',
-  '../src/assets/images/tees/weakend-voltron-tee.png',
-  '../src/assets/images/tees/weakend-zombies-tee.png',
-  '../src/assets/images/tees/whiv-lion-tee.png',
-  '../src/assets/images/tees/whiv-robot-tee.png',
+  ASundialMap,
+  AlucardRed,
+  AlucardBlack,
+  CinematicSunriseRollercoaster,
+  CinematicSunriseSun,
+  CinematicSunriseTigers,
+  EightSecondsCar,
+  FineLineDog,
+  FineLineGirl,
+  FineLineSwirl,
+  HotnessFairy,
+  NightAwayWords,
+  PoppyPints,
+  RosesdeadBloodyHands,
+  RosesdeadBuilding,
+  RoydenSpike,
+  RoydenBuildings,
+  RoydenMetal,
+  ShowcaseSuicide,
+  SkinThreadSkull,
+  SkinThreadUnicycle,
+  SkinThreadTv,
+  StopRevolutionTrex,
+  TeamGoldieBoombox,
+  WeakendVoltron,
+  WeakendButterflies,
+  WeakendRibcage,
+  WeakendCircleGirl,
+  WeakendSwirled,
+  WeakendArcher,
+  WeakendBronto,
+  WeakendBTTF,
+  WeakendBurningHouse,
+  WeakendCowboy,
+  WeakendGriffins,
+  WeakendGunDismantle,
+  WeakendZombies,
+  WHIVLion,
+  WHIVRobot,
 ];
 
 const transforms = [
@@ -92,7 +131,6 @@ function TeesPage() {
 
       setActiveIndex(index);
       setHiResTee(currentTeeReplace);
-      console.log(index, activeIndex, hiResTee);
     }
   };
 

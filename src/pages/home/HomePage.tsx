@@ -2,6 +2,7 @@ import React from 'react';
 
 import cn from 'clsx';
 
+import ResumePdf from 'src/assets/images/andrew-loehr_web-resume-2024.pdf';
 import ResumeImg from 'src/assets/images/andrew-loehr_web-resume-plain.jpg';
 import { Column, Container, LinkStyled, PageHeading, Typography } from 'src/components';
 import { HomePageStyles as s } from 'src/pages';
@@ -36,7 +37,7 @@ function HomePage() {
           (Find my contact information on my resume)
         </Typography>
         <div className={cn(s.resume, s['resume-plain'])}>
-          <LinkStyled to="/images/andrew-loehr_web-resume-2024.pdf" target="_blank">
+          <LinkStyled to={ResumePdf} target="_blank">
             <img src={ResumeImg} alt={'Andrew M Loehr Resume'} />
             <span>PDF Download</span>
           </LinkStyled>

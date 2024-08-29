@@ -2,36 +2,37 @@ import { useState } from 'react';
 
 import cn from 'clsx';
 
-import AxleBlog from 'src/assets/images/websites/axleWorkout/axle-blog-template.jpg';
-import AxleBuyIt from 'src/assets/images/websites/axleWorkout/axle-buy-it-template.jpg';
-import AxlePartner from 'src/assets/images/websites/axleWorkout/axle-find-it-become-partner-template.jpg';
-import AxleHomepage from 'src/assets/images/websites/axleWorkout/axle-homepage-template-02.jpg';
-import AxleLogo from 'src/assets/images/websites/axleWorkout/axle-logo-wt.png';
-import AxleWorkIt from 'src/assets/images/websites/axleWorkout/axle-work-it-template.jpg';
+import IntelCategory from 'src/assets/images/websites/intel/intel-category.jpg';
+import IntelLogo from 'src/assets/images/websites/intel/intel-dit-store-logo.png';
+import IntelEditAddress from 'src/assets/images/websites/intel/intel-edit-address.jpg';
+import IntelHomepage from 'src/assets/images/websites/intel/intel-homepage.jpg';
+import IntelOrders from 'src/assets/images/websites/intel/intel-orders.jpg';
+import IntelProduct from 'src/assets/images/websites/intel/intel-product-page.jpg';
 import { Row, Typography } from 'src/components';
 import { WebsitesPageStyles as s, WebsiteTopper } from 'src/pages';
 
-const axleImages = [
-  { logo: AxleLogo },
+const images = [
+  { logo: IntelLogo },
   {
-    image: AxleHomepage,
+    image: IntelHomepage,
     position: 'a',
   },
   {
-    image: AxleBlog,
+    image: IntelCategory,
     position: 'b',
   },
   {
-    image: AxlePartner,
+    image: IntelOrders,
     position: 'c',
   },
   {
-    image: AxleBuyIt,
+    image: IntelProduct,
     position: 'd',
   },
   {
-    image: AxleWorkIt,
+    image: IntelEditAddress,
     position: 'e',
+    bumpUp: true,
   },
 ];
 
@@ -47,13 +48,13 @@ function AxleWorkout() {
     }
   };
 
-  const renderedItems = axleImages.map((axleImage, index) => {
+  const renderedItems = images.map((image, index) => {
     const active = index === activeIndex ? 'active' : '';
 
-    if (axleImage.logo) {
+    if (image.logo) {
       return (
         <div className={s['website-logo']} key={index}>
-          <img src={axleImage.logo} alt="" />
+          <img src={image.logo} alt="" />
         </div>
       );
     }
@@ -61,7 +62,8 @@ function AxleWorkout() {
       <div
         className={cn(
           s['website-image'],
-          s[`website-image-${axleImage.position}`],
+          s[`website-image-${image.position}`],
+          image.bumpUp && s['bump-up'],
           active && s.active,
         )}
         key={index}
@@ -69,7 +71,7 @@ function AxleWorkout() {
       >
         {WebsiteTopper}
         <div className={s['website-body']}>
-          <img src={axleImage.image} alt="" />
+          <img src={image.image} alt="" />
         </div>
         <span className={s['expand-close']} onClick={() => activeAction(index, activeIndex)}>
           +
@@ -82,18 +84,20 @@ function AxleWorkout() {
     <Row className={s.website} aria-label="axle-workout">
       <div className={s['website-content']}>
         <Typography variant={'h3'} gutter>
-          Axle Workout
+          Intel Design-in Tools
         </Typography>
         <Typography variant={'body1'} gutter>
-          Axle is an Olympic barbell company that utilizes a wheel instead of weights on their
-          barbell. This allows for a more total body workout than straight weightlifting alone and
-          can be utilized by those not looking for strictly strength training.
+          The Design-in Tools web store hosts multiple B2B account levels for businesses and
+          insiders, tens of thousands of skus, and a headless theme for speed and optimization.
+          Built on a cloud-based Magento 2 Enterprise Platform, this store was built to handle a
+          customized shopping cart quoting system, multiple coupons, and features an extensively
+          custom product library.
         </Typography>
         <Typography variant={'body1'}>
-          <strong>Powered by:</strong> WordPress
+          <strong>Powered by:</strong> Magento / ScandiPWA
         </Typography>
         <Typography variant={'body1'}>
-          <strong>Tools used:</strong> SCSS, jQuery, PHP, Photoshop
+          <strong>Tools used:</strong> React, PHP, SCSS, Composer, Node.JS, Yarn, Docker
         </Typography>
       </div>
       <div className={cn(s['website-screenshots'], s.active, loading && s.loading)}>

@@ -2,6 +2,11 @@ import React from 'react';
 
 import cn from 'clsx';
 
+import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
+import tee1 from 'src/assets/images/tees/royden-spike-tee.png';
+import tee4 from 'src/assets/images/tees/skin-thread-tv-tee.png';
+import tee2 from 'src/assets/images/tees/weakend-bronto-tee.png';
+import tee5 from 'src/assets/images/tees/whiv-robot-tee.png';
 import { Column, Container, Divider, LinkStyled, Row, Typography } from 'src/components';
 import { GraphicsPageStyles as s } from 'src/pages';
 import albumStyles from 'src/pages/graphics/albums/AlbumsPage.module.scss';
@@ -11,12 +16,6 @@ import AsecondtoolateAlbum from 'src/pages/graphics/albums/AsecondtoolateAlbum';
 import ElephantomAlbum from 'src/pages/graphics/albums/ElephantomAlbum';
 import RoydenAlbum from 'src/pages/graphics/albums/RoydenAlbum';
 import teesStyles from 'src/pages/graphics/tees/TeesPage.module.scss';
-
-const tee1 = 'src/assets/images/tees/royden-spike-tee.png';
-const tee2 = 'src/assets/images/tees/weakend-bronto-tee.png';
-const tee3 = 'src/assets/images/tees/alucard-black-tee.png';
-const tee4 = 'src/assets/images/tees/skin-thread-tv-tee.png';
-const tee5 = 'src/assets/images/tees/whiv-robot-tee.png';
 
 function GraphicsDashboard() {
   return (

@@ -179,13 +179,13 @@
         .expand-close {
           display: flex;
           position: absolute;
-          width: 40px;
-          height: 40px;
+          width: 26px;
+          height: 26px;
           background: #333333;
           color: #FFFFFF;
-          top: calc(50% - 20px);
-          left: calc(50% - 20px);
-          font-size: 30px;
+          top: calc(50% - 13px);
+          left: calc(50% - 13px);
+          font-size: 24px;
           align-items: center;
           justify-content: center;
           font-family: Arial, Helvetica, sans-serif;
@@ -208,26 +208,11 @@
           }
         }
 
-        picture {
-          display: block;
-          position: relative;
-          height: 100%;
-          overflow: scroll;
-          border-bottom-left-radius: 5px;
-          border-bottom-right-radius: 5px;
-
-          -ms-overflow-style: none;
-
-          &::-webkit-scrollbar {
-            display: none;
-          }
-        }
-
         &.active {
-          left: 5%;
-          right: 5%;
+          left: 6%;
+          right: 6%;
           bottom: 0%;
-          height: 100% !important;
+          max-height: 100% !important;
           z-index: 12;
           transform: translateZ(15vw);
 
@@ -236,8 +221,8 @@
           }
 
           .expand-close {
-            top: -40px;
-            left: -20px;
+            top: -16px;
+            left: -12px;
             transform: rotate(-135deg);
 
             &:hover {
