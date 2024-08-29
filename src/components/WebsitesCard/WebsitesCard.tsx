@@ -89,7 +89,11 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
 
   return (
     <React.Fragment>
-      <Row className={cn(s.website, s.root, reverse && s.reverse)} aria-label="axle-workout">
+      <Row
+        className={cn(s.website, s.root, reverse && s.reverse)}
+        aria-label="axle-workout"
+        gap={3}
+      >
         <Container className={s['website-content']} justify={'center'}>
           <Typography variant={'h4'}>{title}</Typography>
           <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
