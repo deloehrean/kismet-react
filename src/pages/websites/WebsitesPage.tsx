@@ -1,17 +1,26 @@
 import React from 'react';
 
-import cn from 'clsx';
-
-import { AxleWorkout, Column, Container, Intel, PageHeading } from 'src/components';
-import { WebsitesPageStyles as s } from 'src/pages';
+import { Column, Container, Divider, PageHeading, WebsitesCard } from 'src/components';
+import { axleImages, intelImages } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
 function WebsitesPage() {
   return (
-    <Column className={s['websites-panel']} gap={4}>
+    <Column gap={4}>
       <PageHeading title={'Websites'} subtitle={'Custom built solutions for any problem'} divider />
-      <div className="content-frame-container container">
-        <Intel />
-      </div>
+      <WebsitesCard
+        title={'Intel Design-In Tools'}
+        subtitle={'B2B Ecommerce Website'}
+        description={
+          'The Design-in Tools web store hosts multiple B2B account levels for businesses and insiders, tens of thousands of skus, and a headless theme for speed and optimization. Built on a cloud-based Magento 2 Enterprise Platform, this store was built to handle a customized shopping cart quoting system, multiple coupons, and features an extensively custom product library.'
+        }
+        poweredBy={'Magento Enterprise Cloud / ScandiPWA'}
+        toolsUsed={'React, PHP, SCSS, Composer, Node.JS, Yarn, Docker'}
+        logo={intelImages[0]?.logo}
+        gallery={intelImages[1]?.gallery}
+      />
+      <Container>
+        <Divider />
+      </Container>
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/lake-atitlan/lake-atitlan.php'); ?> */}
       {/* </div> */}
@@ -21,9 +30,17 @@ function WebsitesPage() {
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/serene-spaces/serene-spaces.php'); ?> */}
       {/* </div> */}
-      <Container className={cn(s['content-frame-container'])}>
-        <AxleWorkout />
-      </Container>
+      <WebsitesCard
+        title={'Axle Workout'}
+        subtitle={'Marketing Website'}
+        description={
+          'Axle is an Olympic barbell company that utilizes a wheel instead of weights on their barbell. This allows for a more total body workout than straight weightlifting alone and can be utilized by those not looking for strictly strength training.'
+        }
+        poweredBy={'Wordpress'}
+        toolsUsed={'SCSS, jQuery, PHP, Photoshop'}
+        logo={axleImages[0]?.logo}
+        gallery={axleImages[1]?.gallery}
+      />
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/bravo-actual/bravo-actual.php'); ?> */}
       {/* </div> */}
