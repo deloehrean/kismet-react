@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Column, Container, Divider, PageHeading, WebsitesCard } from 'src/components';
+import { Column, PageHeading, WebsitesCard } from 'src/components';
 import { axleImages, intelImages } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
 function WebsitesPage() {
@@ -18,9 +18,6 @@ function WebsitesPage() {
         logo={intelImages[0]?.logo}
         gallery={intelImages[1]?.gallery}
       />
-      <Container>
-        <Divider />
-      </Container>
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/lake-atitlan/lake-atitlan.php'); ?> */}
       {/* </div> */}
@@ -40,6 +37,8 @@ function WebsitesPage() {
         toolsUsed={'SCSS, jQuery, PHP, Photoshop'}
         logo={axleImages[0]?.logo}
         gallery={axleImages[1]?.gallery}
+        reverse
+        divider={false}
       />
       {/* <div className="content-frame-container container"> */}
       {/*  <?php include('projects/bravo-actual/bravo-actual.php'); ?> */}

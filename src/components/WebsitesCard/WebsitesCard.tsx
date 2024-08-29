@@ -1,8 +1,15 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import cn from 'clsx';
 
-import { Container, Row, Typography, WebsitesCardStyles as s, WebsiteTopper } from 'src/components';
+import {
+  Container,
+  Divider,
+  Row,
+  Typography,
+  WebsitesCardStyles as s,
+  WebsiteTopper,
+} from 'src/components';
 
 type WebsitesCardProps = {
   title: string;
@@ -12,6 +19,8 @@ type WebsitesCardProps = {
   toolsUsed?: string;
   logo: string;
   gallery?: any[] | undefined;
+  reverse?: boolean;
+  divider?: boolean;
 };
 
 const WebsitesCard: React.FC<WebsitesCardProps> = ({
@@ -22,6 +31,8 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   toolsUsed,
   logo,
   gallery,
+  reverse = false,
+  divider = true,
 }) => {
   const [loading, setLoading] = useState('loading');
   const [activeIndex, setActiveIndex] = useState(null);
@@ -77,28 +88,35 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   });
 
   return (
-    <Row className={cn(s.website, s.root)} aria-label="axle-workout">
-      <Container className={s['website-content']} justify={'center'}>
-        <Typography variant={'h4'}>{title}</Typography>
-        <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
-          {subtitle}
-        </Typography>
-        <Typography variant={'body2'} gutter>
-          {description}
-        </Typography>
-        <Typography variant={'body1'}>
-          <strong>Powered by:</strong> {poweredBy}
-        </Typography>
-        <Typography variant={'body1'}>
-          <strong>Tools used:</strong> {toolsUsed}
-        </Typography>
-      </Container>
-      <Container className={cn(s['website-screenshots'], s.active, loading && s[`${loading}`])}>
-        {renderLogo()}
-        {/* {console.log(logo)} */}
-        {renderedGallery}
-      </Container>
-    </Row>
+    <React.Fragment>
+      <Row className={cn(s.website, s.root, reverse && s.reverse)} aria-label="axle-workout">
+        <Container className={s['website-content']} justify={'center'}>
+          <Typography variant={'h4'}>{title}</Typography>
+          <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
+            {subtitle}
+          </Typography>
+          <Typography variant={'body2'} gutter>
+            {description}
+          </Typography>
+          <Typography variant={'body1'}>
+            <strong>Powered by:</strong> {poweredBy}
+          </Typography>
+          <Typography variant={'body1'}>
+            <strong>Tools used:</strong> {toolsUsed}
+          </Typography>
+        </Container>
+        <Container className={cn(s['website-screenshots'], s.active, loading && s[`${loading}`])}>
+          {renderLogo()}
+          {/* {console.log(logo)} */}
+          {renderedGallery}
+        </Container>
+      </Row>
+      {divider && (
+        <Container>
+          <Divider />
+        </Container>
+      )}
+    </React.Fragment>
   );
 };
 
