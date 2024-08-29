@@ -95,19 +95,27 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         gap={3}
       >
         <Container className={s['website-content']} justify={'center'}>
-          <Typography variant={'h4'}>{title}</Typography>
-          <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
-            {subtitle}
-          </Typography>
-          <Typography variant={'body2'} gutter>
-            {description}
-          </Typography>
-          <Typography variant={'body1'}>
-            <strong>Powered by:</strong> {poweredBy}
-          </Typography>
-          <Typography variant={'body1'}>
-            <strong>Tools used:</strong> {toolsUsed}
-          </Typography>
+          {title && <Typography variant={'h4'}>{title}</Typography>}
+          {subtitle && (
+            <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
+              {subtitle}
+            </Typography>
+          )}
+          {description && (
+            <Typography variant={'body2'} gutter>
+              {description}
+            </Typography>
+          )}
+          {poweredBy && (
+            <Typography variant={'body1'}>
+              <strong>Powered by:</strong> {poweredBy}
+            </Typography>
+          )}
+          {toolsUsed && (
+            <Typography variant={'body1'}>
+              <strong>Tools used:</strong> {toolsUsed}
+            </Typography>
+          )}
         </Container>
         <Container className={cn(s['website-screenshots'], s.active, loading && s[`${loading}`])}>
           {renderLogo()}

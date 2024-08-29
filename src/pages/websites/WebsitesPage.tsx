@@ -1,7 +1,15 @@
 import React from 'react';
 
 import { Column, PageHeading, WebsitesCard } from 'src/components';
-import { axleImages, intelImages } from 'src/components/WebsitesCard/WebsitesCardConstants';
+import {
+  axleImages,
+  bangoImages,
+  bravoImages,
+  intelImages,
+  lakeAtitlanImages,
+  petersFruitImages,
+  sereneSpacesImages,
+} from 'src/components/WebsitesCard/WebsitesCardConstants';
 
 function WebsitesPage() {
   return (
@@ -18,15 +26,41 @@ function WebsitesPage() {
         logo={intelImages[0]?.logo}
         gallery={intelImages[1]?.gallery}
       />
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/lake-atitlan/lake-atitlan.php'); ?> */}
-      {/* </div> */}
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/bango-bowls/bango-bowls.php'); ?> */}
-      {/* </div> */}
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/serene-spaces/serene-spaces.php'); ?> */}
-      {/* </div> */}
+      <WebsitesCard
+        title={'University of Alabama Huntsville & NASA: Lake Atitlán Project'}
+        subtitle={'Algal Satellite & Data Solution'}
+        description={
+          'By leveraging the power of AI and satellite remote sensing, the aim of the Lake Atitlán Project is to inform authorities about when algal blooms are expected, so preventative measures against their negative economic and environmental impacts can be enforced.'
+        }
+        poweredBy={'Concrete CMS / Sentinel-2 Explorer / GEE Planet Labs'}
+        toolsUsed={'PHP, LESS, Composer, Node.js'}
+        logo={lakeAtitlanImages[0]?.logo}
+        gallery={lakeAtitlanImages[1]?.gallery}
+        reverse
+      />
+      <WebsitesCard
+        title={'Bango Bowls'}
+        subtitle={'Marketing Website with Store Locator'}
+        description={
+          'Bango Bowls is an açaí and smoothie restaurant based out of the Northeast. They have multiple locations and needed a website to showcase them all as well as their full menu for each location with an integrated online ordering tool.'
+        }
+        poweredBy={'Concrete CMS'}
+        toolsUsed={'LESS, PHP, jQuery, Composer, Photoshop'}
+        logo={bangoImages[0]?.logo}
+        gallery={bangoImages[1]?.gallery}
+      />
+      <WebsitesCard
+        title={'Serene Spaces Living'}
+        subtitle={'Ecommerce website'}
+        description={
+          'Serene Spaces Living is an eCommerce site that sells insanely cool handmade home goods, decorations, and luxurious accessories. Most of the products are imported from around the world and created by street vendors to be brought to your door. They have a brick-and-mortar store in Manhattan but needed a way of selling their backstock and inventory online. Giving them a Magento website was exactly what they needed and have been selling on it very successfully for years.'
+        }
+        poweredBy={'Magento'}
+        toolsUsed={'PHP, LESS, jQuery, Composer, Photoshop'}
+        logo={sereneSpacesImages[0]?.logo}
+        gallery={sereneSpacesImages[1]?.gallery}
+        reverse
+      />
       <WebsitesCard
         title={'Axle Workout'}
         subtitle={'Marketing Website'}
@@ -37,14 +71,31 @@ function WebsitesPage() {
         toolsUsed={'SCSS, jQuery, PHP, Photoshop'}
         logo={axleImages[0]?.logo}
         gallery={axleImages[1]?.gallery}
+      />
+      <WebsitesCard
+        title={'Bravo Actual'}
+        subtitle={'Ecommerce website'}
+        description={
+          'Bravo Actual is a workout supplement company. They wanted to move away from their X-Cart storefront but be put on a website platform that could both support a small Ecommerce plugin and be content-rich. Rebuilding their website on a Concrete CMS solution did exactly that and allowed for expansions in the future.'
+        }
+        poweredBy={'Concrete CMS w/ Ecommerce Add-on'}
+        toolsUsed={'LESS, PHP, jQuery, Photoshop'}
+        logo={bravoImages[0]?.logo}
+        gallery={bravoImages[1]?.gallery}
         reverse
+      />
+      <WebsitesCard
+        title={`Peter's Fruit`}
+        subtitle={'Marketing website'}
+        description={
+          "Peter's Fruit Company needed a way to show all the available produce during each rotating season. I put together a simple dynamic site to rotate their produce in and out of categories easily and painlessly."
+        }
+        poweredBy={'Concrete CMS'}
+        toolsUsed={'LESS, PHP, jQuery, Photoshop'}
+        logo={petersFruitImages[0]?.logo}
+        gallery={petersFruitImages[1]?.gallery}
         divider={false}
       />
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/bravo-actual/bravo-actual.php'); ?> */}
-      {/* </div> */}
-      {/* <div className="content-frame-container container"> */}
-      {/*  <?php include('projects/peters-fruit/peters-fruit.php'); ?> */}
       {/* </div> */}
       {/* <div className="container extra-content"> */}
       {/*  <h3 style="text-align: center;">From 'ugh...' to 'Ohhhhh!'</h3> */}
