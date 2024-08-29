@@ -24,7 +24,6 @@
 }
 
 .website {
-
   &-content {
     width: 32%;
     @media (max-width: 767px) {
@@ -74,7 +73,7 @@
       }
 
       &-body {
-        overflow: scroll;
+        overflow: hidden;
       }
 
       &-image {
@@ -84,7 +83,7 @@
         right: 30%;
         max-height: 80%;
         box-shadow: 0 0 40px -10px #000000;
-        transition: all 0.5s ease-in-out;
+        transition: all 0.35s ease;
         cursor: pointer;
         border-radius: 5px;
         display: flex;
@@ -205,6 +204,10 @@
           z-index: 12;
           transform: translateZ(15vw);
 
+          .website-body {
+            overflow: scroll;
+          }
+
           &::before {
             top: -4.5%;
           }
@@ -223,7 +226,6 @@
     }
 
     &.loading {
-
       .website-image {
         max-height: 0% !important;
         bottom: 10%;
