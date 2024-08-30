@@ -93,6 +93,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         className={cn(s.website, s.root, reverse && s.reverse)}
         aria-label="axle-workout"
         gap={3}
+        breakpoint={'md'}
       >
         <Container className={s['website-content']} justify={'center'}>
           {title && <Typography variant={'h4'}>{title}</Typography>}

@@ -1,18 +1,26 @@
+@use 'src/assets/mixins' as m;
+
 .root {
   align-items: center;
   border-block-start: 1px solid var(--divider);
   display: flex;
-  gap: var(--size-6);
+  gap: var(--size-3);
   justify-content: center;
-  padding: var(--size-2) var(--size-3);
+  padding: var(--size-2) var(--size-1);
   width: 100%;
   height: var(--footer-height);
+
+  @include m.breakpoint(sm, min) {
+    padding: var(--size-2) var(--size-3);
+    gap: var(--size-6);
+  }
 
   .links {
     ul {
       display: flex;
       justify-content: center;
       gap: var(--size-1);
+      white-space: nowrap;
 
       li a {
         color: var(--text-primary);

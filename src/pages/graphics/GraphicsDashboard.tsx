@@ -24,7 +24,7 @@ function GraphicsDashboard() {
         Here you will find a small selection of the best items from each child category displayed.
         They will have links to go to the full category page.
       </Typography>
-      <Row gap={2}>
+      <Row gap={2} breakpoint={'md'}>
         <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
           <Column gap={2}>
             <Column>

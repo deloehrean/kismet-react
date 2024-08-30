@@ -1,3 +1,5 @@
+@use 'src/assets/mixins' as m;
+
 .graphics-panel {
   position: relative;
 
@@ -7,7 +9,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @media screen and (min-width: 767px) {
+    @include m.breakpoint(lg, min) {
       flex-direction: row;
 
       .page-title {

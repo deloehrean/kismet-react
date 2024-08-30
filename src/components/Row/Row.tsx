@@ -9,10 +9,16 @@ interface RowProps {
   children?: React.ReactNode;
   el?: HTMLElement;
   gap?: number;
+  breakpoint?: string;
 }
 
-const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0 }) => {
-  const rootClassName = cn(className, s.root, gap && s[`gap-${gap}`]);
+const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0, breakpoint = 'sm' }) => {
+  const rootClassName = cn(
+    className,
+    s.root,
+    gap && s[`gap-${gap}`],
+    breakpoint && s[`break-${breakpoint}`],
+  );
 
   const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
 

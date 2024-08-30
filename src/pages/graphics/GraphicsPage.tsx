@@ -3,13 +3,13 @@ import React from 'react';
 import cn from 'clsx';
 import { Outlet } from 'react-router-dom';
 
-import { Container, Divider, LinkStyled, Typography } from 'src/components';
+import { Container, Divider, LinkStyled, Row, Typography } from 'src/components';
 import { GraphicsPageStyles as s } from 'src/pages';
 
 function GraphicsPage() {
   return (
     <Container className={s['graphics-panel']}>
-      <div className={cn(s['subnav-container'], s.container)}>
+      <Row className={cn(s['subnav-container'], s.container)}>
         <LinkStyled to={'/graphics'}>
           <Typography variant={'h1'} className={s['page-title']}>
             Graphic Design
@@ -48,7 +48,7 @@ function GraphicsPage() {
             </LinkStyled>
           </li>
         </ul>
-      </div>
+      </Row>
       <Divider spacing />
       <Outlet />
     </Container>

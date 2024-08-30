@@ -1,3 +1,5 @@
+@use 'src/assets/mixins' as m;
+
 .root {
   display: flex;
   flex-direction: row;
@@ -48,5 +50,35 @@
 
   &.gap-12 {
     gap: var(--size-12);
+  }
+
+  &.break-xl {
+    @include m.breakpoint(xl, max) {
+      flex-direction: column !important;
+    }
+  }
+
+  &.break-lg {
+    @include m.breakpoint(lg, max) {
+      flex-direction: column !important;
+    }
+  }
+
+  &.break-md {
+    @include m.breakpoint(md, max) {
+      flex-direction: column !important;
+    }
+  }
+
+  &.break-sm {
+    @include m.breakpoint(sm, max) {
+      flex-direction: column !important;
+    }
+  }
+
+  &.break-xs {
+    @include m.breakpoint(xs, max) {
+      flex-direction: column !important;
+    }
   }
 }
