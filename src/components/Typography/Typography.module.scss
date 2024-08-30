@@ -1,3 +1,5 @@
+@use 'src/assets/mixins' as m;
+
 .root {
   font-weight: 400;
   line-height: 1.2;
@@ -9,18 +11,30 @@
     font-size: 2.75rem;
     font-weight: 700;
     line-height: 1.4;
+
+    @include m.breakpoint(md, max) {
+      font-size: 2.5rem;
+    }
   }
 
   &.h2 {
     font-family: var(--font-fancy), sans-serif;
     font-size: 2.25rem;
     font-weight: 700;
+
+    @include m.breakpoint(md, max) {
+      font-size: 2rem;
+    }
   }
 
   &.h3 {
     font-family: var(--font-fancy), sans-serif;
     font-size: 2rem;
     font-weight: 500;
+
+    @include m.breakpoint(md, max) {
+      font-size: 1.85rem;
+    }
   }
 
   &.h4 {
@@ -29,12 +43,20 @@
     line-height: 1;
     font-weight: 300;
     text-transform: uppercase;
+
+    @include m.breakpoint(md, max) {
+      font-size: 1.65rem;
+    }
   }
 
   &.h5 {
     font-family: var(--font-compact), sans-serif;
     font-size: 1.65rem;
     font-weight: 400;
+
+    @include m.breakpoint(md, max) {
+      font-size: 1.5rem;
+    }
   }
 
   &.h6 {
@@ -43,6 +65,10 @@
     line-height: 1;
     font-weight: 300;
     text-transform: uppercase;
+
+    @include m.breakpoint(md, max) {
+      font-size: 1.35rem;
+    }
   }
 
   &.subtitle1 {
@@ -68,7 +94,7 @@
 
   &.overline {
     font-family: var(--font-sans), sans-serif;
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     letter-spacing: 1px;
     line-height: 1.5;
     text-transform: uppercase;
@@ -93,7 +119,7 @@
   &.tooltip {
     font-family: var(--font-sans), sans-serif;
     text-transform: uppercase;
-    font-size: 0.625rem;
+    font-size: 0.75rem;
     font-weight: 200;
   }
 
