@@ -9,6 +9,20 @@
 
   .content {
     position: relative;
+
+    @media all and (max-width: 800px) {
+      flex-direction: column;
+
+      .logo {
+        height: 80px;
+        width: 180px;
+        justify-content: center;
+        
+        svg {
+          height: 100%;
+        }
+      }
+    }
   }
 
   .collage-carousel {

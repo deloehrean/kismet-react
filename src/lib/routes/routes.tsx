@@ -12,14 +12,14 @@ const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 
 export const routes: RoutePathDefinition[] = [
-  { path: '/', element: <Homepage />, title: 'home', color: 'rust', index: true },
+  { path: '/', element: <Homepage />, title: 'Kismet', color: 'rust', index: true, nav: true },
   { path: '*', element: <FourOhFourPage />, title: 'Not Found', color: 'rust' },
-  { path: '/home', element: <Homepage />, title: 'home', color: 'rust', index: true },
-  { path: '/theme', element: <ThemePage />, title: 'Theme', color: 'rust', nav: true },
+  { path: '/home', element: <Homepage />, title: 'Kismet', color: 'rust', index: true },
+  { path: '/theme', element: <ThemePage />, title: 'Theme', color: 'rust' },
   {
     path: '/websites',
     element: <WebsitesPage />,
-    title: 'Web Dev',
+    title: 'Websites',
     tree: 'websites',
     color: 'dusk',
     nav: true,
@@ -51,7 +51,6 @@ export const routes: RoutePathDefinition[] = [
     title: 'Branding',
     tree: 'branding',
     color: 'aqua',
-    nav: true,
   },
   {
     path: '/ecommerce',
@@ -59,6 +58,5 @@ export const routes: RoutePathDefinition[] = [
     title: 'eCommerce',
     tree: 'ecommerce',
     color: 'plum',
-    nav: true,
   },
 ];
