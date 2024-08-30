@@ -1,3 +1,5 @@
+@use 'mixins' as m;
+
 @import 'material';
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
@@ -9,7 +11,7 @@
   --font-fancy: 'Kaoly', serif;
 
   /*******************
-  PALLET - LIGHT MODE
+  PALETTE - LIGHT MODE
   *******************/
 
   // Text
@@ -249,13 +251,17 @@
   --size-11: 5.5rem;
   --size-12: 6rem;
 
-  --appbar-height: 126px;
+  --appbar-height: 70px;
   --footer-height: 54px;
   --main-body-max-height: calc(100vh - var(--appbar-height) - var(--footer-height));
+
+  @include m.breakpoint('681px', min) {
+    --appbar-height: 120px;
+  }
 }
 
 /*******************
-PALLET - DARK MODE
+PALETTE - DARK MODE
 *******************/
 
 [data-theme="dark-theme"] {

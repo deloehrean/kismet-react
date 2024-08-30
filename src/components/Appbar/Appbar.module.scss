@@ -3,26 +3,13 @@
   display: flex;
   flex-direction: row;
   height: var(--appbar-height);
-  padding-inline: 24px;
+  padding-inline-end: var(--size-2);
+  padding-inline-start: var(--size-1);
   width: 100%;
   position: relative;
 
   .content {
     position: relative;
-
-    @media all and (max-width: 800px) {
-      flex-direction: column;
-
-      .logo {
-        height: 80px;
-        width: 180px;
-        justify-content: center;
-        
-        svg {
-          height: 100%;
-        }
-      }
-    }
   }
 
   .collage-carousel {
@@ -41,17 +28,30 @@
   }
 
   .logo {
-    width: 300px;
+    margin: var(--size-1) auto;
+    height: auto;
+    transition: all .3s ease;
 
-    path {
-      -webkit-filter: drop-shadow(0 0 8px var(--text-contrast));
-      filter: drop-shadow(0 0 8px var(--text-contrast));
+    @media all and (max-width: 680px) {
+      //height: 60px;
+      opacity: 0;
+      width: 10px;
     }
 
     a {
       display: flex;
       color: var(--common-white-main);
       align-items: center;
+
+      svg {
+        width: 100%;
+        height: auto;
+
+        path {
+          -webkit-filter: drop-shadow(0 0 8px var(--text-contrast));
+          filter: drop-shadow(0 0 8px var(--text-contrast));
+        }
+      }
     }
   }
 
@@ -60,6 +60,10 @@
     flex: 1;
     justify-content: flex-end;
     align-items: end;
+
+    @media all and (max-width: 680px) {
+      align-items: center;
+    }
   }
 }
 

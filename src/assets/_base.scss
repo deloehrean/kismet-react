@@ -45,8 +45,8 @@ main {
 
   > div {
     padding: var(--size-4) var(--size-3);
-    overflow-x: scroll;
-    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
   }
 }
 

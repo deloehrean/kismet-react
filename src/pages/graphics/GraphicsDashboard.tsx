@@ -19,99 +19,96 @@ import teesStyles from 'src/pages/graphics/tees/TeesPage.module.scss';
 
 function GraphicsDashboard() {
   return (
-    <Container>
-      <Column gap={4}>
-        <Typography variant={'h4'}>This is the graphics dashboard</Typography>
-        <Typography variant={'body1'}>
-          Here you will find a small selection of the best items from each child category displayed.
-          They will have links to go to the full category page.
-        </Typography>
-        <Row gap={2}>
-          <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-            <Column gap={2}>
-              <Column>
-                <Typography variant={'h6'}>Album Artwork</Typography>
-                <Typography variant={'overline'} color={'secondary'}>
-                  CD, Vinyl, Cassette
-                </Typography>
-              </Column>
-              <Divider />
-              <Typography variant={'body2'} gutter>
-                Since 2000, I have been designing album artwork for bands from all over the country.
-                It allows me to showcase both digital and illustrative talents and really stretch
-                the imagination.
+    <Column gap={4}>
+      <Typography variant={'body1'}>
+        Here you will find a small selection of the best items from each child category displayed.
+        They will have links to go to the full category page.
+      </Typography>
+      <Row gap={2}>
+        <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
+          <Column gap={2}>
+            <Column>
+              <Typography variant={'h6'}>Album Artwork</Typography>
+              <Typography variant={'overline'} color={'secondary'}>
+                CD, Vinyl, Cassette
               </Typography>
-              <Row className={albumStyles['content-frame-container']}>
-                <div className={cn(albumStyles['album-group'])}>
-                  <div className={albumStyles['active-reset']}>
-                    <AlucardAlbum />
-                  </div>
-                </div>
-                <div className={cn(albumStyles['album-group'])}>
-                  <div className={albumStyles['active-reset']}>
-                    <ElephantomAlbum />
-                  </div>
-                </div>
-                <div className={cn(albumStyles['album-group'])}>
-                  <div className={albumStyles['active-reset']}>
-                    <AsecondtoolateAlbum />
-                  </div>
-                </div>
-                <div className={cn(albumStyles['album-group'])}>
-                  <div className={albumStyles['active-reset']}>
-                    <AndrewLoehrAlbum />
-                  </div>
-                </div>
-                <div className={cn(albumStyles['album-group'])}>
-                  <div className={albumStyles['active-reset']}>
-                    <RoydenAlbum />
-                  </div>
-                </div>
-              </Row>
-              <LinkStyled className={s.button} to={'/graphics/albums'}>
-                View All
-              </LinkStyled>
             </Column>
-          </Container>
-          <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-            <Column gap={2}>
-              <Column>
-                <Typography variant={'h6'}>Tee Shirt Designs</Typography>
-                <Typography variant={'overline'} color={'secondary'}>
-                  From concept to wearable
-                </Typography>
-              </Column>
-              <Divider />
-              <Typography variant={'body2'} gutter>
-                I have designed over 100 tee shirts for multiple bands, companies, corporate
-                outings, and events... mostly bands. Getting to work with artists on how they want
-                to brand themselves has been a highlight of my career.
+            <Divider />
+            <Typography variant={'body2'} gutter>
+              Since 2000, I have been designing album artwork for bands from all over the country.
+              It allows me to showcase both digital and illustrative talents and really stretch the
+              imagination.
+            </Typography>
+            <Row className={albumStyles['content-frame-container']}>
+              <div className={cn(albumStyles['album-group'])}>
+                <div className={albumStyles['active-reset']}>
+                  <AlucardAlbum />
+                </div>
+              </div>
+              <div className={cn(albumStyles['album-group'])}>
+                <div className={albumStyles['active-reset']}>
+                  <ElephantomAlbum />
+                </div>
+              </div>
+              <div className={cn(albumStyles['album-group'])}>
+                <div className={albumStyles['active-reset']}>
+                  <AsecondtoolateAlbum />
+                </div>
+              </div>
+              <div className={cn(albumStyles['album-group'])}>
+                <div className={albumStyles['active-reset']}>
+                  <AndrewLoehrAlbum />
+                </div>
+              </div>
+              <div className={cn(albumStyles['album-group'])}>
+                <div className={albumStyles['active-reset']}>
+                  <RoydenAlbum />
+                </div>
+              </div>
+            </Row>
+            <LinkStyled className={s.button} to={'/graphics/albums'}>
+              View All
+            </LinkStyled>
+          </Column>
+        </Container>
+        <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
+          <Column gap={2}>
+            <Column>
+              <Typography variant={'h6'}>Tee Shirt Designs</Typography>
+              <Typography variant={'overline'} color={'secondary'}>
+                From concept to wearable
               </Typography>
-              <Row className={teesStyles['content-frame-container']}>
-                <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                  <img src={tee1} />
-                </div>
-                <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                  <img src={tee2} />
-                </div>
-                <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                  <img src={tee3} />
-                </div>
-                <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                  <img src={tee4} />
-                </div>
-                <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                  <img src={tee5} />
-                </div>
-              </Row>
-              <LinkStyled className={s.button} to={'/graphics/tees'}>
-                View All
-              </LinkStyled>
             </Column>
-          </Container>
-        </Row>
-      </Column>
-    </Container>
+            <Divider />
+            <Typography variant={'body2'} gutter>
+              I have designed over 100 tee shirts for multiple bands, companies, corporate outings,
+              and events... mostly bands. Getting to work with artists on how they want to brand
+              themselves has been a highlight of my career.
+            </Typography>
+            <Row className={teesStyles['content-frame-container']}>
+              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
+                <img src={tee1} />
+              </div>
+              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
+                <img src={tee2} />
+              </div>
+              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
+                <img src={tee3} />
+              </div>
+              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
+                <img src={tee4} />
+              </div>
+              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
+                <img src={tee5} />
+              </div>
+            </Row>
+            <LinkStyled className={s.button} to={'/graphics/tees'}>
+              View All
+            </LinkStyled>
+          </Column>
+        </Container>
+      </Row>
+    </Column>
   );
 }
 

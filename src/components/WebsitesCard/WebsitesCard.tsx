@@ -57,7 +57,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   const renderLogo = () => {
     return (
       <div className={s['website-logo']}>
-        <img src={logo} alt="" />
+        <img src={logo} alt={title} />
       </div>
     );
   };

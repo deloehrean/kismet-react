@@ -17,6 +17,7 @@ interface ContainerProps {
   variant?: 'outline' | 'darkish' | 'green' | 'blue' | 'purple';
   elevation?: number;
   onClick?: () => void;
+  gap?: number;
 }
 
 const Container: FC<ContainerProps> = ({
@@ -32,17 +33,19 @@ const Container: FC<ContainerProps> = ({
   elevation,
   variant,
   onClick = undefined,
+  gap = 0,
 }) => {
   const rootClassName = cn(
     className,
     styled && s.styled,
-    direction && s[direction],
+    s[direction],
     align && s[`align-${align}`],
     justify && s[`justify-${justify}`],
     full && s.full,
     (styled && rounded === 'extra' && s['extra-rounded']) || (rounded && s.rounded),
     styled && variant && s[variant],
     styled && elevation && s[`elevation-${elevation}`],
+    gap && s[`gap-${gap}`],
   );
 
   const [opacity, setOpacity] = useState(0);

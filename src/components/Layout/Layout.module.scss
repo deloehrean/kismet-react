@@ -1,6 +1,5 @@
 .root {
-  display: flex;
-  flex-direction: row;
+  min-height: 100%;
 
   .sidebarWrap {
     width: 240px;
@@ -8,15 +7,16 @@
 
   .pageWrap {
     display: flex;
-    height: 100vh;
-    flex: 1;
     flex-direction: column;
+    height: 100%;
 
     main {
+      display: flex;
       flex: 1;
-      overflow: visible;
+      overflow-x: scroll;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: var(--shadow-elevation-8);
+      min-height: var(--main-body-max-height);
 
       &.rust {
         background: var(--home-page-color);
