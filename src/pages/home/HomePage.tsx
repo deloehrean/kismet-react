@@ -31,7 +31,7 @@ function HomePage() {
       </Container>
       <Container align={'center'} className={s['resume-downloads']}>
         <Typography variant={'h5'} gutter>
-          Hire me!
+          <span className={s.tight}>Hire</span> me!
         </Typography>
         <Typography variant={'code'} gutter>
           (Find my contact information on my resume)

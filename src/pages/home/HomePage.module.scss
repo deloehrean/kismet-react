@@ -69,6 +69,10 @@
   }
 }
 
+.tight {
+  letter-spacing: -2px;
+}
+
 @keyframes jump {
   0% {
     transform: translateY(100%);
