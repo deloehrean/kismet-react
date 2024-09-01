@@ -10,7 +10,7 @@
     gap: var(--size-2);
   }
 
-  @include m.breakpoint(sm, min) {
+  @include m.breakpoint('380px', min) {
     gap: var(--size-1);
   }
 

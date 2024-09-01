@@ -4,14 +4,17 @@
   align-items: center;
   border-block-start: 1px solid var(--divider);
   display: flex;
-  gap: var(--size-3);
+  flex-direction: column;
+  gap: 0;
   justify-content: center;
   padding: var(--size-2) var(--size-1);
+  line-height: 1rem;
   width: 100%;
   height: var(--footer-height);
 
   @include m.breakpoint(sm, min) {
     padding: var(--size-2) var(--size-3);
+    flex-direction: row;
     gap: var(--size-6);
   }
 
