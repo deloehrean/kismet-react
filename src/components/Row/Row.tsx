@@ -12,7 +12,7 @@ interface RowProps {
   breakpoint?: string;
 }
 
-const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0, breakpoint = 'sm' }) => {
+const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0, breakpoint }) => {
   const rootClassName = cn(
     className,
     s.root,
