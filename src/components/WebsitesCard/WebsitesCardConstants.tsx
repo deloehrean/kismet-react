@@ -15,6 +15,12 @@ import BravoLogo from 'src/assets/images/websites/bravo-actual/bravo-actual-logo
 import BravoProducts from 'src/assets/images/websites/bravo-actual/bravo-actual-products.jpg';
 import BravoShirt1 from 'src/assets/images/websites/bravo-actual/bravo-actual-shirt-01.jpg';
 import BravoShirt2 from 'src/assets/images/websites/bravo-actual/bravo-actual-shirt-02.jpg';
+import ClearAcaAddEmployees from 'src/assets/images/websites/clear-aca/clear-aca-add-employee.jpg';
+import ClearAcaAdminManagement from 'src/assets/images/websites/clear-aca/clear-aca-admin-management.jpg';
+import ClearAcaAllEmployees from 'src/assets/images/websites/clear-aca/clear-aca-all-employees.jpg';
+import ClearAcaContact from 'src/assets/images/websites/clear-aca/clear-aca-contact.jpg';
+import ClearAcaLogo from 'src/assets/images/websites/clear-aca/clear-aca-logo.svg';
+import ClearAcaReportingHome from 'src/assets/images/websites/clear-aca/clear-aca-reporting-home.jpg';
 import AsensiaHomepage from 'src/assets/images/websites/extra/asensia-homepage-template.jpg';
 import FareriLanding1 from 'src/assets/images/websites/extra/fareri-landing-page-01.jpg';
 import FareriLanding2 from 'src/assets/images/websites/extra/fareri-landing-page-02.jpg';
@@ -36,6 +42,11 @@ import PetersFruitCategory from 'src/assets/images/websites/peters-fruit/peters-
 import PetersFruitHomepage from 'src/assets/images/websites/peters-fruit/peters-fruit-homepage.jpg';
 import PetersFruitLogo from 'src/assets/images/websites/peters-fruit/peters-fruit-logo.png';
 import PetersFruitSubCategory from 'src/assets/images/websites/peters-fruit/peters-fruit-sub-category.jpg';
+import ProsemiHomepage from 'src/assets/images/websites/prosemi/prosemi-homepage.jpg';
+import ProsemiLogo from 'src/assets/images/websites/prosemi/prosemi-logo-white.png';
+import ProsemiQualityManagement from 'src/assets/images/websites/prosemi/prosemi-quality-management.jpg';
+import ProsemiRequestAQuote from 'src/assets/images/websites/prosemi/prosemi-request-a-quote.jpg';
+import ProsemiServices from 'src/assets/images/websites/prosemi/prosemi-services.jpg';
 import SereneSpacesPopup from 'src/assets/images/websites/serene-spaces/serene-spaces-category-popup.jpg';
 import SereneSpacesCategory from 'src/assets/images/websites/serene-spaces/serene-spaces-category.jpg';
 import SereneSpacesHomepage from 'src/assets/images/websites/serene-spaces/serene-spaces-home.jpg';
@@ -120,6 +131,33 @@ export const bravoImages = [
     ],
   },
 ];
+export const clearAcaImages = [
+  { logo: ClearAcaLogo },
+  {
+    gallery: [
+      {
+        image: ClearAcaReportingHome,
+        position: 'a',
+      },
+      {
+        image: ClearAcaContact,
+        position: 'b',
+      },
+      {
+        image: ClearAcaAdminManagement,
+        position: 'c',
+      },
+      {
+        image: ClearAcaAllEmployees,
+        position: 'd',
+      },
+      {
+        image: ClearAcaAddEmployees,
+        position: 'e',
+      },
+    ],
+  },
+];
 export const extraImages = [
   {
     gallery: [
@@ -154,11 +192,11 @@ export const intelImages = [
       },
       {
         image: IntelCategory,
-        position: 'b',
+        position: 'c',
       },
       {
         image: IntelOrders,
-        position: 'c',
+        position: 'b',
       },
       {
         image: IntelProduct,
@@ -209,6 +247,29 @@ export const petersFruitImages = [
       },
       {
         image: PetersFruitSubCategory,
+        position: 'c',
+      },
+    ],
+  },
+];
+export const prosemiImages = [
+  { logo: ProsemiLogo },
+  {
+    gallery: [
+      {
+        image: ProsemiHomepage,
+        position: 'a',
+      },
+      {
+        image: ProsemiServices,
+        position: 'b',
+      },
+      {
+        image: ProsemiQualityManagement,
+        position: 'e',
+      },
+      {
+        image: ProsemiRequestAQuote,
         position: 'c',
       },
     ],

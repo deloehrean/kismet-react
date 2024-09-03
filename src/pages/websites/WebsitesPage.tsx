@@ -5,9 +5,11 @@ import {
   axleImages,
   bangoImages,
   bravoImages,
+  clearAcaImages,
   intelImages,
   lakeAtitlanImages,
   petersFruitImages,
+  prosemiImages,
   sereneSpacesImages,
 } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
@@ -22,9 +24,32 @@ function WebsitesPage() {
           'The Design-in Tools web store hosts multiple B2B account levels for businesses and insiders, tens of thousands of skus, and a headless theme for speed and optimization. Built on a cloud-based Magento 2 Enterprise Platform, this store was built to handle a customized shopping cart quoting system, multiple coupons, and features an extensively custom product library.'
         }
         poweredBy={'Magento Enterprise Cloud / ScandiPWA'}
-        toolsUsed={'React, PHP, SCSS, Composer, Node.JS, Yarn, Docker'}
+        toolsUsed={'React, PHP, SCSS, Composer, Node.js, Yarn, GraphQL, Docker'}
         logo={intelImages[0]?.logo}
         gallery={intelImages[1]?.gallery}
+      />
+      <WebsitesCard
+        title={'Clear ACA'}
+        subtitle={'Website'}
+        description={
+          'Clear ACA is a fully functional solution for Affordable Care Act management. A fully branded headless theme was built to work as the frontend of an extensive Python backend connected to an MDM for data management.'
+        }
+        poweredBy={'React + Vite / Python'}
+        toolsUsed={'React, Typescript, SCSS, Node.js, Yarn, GraphQL'}
+        logo={clearAcaImages[0]?.logo}
+        gallery={clearAcaImages[1]?.gallery}
+        reverse
+      />
+      <WebsitesCard
+        title={'Prosemi'}
+        subtitle={'Marketing Website'}
+        description={
+          'As the leading semi-conductor testing facility in the world, Prosemi needed a new website to reflect their updated facilities and gather requests for quotes.'
+        }
+        poweredBy={'Gatsby / Contentful'}
+        toolsUsed={'React, Node.js, SCSS, Yarn, GraphQL'}
+        logo={prosemiImages[0]?.logo}
+        gallery={prosemiImages[1]?.gallery}
       />
       <WebsitesCard
         title={'University of Alabama Huntsville & NASA: Lake Atitlán Project'}
@@ -45,7 +70,7 @@ function WebsitesPage() {
           'Bango Bowls is an açaí and smoothie restaurant based out of the Northeast. They have multiple locations and needed a website to showcase them all as well as their full menu for each location with an integrated online ordering tool.'
         }
         poweredBy={'Concrete CMS'}
-        toolsUsed={'LESS, PHP, jQuery, Composer, Photoshop'}
+        toolsUsed={'LESS, PHP, jQuery, Composer'}
         logo={bangoImages[0]?.logo}
         gallery={bangoImages[1]?.gallery}
       />
@@ -56,7 +81,7 @@ function WebsitesPage() {
           'Serene Spaces Living is an eCommerce site that sells insanely cool handmade home goods, decorations, and luxurious accessories. Most of the products are imported from around the world and created by street vendors to be brought to your door. They have a brick-and-mortar store in Manhattan but needed a way of selling their backstock and inventory online. Giving them a Magento website was exactly what they needed and have been selling on it very successfully for years.'
         }
         poweredBy={'Magento'}
-        toolsUsed={'PHP, LESS, jQuery, Composer, Photoshop'}
+        toolsUsed={'PHP, LESS, jQuery, Composer'}
         logo={sereneSpacesImages[0]?.logo}
         gallery={sereneSpacesImages[1]?.gallery}
         reverse
@@ -68,7 +93,7 @@ function WebsitesPage() {
           'Axle is an Olympic barbell company that utilizes a wheel instead of weights on their barbell. This allows for a more total body workout than straight weightlifting alone and can be utilized by those not looking for strictly strength training.'
         }
         poweredBy={'Wordpress'}
-        toolsUsed={'SCSS, jQuery, PHP, Photoshop'}
+        toolsUsed={'SCSS, jQuery, PHP'}
         logo={axleImages[0]?.logo}
         gallery={axleImages[1]?.gallery}
       />
@@ -79,7 +104,7 @@ function WebsitesPage() {
           'Bravo Actual is a workout supplement company. They wanted to move away from their X-Cart storefront but be put on a website platform that could both support a small Ecommerce plugin and be content-rich. Rebuilding their website on a Concrete CMS solution did exactly that and allowed for expansions in the future.'
         }
         poweredBy={'Concrete CMS w/ Ecommerce Add-on'}
-        toolsUsed={'LESS, PHP, jQuery, Photoshop'}
+        toolsUsed={'LESS, PHP, jQuery'}
         logo={bravoImages[0]?.logo}
         gallery={bravoImages[1]?.gallery}
         reverse
@@ -91,7 +116,7 @@ function WebsitesPage() {
           "Peter's Fruit Company needed a way to show all the available produce during each rotating season. I put together a simple dynamic site to rotate their produce in and out of categories easily and painlessly."
         }
         poweredBy={'Concrete CMS'}
-        toolsUsed={'LESS, PHP, jQuery, Photoshop'}
+        toolsUsed={'LESS, PHP, jQuery'}
         logo={petersFruitImages[0]?.logo}
         gallery={petersFruitImages[1]?.gallery}
         divider={false}
