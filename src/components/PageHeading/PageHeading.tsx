@@ -11,7 +11,7 @@ type PageHeadingProps = {
 const PageHeading: React.FC<PageHeadingProps> = ({ title, divider, subtitle }) => {
   return (
     <React.Fragment>
-      <Container className={s.root}>
+      <Container className={s.root} full>
         <div className={'title'}>
           <Typography variant={'h1'} gutter>
             {title}
@@ -23,7 +23,7 @@ const PageHeading: React.FC<PageHeadingProps> = ({ title, divider, subtitle }) =
           )}
         </div>
       </Container>
-      <Container>{divider && <Divider />}</Container>
+      <Container full>{divider && <Divider />}</Container>
     </React.Fragment>
   );
 };

@@ -1,4 +1,4 @@
-import { Container, Column } from 'src/components';
+import { Column } from 'src/components';
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
 import { mapDefinitionToMenu } from './mapDefinitionToMenu';
@@ -17,11 +17,9 @@ const NavMenu = ({ routes, variant }: NavMenuProps) => {
   // );
 
   return (
-    <Container>
-      <Column gap={2} el={'nav'}>
-        {variant === 'sidebar-nav' ? renderSidebarNav : renderAppbarNav}
-      </Column>
-    </Container>
+    <Column gap={2} el={'nav'}>
+      {variant === 'sidebar-nav' ? renderSidebarNav : renderAppbarNav}
+    </Column>
   );
 };
 export default NavMenu;

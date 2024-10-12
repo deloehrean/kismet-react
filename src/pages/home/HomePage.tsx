@@ -1,11 +1,7 @@
 import React from 'react';
 
-import cn from 'clsx';
-
-import ResumePdf from 'src/assets/images/andrew-loehr_web-resume-2024.pdf';
-import ResumeImg from 'src/assets/images/andrew-loehr_web-resume-plain.jpg';
-import { Column, Container, LinkStyled, PageHeading, Typography } from 'src/components';
-import { HomePageStyles as s } from 'src/pages';
+import { Column, Container, PageHeading, Typography } from 'src/components';
+import { Resume } from 'src/components/Resume';
 
 function HomePage() {
   return (
@@ -29,20 +25,7 @@ function HomePage() {
           real impact and operate seamlessly within your business specifications.
         </Typography>
       </Container>
-      <Container align={'center'} className={s['resume-downloads']}>
-        <Typography variant={'h5'} gutter>
-          <span className={s.tight}>Hire</span> me!
-        </Typography>
-        <Typography variant={'code'} gutter>
-          (Find my contact information on my resume)
-        </Typography>
-        <div className={cn(s.resume, s['resume-plain'])}>
-          <LinkStyled to={ResumePdf} target="_blank">
-            <img src={ResumeImg} alt={'Andrew M Loehr Resume'} />
-            <span>PDF Download</span>
-          </LinkStyled>
-        </div>
-      </Container>
+      <Resume />
       <Container>
         <Typography variant={'body1'}>
           As a seasoned professional, I have extensive expertise in digital and illustration graphic

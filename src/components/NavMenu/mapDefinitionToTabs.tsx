@@ -1,9 +1,9 @@
 import React from 'react';
 
 import cn from 'clsx';
-import { generatePath, useResolvedPath, useMatch } from 'react-router-dom';
+import { generatePath, useMatch, useResolvedPath } from 'react-router-dom';
 
-import { NavMenuStyles as s, ListItem } from 'src/components';
+import { ListItem, NavMenuStyles as s } from 'src/components';
 import { concatPaths } from 'src/lib/routes/routeHelpers';
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
@@ -42,6 +42,7 @@ export function mapDefinitionToTabs(
                 dense={!!parent}
                 title={definition.title}
                 subtitle={definition.subtitle}
+                disabled={definition.protected}
               />
             ) : undefined}
           </React.Fragment>

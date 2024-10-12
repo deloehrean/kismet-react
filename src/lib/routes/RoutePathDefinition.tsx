@@ -11,4 +11,5 @@ export type RoutePathDefinition = RouteObject & {
   tree?: string;
   parent?: string;
   children?: RoutePathDefinition[];
+  protected?: boolean;
 };

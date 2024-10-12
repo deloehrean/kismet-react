@@ -7,6 +7,9 @@ import { Layout } from 'src/components';
 function App() {
   useEffect(() => {
     document.body.classList.remove('loading');
+    setTimeout(() => {
+      document.body.classList.remove('pw-loading');
+    }, 1000);
   }, []);
 
   return (

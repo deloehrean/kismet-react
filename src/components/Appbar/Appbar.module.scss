@@ -2,14 +2,26 @@
   //background: var(--background-gradient-primary-45);
   display: flex;
   flex-direction: row;
-  height: var(--appbar-height);
-  padding-inline-end: var(--size-2);
-  padding-inline-start: var(--size-1);
+  height: calc(0vh + var(--appbar-height));
   width: 100%;
   position: relative;
+  transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
 
   .content {
+    flex: 1;
     position: relative;
+    justify-content: space-between;
+
+    @media all and (max-width: 680px) {
+      gap: var(--size-4);
+    }
+  }
+
+  .spacer {
+    height: 0;
+    background: var(--primary-main);
+    box-shadow: none;
+    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .collage-carousel {
@@ -24,24 +36,25 @@
     background-size: 50%;
     width: 100vw;
     animation: bgSlide 240s linear infinite;
-    height: var(--appbar-height);
   }
 
   .logo {
-    margin: var(--size-1) auto;
-    height: auto;
-    transition: all .3s ease;
+    gap: 0;
+    width: 100%;
+    flex: 2;
 
     @media all and (max-width: 680px) {
-      //height: 60px;
-      opacity: 0;
-      width: 1px;
+      flex: unset;
     }
+
 
     a {
       display: flex;
+      margin: var(--size-1);
       color: var(--common-white-main);
       align-items: center;
+      width: 100%;
+      max-width: 301px;
 
       svg {
         width: 100%;
@@ -55,11 +68,44 @@
     }
   }
 
+  .password-wrap {
+    margin-inline: auto;
+    width: 100vw;
+    gap: 0rem;
+    max-width: 2000px;
+    align-items: center;
+    justify-content: flex-start;
+
+    @media all and (max-width: 680px) {
+      width: 80vw;
+      flex-direction: column;
+      height: 0;
+      opacity: 0;
+    }
+
+    .resume {
+      flex: 1;
+      max-width: 0;
+      min-width: 0;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .login {
+      align-items: flex-end;
+      opacity: 0;
+      max-height: 0;
+      filter: blur(100px);
+      transition: all .85s ease-in-out;
+
+      @media all and (max-width: 680px) {
+        align-items: center;
+      }
+    }
+  }
+
   .nav {
-    height: 100%;
-    flex: 1;
-    justify-content: flex-end;
-    align-items: end;
+    height: 0;
 
     @media all and (max-width: 680px) {
       align-items: center;
@@ -67,6 +113,128 @@
   }
 }
 
+:global(.password-protected) {
+  .root {
+    height: 80vh;
+    min-height: 550px;
+    transition-delay: 2s;
+
+    @media all and (max-width: 680px) {
+      height: 95vh;
+      min-height: 800px;
+    }
+
+    .collage-carousel {
+      opacity: .2;
+      background-size: 100%;
+    }
+
+    .spacer {
+      box-shadow: 0 -8px 10px rgba(0, 0, 0, .8), 0 -16px 24px rgba(0, 0, 0, .4), 0 -6px 32px rgba(0, 0, 0, .4);
+      height: 20vh;
+      transition-delay: 2s;
+
+      @media all and (max-width: 680px) {
+        height: 5vh;
+      }
+    }
+
+    .content {
+      .password-wrap {
+        max-width: 800px;
+        gap: var(--size-4);
+
+        @media all and (max-width: 680px) {
+          gap: var(--size-2);
+          height: auto;
+          opacity: 1;
+        }
+
+        .logo {
+          gap: var(--size-3);
+          transition-duration: 1s;
+
+          a {
+            max-width: 700px;
+            margin: 0;
+            opacity: 1;
+            filter: blur(0);
+            transform: scale(1);
+          }
+        }
+
+        .login {
+          opacity: 1;
+          max-height: 300px;
+          filter: blur(0);
+          transition-delay: 2s;
+        }
+
+        .resume {
+          max-width: 300px;
+          min-width: 200px;
+          opacity: 1;
+          align-items: flex-start;
+        }
+
+        .nav {
+          //height: auto;
+        }
+      }
+    }
+  }
+
+  &:global(.pw-loading) {
+    .root {
+      height: 100vh;
+
+      .spacer {
+        height: 0;
+      }
+
+      .content {
+        .password-wrap {
+          .logo {
+            a {
+              opacity: 0;
+              filter: blur(100px);
+              transform: scale(2);
+            }
+          }
+
+          .login {
+            opacity: 0;
+            max-height: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+input {
+  background: var(--text-primary);
+  color: var(--text-contrast);
+  border: none;
+  padding: var(--size-1) var(--size-2);
+  outline: none;
+  border-radius: var(--size-4);
+  font-weight: 500;
+}
+
+button[type="submit"] {
+  padding: var(--size-1) var(--size-3);
+  border-radius: var(--size-4);
+  background: var(--text-contrast);
+
+  &:hover {
+    background: var(--primary-main);
+  }
+}
+
+.login-transition {
+  transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
 
 @keyframes bgSlide {
   0% {
@@ -76,3 +244,4 @@
     background-position-x: -100vw;
   }
 }
+

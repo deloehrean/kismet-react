@@ -54,6 +54,12 @@ main {
   }
 }
 
+.password-protected {
+  main {
+    max-height: none;
+  }
+}
+
 a {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

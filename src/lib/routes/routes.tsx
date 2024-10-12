@@ -10,7 +10,11 @@ const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
 const TeesPage = lazy(() => import('src/pages/graphics/tees/TeesPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
+const isPasswordProtected = () => {
+  return document.body.classList.contains('password-protected');
+};
 
+console.log(isPasswordProtected());
 export const routes: RoutePathDefinition[] = [
   { path: '/', element: <Homepage />, title: 'Kismet', color: 'rust', index: true },
   { path: '*', element: <FourOhFourPage />, title: 'Not Found', color: 'rust' },
@@ -23,6 +27,7 @@ export const routes: RoutePathDefinition[] = [
     tree: 'websites',
     color: 'dusk',
     nav: true,
+    protected: isPasswordProtected(),
   },
   {
     path: '/graphics',
@@ -31,6 +36,7 @@ export const routes: RoutePathDefinition[] = [
     tree: 'graphics',
     color: 'olive',
     nav: true,
+    protected: isPasswordProtected(),
     children: [
       { index: true, title: 'Graphics Dashboard', Component: GraphicsDashboard, path: '' },
       {

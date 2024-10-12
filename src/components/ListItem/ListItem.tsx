@@ -1,9 +1,9 @@
 import React, { FC, useEffect } from 'react';
 
 import cn from 'clsx';
-import { To, useResolvedPath, useMatch } from 'react-router-dom';
+import { To, useMatch, useResolvedPath } from 'react-router-dom';
 
-import { ListItemStyles as s, Divider, Typography, LinkStyled, Icon, Row } from 'src/components';
+import { Divider, Icon, LinkStyled, ListItemStyles as s, Row, Typography } from 'src/components';
 
 interface ListItemProps {
   className?: string;
@@ -16,6 +16,7 @@ interface ListItemProps {
   startIcon?: any;
   endIcon?: any;
   expandBtn?: boolean;
+  disabled?: boolean;
 }
 
 const ListItem: FC<ListItemProps> = ({
@@ -29,8 +30,12 @@ const ListItem: FC<ListItemProps> = ({
   startIcon,
   endIcon,
   expandBtn = false,
+  disabled = false,
 }) => {
   const rootClassName = cn(className, s.root, dense && s.dense, color && s[color]);
+  const isPasswordProtected = () => {
+    return document.body.classList.contains('password-protected');
+  };
 
   const [isCollapsed, setIsCollapsed] = React.useState(true);
 
@@ -72,7 +77,11 @@ const ListItem: FC<ListItemProps> = ({
 
   const renderLink = (href: To) => {
     return (
-      <LinkStyled to={href} onMouseUp={() => matchEnd && collapseToggle()}>
+      <LinkStyled
+        to={href}
+        onMouseUp={() => matchEnd && collapseToggle()}
+        aria-disabled={disabled && isPasswordProtected()}
+      >
         {renderTitles(title, subtitle)}
       </LinkStyled>
     );
@@ -95,7 +104,7 @@ const ListItem: FC<ListItemProps> = ({
       className={cn(
         rootClassName,
         expandBtn && !match && s.isCollapsed,
-
+        disabled && isPasswordProtected() && s.disabled,
         match && s.active,
       )}
     >

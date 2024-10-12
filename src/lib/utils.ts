@@ -81,3 +81,7 @@ export const pathTo = (route: { parent: any }): any[] => {
 
   return [...pathTo(route.parent), route];
 };
+
+export const isPasswordProtected = () => {
+  return document.body.classList.contains('password-protected');
+};
