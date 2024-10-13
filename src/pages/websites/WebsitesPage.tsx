@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import { Column, PageHeading, Typography, WebsitesCard } from 'src/components';
 import {
@@ -15,6 +15,11 @@ import {
 import { isPasswordProtected } from 'src/lib/utils';
 
 function WebsitesPage() {
+  useEffect(() => {
+    setInterval(() => {
+      return isPasswordProtected();
+    }, 2000);
+  });
   return (
     <Column gap={4}>
       <PageHeading title={'Websites'} subtitle={'Custom built solutions for any problem'} divider />
@@ -32,9 +37,9 @@ function WebsitesPage() {
               'Led the development and customization of a specialized React.js headless theme for an ' +
               'Enterprise Magento B2B platform. Managed semantic versioning of deployments using Gitlab ' +
               'and Azure for precise version control. Integrated custom components, including tailored ' +
-              'product views,specialized payment methods, B2B invoicing, bulk international shipping ' +
+              'product views, specialized payment methods, B2B invoicing, bulk international shipping ' +
               'options, complex cart discounts, coupon configurations, and a streamlined customer-facing ' +
-              'quoting system'
+              'quoting system.'
             }
             poweredBy={'Magento Enterprise Cloud / ScandiPWA'}
             toolsUsed={'React, PHP, SCSS, Composer, Node.js, Yarn, GraphQL, Docker'}

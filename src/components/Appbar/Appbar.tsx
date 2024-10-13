@@ -27,9 +27,6 @@ const Appbar: FC<AppbarProps> = () => {
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
-  console.log(`password protected:${isPasswordProtected()}`);
-  console.log(`password accepted:${isPasswordAccepted}`);
-
   const handleInputChange = event => {
     const { value } = event.target;
     setInputValue(value);
@@ -50,12 +47,16 @@ const Appbar: FC<AppbarProps> = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (inputValue !== 'Kismet!') {
+    if (inputValue !== 'Kismet123!') {
       setError('Password is incorrect.');
     } else if (!error) {
       setIsPasswordAccepted(true);
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
       document.body.classList.remove('password-protected');
-      setTimeout(() => {
+      setInterval(() => {
         return isPasswordProtected();
       }, 2000);
     }
@@ -78,7 +79,11 @@ const Appbar: FC<AppbarProps> = () => {
             </LinkStyled>
             <Column className={s.login} gap={1}>
               <Divider />
-              <Typography variant={'overline'} color={'primary'} align={'right'}>
+              <Typography
+                variant={'caption'}
+                color={'primary'}
+                align={isMobile() ? 'center' : 'right'}
+              >
                 Enter portfolio password for full access
               </Typography>
               <Row gap={1}>

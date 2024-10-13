@@ -71,7 +71,7 @@
   .password-wrap {
     margin-inline: auto;
     width: 100vw;
-    gap: 0rem;
+    gap: 0;
     max-width: 2000px;
     align-items: center;
     justify-content: flex-start;
@@ -81,6 +81,7 @@
       flex-direction: column;
       height: 0;
       opacity: 0;
+      pointer-events: none;
     }
 
     .resume {
@@ -115,13 +116,13 @@
 
 :global(.password-protected) {
   .root {
-    height: 80vh;
-    min-height: 550px;
+    height: calc((100vh + 430px) / 2);
+    //min-height: 550px;
     transition-delay: 2s;
 
     @media all and (max-width: 680px) {
-      height: 95vh;
-      min-height: 800px;
+      height: calc((100vh + 760px) / 2);
+      //min-height: 800px;
     }
 
     .collage-carousel {
@@ -131,11 +132,11 @@
 
     .spacer {
       box-shadow: 0 -8px 10px rgba(0, 0, 0, .8), 0 -16px 24px rgba(0, 0, 0, .4), 0 -6px 32px rgba(0, 0, 0, .4);
-      height: 20vh;
+      height: calc((100vh - 430px) / 2);
       transition-delay: 2s;
 
       @media all and (max-width: 680px) {
-        height: 5vh;
+        height: calc((100vh - 760px) / 2);
       }
     }
 
@@ -143,6 +144,7 @@
       .password-wrap {
         max-width: 800px;
         gap: var(--size-4);
+        pointer-events: all;
 
         @media all and (max-width: 680px) {
           gap: var(--size-2);
@@ -178,7 +180,10 @@
         }
 
         .nav {
-          //height: auto;
+
+          @media all and (max-width: 680px) {
+            height: auto;
+          }
         }
       }
     }
