@@ -22,7 +22,7 @@ const Resume: FC<ResumeProps> = ({ inAppbar = false }) => {
     >
       {!inAppbar && (
         <React.Fragment>
-          <Typography variant={'h5'} gutter>
+          <Typography variant={'h6'} gutter>
             Resume Download
           </Typography>
           <Typography variant={'overline'} color={'secondary'} gutter>
