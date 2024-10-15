@@ -25,7 +25,7 @@ type AppbarProps = {
 const Appbar = ({ color }: AppbarProps) => {
   const [isPasswordAccepted, setIsPasswordAccepted] = useState(!isPasswordProtected);
   const [inputValue, setInputValue] = useState('');
-  const [error, setError] = useState('Please enter the password found in resume');
+  const [error, setError] = useState('');
 
   const handleInputChange = event => {
     const { value } = event.target;
@@ -48,7 +48,7 @@ const Appbar = ({ color }: AppbarProps) => {
   const handleSubmit = event => {
     event.preventDefault();
     if (inputValue === '') {
-      setError('Please enter password found in resume');
+      setError('Password required');
     } else if (inputValue !== 'Kismet123!') {
       setError('Password is incorrect');
     } else {
@@ -70,21 +70,22 @@ const Appbar = ({ color }: AppbarProps) => {
   };
 
   return (
-    <header className={cn(s.root, s['login-transition'])}>
+    <header className={s.root}>
       <div className={cn(s['collage-carousel'], s['login-transition'])} />
       <Column className={cn(s.content)}>
         <div className={cn(s.spacer, s[`${color}`])} />
         <Row className={cn(s['password-wrap'], s['login-transition'])}>
           <Column className={cn(s.logo, s['login-transition'])}>
             <KismetLogo />
-            <Column className={s.login} gap={1}>
+            <Column className={s.login} gap={2}>
               <Divider />
               <Typography
-                variant={'caption'}
+                variant={'overline'}
                 color={'primary'}
                 align={isMobile() ? 'center' : 'right'}
               >
-                Enter password from resume for full access
+                Enter password for full access
+                <br /> which can be found by downloading resume
               </Typography>
               <Row gap={1}>
                 <input

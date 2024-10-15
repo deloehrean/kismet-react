@@ -36,13 +36,13 @@ const Resume: FC<ResumeProps> = ({ inAppbar = false }) => {
           <span>PDF Download</span>
         </LinkStyled>
       </div>
-      {inAppbar && (
-        <Container>
-          <Typography variant={'code'} align={'center'}>
-            Find password in resume
-          </Typography>
-        </Container>
-      )}
+      {/* {inAppbar && ( */}
+      {/*  <Container> */}
+      {/*    <Typography variant={'code'} align={'center'}> */}
+      {/*      Download for password */}
+      {/*    </Typography> */}
+      {/*  </Container> */}
+      {/* )} */}
     </Container>
   );
 };

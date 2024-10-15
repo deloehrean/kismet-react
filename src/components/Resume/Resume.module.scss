@@ -57,11 +57,14 @@
         padding: 10px 20px;
         opacity: 0;
         transition: all 0.2s ease-in-out;
+        animation: fadeIn 0.72s ease-in-out forwards;
+        animation-delay: 2.35s;
       }
 
       &:hover {
         span {
           opacity: 1;
+          transform: translate(-50%, 50%) scale(1.05);
         }
       }
     }

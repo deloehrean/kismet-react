@@ -136,13 +136,13 @@
 
 :global(.password-protected) {
   .root {
-    height: calc((100vh + 430px) / 2);
+    height: calc((100vh + 500px) / 2);
     //min-height: 550px;
     transition-delay: 2s;
 
     @media all and (max-width: 680px) {
       height: calc((100vh + 760px) / 2);
-      //min-height: 800px;
+      min-height: 770px;
     }
 
     .collage-carousel {
@@ -152,7 +152,7 @@
 
     .spacer {
       box-shadow: var(--shadow-elevation-14);
-      height: calc((100vh - 430px) / 2);
+      height: calc((100vh - 500px) / 2);
       transition-delay: 2s;
 
       @media all and (max-width: 680px) {
@@ -204,12 +204,11 @@
         .divider {
           align-self: normal;
         }
+      }
 
-        .nav {
-
-          @media all and (max-width: 680px) {
-            height: auto;
-          }
+      .nav {
+        @media all and (max-width: 680px) {
+          height: auto;
         }
       }
     }
