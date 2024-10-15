@@ -25,7 +25,7 @@ type AppbarProps = {
 const Appbar = ({ color }: AppbarProps) => {
   const [isPasswordAccepted, setIsPasswordAccepted] = useState(!isPasswordProtected);
   const [inputValue, setInputValue] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState('Please enter the password found in resume');
 
   const handleInputChange = event => {
     const { value } = event.target;
@@ -33,7 +33,7 @@ const Appbar = ({ color }: AppbarProps) => {
 
     // Validate if the input is not empty
     if (!value.trim()) {
-      setError('This field is required.');
+      setError('This field is required');
     } else {
       setError('');
     }
@@ -47,9 +47,11 @@ const Appbar = ({ color }: AppbarProps) => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    if (inputValue !== 'Kismet123!') {
-      setError('Password is incorrect.');
-    } else if (!error) {
+    if (inputValue === '') {
+      setError('Please enter password found in resume');
+    } else if (inputValue !== 'Kismet123!') {
+      setError('Password is incorrect');
+    } else {
       setIsPasswordAccepted(true);
       window.scrollTo({
         top: 0,
@@ -68,12 +70,12 @@ const Appbar = ({ color }: AppbarProps) => {
   };
 
   return (
-    <header className={s.root}>
+    <header className={cn(s.root, s['login-transition'])}>
       <div className={cn(s['collage-carousel'], s['login-transition'])} />
       <Column className={cn(s.content)}>
         <div className={cn(s.spacer, s[`${color}`])} />
-        <Row className={cn(s['password-wrap'])}>
-          <Column className={s.logo}>
+        <Row className={cn(s['password-wrap'], s['login-transition'])}>
+          <Column className={cn(s.logo, s['login-transition'])}>
             <KismetLogo />
             <Column className={s.login} gap={1}>
               <Divider />
@@ -82,7 +84,7 @@ const Appbar = ({ color }: AppbarProps) => {
                 color={'primary'}
                 align={isMobile() ? 'center' : 'right'}
               >
-                Enter portfolio password for full access
+                Enter password from resume for full access
               </Typography>
               <Row gap={1}>
                 <input
