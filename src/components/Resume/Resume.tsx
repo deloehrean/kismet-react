@@ -14,7 +14,12 @@ type ResumeProps = {
 
 const Resume: FC<ResumeProps> = ({ inAppbar = false }) => {
   return (
-    <Container align={'center'} className={s['resume-downloads']} gap={inAppbar ? 3 : 0}>
+    <Container
+      variant={'static'}
+      align={'center'}
+      className={s['resume-downloads']}
+      gap={inAppbar ? 3 : 0}
+    >
       {!inAppbar && (
         <React.Fragment>
           <Typography variant={'h5'} gutter>
@@ -32,9 +37,11 @@ const Resume: FC<ResumeProps> = ({ inAppbar = false }) => {
         </LinkStyled>
       </div>
       {inAppbar && (
-        <Typography variant={'code'} align={'center'}>
-          Find password in resume
-        </Typography>
+        <Container>
+          <Typography variant={'code'} align={'center'}>
+            Find password in resume
+          </Typography>
+        </Container>
       )}
     </Container>
   );

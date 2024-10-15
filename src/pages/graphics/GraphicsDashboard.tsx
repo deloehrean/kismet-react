@@ -26,7 +26,7 @@ function GraphicsDashboard() {
       </Typography>
       <Row gap={2} breakpoint={'md'}>
         <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-          <Column gap={2}>
+          <Container direction={'column'} full gap={2}>
             <Column>
               <Typography variant={'h6'}>Album Artwork</Typography>
               <Typography variant={'overline'} color={'secondary'}>
@@ -66,13 +66,15 @@ function GraphicsDashboard() {
                 </div>
               </div>
             </Row>
-            <LinkStyled className={s.button} to={'/graphics/albums'}>
-              View All
-            </LinkStyled>
-          </Column>
+            <Container direction={'column'} full justify={'end'} variant={'static'}>
+              <LinkStyled className={s.button} to={'/graphics/albums'}>
+                View All
+              </LinkStyled>
+            </Container>
+          </Container>
         </Container>
         <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-          <Column gap={2}>
+          <Container direction={'column'} full gap={2}>
             <Column>
               <Typography variant={'h6'}>Tee Shirt Designs</Typography>
               <Typography variant={'overline'} color={'secondary'}>
@@ -105,7 +107,7 @@ function GraphicsDashboard() {
             <LinkStyled className={s.button} to={'/graphics/tees'}>
               View All
             </LinkStyled>
-          </Column>
+          </Container>
         </Container>
       </Row>
     </Column>

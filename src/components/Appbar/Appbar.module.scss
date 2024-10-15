@@ -19,9 +19,29 @@
 
   .spacer {
     height: 0;
-    background: var(--primary-main);
-    box-shadow: none;
-    transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+    background: var(--background-default);
+    box-shadow: var(--shadow-elevation-1);
+    transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.rust {
+      background: var(--home-page-color);
+    }
+
+    &.olive {
+      background: var(--graphics-page-color);
+    }
+
+    &.dusk {
+      background: var(--webdev-page-color);
+    }
+
+    &.aqua {
+      background: var(--branding-page-color);
+    }
+
+    &.plum {
+      background: var(--ecommerce-page-color);
+    }
   }
 
   .collage-carousel {
@@ -50,11 +70,11 @@
 
     a {
       display: flex;
-      margin: var(--size-1);
-      color: var(--common-white-main);
+      margin-inline: var(--size-1);
       align-items: center;
       width: 100%;
       max-width: 301px;
+      max-height: 106px;
 
       svg {
         width: 100%;
@@ -131,7 +151,7 @@
     }
 
     .spacer {
-      box-shadow: 0 -8px 10px rgba(0, 0, 0, .8), 0 -16px 24px rgba(0, 0, 0, .4), 0 -6px 32px rgba(0, 0, 0, .4);
+      box-shadow: var(--shadow-elevation-14);
       height: calc((100vh - 430px) / 2);
       transition-delay: 2s;
 
@@ -158,6 +178,7 @@
 
           a {
             max-width: 700px;
+            max-height: unset;
             margin: 0;
             opacity: 1;
             filter: blur(0);
@@ -175,8 +196,13 @@
         .resume {
           max-width: 300px;
           min-width: 200px;
+          overflow: visible;
           opacity: 1;
           align-items: flex-start;
+        }
+
+        .divider {
+          align-self: normal;
         }
 
         .nav {

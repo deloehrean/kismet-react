@@ -12,7 +12,7 @@ function HomePage() {
         focus on e-commerce living in Detroit, MI."
         divider
       />
-      <Container>
+      <Container gap={4}>
         <Typography variant="body1">
           An agile and adaptable professional with over 20 years of experience in software
           development, user interface design, product design, team leadership, and e-commerce. I
@@ -25,9 +25,7 @@ function HomePage() {
           front-end solutions that have a real impact and operate seamlessly within your business
           specifications.
         </Typography>
-      </Container>
-      <Resume />
-      <Container>
+        <Resume />
         <Typography variant={'body1'}>
           As a seasoned professional, I have extensive expertise in digital and illustration graphic
           design, web design and styling (CSS), and proper website architecture (HTML, W3C

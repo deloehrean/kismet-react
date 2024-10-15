@@ -14,7 +14,7 @@ interface ContainerProps {
   justify?: 'start' | 'center' | 'end';
   full?: boolean;
   rounded?: boolean | 'extra';
-  variant?: 'outline' | 'darkish' | 'green' | 'blue' | 'purple';
+  variant?: 'outline' | 'darkish' | 'green' | 'blue' | 'purple' | 'static';
   elevation?: number;
   onClick?: () => void;
   gap?: number;
@@ -68,7 +68,11 @@ const Container: FC<ContainerProps> = ({
   const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
 
   return (
-    <Component style={animateOpacity} className={rootClassName} onClick={onClick}>
+    <Component
+      style={variant === 'static' ? undefined : animateOpacity}
+      className={rootClassName}
+      onClick={onClick}
+    >
       {children}
     </Component>
   );

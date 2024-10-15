@@ -1,5 +1,11 @@
 .root {
-  fill: var(--logo-fill);
+  fill: var(--logo-fill) !important;
+  color: var(--logo-fill) !important;
   height: 100%;
   width: 100%;
+
+  &:hover {
+    fill: var(--logo-fill) !important;
+    color: var(--logo-fill) !important;
+  }
 }

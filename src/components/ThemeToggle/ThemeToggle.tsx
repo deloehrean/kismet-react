@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { Container } from 'src/components';
+import { Container, Row, ThemeToggleStyles as s } from 'src/components';
 
 const ThemeToggle: React.FC = () => {
   const [isDarkChecked, setIsDarkChecked] = useState(true);
@@ -25,28 +25,29 @@ const ThemeToggle: React.FC = () => {
   }, [isDarkChecked, isSystemDark, isUseSystem]);
 
   return (
-    <Container>
-      {/* <Row gap={3}> */}
-      {/*  <Row gap={1}> */}
-      {/*    <label htmlFor="dark-mode">Dark Mode?</label> */}
-      {/*    <input */}
-      {/*      id="dark-mode" */}
-      {/*      type="checkbox" */}
-      {/*      checked={!isUseSystem && isDarkChecked} */}
-      {/*      disabled={isUseSystem} */}
-      {/*      onChange={({ target }) => setIsDarkChecked(target.checked)} */}
-      {/*    /> */}
-      {/*  </Row> */}
-      {/*  <Row gap={1}> */}
-      {/*    <label htmlFor="system-dark">Use System?</label> */}
-      {/*    <input */}
-      {/*      id="system-dark" */}
-      {/*      type="checkbox" */}
-      {/*      checked={isUseSystem} */}
-      {/*      onChange={({ target }) => setIsUseSystem(target.checked)} */}
-      {/*    /> */}
-      {/*  </Row> */}
-      {/* </Row> */}
+    <Container className={s.root}>
+      <Row gap={3}>
+        <label htmlFor="dark-mode">
+          Dark Mode?
+          <input
+            id="dark-mode"
+            type="checkbox"
+            checked={!isUseSystem && isDarkChecked}
+            disabled={isUseSystem}
+            onChange={({ target }) => setIsDarkChecked(target.checked)}
+          />
+        </label>
+        {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
+        <label htmlFor="system-dark">
+          Use System?
+          <input
+            id="system-dark"
+            type="checkbox"
+            checked={isUseSystem}
+            onChange={({ target }) => setIsUseSystem(target.checked)}
+          />
+        </label>
+      </Row>
     </Container>
   );
 };

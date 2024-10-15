@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { useState } from 'react';
 
 import cn from 'clsx';
 
@@ -8,7 +8,6 @@ import {
   Container,
   Divider,
   KismetLogo,
-  LinkStyled,
   NavMenu,
   Row,
   Typography,
@@ -20,9 +19,10 @@ import { isPasswordProtected } from 'src/lib/utils';
 type AppbarProps = {
   // eslint-disable-next-line react/no-unused-prop-types
   breadcrumbs?: boolean;
+  color: string;
 };
 
-const Appbar: FC<AppbarProps> = () => {
+const Appbar = ({ color }: AppbarProps) => {
   const [isPasswordAccepted, setIsPasswordAccepted] = useState(!isPasswordProtected);
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
@@ -70,13 +70,11 @@ const Appbar: FC<AppbarProps> = () => {
   return (
     <header className={s.root}>
       <div className={cn(s['collage-carousel'], s['login-transition'])} />
-      <Column className={cn(s.content, s['login-transition'])}>
-        <div className={s.spacer} />
-        <Row className={cn(s['password-wrap'], s['login-transition'])}>
+      <Column className={cn(s.content)}>
+        <div className={cn(s.spacer, s[`${color}`])} />
+        <Row className={cn(s['password-wrap'])}>
           <Column className={s.logo}>
-            <LinkStyled to={'/'}>
-              <KismetLogo />
-            </LinkStyled>
+            <KismetLogo />
             <Column className={s.login} gap={1}>
               <Divider />
               <Typography
@@ -101,7 +99,9 @@ const Appbar: FC<AppbarProps> = () => {
               {error && <Typography variant={'caption'}>{error}</Typography>}
             </Column>
           </Column>
-          <Divider direction={isMobile() ? 'horizontal' : 'vertical'} />
+          <Container direction={'column'} className={s.divider}>
+            <Divider direction={isMobile() ? 'horizontal' : 'vertical'} />
+          </Container>
           <Column className={cn(s.resume, s['login-transition'])}>
             <Resume inAppbar />
           </Column>

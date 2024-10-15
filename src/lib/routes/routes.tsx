@@ -14,7 +14,6 @@ const isPasswordProtected = () => {
   return document.body.classList.contains('password-protected');
 };
 
-console.log(isPasswordProtected());
 export const routes: RoutePathDefinition[] = [
   { path: '/', element: <Homepage />, title: 'Kismet', color: 'rust', index: true },
   { path: '*', element: <FourOhFourPage />, title: 'Not Found', color: 'rust' },

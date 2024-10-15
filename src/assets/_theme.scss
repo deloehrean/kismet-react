@@ -16,9 +16,9 @@
 
   // Text
   --text-primary: #{$slate-900};
-  --text-secondary: #{$slate-700};
+  --text-secondary: #{$slate-900-72};
   --text-contrast: #{$white-100};
-  --text-disabled: #{$slate-300};
+  --text-disabled: #{$slate-700-56};
   --text-focus: #{$slate-200};
   --text-focus-visible: #{$slate-200};
   --text-hover: #{$slate-100};
@@ -91,7 +91,7 @@
   --success-outlined-border: #{$aqua-700-72};
   --success-selected: #{$aqua-700-8};
 
-  // Success
+  // Slate
   --slate-main: #{$slate-700};
   --slate-dark: #{$slate-900};
   --slate-light: #{$slate-500};
@@ -102,21 +102,20 @@
   --slate-outlined-border: #{$slate-700-72};
   --slate-selected: #{$slate-700-8};
 
-
   // Tabbed Nav Page Colors
-  --home-page-color: #{$rust-800};
-  --graphics-page-color: #{$olive-700};
-  --webdev-page-color: #{$dusk-500};
-  --branding-page-color: #{$aqua-500};
-  --ecommerce-page-color: #{$plum-700};
+  --home-page-color: #{$rust-100};
+  --graphics-page-color: #{$olive-100};
+  --webdev-page-color: #{$dusk-100};
+  --branding-page-color: #{$aqua-100};
+  --ecommerce-page-color: #{$plum-200};
 
   // Action
   --action-active: #{$slate-900-72};
-  --action-disabled: #{$slate-500-32};
-  --action-disabled-background: #{$slate-500-16};
-  --action-focus: #{$slate-500-48};
-  --action-hover: #{$slate-500-32};
-  --action-selected: #{$slate-500-24};
+  --action-disabled: #{$slate-700-32};
+  --action-disabled-background: #{$slate-700-16};
+  --action-focus: #{$slate-700-48};
+  --action-hover: #{$slate-700-32};
+  --action-selected: #{$slate-700-24};
 
   // Common/Black
   --common-black-main: #{$slate-900};
@@ -136,9 +135,9 @@
 
   // Background
   --background-default: #{$white-100};
-  --background-darker-25: #{$slate-25};
-  --background-darker-50: #{$slate-50};
-  --background-darker-75: #{$slate-75};
+  --background-darker-25: #{$slate-700-8};
+  --background-darker-50: #{$slate-700-16};
+  --background-darker-75: #{$slate-700-24};
   --background-elevation-0: #{$white-100};
   --background-elevation-1: #{$white-100};
   --background-elevation-2: #{$white-100};
@@ -215,14 +214,14 @@
   //--chip-default-fill: var(--slate-slate-50);
   //--chip-default-focus-fill: var(--slate-slate-200);
   //--chip-default-hover-fill: var(--slate-slate-100);
-  --divider: #{$slate-100};
-  --divider-dark: #{$slate-200};
-  //--input-filled-enabled-fill: var(--action-selected);
-  //--input-filled-hover-fill: var(--action-hover);
-  //--input-outlined-enabled-border: #{$slate-200};
-  //--input-outlined-hover-border: #{$slate-400};
-  //--input-standard-enabled-border: #{$slate-200};
-  //--input-standard-hover-border: #{$slate-400};
+  --divider: #{$slate-700-48};
+  --divider-dark: #{$slate-900-64};
+  --input-filled-enabled-fill: var(--action-selected);
+  --input-filled-hover-fill: var(--action-hover);
+  --input-outlined-enabled-border: #{$slate-200};
+  --input-outlined-hover-border: #{$slate-400};
+  --input-standard-enabled-border: #{$slate-200};
+  --input-standard-hover-border: #{$slate-400};
   --link-primary: var(--action-active);
   --link-primary-hover: var(--action-hover);
   --link-primary-disabled: var(--action-disabled);
@@ -323,6 +322,13 @@ PALETTE - DARK MODE
   --success-contrast: #{$slate-900};
   --success-focus-visible: #{$aqua-700-40};
 
+  // Tabbed Nav Page Colors
+  --home-page-color: #{$rust-800};
+  --graphics-page-color: #{$olive-700};
+  --webdev-page-color: #{$dusk-500};
+  --branding-page-color: #{$aqua-500};
+  --ecommerce-page-color: #{$plum-700};
+
   // Action
   --action-active: #{$white-88};
   --action-disabled: #{$white-32};
@@ -383,12 +389,12 @@ PALETTE - DARK MODE
   //--chip-default-hover-fill: var(--slate-slate-100);
   --divider: #{$white-16};
   --divider-dark: #{$white-24};
-  //--input-filled-enabled-fill: var(--action-selected);
-  //--input-filled-hover-fill: var(--action-hover);
-  //--input-outlined-enabled-border: #{$slate-200};
-  //--input-outlined-hover-border: #{$slate-400};
-  //--input-standard-enabled-border: #{$slate-200};
-  //--input-standard-hover-border: #{$slate-400};
+  --input-filled-enabled-fill: var(--action-selected);
+  --input-filled-hover-fill: var(--action-hover);
+  --input-outlined-enabled-border: #{$slate-200};
+  --input-outlined-hover-border: #{$slate-400};
+  --input-standard-enabled-border: #{$slate-200};
+  --input-standard-hover-border: #{$slate-400};
   --logo-fill: #{$white-100};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);
