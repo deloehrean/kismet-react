@@ -10,4 +10,8 @@
     flex-direction: row;
     gap: 8px;
   }
+
+  @media all and (max-width: 680px) {
+    display: none;
+  }
 }
