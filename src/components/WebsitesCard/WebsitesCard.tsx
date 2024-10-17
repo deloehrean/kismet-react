@@ -12,25 +12,13 @@ import {
 } from 'src/components';
 
 type WebsitesCardProps = {
-  title: string;
-  subtitle?: string;
-  description?: string;
-  poweredBy?: string;
-  toolsUsed?: string;
-  logo: string;
-  gallery?: any[] | undefined;
+  content?: any;
   reverse?: boolean;
   divider?: boolean;
 };
 
 const WebsitesCard: React.FC<WebsitesCardProps> = ({
-  title,
-  subtitle,
-  description,
-  poweredBy,
-  toolsUsed,
-  logo,
-  gallery,
+  content,
   reverse = false,
   divider = true,
 }) => {
@@ -57,12 +45,12 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   const renderLogo = () => {
     return (
       <div className={s['website-logo']}>
-        <img src={logo} alt={title} />
+        <img src={content.logo} alt={content.title} />
       </div>
     );
   };
 
-  const renderedGallery = gallery?.map((image, index) => {
+  const renderedGallery = content.gallery?.map((image, index) => {
     const active = index === activeIndex ? 'active' : '';
 
     return (
@@ -96,25 +84,25 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         breakpoint={'md'}
       >
         <Container className={s['website-content']} justify={'center'}>
-          {title && <Typography variant={'h4'}>{title}</Typography>}
-          {subtitle && (
+          {content.title && <Typography variant={'h4'}>{content.title}</Typography>}
+          {content.subtitle && (
             <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
-              {subtitle}
+              {content.subtitle}
             </Typography>
           )}
-          {description && (
+          {content.description && (
             <Typography variant={'body2'} gutter>
-              {description}
+              {content.description}
             </Typography>
           )}
-          {poweredBy && (
+          {content.poweredBy && (
             <Typography variant={'body1'}>
-              <strong>Powered by:</strong> {poweredBy}
+              <strong>content.Powered by:</strong> {content.poweredBy}
             </Typography>
           )}
-          {toolsUsed && (
+          {content.toolsUsed && (
             <Typography variant={'body1'}>
-              <strong>Tools used:</strong> {toolsUsed}
+              <strong>Tools used:</strong> {content.toolsUsed}
             </Typography>
           )}
         </Container>
