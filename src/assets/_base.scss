@@ -40,7 +40,7 @@ body.loading * {
 
 main {
   display: flex;
-  max-height: var(--main-body-max-height);
+  //max-height: var(--main-body-max-height);
   flex-direction: column;
 
   @media all and (max-height: 768px) {

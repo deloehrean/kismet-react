@@ -1,5 +1,6 @@
 .root {
   min-height: 100%;
+  overflow: hidden;
 
   .sidebarWrap {
     width: 240px;
@@ -13,7 +14,6 @@
     main {
       display: flex;
       flex: 1;
-      overflow-x: scroll;
       transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       box-shadow: var(--shadow-elevation-8);
       min-height: var(--main-body-max-height);

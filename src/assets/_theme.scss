@@ -195,6 +195,7 @@
   --background-gradient-aqua: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
   --background-gradient-dusk: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
   --background-gradient-purple: linear-gradient(91.1deg, #fc5c7d 0%, #9e50ff 100%);
+  --background-modal: #{$slate-900-88};
 
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);

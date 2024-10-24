@@ -1,3 +1,5 @@
+@use 'src/assets/mixins' as m;
+
 .albums-content {
   position: relative;
 }
@@ -36,16 +38,29 @@
   .album-group {
     cursor: pointer;
     position: relative;
-    width: 20%;
+    width: 50%;
     z-index: 1;
+
+    @include m.breakpoint(sm, min) {
+      width: 33.33334%;
+    }
+
+    @include m.breakpoint(md, min) {
+      width: 25%;
+    }
+
+    @include m.breakpoint(lg, min) {
+      width: 20%;
+    }
 
     .active-reset {
       position: relative;
       transition: all 1s ease-in-out;
-      perspective: 104vw;
+      perspective: 134vw;
       perspective-origin: center;
       transform-style: preserve-3d;
       height: 100%;
+      width: 100%;
 
       &:after {
         content: " ";
@@ -165,7 +180,7 @@
       }
 
       .graphic-item {
-        filter: none
+        filter: none;
       }
 
       .album-cover {
@@ -209,7 +224,7 @@
       .expand-close {
         opacity: 1;
         transition-duration: 1s !important;
-        transform: translate3d(-116%, -80%, 60vw) scale(0.5) rotate(315deg);
+        transform: translate3d(-3.5vw, -36px, 66vw) scale(0.4) rotate(315deg);
         perspective: 104vw;
         z-index: 15;
         perspective-origin: center;
@@ -229,13 +244,13 @@
       // ALBUM COVER ACTIVE ANIMATION - CD
       .album-cover {
         transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
-        transform: translate3d(25%, 20%, 50vw) rotate3d(0.7, 4.5, -0.1, 20deg);
+        transform: translate3d(44%, 20%, 60vw) rotate3d(0, 0.3, 0, 20deg);
       }
 
       // ALBUM FACE ANIMATION
       .album-face {
         transition: all 1s ease-in-out;
-        transform: translate3d(105%, 20%, 50vw);
+        transform: translate3d(135%, 20%, 60vw);
         z-index: 4;
         perspective: 100vw;
         perspective-origin: center;
@@ -279,54 +294,96 @@
 
       .tray-in {
         transition-duration: 1.15s;
-        transform: translate3d(226%, 5%, 37vw) rotate3d(1, 30, 1, -69deg);
+        transform: translate3d(163%, 165%, 42vw) rotate3d(1, 10, 0.3, -26deg);
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(269%, 15%, 42vw) rotate3d(1, 37, 0.7, -49deg);
+        }
       }
 
       .tray-out {
         transition-duration: 1.65s;
-        transform: translate3d(218%, 95%, 40vw) rotate3d(-3, 30, -1, -75deg);
+        transform: translate3d(121%, 234%, 49vw) rotate3d(-3, 30, -1, -7deg);
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(231%, 99%, 51vw) rotate3d(-3, 30, -1, -47deg);
+        }
       }
 
       .tray-only {
-        transform: translate3d(200%, 32%, 46vw) rotate3d(0.1, 20, 0.1, -78deg);
+        transform: translate3d(148%, 142%, 53vw) rotate3d(0, -0.1, 0, 22.2deg);
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(210%, 36%, 64vw) rotate3d(0, 1.2, 0, -65deg);
+        }
       }
 
       .longboi1,
       .longboi2,
       .medboi1,
       .medboi2 {
-        transform: scale(2) translate3d(50%, 270%, 38vw) rotate3d(2, 0.7, -0.6, 58deg);
+        transform: scale(2) translate3d(40%, 300%, 30vw) rotate3d(2, 0.7, -0.6, 60deg);
         perspective: 3vw;
         perspective-origin: center;
         transform-style: preserve-3d;
       }
 
+      .longboi1 {
+        @include m.breakpoint(md, min) {
+          transform: scale(2) translate3d(37%, 310%, 38vw) rotate3d(2, 0.7, -0.6, 58deg);
+        }
+      }
+
       .longboi2 {
-        transform: scale(2) translate3d(70%, 330%, 35vw) rotate3d(2.5, 0.5, -0.8, 71deg);
+        transform: scale(2) translate3d(35%, 369%, 30vw) rotate3d(2.5, 0.5, -0.8, 71deg);
+
+        @include m.breakpoint(md, min) {
+          transform: scale(2) translate3d(70%, 330%, 35vw) rotate3d(2.5, 0.5, -0.8, 71deg);
+        }
       }
 
       .medboi1 {
-        transform: scale(2) translate3d(100%, 276%, 23vw) rotate3d(1.6, 0.8, -0.9, 46deg);
+        transform: scale(1.9) translate3d(36%, 314%, 32vw) rotate3d(1.6, 0.8, -0.8, 76deg);
+
+        @include m.breakpoint(md, min) {
+          transform: scale(1.6) translate3d(106%, 264%, 46vw) rotate3d(1.6, 0.8, -0.8, 76deg);
+        }
       }
 
       .medboi2 {
-        transform: scale(2) translate3d(75%, 235%, 25vw) rotate3d(3.5, 0.7, -0.7, 56deg);
+        transform: scale(1.9) translate3d(33%, 247%, 30vw) rotate3d(3.5, 1, -0.9, 66deg);
+
+        @include m.breakpoint(md, min) {
+          transform: scale(1.4) translate3d(55%, 267%, 51vw) rotate3d(3.5, 1.1, -0.7, 66deg);
+        }
       }
 
       .shortboi1,
       .shortboi2 {
-        transform: scale(1.5) translate3d(90%, 195%, 22vw) rotate3d(9.1, 1.3, -2.7, 50deg);
+        transform: scale(1.65) translate3d(43%, 184%, 34vw) rotate3d(14.9, 1.3, -3.7, 60deg);
         perspective: 3vw;
         perspective-origin: center;
         transform-style: preserve-3d;
 
         picture {
-          transform: rotate3d(0.4, 1.1, -1.3, 5.7deg);
+          transform: rotate3d(0.4, 1.1, -1.3, 2.5deg);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: scale(1.5) translate3d(90%, 195%, 22vw) rotate3d(9.1, 1.3, -2.7, 50deg);
+
+          picture {
+            transform: rotate3d(0.4, 1.1, -1.3, 5.7deg);
+          }
         }
       }
 
       .shortboi2 {
-        transform: scale(1.5) translate3d(160%, 180%, 25vw) rotate3d(8.1, 2.3, -3.4, 60deg);
+        transform: scale(1.5) translate3d(80%, 260%, 38vw) rotate3d(10.1, 3.3, -4.4, 70deg);
+
+        @include m.breakpoint(md, min) {
+          transform: scale(1.5) translate3d(160%, 180%, 25vw) rotate3d(8.1, 2.3, -3.4, 60deg);
+        }
       }
 
       .lonelyboi {
@@ -334,68 +391,170 @@
       }
 
       .active-reset {
-        perspective: 104vw;
-        perspective-origin: center;
+        perspective: 134vw;
+        perspective-origin: right center;
         transform-style: preserve-3d;
+        height: 100%;
+        width: 100%;
       }
 
       &:nth-child(1) .active-reset {
-        transform: translate3d(0%, -40%, 0vw);
+        transform: translate3d(-23%, -22%, 0vw) scale(0.58);
+
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-7%, -10%, 0vw) scale(0.88);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-13%, 0%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: none;
+        }
       }
 
       &:nth-child(2) .active-reset {
-        transform: translate3d(-100%, -20%, 0vw);
+        transform: translate3d(-124%, -22%, 0vw) scale(0.58);
 
-        .expand-close {
-          transform: translate3d(-97%, -114%, 68vw) scale(0.4) rotate(45deg);
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-112%, -11%, 0vw) scale(0.86);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-109%, 0, 0vw) scale(0.9);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-97%, 0, 0vw) scale(1.1);
         }
       }
 
       &:nth-child(3) .active-reset {
-        transform: translate3d(-200%, -40%, 0vw);
+        transform: translate3d(-23%, -82%, 0vw) scale(0.58);
+
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-207%, -10%, 0vw) scale(0.88);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-213%, 0%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-200%, 0, 0vw) scale(1);
+        }
       }
 
       &:nth-child(4) .active-reset {
-        transform: translate3d(-300%, -40%, 0vw);
+        transform: translate3d(-122%, -85%, 0vw) scale(0.565);
+
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-7%, -87%, 0vw) scale(0.85);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-312%, 0%, 0vw) scale(0.79);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-300%, 0, 0vw) scale(1);
+        }
       }
 
       &:nth-child(5) .active-reset {
-        transform: translate3d(-400%, 0%, 0vw);
+        transform: translate3d(-24%, -53%, 0vw) scale(0.565);
 
-        .expand-close {
-          transform: translate3d(-116%, -190%, 60vw) scale(0.5) rotate(45deg);
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-107%, -87%, 0vw) scale(0.85);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-11%, -50%, 0vw) scale(0.79);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-400%, 0%, 0vw) scale(1);
         }
       }
 
       &:nth-child(6) .active-reset {
-        transform: translate3d(0%, -140%, 0vw);
+        transform: translate3d(-122%, -85%, 0vw) scale(0.565);
+
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-207%, -87%, 0vw) scale(0.85);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-113%, -65%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(0%, -100%, 0vw) scale(1);
+        }
       }
 
       &:nth-child(7) .active-reset {
-        transform: translate3d(-100%, -140%, 0vw);
+        transform: translate3d(-23%, -36%, 0vw) scale(0.565);
+
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-7%, -82%, 0vw) scale(0.85);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-213%, -65%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-100%, -100%, 0vw) scale(1);
+        }
       }
 
       &:nth-child(8) .active-reset {
-        transform: translate3d(-200%, -100%, 0vw);
+        transform: translate3d(-120%, -08%, 0vw) scale(0.6);
 
-        .expand-close {
-          transform: translate3d(-116%, -190%, 60vw) scale(0.5) rotate(45deg);
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-107%, -40%, 0vw) scale(0.88);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-296%, -49%, 0vw) scale(1.08);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-193%, -94%, 0vw) scale(1.1);
         }
       }
 
       &:nth-child(9) .active-reset {
-        transform: translate3d(-300%, -100%, 0vw);
+        transform: translate3d(-20%, -90%, 0) scale(0.58);
 
-        .expand-close {
-          transform: translate3d(-116%, -190%, 60vw) scale(0.5) rotate(45deg);
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-205%, -89%, 0vw) scale(0.88);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-13%, -100%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-300%, -100%, 0vw) scale(1);
         }
       }
 
       &:nth-child(10) .active-reset {
-        transform: translate3d(-400%, -100%, 0vw);
+        transform: translate3d(-120%, -90%, 0) scale(0.58);
 
-        .expand-close {
-          transform: translate3d(-116%, -190%, 60vw) scale(0.5) rotate(45deg);
+        @include m.breakpoint(sm, min) {
+          transform: translate3d(-5%, -164%, 0vw) scale(0.88);
+        }
+
+        @include m.breakpoint(md, min) {
+          transform: translate3d(-113%, -100%, 0vw) scale(0.8);
+        }
+
+        @include m.breakpoint(lg, min) {
+          transform: translate3d(-400%, -100%, 0vw) scale(1);
         }
       }
     }
@@ -404,7 +563,7 @@
       z-index: 50;
 
       .active-reset {
-        transition: transform 0.35s ease-in-out;
+        transition: transform 0.5s ease-in-out;
       }
 
       .graphic-item {
@@ -414,7 +573,7 @@
         }
 
         &.album-face {
-          transition: transform 0.35s ease-in-out;
+          transition: transform 0.5s ease-in-out;
         }
 
         &.longboi1,
@@ -455,19 +614,28 @@
       &.active {
         .album-cover {
           transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
-          transform: translate3d(30%, 16%, 60vw) rotate3d(0.4, 1.3, 0, 20deg);
+          transform: translate3d(49%, 22%, 65vw) rotate3d(0.4, 1.3, 0, 20deg);
         }
 
         .album-face {
           transition: all 1s ease-in-out;
-          transform: translate3d(110%, 18%, 60vw);
+          transform: translate3d(132%, 24%, 66vw);
           perspective: 100vw;
           perspective-origin: center;
           transform-style: preserve-3d;
+
+          @include m.breakpoint(md, min) {
+            transform: translate3d(180%, 24%, 66vw);
+
+          }
         }
 
         .lonelyboi {
-          transform: translate3d(125%, 190%, 50vw) rotate3d(7.5, 1.1, -5.1, 30deg);
+          transform: translate3d(107%, 290%, 44vw) rotate3d(6.2, 1.1, -5.1, 30deg);
+
+          @include m.breakpoint(md, min) {
+            transform: translate3d(121%, 97%, 46vw) rotate3d(0, -0.2, 1.1, 150deg);
+          }
 
           picture {
             transform: scale(2);
@@ -513,16 +681,24 @@
       &.active {
         .tape-face {
           transition: transform 1s ease-in-out;
-          transform: translate3d(90%, 5%, 55vw) rotate3d(0, 0, 1, -8deg);
+          transform: translate3d(138%, 48%, 55vw) rotate3d(0, 0, 1, 22deg);
+
+          @include m.breakpoint(md, min) {
+            transform: translate3d(140%, 67%, 55vw) rotate3d(0, 0, 1, 52deg);
+          }
         }
 
         .album-cover {
-          transform: translate3d(155%, 50%, 50vw) rotate3d(1, -5, 0.1, 60deg);
+          transform: translate3d(158%, 102%, 43vw) rotate3d(1, -5, 0.1, 20deg);
+
+          @include m.breakpoint(md, min) {
+            transform: translate3d(218%, 25%, 60vw) rotate3d(1, -5, 0.1, 60deg);
+          }
         }
 
         .lonelyboi {
           transition: transform 1.15s ease-in-out;
-          transform: translate3d(30%, 50%, 50vw) rotate3d(2, 10, 0.1, 20deg);
+          transform: translate3d(46%, 25%, 62vw) rotate3d(2, 10, 0.1, 20deg);
         }
       }
     }
@@ -608,19 +784,19 @@
 
 .single-tee-hires-wrap,
 .album-hires-wrap {
-  background: #222222EE;
+  background: var(--background-modal);
   position: fixed;
   top: 50vh;
   bottom: 50vh;
   left: 0vw;
   right: 0vw;
   opacity: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease-in-out !important;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 30px;
+  //padding: 30px;
 
   &.active {
     top: 15vh;
@@ -654,22 +830,95 @@
   position: absolute;
   top: 50%;
   bottom: 50%;
+  right: auto;
+  left: calc(((100vw - 100%) / 2) * -1);
+  width: 100vw;
 
   &.active {
     cursor: pointer;
-    top: -50px;
-    bottom: -50px;
-    right: calc(var(--size-4) * -1);
-    left: calc(var(--size-4) * -1);
+    top: 2%;
+    bottom: 54%;
     z-index: 40;
 
-    .expand-close {
-      top: 10px;
-      left: 10px;
-      transform: rotate(45deg);
-      opacity: 1;
-      z-index: 55;
-      cursor: pointer;
+    &.modal-wrap-2,
+    &.modal-wrap-3 {
+      top: 10%;
+      bottom: 46%;
     }
+
+    &.modal-wrap-4,
+    &.modal-wrap-5 {
+      top: 30%;
+      bottom: 26%;
+    }
+
+    &.modal-wrap-6,
+    &.modal-wrap-7 {
+      top: 58%;
+      bottom: 10%;
+    }
+
+    &.modal-wrap-8,
+    &.modal-wrap-9 {
+      top: 65%;
+      bottom: -2%;
+    }
+
+    @include m.breakpoint(sm, min) {
+      top: 2%;
+      bottom: 18%;
+
+      &.modal-wrap-3,
+      &.modal-wrap-4,
+      &.modal-wrap-5 {
+        top: 7.33%;
+        bottom: 12.67%;
+      }
+
+      &.modal-wrap-6,
+      &.modal-wrap-7,
+      &.modal-wrap-8 {
+        top: 32%;
+        bottom: 7.33%;
+      }
+
+      &.modal-wrap-9 {
+        top: 37.67%;
+        bottom: 2%;
+      }
+    }
+
+    @include m.breakpoint(md, min) {
+      top: 3%;
+      bottom: 33%;
+
+      &.modal-wrap-4,
+      &.modal-wrap-5,
+      &.modal-wrap-6,
+      &.modal-wrap-7 {
+        top: 18%;
+        bottom: 18%;
+      }
+
+      &.modal-wrap-8,
+      &.modal-wrap-9 {
+        top: 33%;
+        bottom: 3%;
+      }
+    }
+
+    @include m.breakpoint(lg, min) {
+      top: 4% !important;
+      bottom: 4% !important;
+    }
+
+    //.expand-close {
+    //  top: 10px;
+    //  left: 10px;
+    //  transform: rotate(45deg);
+    //  opacity: 1;
+    //  z-index: 55;
+    //  cursor: pointer;
+    //}
   }
 }

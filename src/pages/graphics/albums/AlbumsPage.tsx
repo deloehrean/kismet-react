@@ -98,7 +98,11 @@ function AlbumsPage() {
       <Row className={s['content-frame-container']}>{renderedItems}</Row>
 
       <div
-        className={cn(s['album-hires-wrap'], activeIndex !== null && s.active)}
+        className={cn(
+          s['album-hires-wrap'],
+          activeIndex !== null && s.active,
+          s[`modal-wrap-${activeIndex}`],
+        )}
         onClick={() => {
           activeAction(null, null);
         }}
