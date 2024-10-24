@@ -865,8 +865,12 @@
     }
 
     @include m.breakpoint(sm, min) {
-      top: 2%;
-      bottom: 18%;
+      &.modal-wrap-0,
+      &.modal-wrap-1,
+      &.modal-wrap-2 {
+        top: 2%;
+        bottom: 18%;
+      }
 
       &.modal-wrap-3,
       &.modal-wrap-4,
