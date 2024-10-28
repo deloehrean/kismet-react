@@ -1,6 +1,7 @@
 import React from 'react';
 
 import cn from 'clsx';
+import { Link } from 'react-router-dom';
 
 import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
 import tee1 from 'src/assets/images/tees/royden-spike-tee.png';
@@ -40,31 +41,51 @@ function GraphicsDashboard() {
               imagination.
             </Typography>
             <Row className={albumStyles['content-frame-container']}>
-              <div className={cn(albumStyles['album-group'])}>
+              <Link
+                to={'/graphics/albums'}
+                aria-label={'View all albums'}
+                className={cn(albumStyles['album-group'])}
+              >
                 <div className={albumStyles['active-reset']}>
                   <AlucardAlbum />
                 </div>
-              </div>
-              <div className={cn(albumStyles['album-group'])}>
+              </Link>
+              <Link
+                to={'/graphics/albums'}
+                aria-label={'View all albums'}
+                className={cn(albumStyles['album-group'])}
+              >
                 <div className={albumStyles['active-reset']}>
                   <ElephantomAlbum />
                 </div>
-              </div>
-              <div className={cn(albumStyles['album-group'])}>
+              </Link>
+              <Link
+                to={'/graphics/albums'}
+                aria-label={'View all albums'}
+                className={cn(albumStyles['album-group'])}
+              >
                 <div className={albumStyles['active-reset']}>
                   <AsecondtoolateAlbum />
                 </div>
-              </div>
-              <div className={cn(albumStyles['album-group'])}>
+              </Link>
+              <Link
+                to={'/graphics/albums'}
+                aria-label={'View all albums'}
+                className={cn(albumStyles['album-group'])}
+              >
                 <div className={albumStyles['active-reset']}>
                   <AndrewLoehrAlbum />
                 </div>
-              </div>
-              <div className={cn(albumStyles['album-group'])}>
+              </Link>
+              <Link
+                to={'/graphics/albums'}
+                aria-label={'View all albums'}
+                className={cn(albumStyles['album-group'])}
+              >
                 <div className={albumStyles['active-reset']}>
                   <RoydenAlbum />
                 </div>
-              </div>
+              </Link>
             </Row>
             <Container direction={'column'} full justify={'end'} variant={'static'}>
               <LinkStyled className={s.button} to={'/graphics/albums'}>

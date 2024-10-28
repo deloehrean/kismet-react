@@ -49,6 +49,7 @@
     "react-imask": "6.6.3",
     "react-number-format": "4.9.4",
     "react-router-dom": "6.23.1",
+    "react-tooltip": "^5.28.0",
     "react-virtuoso": "4.7.11",
     "readable-web-to-node-stream": "3.0.2",
     "recharts": "2.12.7",
