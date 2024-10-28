@@ -22,6 +22,7 @@ export function mapDefinitionToTabs(
         let to: string | undefined;
         try {
           to = generatePath(builtPath);
+          // eslint-disable-next-line id-denylist
         } catch (err) {
           /* empty */
         }
@@ -43,6 +44,7 @@ export function mapDefinitionToTabs(
                 title={definition.title}
                 subtitle={definition.subtitle}
                 disabled={definition.protected}
+                tooltipContent={definition.protected ? 'Enter password for access' : ''}
               />
             ) : undefined}
           </React.Fragment>

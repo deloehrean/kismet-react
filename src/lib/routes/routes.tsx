@@ -35,7 +35,7 @@ export const routes: RoutePathDefinition[] = [
     tree: 'graphics',
     color: 'olive',
     nav: true,
-    protected: isPasswordProtected(),
+    // protected: isPasswordProtected(),
     children: [
       { index: true, title: 'Graphics Dashboard', Component: GraphicsDashboard, path: '' },
       {
@@ -49,6 +49,13 @@ export const routes: RoutePathDefinition[] = [
         title: 'Tees',
       },
     ],
+  },
+  {
+    path: '/process',
+    element: <WebsitesPage />,
+    title: 'Process',
+    color: 'plum',
+    protected: isPasswordProtected(),
   },
   {
     path: '/branding',

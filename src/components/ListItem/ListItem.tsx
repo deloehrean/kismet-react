@@ -2,6 +2,7 @@ import React, { FC, useEffect } from 'react';
 
 import cn from 'clsx';
 import { To, useMatch, useResolvedPath } from 'react-router-dom';
+import { Tooltip } from 'react-tooltip';
 
 import { Divider, Icon, LinkStyled, ListItemStyles as s, Row, Typography } from 'src/components';
 
@@ -17,6 +18,7 @@ interface ListItemProps {
   endIcon?: any;
   expandBtn?: boolean;
   disabled?: boolean;
+  tooltipContent?: string | undefined;
 }
 
 const ListItem: FC<ListItemProps> = ({
@@ -31,6 +33,7 @@ const ListItem: FC<ListItemProps> = ({
   endIcon,
   expandBtn = false,
   disabled = false,
+  tooltipContent = undefined,
 }) => {
   const rootClassName = cn(className, s.root, dense && s.dense, color && s[color]);
   const isPasswordProtected = () => {
@@ -44,10 +47,12 @@ const ListItem: FC<ListItemProps> = ({
   const matchEnd = useMatch({ path: resolved.pathname, end: true });
 
   const collapseToggle = () => {
+    // eslint-disable-next-line no-unused-expressions
     isCollapsed ? setIsCollapsed(false) : setIsCollapsed(true);
   };
 
   useEffect(() => {
+    // eslint-disable-next-line no-unused-expressions
     matchEnd && collapseToggle();
   }, []);
 
@@ -77,13 +82,18 @@ const ListItem: FC<ListItemProps> = ({
 
   const renderLink = (href: To) => {
     return (
-      <LinkStyled
-        to={href}
-        onMouseUp={() => matchEnd && collapseToggle()}
-        aria-disabled={disabled && isPasswordProtected()}
-      >
-        {renderTitles(title, subtitle)}
-      </LinkStyled>
+      <React.Fragment>
+        <LinkStyled
+          to={href}
+          onMouseUp={() => matchEnd && collapseToggle()}
+          aria-disabled={disabled && isPasswordProtected()}
+          data-tooltip-id={'link-tooltip'}
+          data-tooltip-content={tooltipContent}
+        >
+          {renderTitles(title, subtitle)}
+        </LinkStyled>
+        {tooltipContent ? <Tooltip id={'link-tooltip'} /> : ''}
+      </React.Fragment>
     );
   };
 
