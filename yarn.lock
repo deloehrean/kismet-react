@@ -1910,7 +1910,6 @@ __metadata:
     react-number-format: "npm:4.9.4"
     react-router-dom: "npm:6.23.1"
     react-tooltip: "npm:^5.28.0"
-    react-use-scroll-snap: "npm:^1.0.0"
     react-virtuoso: "npm:4.7.11"
     readable-web-to-node-stream: "npm:3.0.2"
     recharts: "npm:2.12.7"
@@ -8961,17 +8960,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use-scroll-snap@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "react-use-scroll-snap@npm:1.0.0"
-  dependencies:
-    tweezer.js: "npm:^1.5.0"
-  peerDependencies:
-    react: ">=18.2.0"
-  checksum: 10c0/f04f92ea0a60a86cf7abba061e56d1ac5863fc4dafc7ef06c2f98dae3d5a0f17c5af24c26f908cfb300a78e82a4f4914430ed6c72cf5668ae8ec3df8a91c4464
-  languageName: node
-  linkType: hard
-
 "react-virtuoso@npm:4.7.11":
   version: 4.7.11
   resolution: "react-virtuoso@npm:4.7.11"
@@ -10369,13 +10357,6 @@ __metadata:
   version: 0.0.1
   resolution: "tty-browserify@npm:0.0.1"
   checksum: 10c0/5e34883388eb5f556234dae75b08e069b9e62de12bd6d87687f7817f5569430a6dfef550b51dbc961715ae0cd0eb5a059e6e3fc34dc127ea164aa0f9b5bb033d
-  languageName: node
-  linkType: hard
-
-"tweezer.js@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "tweezer.js@npm:1.5.0"
-  checksum: 10c0/3ae9627fd89ce178fb51da4a405677b9c1fb8f58a8bcbdecd345cdbae8304c9b71f675e286af648d38cc9089577dd6ff7ee5d93f634a7d988566687e1a011e27
   languageName: node
   linkType: hard
 
