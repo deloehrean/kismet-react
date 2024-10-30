@@ -9,6 +9,7 @@ const GraphicsDashboard = lazy(() => import('src/pages/graphics/GraphicsDashboar
 const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
 const TeesPage = lazy(() => import('src/pages/graphics/tees/TeesPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
+const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 const isPasswordProtected = () => {
   return document.body.classList.contains('password-protected');
@@ -52,10 +53,11 @@ export const routes: RoutePathDefinition[] = [
   },
   {
     path: '/process',
-    element: <WebsitesPage />,
+    element: <ProcessPage />,
     title: 'Process',
     color: 'plum',
-    protected: isPasswordProtected(),
+    // nav: true,
+    // protected: isPasswordProtected(),
   },
   {
     path: '/branding',

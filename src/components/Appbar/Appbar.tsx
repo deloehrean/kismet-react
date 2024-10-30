@@ -94,6 +94,7 @@ const Appbar = ({ color }: AppbarProps) => {
                   value={inputValue}
                   onChange={handleInputChange}
                   onKeyDown={handleKeyDown}
+                  name={'password-input'}
                 />
                 <button type={'submit'} className={s.submit} onClick={handleSubmit}>
                   submit

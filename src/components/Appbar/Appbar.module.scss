@@ -55,7 +55,7 @@
     background: url("/src/assets/images/homepage-collage.jpg") repeat center 40%;
     background-size: 50%;
     width: 100vw;
-    animation: bgSlide 240s linear infinite;
+    //animation: bgSlide 240s linear infinite;
   }
 
   .logo {
@@ -148,6 +148,7 @@
     .collage-carousel {
       opacity: .2;
       background-size: 100%;
+      animation: bgSlide 240s linear infinite;
     }
 
     .spacer {

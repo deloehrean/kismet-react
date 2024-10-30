@@ -1,0 +1,88 @@
+.root {
+  width: 100%;
+
+  .full-wrap {
+    position: relative;
+
+    .scroll-wrap {
+      background: var(--background-elevation-5);
+      height: calc(100vh - (var(--appbar-height) + var(--footer-height)));
+      position: relative;
+      scroll-snap-type: block mandatory;
+      scroll-snap-stop: normal;
+      overflow-x: scroll;
+
+      .frame {
+        background: var(--background-elevation-5);
+        scroll-snap-align: end;
+        height: calc(100vh - (var(--appbar-height) + var(--footer-height)));
+
+
+        &:nth-child(odd) {
+          background: var(--background-elevation-0);
+        }
+
+        &.frame-1 {
+
+        }
+      }
+    }
+
+    .content-wrap {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      overflow: scroll;
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .shape {
+        top: 20px;
+        transition: all 0.5s ease-in-out;
+        height: 200px;
+        width: 200px;
+        padding: var(--size-1);
+        background: var(--background-default);
+
+        &:nth-child(odd) {
+          background: var(--background-darker-50);
+        }
+      }
+
+      &.active-frame-1 {
+        .shape {
+          border-radius: 50%;
+        }
+      }
+
+      &.active-frame-2 {
+        .shape {
+          height: 300px;
+          width: 300px;
+        }
+      }
+
+      &.active-frame-3 {
+        .shape {
+        }
+      }
+
+      &.active-frame-4 {
+        .shape {
+          background: var(--secondary-dark);
+        }
+      }
+
+      &.active-frame-5 {
+        .shape {
+          background: var(--primary-main);
+          transform: scale(2)
+        }
+      }
+    }
+  }
+}
