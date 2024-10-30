@@ -8,6 +8,8 @@ import { isPasswordProtected } from 'src/lib/utils';
 import { ProcessPageStyles as s } from 'src/pages';
 
 function ProcessPage() {
+  document.body.classList.remove('password-protected');
+
   const scrollWrapRef = useRef<HTMLInputElement>(null);
   const numberOfFrames = 8;
 
@@ -19,8 +21,6 @@ function ProcessPage() {
     }, 2000);
   });
 
-  const [isVisible, setIsVisible] = useState(false);
-  const [scrollIsActive, setScrollIsActive] = useState(false);
   const [scrollPosition, setScrollPosition] = useState(0);
   const [frameScrollPercent, setFrameScrollPercent] = useState(0);
   const [activeFrame, setActiveFrame] = useState(1);
@@ -28,27 +28,16 @@ function ProcessPage() {
   function handleScroll(event) {
     const { scrollHeight, scrollTop, clientHeight } = event.target;
     const scrollPosition = scrollHeight - scrollTop - clientHeight;
-    const frameHeight = scrollHeight - scrollTop;
-    const windowHeight = window.innerHeight;
-    const windowScrollPos = document.documentElement.scrollTop;
-
     const frameScrollPercent = 1 + scrollTop / clientHeight;
+    const activeFrameNumber = Math.round(frameScrollPercent);
 
+    setScrollPosition(scrollPosition);
+    setFrameScrollPercent(Number(frameScrollPercent.toFixed(1)));
+    setActiveFrame(activeFrameNumber);
     window.scrollTo({
       top: scrollWrapRef.current?.offsetTop,
       behavior: 'smooth',
     });
-
-    const activeFrameNumber = Math.round(frameScrollPercent);
-
-    console.log(activeFrameNumber);
-
-    console.log(windowHeight, windowScrollPos, frameScrollPercent);
-
-    console.log(scrollPosition, scrollHeight, scrollTop, clientHeight, frameHeight);
-    setScrollPosition(scrollPosition);
-    setFrameScrollPercent(Number(frameScrollPercent.toFixed(1)));
-    setActiveFrame(activeFrameNumber);
   }
 
   return (
