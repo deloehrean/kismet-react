@@ -20,7 +20,7 @@ module.exports = {
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    project: isExtraTsFeaturesEnabled,
+    project: './tsconfig.json',
     lib: tsconfig.compilerOptions.lib,
     sourceType: 'module',
     ecmaVersion: 2020,
@@ -28,6 +28,7 @@ module.exports = {
       jsx: true,
     },
     requireConfigFile: false,
+    tsconfigRootDir: __dirname,
   },
   settings: {
     react: {
@@ -48,15 +49,15 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
-    'prettier/prettier': ['warn', {endOfLine: 'auto'}],
+    'prettier/prettier': ['warn', { endOfLine: 'auto' }],
 
     'no-shadow': 'off',
     'no-nested-ternary': 'warn',
-    'no-console': ['warn', {allow: ['warn', 'error']}],
-    'no-plusplus': ['error', {allowForLoopAfterthoughts: true}],
+    'no-console': ['warn', { allow: ['warn', 'error'] }],
+    'no-plusplus': ['error', { allowForLoopAfterthoughts: true }],
     'no-param-reassign': [
       'warn',
-      {props: true, ignorePropertyModificationsForRegex: ['.*[Rr]ef']},
+      { props: true, ignorePropertyModificationsForRegex: ['.*[Rr]ef'] },
     ],
     'no-use-before-define': 'off',
     'no-unsafe-optional-chaining': 'warn',
@@ -64,7 +65,6 @@ module.exports = {
     'no-promise-executor-return': 'warn',
     'no-continue': 'off',
     'no-await-in-loop': 'off',
-
 
     '@typescript-eslint/ban-ts-comment': 'warn',
     '@typescript-eslint/no-explicit-any': 'warn',
@@ -82,12 +82,12 @@ module.exports = {
     ],
 
     '@typescript-eslint/no-unnecessary-condition': isExtraTsFeaturesEnabled
-      ? ['warn', {allowConstantLoopConditions: true}]
+      ? ['warn', { allowConstantLoopConditions: true }]
       : 'off',
 
     'react/react-in-jsx-scope': 'off',
     'react/display-name': 'off',
-    'react/jsx-filename-extension': [1, {extensions: ['.tsx', '.jsx']}],
+    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
     'react/jsx-no-undef': 'warn',
     'react/jsx-props-no-spreading': 'off',
     'react/prop-types': 'off',
@@ -99,7 +99,7 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'warn',
     'react/function-component-definition': 'off',
     'react/no-unstable-nested-components': 'warn',
-    'react/jsx-no-useless-fragment': ['warn', {allowExpressions: true}],
+    'react/jsx-no-useless-fragment': ['warn', { allowExpressions: true }],
     'react/no-array-index-key': 'off',
     'react/destructuring-assignment': 'warn',
     'react/no-unused-prop-types': 'warn',
@@ -135,11 +135,6 @@ module.exports = {
             position: 'before',
           },
           {
-            pattern: '@trakcap/**',
-            group: 'external',
-            position: 'after',
-          },
-          {
             pattern: 'src/**',
             group: 'internal',
             position: 'after',
@@ -157,7 +152,7 @@ module.exports = {
     'lines-between-class-members': 'off',
     'class-methods-use-this': 'off',
     'consistent-return': 'warn',
-    'prefer-const': ['error', {destructuring: 'all'}],
+    'prefer-const': ['error', { destructuring: 'all' }],
     'id-denylist': ['warn', 'err', 'e'],
     'default-param-last': 'off',
     'guard-for-in': 'warn',
