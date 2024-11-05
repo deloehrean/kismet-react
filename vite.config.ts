@@ -55,6 +55,11 @@ const config = defineConfig(({ command, mode }) => {
       modules: {
         generateScopedName: '[folder]_[local]_[hash:base64:5]',
       },
+      preprocessorOptions: {
+        scss: {
+          api: 'modern-compiler', // or "modern"
+        },
+      },
     },
   };
 });

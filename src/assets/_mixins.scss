@@ -1,3 +1,4 @@
+@use "sass:map";
 $breakpoints: (
   xs: 319px,
   sm: 505px,
@@ -7,9 +8,9 @@ $breakpoints: (
 );
 
 @mixin breakpoint($breakpoint, $direction) {
-  @if map-has-key($breakpoints, $breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
     // Get the breakpoint value.
-    $breakpoint-value: map-get($breakpoints, $breakpoint);
+    $breakpoint-value: map.get($breakpoints, $breakpoint);
 
     @if $direction == max {
       @media (max-width: ($breakpoint-value - 1)) {

@@ -7759,6 +7759,7 @@ __metadata:
     readable-web-to-node-stream: "npm:3.0.2"
     recharts: "npm:2.12.7"
     sass: "npm:^1.77.8"
+    sass-migrator: "npm:^2.2.1"
     scroll-snap: "npm:^4.0.5"
     stylelint: "npm:^16.7.0"
     stylelint-config-standard-scss: "npm:^13.1.0"
@@ -10134,6 +10135,15 @@ __metadata:
   version: 2.1.2
   resolution: "safer-buffer@npm:2.1.2"
   checksum: 10c0/7e3c8b2e88a1841c9671094bbaeebd94448111dd90a81a1f606f3f67708a6ec57763b3b47f06da09fc6054193e0e6709e77325415dc8422b04497a8070fa02d4
+  languageName: node
+  linkType: hard
+
+"sass-migrator@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "sass-migrator@npm:2.2.1"
+  bin:
+    sass-migrator: sass-migrator.js
+  checksum: 10c0/fa3f244ff7106da1556685faf8ef18f8aee57670abc55e8aa92a0cccaca7836d6dc2799e5c69d06e250ecb35faede4d9a088cc883afa31a3e4e3fd737a6c330c
   languageName: node
   linkType: hard
 

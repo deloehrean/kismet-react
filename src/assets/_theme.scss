@@ -1,6 +1,6 @@
 @use 'mixins' as m;
 
-@import 'material';
+@use 'material';
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
@@ -15,154 +15,154 @@
   *******************/
 
   // Text
-  --text-primary: #{$slate-900};
-  --text-secondary: #{$slate-900-72};
-  --text-contrast: #{$white-100};
-  --text-disabled: #{$slate-700-56};
-  --text-focus: #{$slate-200};
-  --text-focus-visible: #{$slate-200};
-  --text-hover: #{$slate-100};
-  --text-outlined-border: #{$slate-700};
-  --text-selected: #{$slate-75};
+  --text-primary: #{material.$slate-900};
+  --text-secondary: #{material.$slate-900-72};
+  --text-contrast: #{material.$white-100};
+  --text-disabled: #{material.$slate-700-56};
+  --text-focus: #{material.$slate-200};
+  --text-focus-visible: #{material.$slate-200};
+  --text-hover: #{material.$slate-100};
+  --text-outlined-border: #{material.$slate-700};
+  --text-selected: #{material.$slate-75};
 
   // Primary
-  --primary-main: #{$rust-500};
-  --primary-dark: #{$rust-700};
-  --primary-light: #{$rust-300};
-  --primary-contrast: #{$white-100};
-  --primary-focus: #{$rust-500-24};
-  --primary-focus-visible: #{$rust-500-32};
-  --primary-hover: #{$rust-500-16};
-  --primary-outlined-border: #{$rust-500-72};
-  --primary-selected: #{$rust-500-12};
+  --primary-main: #{material.$rust-500};
+  --primary-dark: #{material.$rust-700};
+  --primary-light: #{material.$rust-300};
+  --primary-contrast: #{material.$white-100};
+  --primary-focus: #{material.$rust-500-24};
+  --primary-focus-visible: #{material.$rust-500-32};
+  --primary-hover: #{material.$rust-500-16};
+  --primary-outlined-border: #{material.$rust-500-72};
+  --primary-selected: #{material.$rust-500-12};
 
   // Secondary
-  --secondary-main: #{$dusk-500};
-  --secondary-dark: #{$dusk-700};
-  --secondary-light: #{$dusk-200};
-  --secondary-contrast: #{$white-100};
-  --secondary-focus: #{$dusk-500-24};
-  --secondary-focus-visible: #{$dusk-500-32};
-  --secondary-hover: #{$dusk-500-16};
-  --secondary-outlined-border: #{$dusk-500-72};
-  --secondary-selected: #{$dusk-500-8};
+  --secondary-main: #{material.$dusk-500};
+  --secondary-dark: #{material.$dusk-700};
+  --secondary-light: #{material.$dusk-200};
+  --secondary-contrast: #{material.$white-100};
+  --secondary-focus: #{material.$dusk-500-24};
+  --secondary-focus-visible: #{material.$dusk-500-32};
+  --secondary-hover: #{material.$dusk-500-16};
+  --secondary-outlined-border: #{material.$dusk-500-72};
+  --secondary-selected: #{material.$dusk-500-8};
 
   // Error
-  --error-main: #{$plum-600};
-  --error-dark: #{$plum-800};
-  --error-light: #{$plum-400};
-  --error-contrast: #{$white-100};
-  --error-focus: #{$plum-600-24};
-  --error-focus-visible: #{$plum-600-32};
-  --error-hover: #{$plum-600-16};
-  --error-outlined-border: #{$plum-600-72};
-  --error-selected: #{$plum-600-8};
+  --error-main: #{material.$plum-600};
+  --error-dark: #{material.$plum-800};
+  --error-light: #{material.$plum-400};
+  --error-contrast: #{material.$white-100};
+  --error-focus: #{material.$plum-600-24};
+  --error-focus-visible: #{material.$plum-600-32};
+  --error-hover: #{material.$plum-600-16};
+  --error-outlined-border: #{material.$plum-600-72};
+  --error-selected: #{material.$plum-600-8};
 
   // Warning
-  --warning-main: #{$rust-700};
-  --warning-dark: #{$rust-900};
-  --warning-light: #{$rust-500};
-  --warning-contrast: #{$white-100};
-  --warning-focus: #{$rust-700-24};
-  --warning-focus-visible: #{$rust-700-32};
-  --warning-hover: #{$rust-700-16};
-  --warning-outlined-border: #{$rust-700-72};
-  --warning-selected: #{$rust-700-8};
+  --warning-main: #{material.$rust-700};
+  --warning-dark: #{material.$rust-900};
+  --warning-light: #{material.$rust-500};
+  --warning-contrast: #{material.$white-100};
+  --warning-focus: #{material.$rust-700-24};
+  --warning-focus-visible: #{material.$rust-700-32};
+  --warning-hover: #{material.$rust-700-16};
+  --warning-outlined-border: #{material.$rust-700-72};
+  --warning-selected: #{material.$rust-700-8};
 
   // Info
-  --info-main: #{$dusk-200};
-  --info-dark: #{$dusk-300};
-  --info-light: #{$dusk-100};
-  --info-contrast: #{$white-100};
-  --info-focus: #{$dusk-300-24};
-  --info-focus-visible: #{$dusk-300-32};
-  --info-hover: #{$dusk-300-16};
-  --info-outlined-border: #{$dusk-300-72};
-  --info-selected: #{$dusk-300-8};
+  --info-main: #{material.$dusk-200};
+  --info-dark: #{material.$dusk-300};
+  --info-light: #{material.$dusk-100};
+  --info-contrast: #{material.$white-100};
+  --info-focus: #{material.$dusk-300-24};
+  --info-focus-visible: #{material.$dusk-300-32};
+  --info-hover: #{material.$dusk-300-16};
+  --info-outlined-border: #{material.$dusk-300-72};
+  --info-selected: #{material.$dusk-300-8};
 
   // Success
-  --success-main: #{$aqua-700};
-  --success-dark: #{$aqua-900};
-  --success-light: #{$aqua-500};
-  --success-contrast: #{$white-100};
-  --success-focus: #{$aqua-700-24};
-  --success-focus-visible: #{$aqua-700-32};
-  --success-hover: #{$aqua-700-16};
-  --success-outlined-border: #{$aqua-700-72};
-  --success-selected: #{$aqua-700-8};
+  --success-main: #{material.$aqua-700};
+  --success-dark: #{material.$aqua-900};
+  --success-light: #{material.$aqua-500};
+  --success-contrast: #{material.$white-100};
+  --success-focus: #{material.$aqua-700-24};
+  --success-focus-visible: #{material.$aqua-700-32};
+  --success-hover: #{material.$aqua-700-16};
+  --success-outlined-border: #{material.$aqua-700-72};
+  --success-selected: #{material.$aqua-700-8};
 
   // Slate
-  --slate-main: #{$slate-700};
-  --slate-dark: #{$slate-900};
-  --slate-light: #{$slate-500};
-  --slate-contrast: #{$white-100};
-  --slate-focus: #{$slate-700-24};
-  --slate-focus-visible: #{$slate-700-32};
-  --slate-hover: #{$slate-700-16};
-  --slate-outlined-border: #{$slate-700-72};
-  --slate-selected: #{$slate-700-8};
+  --slate-main: #{material.$slate-700};
+  --slate-dark: #{material.$slate-900};
+  --slate-light: #{material.$slate-500};
+  --slate-contrast: #{material.$white-100};
+  --slate-focus: #{material.$slate-700-24};
+  --slate-focus-visible: #{material.$slate-700-32};
+  --slate-hover: #{material.$slate-700-16};
+  --slate-outlined-border: #{material.$slate-700-72};
+  --slate-selected: #{material.$slate-700-8};
 
   // Tabbed Nav Page Colors
-  --home-page-color: #{$rust-100};
-  --graphics-page-color: #{$olive-100};
-  --webdev-page-color: #{$dusk-100};
-  --branding-page-color: #{$aqua-100};
-  --ecommerce-page-color: #{$plum-200};
+  --home-page-color: #{material.$rust-100};
+  --graphics-page-color: #{material.$olive-100};
+  --webdev-page-color: #{material.$dusk-100};
+  --branding-page-color: #{material.$aqua-100};
+  --ecommerce-page-color: #{material.$plum-200};
 
   // Action
-  --action-active: #{$slate-900-72};
-  --action-disabled: #{$slate-700-32};
-  --action-disabled-background: #{$slate-700-16};
-  --action-focus: #{$slate-700-48};
-  --action-hover: #{$slate-700-32};
-  --action-selected: #{$slate-700-24};
+  --action-active: #{material.$slate-900-72};
+  --action-disabled: #{material.$slate-700-32};
+  --action-disabled-background: #{material.$slate-700-16};
+  --action-focus: #{material.$slate-700-48};
+  --action-hover: #{material.$slate-700-32};
+  --action-selected: #{material.$slate-700-24};
 
   // Common/Black
-  --common-black-main: #{$slate-900};
-  --common-black-focus: #{$slate-900-24};
-  --common-black-focus-visible: #{$slate-900-32};
-  --common-black-hover: #{$slate-900-16};
-  --common-black-outlined-border: #{$slate-900-72};
-  --common-black-selected: #{$slate-900-8};
+  --common-black-main: #{material.$slate-900};
+  --common-black-focus: #{material.$slate-900-24};
+  --common-black-focus-visible: #{material.$slate-900-32};
+  --common-black-hover: #{material.$slate-900-16};
+  --common-black-outlined-border: #{material.$slate-900-72};
+  --common-black-selected: #{material.$slate-900-8};
 
   // Common/White
-  --common-white-main: #{$white-100};
-  --common-white-focus: #{$white-24};
-  --common-white-focus-visible: #{$white-32};
-  --common-white-hover: #{$white-16};
-  --common-white-outlined-border: #{$white-72};
-  --common-white-selected: #{$white-8};
+  --common-white-main: #{material.$white-100};
+  --common-white-focus: #{material.$white-24};
+  --common-white-focus-visible: #{material.$white-32};
+  --common-white-hover: #{material.$white-16};
+  --common-white-outlined-border: #{material.$white-72};
+  --common-white-selected: #{material.$white-8};
 
   // Background
-  --background-default: #{$white-100};
-  --background-darker-25: #{$slate-700-8};
-  --background-darker-50: #{$slate-700-16};
-  --background-darker-75: #{$slate-700-24};
-  --background-elevation-0: #{$white-100};
-  --background-elevation-1: #{$white-100};
-  --background-elevation-2: #{$white-100};
-  --background-elevation-3: #{$white-100};
-  --background-elevation-4: #{$white-100};
-  --background-elevation-5: #{$white-100};
-  --background-elevation-6: #{$white-100};
-  --background-elevation-7: #{$white-100};
-  --background-elevation-8: #{$white-100};
-  --background-elevation-9: #{$white-100};
-  --background-elevation-10: #{$white-100};
-  --background-elevation-11: #{$white-100};
-  --background-elevation-12: #{$white-100};
-  --background-elevation-13: #{$white-100};
-  --background-elevation-14: #{$white-100};
-  --background-elevation-15: #{$white-100};
-  --background-elevation-16: #{$white-100};
-  --background-elevation-17: #{$white-100};
-  --background-elevation-18: #{$white-100};
-  --background-elevation-19: #{$white-100};
-  --background-elevation-20: #{$white-100};
-  --background-elevation-21: #{$white-100};
-  --background-elevation-22: #{$white-100};
-  --background-elevation-23: #{$white-100};
-  --background-elevation-24: #{$white-100};
+  --background-default: #{material.$white-100};
+  --background-darker-25: #{material.$slate-700-8};
+  --background-darker-50: #{material.$slate-700-16};
+  --background-darker-75: #{material.$slate-700-24};
+  --background-elevation-0: #{material.$white-100};
+  --background-elevation-1: #{material.$white-100};
+  --background-elevation-2: #{material.$white-100};
+  --background-elevation-3: #{material.$white-100};
+  --background-elevation-4: #{material.$white-100};
+  --background-elevation-5: #{material.$white-100};
+  --background-elevation-6: #{material.$white-100};
+  --background-elevation-7: #{material.$white-100};
+  --background-elevation-8: #{material.$white-100};
+  --background-elevation-9: #{material.$white-100};
+  --background-elevation-10: #{material.$white-100};
+  --background-elevation-11: #{material.$white-100};
+  --background-elevation-12: #{material.$white-100};
+  --background-elevation-13: #{material.$white-100};
+  --background-elevation-14: #{material.$white-100};
+  --background-elevation-15: #{material.$white-100};
+  --background-elevation-16: #{material.$white-100};
+  --background-elevation-17: #{material.$white-100};
+  --background-elevation-18: #{material.$white-100};
+  --background-elevation-19: #{material.$white-100};
+  --background-elevation-20: #{material.$white-100};
+  --background-elevation-21: #{material.$white-100};
+  --background-elevation-22: #{material.$white-100};
+  --background-elevation-23: #{material.$white-100};
+  --background-elevation-24: #{material.$white-100};
   --shadow-elevation-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
   --shadow-elevation-2: 0px 3px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
   --shadow-elevation-3: 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12);
@@ -187,7 +187,7 @@
   --shadow-elevation-22: 0px 10px 14px rgba(0, 0, 0, 0.2), 0px 22px 35px rgba(0, 0, 0, 0.14), 0px 8px 42px rgba(0, 0, 0, 0.12);
   --shadow-elevation-23: 0px 11px 14px rgba(0, 0, 0, 0.2), 0px 23px 36px rgba(0, 0, 0, 0.14), 0px 9px 44px rgba(0, 0, 0, 0.12);
   --shadow-elevation-24: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12);
-  --background-contrast: #{$slate-900};
+  --background-contrast: #{material.$slate-900};
   --elevation-outlined: var(--components-divider);
   --elevation-outlined-dark: var(--components-divider-dark);
   --background-gradient-primary: linear-gradient(90deg, var(--primary-main) 11%, var(--primary-dark) 100%);
@@ -195,7 +195,7 @@
   --background-gradient-aqua: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
   --background-gradient-dusk: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
   --background-gradient-purple: linear-gradient(91.1deg, #fc5c7d 0%, #9e50ff 100%);
-  --background-modal: #{$slate-900-88};
+  --background-modal: #{material.$slate-900-88};
 
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);
@@ -215,18 +215,18 @@
   //--chip-default-fill: var(--slate-slate-50);
   //--chip-default-focus-fill: var(--slate-slate-200);
   //--chip-default-hover-fill: var(--slate-slate-100);
-  --divider: #{$slate-700-48};
-  --divider-dark: #{$slate-900-64};
+  --divider: #{material.$slate-700-48};
+  --divider-dark: #{material.$slate-900-64};
   --input-filled-enabled-fill: var(--action-selected);
   --input-filled-hover-fill: var(--action-hover);
-  --input-outlined-enabled-border: #{$slate-200};
-  --input-outlined-hover-border: #{$slate-400};
-  --input-standard-enabled-border: #{$slate-200};
-  --input-standard-hover-border: #{$slate-400};
+  --input-outlined-enabled-border: #{material.$slate-200};
+  --input-outlined-hover-border: #{material.$slate-400};
+  --input-standard-enabled-border: #{material.$slate-200};
+  --input-standard-hover-border: #{material.$slate-400};
   --link-primary: var(--action-active);
   --link-primary-hover: var(--action-hover);
   --link-primary-disabled: var(--action-disabled);
-  --logo-fill: #{$dusk-700};
+  --logo-fill: #{material.$dusk-700};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);
   //--snackbar-fill: #323232;
@@ -267,108 +267,108 @@ PALETTE - DARK MODE
 [data-theme="dark-theme"] {
 
   // Text
-  --text-primary: #{$white-100};
-  --text-secondary: #{$white-80};
-  --text-contrast: #{$slate-900};
+  --text-primary: #{material.$white-100};
+  --text-secondary: #{material.$white-80};
+  --text-contrast: #{material.$slate-900};
   --text-disabled: var(--action-disabled);
-  --text-focus: #{$white-24};
-  --text-focus-visible: #{$white-32};
-  --text-hover: #{$white-16};
-  --text-outlined-border: #{$white-72};
-  --text-selected: #{$white-12};
+  --text-focus: #{material.$white-24};
+  --text-focus-visible: #{material.$white-32};
+  --text-hover: #{material.$white-16};
+  --text-outlined-border: #{material.$white-72};
+  --text-selected: #{material.$white-12};
 
   // Primary
-  --primary-main: #{$rust-800};
-  --primary-dark: #{$rust-900};
-  --primary-light: #{$rust-700};
-  --primary-focus: #{$rust-300-24};
-  --primary-focus-visible: #{$rust-300-32};
-  --primary-hover: #{$rust-300-24};
-  --primary-outlined-border: #{$rust-300-72};
-  --primary-selected: #{$rust-300-16};
+  --primary-main: #{material.$rust-800};
+  --primary-dark: #{material.$rust-900};
+  --primary-light: #{material.$rust-700};
+  --primary-focus: #{material.$rust-300-24};
+  --primary-focus-visible: #{material.$rust-300-32};
+  --primary-hover: #{material.$rust-300-24};
+  --primary-outlined-border: #{material.$rust-300-72};
+  --primary-selected: #{material.$rust-300-16};
 
   // Secondary
-  --secondary-dark: #{$dusk-800};
-  --secondary-light: #{$dusk-300};
-  --secondary-outlined-border: #{$dusk-500-56};
+  --secondary-dark: #{material.$dusk-800};
+  --secondary-light: #{material.$dusk-300};
+  --secondary-outlined-border: #{material.$dusk-500-56};
 
   // Error
-  --error-main: #{$plum-500};
-  --error-dark: #{$plum-700};
-  --error-light: #{$plum-300};
-  --error-focus: #{$plum-500-24};
-  --error-focus-visible: #{$plum-500-32};
-  --error-hover: #{$plum-500-16};
-  --error-outlined-border: #{$plum-500-56};
-  --error-selected: #{$plum-500-8};
+  --error-main: #{material.$plum-500};
+  --error-dark: #{material.$plum-700};
+  --error-light: #{material.$plum-300};
+  --error-focus: #{material.$plum-500-24};
+  --error-focus-visible: #{material.$plum-500-32};
+  --error-hover: #{material.$plum-500-16};
+  --error-outlined-border: #{material.$plum-500-56};
+  --error-selected: #{material.$plum-500-8};
 
   // Warning
-  --warning-outlined-border: #{$rust-700-56};
+  --warning-outlined-border: #{material.$rust-700-56};
 
   // Info
-  --info-main: #{$dusk-100};
-  --info-dark: #{$dusk-200};
-  --info-light: #{$dusk-50};
-  --info-contrast: #{$dusk-900};
-  --info-focus: #{$dusk-100-24};
-  --info-focus-visible: #{$dusk-100-32};
-  --info-hover: #{$dusk-100-16};
-  --info-outlined-border: #{$dusk-100-56};
-  --info-selected: #{$dusk-100-8};
+  --info-main: #{material.$dusk-100};
+  --info-dark: #{material.$dusk-200};
+  --info-light: #{material.$dusk-50};
+  --info-contrast: #{material.$dusk-900};
+  --info-focus: #{material.$dusk-100-24};
+  --info-focus-visible: #{material.$dusk-100-32};
+  --info-hover: #{material.$dusk-100-16};
+  --info-outlined-border: #{material.$dusk-100-56};
+  --info-selected: #{material.$dusk-100-8};
 
   // Success
-  --success-main: #{$aqua-600};
-  --success-dark: #{$aqua-800};
-  --success-light: #{$aqua-400};
-  --success-contrast: #{$slate-900};
-  --success-focus-visible: #{$aqua-700-40};
+  --success-main: #{material.$aqua-600};
+  --success-dark: #{material.$aqua-800};
+  --success-light: #{material.$aqua-400};
+  --success-contrast: #{material.$slate-900};
+  --success-focus-visible: #{material.$aqua-700-40};
 
   // Tabbed Nav Page Colors
-  --home-page-color: #{$rust-800};
-  --graphics-page-color: #{$olive-700};
-  --webdev-page-color: #{$dusk-500};
-  --branding-page-color: #{$aqua-500};
-  --ecommerce-page-color: #{$plum-700};
+  --home-page-color: #{material.$rust-800};
+  --graphics-page-color: #{material.$olive-700};
+  --webdev-page-color: #{material.$dusk-500};
+  --branding-page-color: #{material.$aqua-500};
+  --ecommerce-page-color: #{material.$plum-700};
 
   // Action
-  --action-active: #{$white-88};
-  --action-disabled: #{$white-32};
-  --action-disabled-background: #{$white-8};
-  --action-focus: #{$white-72};
-  --action-hover: #{$white-64};
-  --action-selected: #{$white-72};
+  --action-active: #{material.$white-88};
+  --action-disabled: #{material.$white-32};
+  --action-disabled-background: #{material.$white-8};
+  --action-focus: #{material.$white-72};
+  --action-hover: #{material.$white-64};
+  --action-selected: #{material.$white-72};
 
   // Background
-  --background-default: #{$slate-900};
+  --background-default: #{material.$slate-900};
   --background-darker-25: rgba(0, 0, 0, 0.8);
   --background-darker-50: rgba(0, 0, 0, 0.16);
   --background-darker-75: rgba(0, 0, 0, 0.24);
   --background-elevation-0: transparent;
   --background-elevation-1: transparent;
-  --background-elevation-2: #{$white-8};
-  --background-elevation-3: #{$white-8};
-  --background-elevation-4: #{$white-8};
-  --background-elevation-5: #{$white-8};
-  --background-elevation-6: #{$white-12};
-  --background-elevation-7: #{$white-12};
-  --background-elevation-8: #{$white-12};
-  --background-elevation-9: #{$white-12};
-  --background-elevation-10: #{$white-16};
-  --background-elevation-11: #{$white-16};
-  --background-elevation-12: #{$white-16};
-  --background-elevation-13: #{$white-16};
-  --background-elevation-14: #{$white-24};
-  --background-elevation-15: #{$white-24};
-  --background-elevation-16: #{$white-24};
-  --background-elevation-17: #{$white-24};
-  --background-elevation-18: #{$white-32};
-  --background-elevation-19: #{$white-32};
-  --background-elevation-20: #{$white-32};
-  --background-elevation-21: #{$white-32};
-  --background-elevation-22: #{$white-40};
-  --background-elevation-23: #{$white-40};
-  --background-elevation-24: #{$white-40};
-  --background-contrast: #{$white-100};
+  --background-elevation-2: #{material.$white-8};
+  --background-elevation-3: #{material.$white-8};
+  --background-elevation-4: #{material.$white-8};
+  --background-elevation-5: #{material.$white-8};
+  --background-elevation-6: #{material.$white-12};
+  --background-elevation-7: #{material.$white-12};
+  --background-elevation-8: #{material.$white-12};
+  --background-elevation-9: #{material.$white-12};
+  --background-elevation-10: #{material.$white-16};
+  --background-elevation-11: #{material.$white-16};
+  --background-elevation-12: #{material.$white-16};
+  --background-elevation-13: #{material.$white-16};
+  --background-elevation-14: #{material.$white-24};
+  --background-elevation-15: #{material.$white-24};
+  --background-elevation-16: #{material.$white-24};
+  --background-elevation-17: #{material.$white-24};
+  --background-elevation-18: #{material.$white-32};
+  --background-elevation-19: #{material.$white-32};
+  --background-elevation-20: #{material.$white-32};
+  --background-elevation-21: #{material.$white-32};
+  --background-elevation-22: #{material.$white-40};
+  --background-elevation-23: #{material.$white-40};
+  --background-elevation-24: #{material.$white-40};
+  --background-contrast: #{material.$white-100};
 
   // Component Specific
   //--alert-error-background: var(--error-focus-visible);
@@ -388,15 +388,15 @@ PALETTE - DARK MODE
   //--chip-default-fill: var(--slate-slate-50);
   //--chip-default-focus-fill: var(--slate-slate-200);
   //--chip-default-hover-fill: var(--slate-slate-100);
-  --divider: #{$white-16};
-  --divider-dark: #{$white-24};
+  --divider: #{material.$white-16};
+  --divider-dark: #{material.$white-24};
   --input-filled-enabled-fill: var(--action-selected);
   --input-filled-hover-fill: var(--action-hover);
-  --input-outlined-enabled-border: #{$slate-200};
-  --input-outlined-hover-border: #{$slate-400};
-  --input-standard-enabled-border: #{$slate-200};
-  --input-standard-hover-border: #{$slate-400};
-  --logo-fill: #{$white-100};
+  --input-outlined-enabled-border: #{material.$slate-200};
+  --input-outlined-hover-border: #{material.$slate-400};
+  --input-standard-enabled-border: #{material.$slate-200};
+  --input-standard-hover-border: #{material.$slate-400};
+  --logo-fill: #{material.$white-100};
   //--pagination-default-enabled-border: var(--input-outlined-enabled-border);
   //--pagination-default-fill: var(--slate-slate-50);
   //--snackbar-fill: #323232;

@@ -1,7 +1,9 @@
+@use "sass:meta";
 @import '_chrome-bug.css';
-@import 'reset';
-@import 'theme';
-@import 'base';
+
+@include meta.load-css('reset');
+@include meta.load-css('theme');
+@include meta.load-css('base');
 @import 'fonts/fonts.css';
 
-@import 'animations';
+@include meta.load-css('animations');
