@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 const tsconfig = require('./tsconfig.json');
 
 const isVsCodeAddonDemon = process.argv.some(arg => arg.includes('vscode-eslint'));
@@ -9,14 +7,14 @@ const isVsCodeAddonDemon = process.argv.some(arg => arg.includes('vscode-eslint'
 const isExtraTsFeaturesEnabled = !isVsCodeAddonDemon;
 
 /**
- * @type {import('eslint').Linter.Config}
+ * @type {import('eslint').Linter.Config[]}
  */
 
 module.exports = {
   root: true,
   env: {
     browser: true,
-    es2020: true,
+    es2021: true,
   },
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -28,7 +26,6 @@ module.exports = {
       jsx: true,
     },
     requireConfigFile: false,
-    tsconfigRootDir: __dirname,
   },
   settings: {
     react: {
