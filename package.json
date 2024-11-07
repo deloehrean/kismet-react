@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "private": true,
   "packageManager": "yarn@4.1.1",
+  "type": "module",
   "scripts": {
     "// bootstrap scripts": "",
     "bootstrap": "yarn install && yarn build:packages",
