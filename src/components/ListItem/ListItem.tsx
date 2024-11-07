@@ -73,11 +73,11 @@ const ListItem: FC<ListItemProps> = ({
   };
 
   const renderStartIcon = (startIcon: any) => {
-    return <Icon name={startIcon} size={'medium'} />;
+    return <Icon name={startIcon} size={'inherit'} />;
   };
 
   const renderEndIcon = (endIcon: any) => {
-    return <Icon name={endIcon} size={'medium'} />;
+    return <Icon name={endIcon} size={'inherit'} />;
   };
 
   const renderLink = (href: To) => {

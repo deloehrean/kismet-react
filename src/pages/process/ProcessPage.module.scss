@@ -375,30 +375,83 @@
             }
           }
 
-          .menu {
-            transition: all 0.25s ease-in-out;
+          nav ul {
+            transition: all 0s ease-in-out;
             opacity: 0;
             top: 16%;
             right: 12%;
             position: absolute;
+          }
+
+          .before nav ul {
+            border: 1px solid #000;
             background: var(--common-white-main);
             color: #004975;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 11px;
-            padding: 6px 0;
+            font-size: 10px;
+            gap: 0;
+            padding: 4px 0;
+            margin-inline: 0;
+            border-radius: 0;
+            box-shadow: 6px 10px 16px -8px #000;
+            overflow: visible;
 
             li {
-              padding: 2px 12px;
-              display: flex;
-              flex-direction: row;
-              justify-content: flex-start;
-              
+              position: relative;
+              padding: 2px 2px;
+              height: auto;
+              gap: calc(var(--size-1) / 2);
+              background: none;
+              border-radius: 0;
+
+              > div > div {
+                width: 100%;
+
+                > div:first-child {
+                  opacity: 0;
+                }
+              }
+
+              p {
+                white-space: nowrap;
+                font-size: 10px;
+              }
+
+              svg {
+                height: 8px;
+                width: var(--size-1);
+              }
+
+              button {
+                display: none;
+              }
 
               &.hover {
                 color: #fff;
                 background: #004975;
               }
             }
+
+            div {
+              border: none;
+              background: none;
+            }
+
+            ul {
+              top: 24px;
+              right: 95%;
+            }
+          }
+
+          .cursor {
+            transition: all .5s ease-in-out;
+            opacity: 0;
+            position: absolute;
+            top: 10%;
+            right: 0;
+            z-index: 20;
+            height: 24px;
+            width: 24px;
           }
         }
       }
@@ -414,12 +467,189 @@
           overflow: hidden;
 
           .website-wrap {
-            transform: scale(2) translate(-15%, 26%);
+            transform: scale(1.9) translate(-13%, 18%);
           }
 
-          .menu {
-            opacity: 1;
+          nav > ul {
+            animation: menuInstant 0s linear forwards;
+            animation-delay: 0.6s;
+
+            > div:nth-child(1) {
+              animation: menuItemInstant 0.1s linear alternate;
+              animation-delay: 1.5s;
+            }
+
+            > div:nth-child(2) {
+              border-radius: 0;
+              animation: menuItemInstant 1.1s linear alternate;
+              animation-delay: 1.7s;
+
+              > ul {
+                > div:nth-child(1) {
+                  animation: menuItemInstant 0.1s linear alternate;
+                  animation-delay: 2.6s;
+                }
+
+                > div:nth-child(2) {
+                  border-radius: 0;
+                  animation: menuItemInstant 1.2s linear alternate;
+                  animation-delay: 2.8s;
+
+                  > ul {
+                    > div:nth-child(1) {
+                      animation: menuItemInstant 1.25s linear alternate;
+                      animation-delay: 3.9s;
+                    }
+
+                    > div:nth-child(2) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.2s linear alternate;
+                      animation-delay: 5.15s;
+                    }
+
+                    > div:nth-child(3) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear alternate;
+                      animation-delay: 5.45s;
+                    }
+
+                    > div:nth-child(4) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear alternate;
+                      animation-delay: 5.55s;
+                    }
+
+                    > div:nth-child(5) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear alternate;
+                      animation-delay: 5.67s;
+                    }
+
+                    > div:nth-child(6) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear alternate;
+                      animation-delay: 5.76s;
+                    }
+
+                    > div:nth-child(7) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear alternate;
+                      animation-delay: 5.85s;
+                    }
+
+                    > div:nth-child(8) {
+                      border-radius: 0;
+                      animation: menuItemInstant 0.1s linear forwards;
+                      animation-delay: 6.02s;
+                    }
+                  }
+                }
+              }
+            }
+
+            > div:nth-child(2) {
+              > ul {
+                animation: menuInstant 0s linear forwards;
+                animation-delay: 1.7s;
+
+                > div:nth-child(2) {
+                  > ul {
+                    animation: menuInstant 0s linear forwards;
+                    animation-delay: 2.75s;
+
+                    > div:nth-child(8) {
+                      > ul {
+                        right: auto;
+                        left: 97%;
+                        top: 48%;
+                        z-index: 20;
+                        animation: menuInstant 0s linear forwards;
+                        animation-delay: 6s;
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
+
+          @keyframes menuItemInstant {
+            0% {
+              color: #004975;
+              background: none;
+            }
+            1% {
+              color: #FFF;
+              background: #004975;
+            }
+            100% {
+              color: #FFF;
+              background: #004975;
+            }
+          }
+
+          @keyframes menuInstant {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          .cursor {
+            opacity: 1;
+            animation: cursorAnim1 6s ease-in-out forwards;
+          }
+
+          @keyframes cursorAnim1 {
+            0% {
+              top: 10%;
+              right: 0;
+            }
+            10% {
+              top: 13.5%;
+              right: 21%;
+            }
+            20% {
+              top: 13.5%;
+              right: 21%;
+            }
+            30% {
+              top: 19.8%;
+              right: 18%;
+            }
+            40% {
+              top: 19.8%;
+              right: 18%;
+            }
+            50% {
+              top: 23%;
+              right: 30%;
+            }
+            60% {
+              top: 23%;
+              right: 30%;
+            }
+            70% {
+              top: 24%;
+              right: 40%;
+            }
+            80% {
+              top: 24%;
+              right: 40%;
+            }
+            90% {
+              top: 28%;
+              right: 41%;
+            }
+            100% {
+              top: 43%;
+              right: 43%;
+            }
+          }
+
+
         }
       }
 

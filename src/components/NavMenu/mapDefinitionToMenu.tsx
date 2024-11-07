@@ -1,9 +1,9 @@
 import React from 'react';
 
 import cn from 'clsx';
-import { generatePath, useResolvedPath, useMatch } from 'react-router-dom';
+import { generatePath, useMatch, useResolvedPath } from 'react-router-dom';
 
-import { Typography, NavMenuStyles as s, ListItem } from 'src/components';
+import { ListItem, NavMenuStyles as s } from 'src/components';
 import { concatPaths } from 'src/lib/routes/routeHelpers';
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
@@ -22,7 +22,10 @@ export function mapDefinitionToMenu(
         let to: string | undefined;
         try {
           to = generatePath(builtPath);
-        } catch (err) {}
+          // eslint-disable-next-line id-denylist
+        } catch (err) {
+          /* empty */
+        }
 
         const resolved = useResolvedPath(to || '');
         const match = useMatch({ path: resolved.pathname, end: false });
@@ -38,13 +41,19 @@ export function mapDefinitionToMenu(
                     href={to}
                     startIcon={definition.startIcon}
                     endIcon={definition.endIcon}
-                    dense={!!parent}
                     title={definition.title}
                     subtitle={definition.subtitle}
                     expandBtn={!!definition.children}
                   />
                 ) : (
-                  <Typography>{definition.title}</Typography>
+                  <ListItem
+                    key={index}
+                    className={cn(definition.children ? s['list-item-expand'] : s['list-item'])}
+                    title={definition.title}
+                    startIcon={definition.startIcon}
+                    endIcon={definition.endIcon}
+                    expandBtn={!!definition.children}
+                  />
                 )}
                 {definition.children
                   ? mapDefinitionToMenu(definition.children, builtPath)

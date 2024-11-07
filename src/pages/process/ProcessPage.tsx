@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useState } from 'react';
 import cn from 'clsx';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import Chevron from 'src/assets/images/process/chevron';
 import Process1ReportingReview from 'src/assets/images/process/process-1-reporting-page-review.jpg';
 import {
   Markup01,
@@ -23,7 +22,8 @@ import {
   Markup15,
   Markup16,
 } from 'src/assets/images/process/screen-2-markup';
-import { Column, PageHeading, WebsiteTopper } from 'src/components';
+import { Column, CursorIcon, NavMenu, PageHeading, WebsiteTopper } from 'src/components';
+import { processRoutes } from 'src/lib/routes/processRoutes';
 import { isPasswordProtected } from 'src/lib/utils';
 import { ProcessPageStyles as s } from 'src/pages';
 
@@ -78,60 +78,38 @@ function ProcessPage() {
     <Markup16 key={16} />,
   ];
 
-  const menuOptions = () => {
+  const renderFrame2 = () => {
     return (
-      <ul className={s.menu}>
-        <li>
-          <Chevron direction="left" />
-          Partner Admin
-          <Chevron direction="right" />
-        </li>
-        <li className={s.hover}>
-          <Chevron direction="left" />
-          General Admin
-          <Chevron direction="right" />
-        </li>
-        <ul>
-          <li>
-            <Chevron direction="left" />
-            Setups
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Data Management
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Reports
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Imports
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Site Alerts
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Misc.
-            <Chevron direction="right" />
-          </li>
-          <li>
-            <Chevron direction="left" />
-            Billing
-            <Chevron direction="right" />
-          </li>
-        </ul>
-      </ul>
+      <div className={cn(s.markup, activeFrame === 2 && s.active)}>
+        {markupMap.map((markup, index) => (
+          <div className={cn(s.mark, s[`mark-${index + 1}`])} key={index}>
+            {markup}
+          </div>
+        ))}
+        <span className={cn(s.comment, s['comment-1'])}>Not vertically centered</span>
+        <span className={cn(s.comment, s['comment-2'])}>Not horizontally centered</span>
+        <span className={cn(s.comment, s['comment-3'])}>Too little margin / padding</span>
+        <span className={cn(s.comment, s['comment-4'])}>
+          Banner is clunky and takes up too much space
+        </span>
+        <span className={cn(s.comment, s['comment-5'])}>Too much of a gap</span>
+        <span className={cn(s.comment, s['comment-6'])}>
+          Should be aligned horizontally or vertically
+        </span>
+      </div>
     );
   };
 
+  const renderFrame3 = () => {
+    return (
+      <div className={cn(activeFrame === 3 && s.active, s.before)}>
+        <div className={s.cursor}>
+          <CursorIcon />
+        </div>
+        <NavMenu routes={processRoutes} variant={'process-nav'} />
+      </div>
+    );
+  };
   return (
     <Column gap={6} className={s.root}>
       <PageHeading title={'Process'} subtitle={'Making lemonade from lemons'} divider />
@@ -163,24 +141,8 @@ function ProcessPage() {
               <div className={s.img}>
                 <img src={Process1ReportingReview} alt={''} />
               </div>
-              <div className={cn(s.markup, activeFrame === 2 && s.active)}>
-                {markupMap.map((markup, index) => (
-                  <div className={cn(s.mark, s[`mark-${index + 1}`])} key={index}>
-                    {markup}
-                  </div>
-                ))}
-                <span className={cn(s.comment, s['comment-1'])}>Not vertically centered</span>
-                <span className={cn(s.comment, s['comment-2'])}>Not horizontally centered</span>
-                <span className={cn(s.comment, s['comment-3'])}>Too little margin / padding</span>
-                <span className={cn(s.comment, s['comment-4'])}>
-                  Banner is clunky and takes up too much space
-                </span>
-                <span className={cn(s.comment, s['comment-5'])}>Too much of a gap</span>
-                <span className={cn(s.comment, s['comment-6'])}>
-                  Should be aligned horizontally or vertically
-                </span>
-              </div>
-              {menuOptions()}
+              {renderFrame2()}
+              {renderFrame3()}
             </div>
           </div>
           {/* <div className={s.shape}> */}
