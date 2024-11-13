@@ -34,14 +34,31 @@ function ProcessPage() {
   const frameRef = useRef([]);
   const numberOfFrames = 8;
 
+  const cropWrapRef = useRef<HTMLDivElement>(null);
+  const menuWrapRef = useRef<HTMLDivElement>(null);
+
   const [activeFrame, setActiveFrame] = useState(1);
-  // const [scrollPosition, setScrollPosition] = useState(0);
-  // const [frameScrollPercent, setFrameScrollPercent] = useState(0);
+  const [scale, setScale] = useState(0);
 
   useEffect(() => {
-    setInterval(() => {
+    const interval = setInterval(() => {
+      const cropWrapWidth = cropWrapRef.current?.clientWidth;
+      const cropWrapHeight = cropWrapRef.current?.clientHeight;
+      const cropX = 950;
+      const cropY = 770;
+      const scale = ((cropWrapWidth || 0) + (cropWrapHeight || 0)) / 2 / ((cropX + cropY) / 2);
+
+      setScale(scale);
+
       return isPasswordProtected();
     }, 2000);
+
+    return () => {
+      // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+      if (interval) {
+        clearInterval(interval);
+      }
+    };
   });
 
   function handleScroll(event) {
@@ -102,7 +119,10 @@ function ProcessPage() {
 
   const renderFrame3 = () => {
     return (
-      <div className={cn(activeFrame === 3 && s.active, s.before)}>
+      <div
+        className={cn(s['menu-wrap'], activeFrame === 3 && s.active, s.before)}
+        style={{ transform: `scale(${scale})` }}
+      >
         <div className={s.cursor}>
           <CursorIcon />
         </div>
@@ -134,9 +154,9 @@ function ProcessPage() {
             </div>
           ))}
         </div>
-        <div className={cn(s['content-wrap'], s[`active-frame-${activeFrame}`])}>
+        <div className={cn(s['content-wrap'], s[`active-frame-${activeFrame}`])} ref={menuWrapRef}>
           <div className={s['crop-wrap']}>
-            <div className={s['website-wrap']}>
+            <div className={s['website-wrap']} ref={cropWrapRef}>
               <div className={s['website-topper']}>{WebsiteTopper}</div>
               <div className={s.img}>
                 <img src={Process1ReportingReview} alt={''} />
