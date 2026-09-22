@@ -9,9 +9,6 @@
   # "packageManager" field in package.json via corepack.
   NODE_VERSION = "22"
 
-# Single-page app: react-router owns the routes, so every path that isn't a
-# real file must serve index.html or deep links (e.g. /process) 404.
-# Must stay LAST — redirects are evaluated in order.
 [[headers]]
   for = "/assets/*"
   [headers.values]
@@ -26,6 +23,19 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=()"
 
+# --- Redirects are evaluated top to bottom; the SPA catch-all MUST stay last. ---
+
+# A real file always wins over a redirect, so this only fires for assets that
+# do NOT exist. Without it the catch-all below answers every missing image,
+# font or PDF with 200 + index.html, which browsers then try to decode as the
+# requested media type.
+[[redirects]]
+  from = "/assets/*"
+  to = "/404.html"
+  status = 404
+
+# Single-page app: react-router owns the routes, so any path that isn't a real
+# file serves index.html, letting the client render the route (or its own 404).
 [[redirects]]
   from = "/*"
   to = "/index.html"
