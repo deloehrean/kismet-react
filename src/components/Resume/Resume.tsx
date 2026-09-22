@@ -2,8 +2,8 @@ import React, { FC } from 'react';
 
 import cn from 'clsx';
 
-import ResumePdf from 'src/assets/images/andrew-loehr_web-resume-2024.pdf';
-import ResumeImg from 'src/assets/images/andrew-loehr_web-resume-plain.jpg';
+import ResumePdf from 'src/assets/images/andrew-loehr-resume_director-of-product.pdf';
+import ResumeImg from 'src/assets/images/andrew-loehr-resume_director-of-product.jpg';
 import { Container, LinkStyled, Typography } from 'src/components';
 import { ResumeStyles as s } from 'src/components/Resume/index';
 
