@@ -1,3 +1,110 @@
-.tight {
-  letter-spacing: -2px;
+.lede {
+  max-width: 68ch;
+  font-size: 1.12rem;
+  line-height: 1.55;
+}
+
+// --- proof strip ------------------------------------------------------
+.proof {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--size-3);
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-left: var(--size-2);
+    border-left: 3px solid var(--primary-main);
+  }
+
+  strong {
+    font-size: 1.9rem;
+    line-height: 1.1;
+  }
+
+  span {
+    font-size: .82rem;
+    opacity: .78;
+  }
+}
+
+// --- capability blocks ------------------------------------------------
+.capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--size-4);
+
+  @media all and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: var(--size-3);
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+  }
+}
+
+// --- selected work ----------------------------------------------------
+.work {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--size-3);
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  padding: var(--size-3);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .18);
+  background: rgba(255, 255, 255, .05);
+  transition: background .2s ease, transform .2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: rgba(255, 255, 255, .1);
+    transform: translateY(-2px);
+  }
+
+  .more {
+    margin-top: auto;
+    padding-top: var(--size-1);
+    font-size: .82rem;
+    opacity: .8;
+  }
+}
+
+// --- two audiences ----------------------------------------------------
+.paths {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--size-3);
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+    padding: var(--size-3);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .18);
+  }
 }

@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
 import ChevronIcon from 'src/assets/images/process/chevron';
-import { IconStyles as s, StarIcon, TargetIcon } from 'src/components';
+import { IconStyles as s, LockIcon, StarIcon, TargetIcon } from 'src/components';
 
 type IconProps = {
   name:
@@ -11,6 +11,7 @@ type IconProps = {
     | 'chevronUpIcon'
     | 'chevronRightIcon'
     | 'chevronLeftIcon'
+    | 'lockIcon'
     | 'placeholder';
   size?: 'x-large' | 'large' | 'medium' | 'small' | 'inherit';
 };
@@ -29,6 +30,7 @@ const Icon = (props = defaultProps) => {
     chevronUpIcon: <ChevronIcon direction={'up'} />,
     chevronLeftIcon: <ChevronIcon direction={'left'} />,
     chevronRightIcon: <ChevronIcon direction={'right'} />,
+    lockIcon: <LockIcon />,
     placeholder: null,
   };
 
