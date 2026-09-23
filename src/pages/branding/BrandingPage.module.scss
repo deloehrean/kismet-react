@@ -1,0 +1,207 @@
+.hero {
+  display: flex;
+  align-items: center;
+  gap: var(--size-4);
+
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-2);
+  }
+
+  .hero-mark {
+    width: 132px;
+    height: auto;
+    flex: none;
+  }
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
+}
+
+.section-head {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  max-width: 62ch;
+}
+
+.lead {
+  opacity: .85;
+}
+
+// --- shared tile ------------------------------------------------------
+.tile {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+
+  // Each image declares its own true ratio via --tile-ratio, so cover never
+  // actually crops - it just fills a box the same shape as the file. Forcing
+  // everything square cut the wording out of the wide Facebook pieces.
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: var(--tile-ratio, 1);
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px -14px rgba(0, 0, 0, .7);
+    background: rgba(255, 255, 255, .04);
+  }
+
+  figcaption {
+    font-size: .78rem;
+    opacity: .7;
+  }
+}
+
+.row3,
+.row4,
+.grid,
+.pair {
+  display: grid;
+  gap: var(--size-3);
+  // tiles differ in height by design now; hang them from the top
+  align-items: start;
+}
+
+.pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.row3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+// Logo concepts are line art on white - cropping them would cut the lockup,
+// so these keep their whole shape on a consistent white field.
+.concepts .tile img {
+  aspect-ratio: 4 / 3;
+  object-fit: contain;
+  background: #ffffff;
+  padding: var(--size-2);
+}
+.row4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.grid { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+
+@media all and (max-width: 900px) {
+  .row4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media all and (max-width: 600px) {
+  .row3, .row4, .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+// --- lockups ----------------------------------------------------------
+.lockups {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--size-3);
+
+  @media all and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--size-5) var(--size-4);
+    border-radius: 8px;
+    min-height: 200px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 150px;
+  }
+}
+
+.lockup-light { background: #ffffff; }
+.lockup-dark  { background: #26110F; }
+
+// --- palette ----------------------------------------------------------
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--size-2);
+
+  @media all and (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  span {
+    display: block;
+    height: 84px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, .18);
+  }
+
+  strong { font-size: .85rem; }
+
+  code {
+    font-size: .74rem;
+    opacity: .65;
+  }
+}
+
+// --- type -------------------------------------------------------------
+.typelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--size-2);
+
+  @media all and (max-width: 600px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--size-2);
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, .16);
+    background: rgba(255, 255, 255, .04);
+  }
+
+  span {
+    font-size: .76rem;
+    opacity: .7;
+  }
+}
+
+.banner {
+  margin: 0;
+  // full-bleed white against the page colour was swallowing the section
+  max-width: 620px;
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    // The SVG ships transparent - its only greens are the gradient on the
+    // half-opacity "where da pints of guinness at" lettering. Kelly green is
+    // the field the piece was designed against, so the tone-on-tone text and
+    // the white/yellow display type both read correctly.
+    background: #01A555;
+    padding: var(--size-2);
+  }
+
+  figcaption {
+    font-size: .78rem;
+    opacity: .7;
+    margin-top: var(--size-1);
+  }
+}

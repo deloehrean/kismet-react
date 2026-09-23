@@ -204,7 +204,13 @@ export const extraImages = [
   },
 ];
 
+// `gated: true` swaps this card for a locked placeholder until the password is
+// entered. Add the flag to any other client that shouldn't be public.
+// `ratio` is each screenshot's width/height, measured from the file. The
+// locked placeholder uses it to size its glass panes so the composition
+// matches the real stack without shipping anything about the image itself.
 export const intelContent = {
+  gated: true,
   title: 'Intel Design-In Tools',
   subtitle: 'B2B Ecommerce Website',
 
@@ -221,22 +227,27 @@ export const intelContent = {
   gallery: [
     {
       image: IntelHomepage,
+      ratio: 0.516,
       position: 'a',
     },
     {
       image: IntelCategory,
+      ratio: 0.534,
       position: 'c',
     },
     {
       image: IntelOrders,
+      ratio: 0.659,
       position: 'b',
     },
     {
       image: IntelProduct,
+      ratio: 0.566,
       position: 'd',
     },
     {
       image: IntelEditAddress,
+      ratio: 1.019,
       position: 'e',
       bumpUp: true,
     },

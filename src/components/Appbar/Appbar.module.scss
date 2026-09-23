@@ -19,9 +19,87 @@
 
   .spacer {
     height: 0;
+    // Fixed-height bar: never let flex steal from it when .content is short
+    // (in .pw-compact the header is only --appbar-height + 4rem tall).
+    flex: none;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
     background: var(--background-default);
     box-shadow: var(--shadow-elevation-1);
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+
+    .password-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: var(--size-1);
+      width: 100%;
+      max-width: 2000px;
+      margin-inline: auto;
+      padding-inline: var(--size-3);
+
+      @media all and (max-width: 680px) {
+        justify-content: center;
+        padding-inline: var(--size-2);
+      }
+    }
+
+    .field {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      input {
+        // explicit so the flight's start offset can be derived in CSS
+        width: 15rem;
+        padding-right: calc(var(--size-2) + 32px);
+
+        @media all and (max-width: 680px) {
+          width: 11rem;
+        }
+        background: color-mix(in srgb, var(--text-primary) 40%, transparent);
+        transition: background .25s ease;
+
+        &:focus,
+        &:focus-visible {
+          background: var(--text-primary);
+        }
+      }
+
+      button[type="submit"] {
+        position: absolute;
+        right: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--common-black-main);
+        width: 32px;
+        height: 32px;
+        padding: 0;
+        border-radius: 50%;
+        color: var(--text-contrast);
+        cursor: pointer;
+
+        &:hover,
+        &:focus-visible {
+          background: var(--primary-main);
+          color: var(--primary-contrast);
+        }
+      }
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+    }
 
     &.rust {
       background: var(--home-page-color);
@@ -55,7 +133,9 @@
     background: url("/src/assets/images/homepage-collage.jpg") repeat center 40%;
     background-size: 50%;
     width: 100vw;
-    //animation: bgSlide 240s linear infinite;
+    // Runs in every state. It used to live only under .password-protected, so
+    // the montage froze the moment anyone unlocked.
+    animation: bgSlide 240s linear infinite;
   }
 
   .logo {
@@ -67,7 +147,6 @@
       flex: unset;
     }
 
-
     a {
       display: flex;
       margin-inline: var(--size-1);
@@ -75,6 +154,10 @@
       width: 100%;
       max-width: 301px;
       max-height: 106px;
+      // .logo (the column) carries .login-transition, but the anchor does not -
+      // so its own max-width/margin changes were applying instantly and the
+      // logo snapped size whenever max-width became the binding constraint.
+      transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
       svg {
         width: 100%;
@@ -148,17 +231,12 @@
     .collage-carousel {
       opacity: .2;
       background-size: 100%;
-      animation: bgSlide 240s linear infinite;
     }
 
     .spacer {
       box-shadow: var(--shadow-elevation-14);
-      height: calc((100vh - 500px) / 2);
+      height: 4rem;
       transition-delay: 2s;
-
-      @media all and (max-width: 680px) {
-        height: calc((100vh - 760px) / 2);
-      }
     }
 
     .content {
@@ -215,6 +293,85 @@
     }
   }
 
+  // Stage 2 - hero minimizes to the same geometry as the unlocked appbar while
+  // the spacer (password bar) stays, and the resume card rides the gust up into
+  // it. Both happen off this one class; the sequencing is delays, not JS.
+  &:global(.pw-compact) {
+    .root {
+      height: calc(var(--appbar-height) + 4rem);
+      transition-delay: 0s;
+    }
+
+    .spacer {
+      transition-delay: 0s;
+    }
+
+    // Geometry here must match the UNLOCKED appbar exactly - this state
+    // transitions straight into it, so any difference reads as a jump. The
+    // logo keeps its own --size-1 margin (no wrap padding) so it lands on the
+    // same left edge either way.
+    .content .password-wrap {
+      gap: 0;
+      width: 100%;
+      max-width: 2000px;
+      justify-content: flex-start;
+
+      // flex/width are left at their base values (flex: 2, width: 100%) so this
+      // column is laid out identically to the unlocked appbar - overriding them
+      // here made the logo snap on unlock when the overrides disappeared.
+      .logo {
+        gap: 0;
+        align-items: flex-start;
+
+        a {
+          // max-width alone drives the size; the svg is height:auto so its
+          // height follows continuously. Setting max-height here snapped the
+          // logo 171px -> 106px instantly, because .password-protected leaves
+          // max-height at `unset` and unset -> <length> cannot be transitioned.
+          max-width: 301px;
+          // restores the base gutter that .password-protected zeroes out
+          margin-inline: var(--size-1);
+          // .password-wrap widens 800px -> 2000px over the same second, so it
+          // stops constraining the logo part way through. max-width has to win
+          // the race or the logo balloons before it shrinks.
+          transition-duration: .4s;
+        }
+      }
+
+      .login {
+        opacity: 0;
+        max-height: 0;
+        filter: blur(40px);
+        transition-delay: 0s;
+      }
+
+      // opacity alone left it holding its width in the row
+      .divider {
+        max-width: 0;
+        min-width: 0;
+        margin: 0;
+        opacity: 0;
+        overflow: hidden;
+      }
+    }
+
+    // The hero card hands off to the flyer. It must collapse, not just fade:
+    // at 259px tall it was forcing .content past the compact header height,
+    // which pushed the logo and nav outside the header entirely.
+    .content .password-wrap .resume {
+      max-width: 0;
+      min-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition-delay: 0s;
+    }
+
+    // the flyer has to be able to leave the bar while it flies
+    .spacer {
+      overflow: visible;
+    }
+  }
+
   &:global(.pw-loading) {
     .root {
       height: 100vh;
@@ -267,12 +424,21 @@ button[type="submit"] {
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
+// background-size is 50%, so one tile is 50vw and -100vw lands exactly two
+// tiles along - the loop point is invisible.
 @keyframes bgSlide {
   0% {
     background-position-x: 0;
   }
+
   100% {
     background-position-x: -100vw;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .root .collage-carousel {
+    animation: none;
   }
 }
 

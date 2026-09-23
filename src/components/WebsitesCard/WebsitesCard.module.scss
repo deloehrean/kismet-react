@@ -245,3 +245,107 @@
     }
   }
 }
+
+// --- Gated clients -----------------------------------------------------
+// Default (unlocked) shows the real card and hides the ghost; the
+// .password-protected body class swaps them. Pure CSS, same pattern as the
+// appbar's staged states.
+.gated-placeholder {
+  display: none;
+}
+
+:global(.password-protected) {
+  .gated {
+    display: none;
+  }
+
+  .gated-placeholder {
+    display: flex;
+  }
+}
+
+// Blank sheets of glass standing in for the screenshots. These sit on the
+// same .website-image position classes as the real stack, so the composition
+// is identical - only the contents are missing.
+.glass {
+  // Sized from the real screenshot's width/height, handed in as --pane-ratio.
+  // Without an intrinsic ratio these collapse - the real .website-image is
+  // sized by the <img> inside it, and these have no content.
+  aspect-ratio: var(--pane-ratio, .6);
+  height: auto;
+  // Matte, not glossy: one flat wash, no specular gradient or sweep.
+  background: rgba(255, 255, 255, .06);
+  border: 3px solid rgba(255, 255, 255, .16);
+  border-radius: 6px;
+  box-shadow: 0 0 34px -16px rgba(0, 0, 0, .65);
+  backdrop-filter: blur(2px) saturate(.85);
+  -webkit-backdrop-filter: blur(2px) saturate(.85);
+  overflow: hidden;
+  cursor: default;
+
+  // the real cards draw their frame with ::after; keep the glass clean
+  &::after {
+    display: none;
+  }
+}
+
+.unlock-widget {
+  position: relative;
+  align-self: flex-start;
+  padding: var(--size-3);
+  border-radius: var(--size-2);
+  border: 1px solid rgba(255, 255, 255, .22);
+  background: rgba(255, 255, 255, .07);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.unlock-head {
+  display: flex;
+  align-items: center;
+  gap: var(--size-1);
+  margin-bottom: var(--size-2);
+}
+
+.unlock-lock {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, .14);
+  border: 1px solid rgba(255, 255, 255, .3);
+}
+
+.unlock-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+  font-size: .9rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: var(--size-1);
+  }
+}
+
+.unlock-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  flex: none;
+  border-radius: 50%;
+  font-size: .72rem;
+  font-weight: 700;
+  background: var(--primary-main);
+  color: var(--primary-contrast);
+}
+

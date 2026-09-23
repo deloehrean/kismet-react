@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import cn from 'clsx';
 
 import {
+  Icon,
   AppbarStyles as s,
   Column,
   Container,
@@ -14,6 +15,7 @@ import {
 } from 'src/components';
 import { Resume } from 'src/components/Resume';
 import { routes } from 'src/lib/routes/routes';
+import { ACCESS_PASSWORD, grantAccess } from 'src/lib/access';
 import { isPasswordProtected } from 'src/lib/utils';
 
 type AppbarProps = {
@@ -39,17 +41,11 @@ const Appbar = ({ color }: AppbarProps) => {
     }
   };
 
-  const handleKeyDown = event => {
-    if (event.key === 'Enter') {
-      handleSubmit(event);
-    }
-  };
-
   const handleSubmit = event => {
     event.preventDefault();
     if (inputValue === '') {
       setError('Password required');
-    } else if (inputValue !== 'Kismet123!') {
+    } else if (inputValue !== ACCESS_PASSWORD) {
       setError('Password is incorrect');
     } else {
       setIsPasswordAccepted(true);
@@ -57,7 +53,7 @@ const Appbar = ({ color }: AppbarProps) => {
         top: 0,
         behavior: 'smooth',
       });
-      document.body.classList.remove('password-protected');
+      grantAccess();
       setInterval(() => {
         return isPasswordProtected();
       }, 2000);
@@ -73,7 +69,27 @@ const Appbar = ({ color }: AppbarProps) => {
     <header className={s.root}>
       <div className={cn(s['collage-carousel'], s['login-transition'])} />
       <Column className={cn(s.content)}>
-        <div className={cn(s.spacer, s[`${color}`])} />
+        <div className={cn(s.spacer, s[`${color}`])}>
+          <form className={s['password-bar']} onSubmit={handleSubmit}>
+            <label htmlFor={'password-input'} className={s['sr-only']}>
+              Password
+            </label>
+            <div className={s.field}>
+              <input
+                id={'password-input'}
+                aria-autocomplete={'none'}
+                type={'text'}
+                value={inputValue}
+                onChange={handleInputChange}
+                name={'password-input'}
+              />
+              <button type={'submit'} className={s.submit} aria-label={'Submit password'}>
+                <Icon name={'lockIcon'} size={'medium'} />
+              </button>
+            </div>
+            {error && <Typography variant={'caption'}>{error}</Typography>}
+          </form>
+        </div>
         <Row className={cn(s['password-wrap'], s['login-transition'])}>
           <Column className={cn(s.logo, s['login-transition'])}>
             <KismetLogo />
@@ -84,23 +100,9 @@ const Appbar = ({ color }: AppbarProps) => {
                 color={'primary'}
                 align={isMobile() ? 'center' : 'right'}
               >
-                Enter password for full access
-                <br /> which can be found by downloading resume
+                Client work is shown by invitation
+                <br /> use the access link from my application, or enter the password
               </Typography>
-              <Row gap={1}>
-                <input
-                  aria-autocomplete={'none'}
-                  type={'text'}
-                  value={inputValue}
-                  onChange={handleInputChange}
-                  onKeyDown={handleKeyDown}
-                  name={'password-input'}
-                />
-                <button type={'submit'} className={s.submit} onClick={handleSubmit}>
-                  submit
-                </button>
-              </Row>
-              {error && <Typography variant={'caption'}>{error}</Typography>}
             </Column>
           </Column>
           <Container direction={'column'} className={s.divider}>
