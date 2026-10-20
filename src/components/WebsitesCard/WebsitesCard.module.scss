@@ -256,6 +256,23 @@
   }
 }
 
+// --- Theme-matched screenshots ------------------------------------------
+// Screenshots and logos that come in both themes ship both; the site's own
+// theme picks one.
+.theme-dark {
+  display: none;
+}
+
+:global([data-theme="dark-theme"]) {
+  .theme-light {
+    display: none;
+  }
+
+  .theme-dark {
+    display: revert;
+  }
+}
+
 // --- Gated clients -----------------------------------------------------
 // Default (unlocked) shows the real card and hides the ghost; the
 // .password-protected body class swaps them. Pure CSS, same pattern as the

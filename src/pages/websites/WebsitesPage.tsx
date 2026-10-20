@@ -6,6 +6,7 @@ import {
   bangoContent,
   bravoContent,
   clearAcaContent,
+  hrlPortalContent,
   intelContent,
   lakeAtitlanContent,
   petersFruitContent,
@@ -19,6 +20,7 @@ import {
 type Site = { title: string; gated?: boolean };
 
 const SITES: Site[] = [
+  hrlPortalContent,
   intelContent,
   clearAcaContent,
   prosemiContent,

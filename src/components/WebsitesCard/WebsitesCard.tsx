@@ -55,10 +55,21 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
     }
   };
 
+  // `logo` is the default art; `logoLight` / `logoDark` override it for one
+  // theme, so a logo only needs a second file when it can't read on both.
   const renderLogo = () => {
+    const forLight = content.logoLight ?? content.logo;
+    const forDark = content.logoDark ?? content.logo;
     return (
       <div className={s['website-logo']}>
-        <img src={content.logo} alt={content.title} />
+        {forLight === forDark ? (
+          <img src={content.logo} alt={content.title} />
+        ) : (
+          <React.Fragment>
+            <img src={forLight} alt={content.title} className={s['theme-light']} />
+            <img src={forDark} alt={content.title} className={s['theme-dark']} />
+          </React.Fragment>
+        )}
       </div>
     );
   };
@@ -79,7 +90,8 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
       >
         {WebsiteTopper}
         <div className={s['website-body']}>
-          <img src={image.image} alt="" />
+          <img src={image.image} alt="" className={cn(image.imageDark && s['theme-light'])} />
+          {image.imageDark && <img src={image.imageDark} alt="" className={s['theme-dark']} />}
         </div>
         <span className={s['expand-close']} onClick={() => activeAction(index, activeIndex)}>
           +

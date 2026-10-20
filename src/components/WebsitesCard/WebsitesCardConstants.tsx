@@ -3,10 +3,12 @@ import AxleBuyIt from 'src/assets/images/websites/axle-workout/axle-buy-it-templ
 import AxlePartner from 'src/assets/images/websites/axle-workout/axle-find-it-become-partner-template.jpg';
 import AxleHomepage from 'src/assets/images/websites/axle-workout/axle-homepage-template-02.jpg';
 import AxleLogo from 'src/assets/images/websites/axle-workout/axle-logo-wt.png';
+import AxleLogoLight from 'src/assets/images/websites/axle-workout/axle-logo.png';
 import AxleWorkIt from 'src/assets/images/websites/axle-workout/axle-work-it-template.jpg';
 import BangoContact from 'src/assets/images/websites/bango-bowls/bango-bowls-contact-us.jpg';
 import BangoHomepage from 'src/assets/images/websites/bango-bowls/bango-bowls-homepage.jpg';
 import BangoLocations from 'src/assets/images/websites/bango-bowls/bango-bowls-locations.jpg';
+import BangoLogoLight from 'src/assets/images/websites/bango-bowls/bango-bowls-logo-light.png';
 import BangoLogo from 'src/assets/images/websites/bango-bowls/bango-bowls-logo.png';
 import BangoMassapequa from 'src/assets/images/websites/bango-bowls/bango-bowls-massapequapark.jpg';
 import BangoOurStory from 'src/assets/images/websites/bango-bowls/bango-bowls-our-story.jpg';
@@ -19,6 +21,7 @@ import ClearAcaAddEmployees from 'src/assets/images/websites/clear-aca/clear-aca
 import ClearAcaAdminManagement from 'src/assets/images/websites/clear-aca/clear-aca-admin-management.jpg';
 import ClearAcaAllEmployees from 'src/assets/images/websites/clear-aca/clear-aca-all-employees.jpg';
 import ClearAcaContact from 'src/assets/images/websites/clear-aca/clear-aca-contact.jpg';
+import ClearAcaLogoLight from 'src/assets/images/websites/clear-aca/clear-aca-logo-light.svg';
 import ClearAcaLogo from 'src/assets/images/websites/clear-aca/clear-aca-logo.svg';
 import ClearAcaReportingHome from 'src/assets/images/websites/clear-aca/clear-aca-reporting-home.jpg';
 import AsensiaHomepage from 'src/assets/images/websites/extra/asensia-homepage-template.jpg';
@@ -27,7 +30,19 @@ import FareriLanding2 from 'src/assets/images/websites/extra/fareri-landing-page
 import GhostHomepage from 'src/assets/images/websites/extra/ghost-network-web-template_home.jpg';
 import GhostInner from 'src/assets/images/websites/extra/ghost-network-web-template_inner_dropdown.jpg';
 import ToadliTemplate from 'src/assets/images/websites/extra/toadli-deal-wall-template.jpg';
+import HrlPortalDashboardDark from 'src/assets/images/websites/hrl-portal/hrl-portal-dashboard-dark.jpg';
+import HrlPortalDashboard from 'src/assets/images/websites/hrl-portal/hrl-portal-dashboard.jpg';
+import HrlPortalEditOrganizationDark from 'src/assets/images/websites/hrl-portal/hrl-portal-edit-organization-dark.jpg';
+import HrlPortalEditOrganization from 'src/assets/images/websites/hrl-portal/hrl-portal-edit-organization.jpg';
+import HrlPortalLockedProductDark from 'src/assets/images/websites/hrl-portal/hrl-portal-locked-product-dark.jpg';
+import HrlPortalLockedProduct from 'src/assets/images/websites/hrl-portal/hrl-portal-locked-product.jpg';
+import HrlPortalLogoLight from 'src/assets/images/websites/hrl-portal/hrl-portal-logo-light.svg';
+import HrlPortalLogo from 'src/assets/images/websites/hrl-portal/hrl-portal-logo.svg';
+import HrlPortalOrganizationsDark from 'src/assets/images/websites/hrl-portal/hrl-portal-organizations-dark.jpg';
+import HrlPortalOrganizations from 'src/assets/images/websites/hrl-portal/hrl-portal-organizations.jpg';
+import HrlPortalSignIn from 'src/assets/images/websites/hrl-portal/hrl-portal-sign-in.jpg';
 import IntelCategory from 'src/assets/images/websites/intel/intel-category.jpg';
+import IntelLogoLight from 'src/assets/images/websites/intel/intel-dit-store-logo-light.svg';
 import IntelLogo from 'src/assets/images/websites/intel/intel-dit-store-logo.png';
 import IntelEditAddress from 'src/assets/images/websites/intel/intel-edit-address.jpg';
 import IntelHomepage from 'src/assets/images/websites/intel/intel-homepage.jpg';
@@ -36,13 +51,16 @@ import IntelProduct from 'src/assets/images/websites/intel/intel-product-page.jp
 import LakeAtitlanAboutUs from 'src/assets/images/websites/lake-atitlan/lake-atitlan-about-us.jpg';
 import LakeAtitlanForecasting from 'src/assets/images/websites/lake-atitlan/lake-atitlan-forcasting.jpg';
 import LakeAtitlanHomepage from 'src/assets/images/websites/lake-atitlan/lake-atitlan-homepage.jpg';
+import LakeAtitlanLogoLight from 'src/assets/images/websites/lake-atitlan/lake-atitlan-logos-light.png';
 import LakeAtitlanLogo from 'src/assets/images/websites/lake-atitlan/lake-atitlan-logos.png';
 import LakeAtitlanMonitoring from 'src/assets/images/websites/lake-atitlan/lake-atitlan-monitoring.jpg';
 import PetersFruitCategory from 'src/assets/images/websites/peters-fruit/peters-fruit-category.jpg';
 import PetersFruitHomepage from 'src/assets/images/websites/peters-fruit/peters-fruit-homepage.jpg';
+import PetersFruitLogoLight from 'src/assets/images/websites/peters-fruit/peters-fruit-logo-light.png';
 import PetersFruitLogo from 'src/assets/images/websites/peters-fruit/peters-fruit-logo.png';
 import PetersFruitSubCategory from 'src/assets/images/websites/peters-fruit/peters-fruit-sub-category.jpg';
 import ProsemiHomepage from 'src/assets/images/websites/prosemi/prosemi-homepage.jpg';
+import ProsemiLogoLight from 'src/assets/images/websites/prosemi/prosemi-logo-light.svg';
 import ProsemiLogo from 'src/assets/images/websites/prosemi/prosemi-logo-white.png';
 import ProsemiQualityManagement from 'src/assets/images/websites/prosemi/prosemi-quality-management.jpg';
 import ProsemiRequestAQuote from 'src/assets/images/websites/prosemi/prosemi-request-a-quote.jpg';
@@ -50,6 +68,7 @@ import ProsemiServices from 'src/assets/images/websites/prosemi/prosemi-services
 import SereneSpacesPopup from 'src/assets/images/websites/serene-spaces/serene-spaces-category-popup.jpg';
 import SereneSpacesCategory from 'src/assets/images/websites/serene-spaces/serene-spaces-category.jpg';
 import SereneSpacesHomepage from 'src/assets/images/websites/serene-spaces/serene-spaces-home.jpg';
+import SereneSpacesLogoDark from 'src/assets/images/websites/serene-spaces/serene-spaces-logo-dark.png';
 import SereneSpacesLogo from 'src/assets/images/websites/serene-spaces/serene-spaces-logo.png';
 import SereneSpacesProductNoOptions from 'src/assets/images/websites/serene-spaces/serene-spaces-product-no-options.jpg';
 import SereneSpacesProductOptions from 'src/assets/images/websites/serene-spaces/serene-spaces-product-options.jpg';
@@ -66,6 +85,7 @@ export const axleContent = {
   poweredBy: 'Wordpress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
+  logoLight: AxleLogoLight,
   gallery: [
     {
       image: AxleHomepage,
@@ -98,6 +118,7 @@ export const bangoContent = {
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Composer',
   logo: BangoLogo,
+  logoLight: BangoLogoLight,
   gallery: [
     {
       image: BangoHomepage,
@@ -165,6 +186,7 @@ export const clearAcaContent = {
   poweredBy: 'React + Vite / Python',
   toolsUsed: 'React, Typescript, SCSS, Node.js, Yarn, GraphQL',
   logo: ClearAcaLogo,
+  logoLight: ClearAcaLogoLight,
   gallery: [
     {
       image: ClearAcaReportingHome,
@@ -219,6 +241,54 @@ export const extraImages = [
   },
 ];
 
+// Captured Oct 2026 from a local copy of v1.3.0 (Auth0 local-only, no AWS)
+// seeded with Faker organizations and example.* users only: short pages at
+// 1440x1260, tall ones at 1440x1800. `imageDark` swaps in with the site's
+// dark theme.
+export const hrlPortalContent = {
+  title: 'HRlogics Portal',
+  subtitle: 'Single Sign-On Platform',
+  description:
+    'The HRlogics Portal was the single sign-on hub for the whole HRlogics suite: Clear I-9, ' +
+    'Ryze, WOTC, Clear Verify, and UCM. Clients signed in once and launched every product they ' +
+    'owned from a hive of product tiles, and products they didn’t own opened a marketing panel ' +
+    'instead, so the dashboard doubled as an introduction to the rest of the suite. Admins ' +
+    'managed organizations, users, and per-product access, and clients sent payroll and census ' +
+    'files securely into HRlogics. I designed it and led the build from first commit to its ' +
+    'April 2026 production launch, on the component library that became the suite’s design ' +
+    'system.',
+  poweredBy: 'Laravel + Inertia.js / PostgreSQL / AWS',
+  toolsUsed: 'React, TypeScript, PHP, Auth0, Redis, Docker, Playwright',
+  logo: HrlPortalLogo,
+  logoLight: HrlPortalLogoLight,
+  gallery: [
+    {
+      image: HrlPortalDashboard,
+      imageDark: HrlPortalDashboardDark,
+      position: 'a',
+    },
+    {
+      image: HrlPortalSignIn,
+      position: 'b',
+    },
+    {
+      image: HrlPortalOrganizations,
+      imageDark: HrlPortalOrganizationsDark,
+      position: 'c',
+    },
+    {
+      image: HrlPortalEditOrganization,
+      imageDark: HrlPortalEditOrganizationDark,
+      position: 'd',
+    },
+    {
+      image: HrlPortalLockedProduct,
+      imageDark: HrlPortalLockedProductDark,
+      position: 'e',
+    },
+  ],
+};
+
 // `gated: true` swaps this card for a locked placeholder until the password is
 // entered. Add the flag to any other client that shouldn't be public.
 // `ratio` is each screenshot's width/height, measured from the file. The
@@ -239,6 +309,7 @@ export const intelContent = {
   poweredBy: 'Magento Enterprise Cloud / ScandiPWA',
   toolsUsed: 'React, PHP, SCSS, Composer, Node.js, Yarn, GraphQL, Docker',
   logo: IntelLogo,
+  logoLight: IntelLogoLight,
   gallery: [
     {
       image: IntelHomepage,
@@ -277,6 +348,7 @@ export const lakeAtitlanContent = {
   poweredBy: 'Concrete CMS / Sentinel-2 Explorer / GEE Planet Labs',
   toolsUsed: 'PHP, LESS, Composer, Node.js',
   logo: LakeAtitlanLogo,
+  logoLight: LakeAtitlanLogoLight,
   gallery: [
     {
       image: LakeAtitlanHomepage,
@@ -304,6 +376,7 @@ export const petersFruitContent = {
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: PetersFruitLogo,
+  logoLight: PetersFruitLogoLight,
   gallery: [
     {
       image: PetersFruitHomepage,
@@ -324,6 +397,7 @@ export const prosemiContent = {
   title: 'Prosemi',
   subtitle: 'Marketing Website',
   logo: ProsemiLogo,
+  logoLight: ProsemiLogoLight,
   description:
     'As the leading semiconductor testing facility in the world, Prosemi needed a new website to reflect its updated facilities and gather requests for quotes.',
   poweredBy: 'Gatsby / Contentful',
@@ -356,6 +430,7 @@ export const sereneSpacesContent = {
   poweredBy: 'Magento',
   toolsUsed: 'PHP, LESS, jQuery, Composer',
   logo: SereneSpacesLogo,
+  logoDark: SereneSpacesLogoDark,
   gallery: [
     {
       image: SereneSpacesHomepage,
