@@ -36,9 +36,8 @@ function GraphicsDashboard() {
             </Column>
             <Divider />
             <Typography variant={'body2'} gutter>
-              Since 2000, I have been designing album artwork for bands from all over the country.
-              It allows me to showcase both digital and illustrative talents and really stretch the
-              imagination.
+              Starting in 2000, I designed album artwork for bands from all over the country. It let
+              me use both digital and illustrative skills and really stretch the imagination.
             </Typography>
             <Row className={albumStyles['content-frame-container']}>
               <Link
@@ -104,25 +103,25 @@ function GraphicsDashboard() {
             </Column>
             <Divider />
             <Typography variant={'body2'} gutter>
-              I have designed over 100 tee shirts for multiple bands, companies, corporate outings,
-              and events... mostly bands. Getting to work with artists on how they want to brand
-              themselves has been a highlight of my career.
+              I designed over 100 tee shirts for bands, companies, corporate outings, and events...
+              mostly bands. Working with artists on how they wanted to brand themselves was a
+              highlight of my career.
             </Typography>
             <Row className={teesStyles['content-frame-container']}>
               <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee1} />
+                <img src={tee1} alt={'Royden spike tee'} />
               </div>
               <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee2} />
+                <img src={tee2} alt={'The Weakend brontosaurus tee'} />
               </div>
               <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee3} />
+                <img src={tee3} alt={'Alucard black tee'} />
               </div>
               <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee4} />
+                <img src={tee4} alt={'Skin & Thread TV tee'} />
               </div>
               <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee5} />
+                <img src={tee5} alt={'WHIV robot tee'} />
               </div>
             </Row>
             <LinkStyled className={s.button} to={'/graphics/tees'}>

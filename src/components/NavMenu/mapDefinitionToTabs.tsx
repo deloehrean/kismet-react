@@ -13,7 +13,7 @@ export function mapDefinitionToTabs(
   parent: string = '',
 ): React.ReactNode {
   return (
-    <ul className={cn(s.root, s.tabs, 'transition-all')}>
+    <ul className={cn(s.root, s.tabs, 'transition-all', 'icon-tabs')}>
       {definitions.map((definition, index) => {
         if (!definition.nav) {
           return undefined;

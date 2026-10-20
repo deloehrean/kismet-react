@@ -1,3 +1,9 @@
+@use 'src/assets/mixins' as m;
+
+.root {
+  @include m.page-fade-in;
+}
+
 .lede {
   max-width: 68ch;
   font-size: 1.12rem;

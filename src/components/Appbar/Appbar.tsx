@@ -100,8 +100,8 @@ const Appbar = ({ color }: AppbarProps) => {
                 color={'primary'}
                 align={isMobile() ? 'center' : 'right'}
               >
-                Client work is shown by invitation
-                <br /> use the access link from my application, or enter the password
+                Some client work is shown by invitation
+                <br /> download my resume and get in touch for the access link
               </Typography>
             </Column>
           </Column>

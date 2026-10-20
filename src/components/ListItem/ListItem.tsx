@@ -62,7 +62,12 @@ const ListItem: FC<ListItemProps> = ({
         {startIcon && renderStartIcon(startIcon)}
         <div className={s.titles}>
           {title && (
-            <Typography variant={dense ? 'menuPrimaryDense' : 'menuPrimary'}>{title}</Typography>
+            <Typography variant={dense ? 'menuPrimaryDense' : 'menuPrimary'}>
+              <span>{title.slice(0, 1)}</span>
+              <span className={s.rest}>
+                <span>{title.slice(1)}</span>
+              </span>
+            </Typography>
           )}
           {subtitle && <Typography variant={dense ? 'tooltip' : 'body2'}>{subtitle}</Typography>}
         </div>

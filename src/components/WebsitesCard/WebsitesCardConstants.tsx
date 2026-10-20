@@ -53,12 +53,16 @@ import SereneSpacesHomepage from 'src/assets/images/websites/serene-spaces/seren
 import SereneSpacesLogo from 'src/assets/images/websites/serene-spaces/serene-spaces-logo.png';
 import SereneSpacesProductNoOptions from 'src/assets/images/websites/serene-spaces/serene-spaces-product-no-options.jpg';
 import SereneSpacesProductOptions from 'src/assets/images/websites/serene-spaces/serene-spaces-product-options.jpg';
+import SolsticeAbout from 'src/assets/images/websites/solstice/solstice-about.jpg';
+import SolsticeHomepage from 'src/assets/images/websites/solstice/solstice-home.jpg';
+import SolsticeLogo from 'src/assets/images/websites/solstice/solstice-logo.png';
+import SolsticeServices from 'src/assets/images/websites/solstice/solstice-services.jpg';
 
 export const axleContent = {
   title: 'Axle Workout',
   subtitle: 'Marketing Website',
   description:
-    'Axle is an Olympic barbell company that utilizes a wheel instead of weights on their barbell. This allows for a more total body workout than straight weightlifting alone and can be utilized by those not looking for strictly strength training.',
+    'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren\'t looking strictly for strength training.',
   poweredBy: 'Wordpress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
@@ -151,7 +155,7 @@ export const clearAcaContent = {
   title: 'Clear ACA',
   subtitle: 'Website',
   description:
-    'Clear ACA is a fully functional solution for Affordable Care Act management. A fully branded headless theme was built to work as the frontend of an extensive Python backend connected to an MDM for data management.',
+    'Clear ACA is the HRlogics platform for Affordable Care Act compliance, part of a suite serving 400+ enterprise clients. I designed and built its fully branded headless React front end, running on an extensive Python backend connected to an MDM for data management.',
   poweredBy: 'React + Vite / Python',
   toolsUsed: 'React, Typescript, SCSS, Node.js, Yarn, GraphQL',
   logo: ClearAcaLogo,
@@ -258,7 +262,7 @@ export const lakeAtitlanContent = {
   title: 'University of Alabama Huntsville & NASA: Lake Atitlán Project',
   subtitle: 'Algal Satellite & Data Solution',
   description:
-    'By leveraging the power of AI and satellite remote sensing, the aim of the Lake Atitlán Project is to inform authorities about when algal blooms are expected, so preventative measures against their negative economic and environmental impacts can be enforced.',
+    'I designed and built a joint platform with NASA, Microsoft, and National Geographic that integrated NASA satellite data into a University of Alabama in Huntsville nonprofit initiative tracking algal growth in Lake Atitlán. Using AI and satellite remote sensing, it told authorities when blooms were expected, so they could act before the economic and environmental damage set in.',
   poweredBy: 'Concrete CMS / Sentinel-2 Explorer / GEE Planet Labs',
   toolsUsed: 'PHP, LESS, Composer, Node.js',
   logo: LakeAtitlanLogo,
@@ -285,7 +289,7 @@ export const lakeAtitlanContent = {
 export const petersFruitContent = {
   title: `Peter's Fruit`,
   subtitle: 'Marketing website',
-  description: `Peter's Fruit Company needed a way to show all the available produce during each rotating season. I put together a simple dynamic site to rotate their produce in and out of categories easily and painlessly.`,
+  description: `Peter's Fruit Company needed a way to show all the produce available in each rotating season. I built a simple dynamic site that let them move produce in and out of categories themselves, with no developer support.`,
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: PetersFruitLogo,
@@ -310,7 +314,7 @@ export const prosemiContent = {
   subtitle: 'Marketing Website',
   logo: ProsemiLogo,
   description:
-    'As the leading semi-conductor testing facility in the world, Prosemi needed a new website to reflect their updated facilities and gather requests for quotes.',
+    'As the leading semiconductor testing facility in the world, Prosemi needed a new website to reflect its updated facilities and gather requests for quotes.',
   poweredBy: 'Gatsby / Contentful',
   toolsUsed: 'React, Node.js, SCSS, Yarn, GraphQL',
   gallery: [
@@ -337,7 +341,7 @@ export const sereneSpacesContent = {
   title: 'Serene Spaces Living',
   subtitle: 'Ecommerce website',
   description:
-    'Serene Spaces Living is an eCommerce site that sells insanely cool handmade home goods, decorations, and luxurious accessories. Most of the products are imported from around the world and created by street vendors to be brought to your door. They have a brick-and-mortar store in Manhattan but needed a way of selling their backstock and inventory online. Giving them a Magento website was exactly what they needed and have been selling on it very successfully for years.',
+    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. A Magento store was exactly what they needed, and they sold on it successfully for years.',
   poweredBy: 'Magento',
   toolsUsed: 'PHP, LESS, jQuery, Composer',
   logo: SereneSpacesLogo,
@@ -361,6 +365,33 @@ export const sereneSpacesContent = {
     {
       image: SereneSpacesProductNoOptions,
       position: 'e',
+    },
+  ],
+};
+
+export const solsticeContent = {
+  title: 'Solstice Massage Therapy',
+  subtitle: 'Marketing Website with Online Booking',
+  description:
+    'Solstice has been on Woodward Avenue since 2007, and so has the identity I designed for its ' +
+    'grand opening. The 2026 rebuild keeps the painted sun and the orange-and-gold palette and ' +
+    'moves everything else forward: a responsive site with the full service menu and pricing, ' +
+    'the therapist bio, directions, and online booking through Booksy.',
+  poweredBy: 'React + Vite / Netlify',
+  toolsUsed: 'React, React Router, CSS Modules, Booksy',
+  logo: SolsticeLogo,
+  gallery: [
+    {
+      image: SolsticeHomepage,
+      position: 'a',
+    },
+    {
+      image: SolsticeServices,
+      position: 'b',
+    },
+    {
+      image: SolsticeAbout,
+      position: 'c',
     },
   ],
 };

@@ -10,7 +10,7 @@ const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
 const TeesPage = lazy(() => import('src/pages/graphics/tees/TeesPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
-const BrandingPage = lazy(() => import('src/pages/branding/BrandingPage'));
+const CaseStudiesPage = lazy(() => import('src/pages/case-studies/CaseStudiesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 const isPasswordProtected = () => {
   return document.body.classList.contains('password-protected');
@@ -60,10 +60,10 @@ export const routes: RoutePathDefinition[] = [
     // protected: isPasswordProtected(),
   },
   {
-    path: '/branding',
-    element: <BrandingPage />,
-    title: 'Branding',
-    tree: 'branding',
+    path: '/case-studies',
+    element: <CaseStudiesPage />,
+    title: 'Case Studies',
+    tree: 'case-studies',
     color: 'plum',
     nav: true,
   },

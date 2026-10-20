@@ -2,10 +2,12 @@ import React, { useEffect, useState } from 'react';
 
 import cn from 'clsx';
 
+import ResumePdf from 'src/assets/images/andrew-loehr-resume_director-of-product.pdf';
 import {
   Container,
   Divider,
   Icon,
+  LinkStyled,
   Row,
   Typography,
   WebsitesCardStyles as s,
@@ -101,13 +103,16 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
               </div>
               <ol className={s['unlock-steps']}>
                 <li>
-                  <span className={s['unlock-num']}>1</span>Download the resume
+                  <span className={s['unlock-num']}>1</span>
+                  <LinkStyled to={ResumePdf} target={'_blank'}>
+                    Download my resume
+                  </LinkStyled>
                 </li>
                 <li>
-                  <span className={s['unlock-num']}>2</span>Find the password inside
-                </li>
-                <li>
-                  <span className={s['unlock-num']}>3</span>Enter it in the bar above
+                  <span className={s['unlock-num']}>2</span>
+                  <LinkStyled to={'mailto:andrew@kismet-ux.com?subject=Portfolio%20access'}>
+                    Email me for the access link
+                  </LinkStyled>
                 </li>
               </ol>
             </div>
@@ -148,7 +153,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           )}
           {content.poweredBy && (
             <Typography variant={'body1'}>
-              <strong>content.Powered by:</strong> {content.poweredBy}
+              <strong>Powered by:</strong> {content.poweredBy}
             </Typography>
           )}
           {content.toolsUsed && (

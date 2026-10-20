@@ -5,46 +5,48 @@ import { Resume } from 'src/components/Resume';
 import { HomePageStyles as s } from 'src/pages';
 
 const PROOF = [
-  { figure: '25+', label: 'years designing, building, and shipping' },
-  { figure: '400+', label: 'enterprise clients on the platform I lead' },
-  { figure: '$1.5B', label: 'projected annual sales on a platform I owned' },
-  { figure: '2007', label: 'working remote since' },
+  { figure: '25+', label: 'years in product, design, and engineering' },
+  { figure: '400+', label: 'enterprise clients managed' },
+  { figure: '$1.5B', label: 'projected annual client sales' },
+  { figure: '1M+', label: 'product SKUs cataloged' },
 ];
 
 const CAPABILITIES = [
   {
     title: 'Product leadership',
-    body: `I've led product and creative teams since 2013 — building a creative technologies team at
-      an agency, owning product direction for a B2B commerce platform, and today running product
-      strategy, definition, and roadmapping across an enterprise compliance suite serving 400+
-      clients. I'm currently defining the flagship product that consolidates that whole portfolio
-      into one platform with subscription tiers.`,
+    body: `I led product and creative teams for over a decade — building a creative team across
+      graphic, web, software, and marketing at an agency, owning product direction for a B2B
+      commerce platform supporting a projected $1.5 billion in annual sales, and running product
+      strategy, roadmapping, and end-to-end UX for an enterprise compliance suite serving 400+
+      clients. There I launched an SSO portal that gave clients a single entry point into every
+      product, and defined the vision for evolving it into one browser-based workspace.`,
   },
   {
     title: 'Design systems & UX',
-    body: `Twenty-five years of building identity and interface systems that have to hold together
-      across every surface — brand systems for bands, bars, and nonprofits through the 2000s, custom
-      component libraries replacing Tailwind on enterprise commerce, and the shared TypeScript
-      design system now underpinning an entire product suite.`,
+    body: `Twenty-five years of building identity and interface systems that had to hold together
+      across every surface — brand systems for bands, bars, and nonprofits through the 2000s, a
+      custom component library that replaced Tailwind on an enterprise B2B platform, and a
+      company-wide rebrand that reached into the product itself, where I designed and built the
+      shared TypeScript component library that became the suite's design system.`,
   },
   {
     title: 'Full-stack delivery',
-    body: `I've shipped the code as well as the design since the beginning: catalogue and commerce
-      work running into millions of SKUs, a headless React storefront on enterprise Magento, and
-      current work on Vercel, Supabase, and Next.js. I can take something from discovery call to
-      production without a handoff losing it.`,
+    body: `I shipped the code as well as the design from the start: clean product data for over a
+      million SKUs on a multi-million-dollar storefront, a React.js headless theme on enterprise
+      Magento B2B, and more recent work on Vercel, Supabase, and Next.js. On every Kismet
+      engagement I owned the work from discovery through launch.`,
   },
 ];
 
 const WORK = [
-  { to: '/branding', title: 'Branding', body: 'Identity systems and how they hold together in the wild.' },
+  { to: '/case-studies', title: 'Case Studies', body: 'Identity systems and data products, from first sketch to shipped.' },
   { to: '/websites', title: 'Websites', body: 'Commerce, marketing, and compliance platforms.' },
   { to: '/graphics', title: 'Graphics', body: 'Album art, apparel, and two decades of illustration.' },
 ];
 
 function HomePage() {
   return (
-    <Column gap={5}>
+    <Column className={s.root} gap={5}>
       <PageHeading
         title="Andrew Loehr"
         subtitle="Product leader with 25+ years across design, engineering, and enterprise SaaS — based in Detroit, working remote."
@@ -96,7 +98,7 @@ function HomePage() {
             HR/compliance SaaS or e-commerce. The resume below has the full history; the case studies
             show how the work actually turned out.
           </Typography>
-          <LinkStyled to={'/branding'}>See a case study →</LinkStyled>
+          <LinkStyled to={'/case-studies'}>See a case study →</LinkStyled>
         </section>
         <section>
           <Typography variant="h5">Need something built?</Typography>

@@ -1,19 +1,7 @@
-.hero {
-  display: flex;
-  align-items: center;
-  gap: var(--size-4);
+@use 'src/assets/mixins' as m;
 
-  @media all and (max-width: 767px) {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--size-2);
-  }
-
-  .hero-mark {
-    width: 132px;
-    height: auto;
-    flex: none;
-  }
+.root {
+  @include m.page-fade-in;
 }
 
 .section {
@@ -90,7 +78,7 @@
 }
 
 @media all and (max-width: 600px) {
-  .row3, .row4, .pair { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .row3, .row4, .pair, .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 // --- lockups ----------------------------------------------------------

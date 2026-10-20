@@ -20,20 +20,20 @@ const Footer = ({ color }: FooterProps) => {
       <nav className={s.links}>
         <ul>
           <li>
-            <LinkStyled to={'mailto: andrew@kismet-ux.com'}>
+            <LinkStyled to={'mailto:andrew@kismet-ux.com'}>
               <Typography variant={'caption'}>andrew@kismet-ux.com</Typography>
             </LinkStyled>
           </li>
           <Divider direction={'vertical'} />
           <li>
-            <LinkStyled to={'tel: 1-313-354-2265'}>
+            <LinkStyled to={'tel:+13133542265'}>
               <Typography variant={'caption'}>(313) 354-2265</Typography>
             </LinkStyled>
           </li>
         </ul>
       </nav>
       <Container>
-        <Typography variant={'caption'}>© 2024 Kismet</Typography>{' '}
+        <Typography variant={'caption'}>© {new Date().getFullYear()} Kismet</Typography>{' '}
       </Container>
       <Container>
         <ThemeToggle />

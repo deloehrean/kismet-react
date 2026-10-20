@@ -119,3 +119,47 @@
     background: var(--ecommerce-page-color);
   }
 }
+
+// Appbar tabs, once the labels no longer fit beside the logo. The labelled
+// strip is 611px wide and the lockup ends at 309px, so below ~960px they start
+// running over each other - on a phone the strip is wider than the viewport
+// itself. Below that each tab collapses to its own initial, which in
+// --font-fancy is the same letterform as the lockup, and grows the rest of the
+// word back on hover. `icon-tabs` is set on the tab list in
+// mapDefinitionToTabs - a global hook, because the label lives in this module
+// and the list class lives in NavMenu's.
+:global(.icon-tabs) {
+  // 0fr -> 1fr animates to the word's own intrinsic width, which a max-width
+  // guess cannot do. Above the breakpoint it sits at 1fr and reads as one word.
+  .rest {
+    display: inline-grid;
+    grid-template-columns: 1fr;
+
+    > span {
+      min-width: 0;
+      overflow: hidden;
+    }
+  }
+
+  @media all and (max-width: 960px) {
+    .rest {
+      grid-template-columns: 0fr;
+      transition: grid-template-columns .45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    a {
+      padding: 12px var(--size-2);
+      justify-content: center;
+    }
+
+    // Touch has no hover to reveal with, and below 480px there is no room to
+    // grow into - the word would run over the lockup. There the monogram is the
+    // whole tab.
+    @media (hover: hover) and (min-width: 480px) {
+      .root:hover .rest,
+      .root:focus-within .rest {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

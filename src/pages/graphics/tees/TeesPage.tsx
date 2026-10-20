@@ -86,6 +86,14 @@ const teeDesigns = [
   WHIVRobot,
 ];
 
+// "…/royden-spike-tee-Ab12_cD3.png" -> "Royden spike tee". Works on the hashed
+// build filenames as well as the dev ones, since the hash follows "-tee".
+const teeName = (src: string) => {
+  const slug = /([a-z0-9-]+?)-tee(?:-[\w-]{8})?\.png$/.exec(src)?.[1] ?? 'Tee shirt';
+  const words = slug.replace(/-/g, ' ');
+  return `${words.charAt(0).toUpperCase()}${words.slice(1)} tee`;
+};
+
 const transforms = [
   'rotateNone',
   'rotateLeftLess',
@@ -97,9 +105,9 @@ const transforms = [
 ];
 
 function TeesPage() {
-  const [shuffledTees, setShuffledTees] = React.useState([]);
+  const [shuffledTees, setShuffledTees] = React.useState<string[]>([]);
   // const [shuffledTransforms, setShuffledTransforms] = React.useState([]);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const shuffledTees: any = shuffle([...teeDesigns]);
@@ -120,14 +128,13 @@ function TeesPage() {
     return shuffledArray;
   }
 
-  const [hiResTee, setHiResTee] = useState(undefined);
+  const [hiResTee, setHiResTee] = useState<string | undefined>(undefined);
 
   const activeAction = (index, activeIndex) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
-      // @ts-ignore
-      const currentTeeReplace = shuffledTees[index].replace('-tee.png', '.jpg');
+      const currentTeeReplace = shuffledTees[index]?.replace('-tee.png', '.jpg');
 
       setActiveIndex(index);
       setHiResTee(currentTeeReplace);
@@ -145,7 +152,7 @@ function TeesPage() {
         key={index}
         onClick={() => activeAction(index, activeIndex)}
       >
-        <img src={tee} alt={index.toString()} />
+        <img src={tee} alt={teeName(tee)} />
       </div>
     );
   });
@@ -170,7 +177,7 @@ function TeesPage() {
       >
         <div className={s['expand-close']}>+</div>
         <div className={s['hires-img']}>
-          <img src={hiResTee} alt={hiResTee} />
+          {hiResTee && <img src={hiResTee} alt={teeName(shuffledTees[activeIndex ?? 0] ?? '')} />}
         </div>
       </div>
     </section>

@@ -1,0 +1,112 @@
+// Rules between brands only - the page heading's divider already sits above
+// the first, and the last runs into the footer.
+.root + .root {
+  border-top: 1px solid var(--divider);
+}
+
+// --- header / trigger ---------------------------------------------------
+.head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--size-4);
+  padding: var(--size-3) var(--size-2);
+  border-radius: var(--size-1);
+  transition: background .2s ease;
+
+  // A tint of the text colour, not --action-hover: that is 64% white in the
+  // dark theme and washes the white title out. Hover-capable devices only -
+  // on touch the hover state sticks after the tap.
+  @media (hover: hover) {
+    &:hover {
+      background: color-mix(in srgb, currentColor 8%, transparent);
+    }
+  }
+
+  // the focus ring belongs to the whole header, not the title text
+  &:has(.trigger:focus-visible) {
+    outline: 2px solid var(--primary-main);
+    outline-offset: 2px;
+  }
+
+  @media all and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--size-2);
+  }
+
+  .mark {
+    width: 132px;
+    height: auto;
+    flex: none;
+  }
+
+  .titles {
+    flex: 1;
+  }
+}
+
+// Kaoly's swash T hangs a third of an em left of its advance - wider than the
+// space before it - so mid-title it ran into the previous word ("MassageTherapy")
+.swash-t {
+  margin-left: 0.33em;
+}
+
+.trigger {
+  all: unset;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+}
+
+.chevron {
+  flex: none;
+  display: flex;
+  transition: transform .45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media all and (max-width: 767px) {
+    position: absolute;
+    top: var(--size-3);
+    right: var(--size-2);
+  }
+}
+
+// --- rolled-up body -----------------------------------------------------
+// 0fr -> 1fr animates to the case study's own height, which a max-height
+// guess cannot do. Padding lives on .content, inside the clipped row - on the
+// row itself it would hold the closed panel open by its own padding.
+.body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows .45s cubic-bezier(0.4, 0, 0.2, 1);
+
+  .inner {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-6);
+    padding: var(--size-4) 0 var(--size-6);
+  }
+}
+
+.instant .body {
+  transition: none;
+}
+
+.open {
+  .body {
+    grid-template-rows: 1fr;
+  }
+
+  .chevron {
+    transform: rotate(180deg);
+  }
+}
