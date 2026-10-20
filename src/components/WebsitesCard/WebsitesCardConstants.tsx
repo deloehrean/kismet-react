@@ -62,7 +62,7 @@ export const axleContent = {
   title: 'Axle Workout',
   subtitle: 'Marketing Website',
   description:
-    'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren\'t looking strictly for strength training.',
+    'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren’t looking strictly for strength training.',
   poweredBy: 'Wordpress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
@@ -152,32 +152,43 @@ export const bravoContent = {
 };
 
 export const clearAcaContent = {
+  gated: true,
   title: 'Clear ACA',
-  subtitle: 'Website',
+  subtitle: 'Compliance Platform',
   description:
-    'Clear ACA is the HRlogics platform for Affordable Care Act compliance, part of a suite serving 400+ enterprise clients. I designed and built its fully branded headless React front end, running on an extensive Python backend connected to an MDM for data management.',
+    'Clear ACA was the HRlogics platform for Affordable Care Act compliance. It started life as ' +
+    'SyncStream, and I took it through a full rebrand onto a refactored front end, doing both the ' +
+    'design and the build. That front end was the first version of the component library that ' +
+    'went on to become the design system for the entire HRlogics suite. The new experience ' +
+    'improved every metric we tracked, and its look and feel helped lead to the product being ' +
+    'sold to another company.',
   poweredBy: 'React + Vite / Python',
   toolsUsed: 'React, Typescript, SCSS, Node.js, Yarn, GraphQL',
   logo: ClearAcaLogo,
   gallery: [
     {
       image: ClearAcaReportingHome,
+      ratio: 0.87,
       position: 'a',
     },
     {
       image: ClearAcaContact,
+      ratio: 1.282,
       position: 'b',
     },
     {
       image: ClearAcaAdminManagement,
+      ratio: 0.802,
       position: 'c',
     },
     {
       image: ClearAcaAllEmployees,
+      ratio: 0.836,
       position: 'd',
     },
     {
       image: ClearAcaAddEmployees,
+      ratio: 0.906,
       position: 'e',
     },
   ],

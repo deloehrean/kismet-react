@@ -17,14 +17,24 @@ import {
 type WebsitesCardProps = {
   content?: any;
   reverse?: boolean;
+  /** Side to side for locked visitors, who see fewer cards. Defaults to `reverse`. */
+  reverseLocked?: boolean;
+  /** Gated cards only: false hides the card from locked visitors instead of showing a ghost. */
+  ghost?: boolean;
+  /** How many projects the access link opens, shown on the ghost. */
+  lockedCount?: number;
   divider?: boolean;
 };
 
 const WebsitesCard: React.FC<WebsitesCardProps> = ({
   content,
   reverse = false,
+  reverseLocked = reverse,
+  ghost = true,
+  lockedCount = 1,
   divider = true,
 }) => {
+  const sides = cn(reverse && s.reverse, reverseLocked && s['reverse-locked']);
   const [loading, setLoading] = useState('loading');
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -85,9 +95,9 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           side becomes a widget explaining how to unlock. Both this and the
           real card are rendered; CSS picks which is visible, so there is no
           polling and no re-render on unlock. */}
-      {content.gated && (
+      {content.gated && ghost && (
         <Row
-          className={cn(s.website, s.root, reverse && s.reverse, s['gated-placeholder'])}
+          className={cn(s.website, s.root, sides, s['gated-placeholder'])}
           gap={3}
           breakpoint={'md'}
         >
@@ -98,7 +108,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
                   <Icon name={'lockIcon'} size={'medium'} />
                 </span>
                 <Typography variant={'subtitle1'} transform={'uppercase'}>
-                  Locked project
+                  {lockedCount} locked {lockedCount === 1 ? 'project' : 'projects'}
                 </Typography>
               </div>
               <ol className={s['unlock-steps']}>
@@ -127,14 +137,25 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
                   image.bumpUp && s['bump-up'],
                   s.glass,
                 )}
-                style={{ ['--pane-ratio' as any]: image.ratio ?? 0.6 }}
-              />
+                aria-hidden
+              >
+                {/* The real frame's contents, invisible: the bar plus a box at
+                    the screenshot's ratio, so the pane takes the frame's exact
+                    size - including where the stack's height cap crops it. */}
+                {WebsiteTopper}
+                <div className={s['website-body']}>
+                  <span
+                    className={s['glass-fill']}
+                    style={{ ['--pane-ratio' as any]: image.ratio ?? 0.6 }}
+                  />
+                </div>
+              </div>
             ))}
           </Container>
         </Row>
       )}
       <Row
-        className={cn(s.website, s.root, reverse && s.reverse, content.gated && s.gated)}
+        className={cn(s.website, s.root, sides, content.gated && s.gated)}
         aria-label="axle-workout"
         gap={3}
         breakpoint={'md'}
@@ -169,7 +190,8 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         </Container>
       </Row>
       {divider && (
-        <Container>
+        // a hidden card takes its divider with it
+        <Container className={cn(content.gated && !ghost && s.gated)}>
           <Divider />
         </Container>
       )}

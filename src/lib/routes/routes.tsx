@@ -9,7 +9,9 @@ const GraphicsDashboard = lazy(() => import('src/pages/graphics/GraphicsDashboar
 const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
 const TeesPage = lazy(() => import('src/pages/graphics/tees/TeesPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
-const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
+// Process is off for launch: unfinished, and it clears the gate for the whole
+// visit. The page itself stays in src/pages/process until it's finished or cut.
+// const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
 const CaseStudiesPage = lazy(() => import('src/pages/case-studies/CaseStudiesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 const isPasswordProtected = () => {
@@ -51,14 +53,12 @@ export const routes: RoutePathDefinition[] = [
       },
     ],
   },
-  {
-    path: '/process',
-    element: <ProcessPage />,
-    title: 'Process',
-    color: 'plum',
-    // nav: true,
-    // protected: isPasswordProtected(),
-  },
+  // {
+  //   path: '/process',
+  //   element: <ProcessPage />,
+  //   title: 'Process',
+  //   color: 'plum',
+  // },
   {
     path: '/case-studies',
     element: <CaseStudiesPage />,
