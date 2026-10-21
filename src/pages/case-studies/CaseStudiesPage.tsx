@@ -4,13 +4,15 @@ import { flushSync } from 'react-dom';
 
 import { CaseStudy, Column, PageHeading } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
+import designSystem from 'src/pages/case-studies/DesignSystem';
 import freshWater from 'src/pages/case-studies/FreshWater';
 import fusionOnline from 'src/pages/case-studies/FusionOnline';
+import hrlogics from 'src/pages/case-studies/HRlogics';
 import poppyParliament from 'src/pages/case-studies/PoppyParliament';
 import solstice from 'src/pages/case-studies/Solstice';
 
 // One entry per brand; each brings its own header copy and case study body.
-const CASES = [fusionOnline, freshWater, poppyParliament, solstice];
+const CASES = [fusionOnline, hrlogics, designSystem, freshWater, poppyParliament, solstice];
 
 const caseTop = (id: string) =>
   document.getElementById(`case-${id}`)?.getBoundingClientRect().top ?? 0;
