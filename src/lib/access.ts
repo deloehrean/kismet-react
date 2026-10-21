@@ -10,7 +10,7 @@
  * It exists to keep client work off the open web, not to withstand attack.
  * Rotating ACCESS_TOKEN invalidates every link previously handed out.
  */
-export const ACCESS_TOKEN = 'unlocked';
+export const ACCESS_TOKEN = 'X4aPY1dkWJ3X';
 export const ACCESS_PASSWORD = 'Kismet123!';
 
 const STORE_KEY = 'kismet.access';

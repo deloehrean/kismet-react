@@ -4,8 +4,25 @@ import { Outlet, useLocation } from 'react-router-dom';
 
 import { Layout } from 'src/components';
 import { resolveAccess } from 'src/lib/access';
+import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
+import { routes } from 'src/lib/routes/routes';
 
 const isHome = (path: string) => path === '/' || path === '/home';
+
+const SITE_TITLE = 'Andrew Loehr Portfolio - Kismet';
+
+// "/graphics/albums" -> "Albums | Andrew Loehr Portfolio - Kismet". Home keeps
+// the bare site title, and anything unknown reads as the 404 it renders.
+const pageTitle = (path: string) => {
+  if (isHome(path)) {
+    return SITE_TITLE;
+  }
+  const [top, child] = path.split('/').filter(Boolean);
+  const section = routes.find(route => route.path === `/${top}`);
+  const children = section?.children as RoutePathDefinition[] | undefined;
+  const page = child ? children?.find(c => c.path === child) : section;
+  return `${page?.title ?? 'Not Found'} | ${SITE_TITLE}`;
+};
 
 function App() {
   const { pathname, hash } = useLocation();
@@ -38,6 +55,10 @@ function App() {
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    document.title = pageTitle(pathname);
+  }, [pathname]);
 
   useEffect(() => {
     // Only a real change of page counts. This tracks the PREVIOUS pathname, not

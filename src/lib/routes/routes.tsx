@@ -3,7 +3,6 @@ import React, { lazy } from 'react';
 import { RoutePathDefinition } from 'src/lib/routes/RoutePathDefinition';
 
 const Homepage = lazy(() => import('src/pages/home/HomePage'));
-const ThemePage = lazy(() => import('src/pages/Theme'));
 const GraphicsPage = lazy(() => import('src/pages/graphics/GraphicsPage'));
 const GraphicsDashboard = lazy(() => import('src/pages/graphics/GraphicsDashboard'));
 const AlbumsPage = lazy(() => import('src/pages/graphics/albums/AlbumsPage'));
@@ -22,7 +21,6 @@ export const routes: RoutePathDefinition[] = [
   { path: '/', element: <Homepage />, title: 'Kismet', color: 'rust', index: true },
   { path: '*', element: <FourOhFourPage />, title: 'Not Found', color: 'rust' },
   { path: '/home', element: <Homepage />, title: 'Kismet', color: 'rust', index: true, nav: true },
-  { path: '/theme', element: <ThemePage />, title: 'Theme', color: 'rust' },
   {
     path: '/websites',
     element: <WebsitesPage />,
@@ -66,12 +64,5 @@ export const routes: RoutePathDefinition[] = [
     tree: 'case-studies',
     color: 'plum',
     nav: true,
-  },
-  {
-    path: '/ecommerce',
-    element: <Homepage />,
-    title: 'eCommerce',
-    tree: 'ecommerce',
-    color: 'plum',
   },
 ];
