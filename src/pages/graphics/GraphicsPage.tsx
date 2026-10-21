@@ -38,8 +38,8 @@ function GraphicsPage() {
             </LinkStyled>
           </li>
           <li>
-            <LinkStyled to={'/graphics/advertisements'} className={s['subnav-btn']}>
-              Advertisements
+            <LinkStyled to={'/graphics/ads'} className={s['subnav-btn']}>
+              Ads &amp; Social
             </LinkStyled>
           </li>
         </ul>

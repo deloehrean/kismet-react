@@ -82,6 +82,12 @@
   position: fixed;
   inset: 0;
   z-index: 100;
+}
+
+.backdrop {
+  all: unset;
+  position: absolute;
+  inset: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -98,15 +104,18 @@
     border-radius: 4px;
   }
 
-  p {
-    margin: 0;
-    color: #ffffff;
-    font-size: .85rem;
+  &:focus-visible {
+    outline: 2px solid var(--primary-main);
+    outline-offset: -6px;
   }
 }
 
+.caption {
+  color: #ffffff;
+  font-size: .85rem;
+}
+
 .close {
-  all: unset;
   position: absolute;
   top: var(--size-2);
   right: var(--size-2);
@@ -120,5 +129,4 @@
   color: #ffffff;
   font: 30px/1 Arial, Helvetica, sans-serif;
   transform: rotate(45deg);
-  cursor: pointer;
 }

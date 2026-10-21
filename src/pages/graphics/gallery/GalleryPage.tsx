@@ -29,7 +29,7 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
     if (!open) {
       return undefined;
     }
-    const close = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(null);
+    const close = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(null);
     window.addEventListener('keydown', close);
     return () => window.removeEventListener('keydown', close);
   }, [open]);
@@ -58,19 +58,22 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
       </div>
 
       {open && (
-        <div
-          className={s.viewer}
-          role={'dialog'}
-          aria-modal
-          aria-label={open.title}
-          onClick={() => setOpen(null)}
-        >
-          <img src={open.img} alt={open.title} />
-          <p>
-            <strong>{open.title}</strong> · {open.meta}
-          </p>
-          <button type={'button'} className={s.close} aria-label={'Close'}>
-            +
+        <div className={s.viewer} role={'dialog'} aria-modal aria-label={open.title}>
+          {/* The whole backdrop closes it, so it is one real button. */}
+          <button
+            type={'button'}
+            className={s.backdrop}
+            onClick={() => setOpen(null)}
+            aria-label={`Close ${open.title}`}
+            autoFocus
+          >
+            <img src={open.img} alt={open.title} />
+            <span className={s.caption}>
+              <strong>{open.title}</strong> · {open.meta}
+            </span>
+            <span className={s.close} aria-hidden>
+              +
+            </span>
           </button>
         </div>
       )}

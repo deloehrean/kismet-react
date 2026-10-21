@@ -54,7 +54,7 @@ export const routes: RoutePathDefinition[] = [
       },
       { path: 'print', element: <PrintPage />, title: 'Print' },
       { path: 'logos', element: <LogosPage />, title: 'Logos' },
-      { path: 'advertisements', element: <AdsPage />, title: 'Advertisements' },
+      { path: 'ads', element: <AdsPage />, title: 'Ads & Social' },
     ],
   },
   // {
