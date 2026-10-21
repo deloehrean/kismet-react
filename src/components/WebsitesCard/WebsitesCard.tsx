@@ -186,7 +186,11 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         breakpoint={'md'}
       >
         <Container className={s['website-content']} justify={'center'}>
-          {content.title && <Typography variant={'h4'}>{content.title}</Typography>}
+          {content.title && (
+            <Typography variant={'h4'} className={s['site-title']}>
+              {content.title}
+            </Typography>
+          )}
           {content.subtitle && (
             <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
               {content.subtitle}

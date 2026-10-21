@@ -17,7 +17,9 @@ export const Section = ({ eyebrow, title, lead, children }: any) => (
       <Typography variant={'overline'} color={'primary'}>
         {eyebrow}
       </Typography>
-      <Typography variant={'h3'}>{title}</Typography>
+      <Typography variant={'h3'} className={s['section-title']}>
+        {title}
+      </Typography>
       {lead && (
         <Typography variant={'body2'} className={s.lead}>
           {lead}

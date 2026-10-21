@@ -464,3 +464,16 @@
   color: var(--primary-contrast);
 }
 
+
+// Restless Youth sets lowercase as small caps and capitals as swashes, so the
+// title keeps its own case - h4's uppercase would turn every letter into a
+// swash. Kaoly stays with the page heading; this is the level below it.
+.website-content .site-title {
+  font-family: var(--font-compact), serif;
+  font-weight: 400;
+  letter-spacing: .02em;
+  line-height: 1.15;
+  text-transform: none;
+  // the swash capitals hang below the baseline into the subtitle
+  margin-bottom: var(--size-1);
+}

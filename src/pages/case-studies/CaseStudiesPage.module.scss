@@ -17,6 +17,14 @@
   max-width: 88ch;
 }
 
+// Kaoly names each case study; its sections step down to Restless Youth, which
+// reads as small caps in sentence case (capitals become its swashes).
+.section-head .section-title {
+  font-family: var(--font-compact), serif;
+  font-weight: 400;
+  letter-spacing: .02em;
+}
+
 .lead {
   opacity: .85;
 }
@@ -216,11 +224,15 @@
     opacity: .75;
   }
 
+  // Restless Youth's figures are clean and even, and give the numbers some
+  // of the headings' character.
   dd {
     margin: 0;
-    font-size: 1.6rem;
-    font-weight: 600;
+    font-family: var(--font-compact), serif;
+    font-size: 1.9rem;
+    font-weight: 400;
     line-height: 1.15;
+    letter-spacing: .02em;
   }
 }
 
