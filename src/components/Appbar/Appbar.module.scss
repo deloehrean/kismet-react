@@ -340,6 +340,13 @@
           gap: var(--size-3);
           transition-duration: 1s;
 
+          // On a phone 700px never binds, so the lockup ran edge to edge and
+          // the K's swash was cut off by the screen. The gutter goes on the
+          // column, which carries the transition - the anchor would snap.
+          @media all and (max-width: 680px) {
+            padding-inline: var(--size-3);
+          }
+
           a {
             max-width: 700px;
             max-height: unset;
@@ -347,6 +354,7 @@
             opacity: 1;
             filter: blur(0);
             transform: scale(1);
+
           }
         }
 
