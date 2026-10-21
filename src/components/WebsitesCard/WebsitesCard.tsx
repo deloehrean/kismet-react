@@ -37,6 +37,10 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   const sides = cn(reverse && s.reverse, reverseLocked && s['reverse-locked']);
   const [loading, setLoading] = useState('loading');
   const [activeIndex, setActiveIndex] = useState(null);
+  // Sites that ship both themes open in light, whatever the visitor's system
+  // or Kismet theme says; the switch beside the copy is theirs to flip.
+  const [siteDark, setSiteDark] = useState(false);
+  const hasDarkShots = content.gallery?.some(image => image.imageDark);
 
   useEffect(() => {
     setTimeout(() => {
@@ -90,8 +94,8 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
       >
         {WebsiteTopper}
         <div className={s['website-body']}>
-          <img src={image.image} alt="" className={cn(image.imageDark && s['theme-light'])} />
-          {image.imageDark && <img src={image.imageDark} alt="" className={s['theme-dark']} />}
+          <img src={image.image} alt="" className={cn(image.imageDark && s['shot-light'])} />
+          {image.imageDark && <img src={image.imageDark} alt="" className={s['shot-dark']} />}
         </div>
         <span className={s['expand-close']} onClick={() => activeAction(index, activeIndex)}>
           +
@@ -194,8 +198,29 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
               <strong>Tools used:</strong> {content.toolsUsed}
             </Typography>
           )}
+          {hasDarkShots && (
+            <button
+              type={'button'}
+              role={'switch'}
+              aria-checked={siteDark}
+              className={s['site-theme']}
+              onClick={() => setSiteDark(dark => !dark)}
+            >
+              <span className={s['site-theme-track']}>
+                <span className={s['site-theme-thumb']} />
+              </span>
+              Dark mode
+            </button>
+          )}
         </Container>
-        <Container className={cn(s['website-screenshots'], s.active, loading && s[`${loading}`])}>
+        <Container
+          className={cn(
+            s['website-screenshots'],
+            s.active,
+            loading && s[`${loading}`],
+            siteDark && s['site-dark'],
+          )}
+        >
           {renderLogo()}
           {/* {console.log(logo)} */}
           {renderedGallery}

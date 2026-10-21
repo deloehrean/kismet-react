@@ -13,6 +13,7 @@ import {
   prosemiContent,
   sereneSpacesContent,
   solsticeContent,
+  wotcContent,
 } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
 // Top to bottom. The first gated site is the one locked visitors see as a ghost;
@@ -21,6 +22,7 @@ type Site = { title: string; gated?: boolean };
 
 const SITES: Site[] = [
   hrlPortalContent,
+  wotcContent,
   intelContent,
   clearAcaContent,
   prosemiContent,

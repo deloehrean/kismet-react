@@ -76,6 +76,18 @@ import SolsticeAbout from 'src/assets/images/websites/solstice/solstice-about.jp
 import SolsticeHomepage from 'src/assets/images/websites/solstice/solstice-home.jpg';
 import SolsticeLogo from 'src/assets/images/websites/solstice/solstice-logo.png';
 import SolsticeServices from 'src/assets/images/websites/solstice/solstice-services.jpg';
+import WotcApplicantDark from 'src/assets/images/websites/wotc/wotc-applicant-dark.jpg';
+import WotcApplicant from 'src/assets/images/websites/wotc/wotc-applicant.jpg';
+import WotcApplicantsDark from 'src/assets/images/websites/wotc/wotc-applicants-dark.jpg';
+import WotcApplicants from 'src/assets/images/websites/wotc/wotc-applicants.jpg';
+import WotcClientSettingsDark from 'src/assets/images/websites/wotc/wotc-client-settings-dark.jpg';
+import WotcClientSettings from 'src/assets/images/websites/wotc/wotc-client-settings.jpg';
+import WotcClientsDark from 'src/assets/images/websites/wotc/wotc-clients-dark.jpg';
+import WotcClients from 'src/assets/images/websites/wotc/wotc-clients.jpg';
+import WotcLogoLight from 'src/assets/images/websites/wotc/wotc-logo-light.svg';
+import WotcLogo from 'src/assets/images/websites/wotc/wotc-logo.svg';
+import WotcStateSubmissionDark from 'src/assets/images/websites/wotc/wotc-state-submission-dark.jpg';
+import WotcStateSubmission from 'src/assets/images/websites/wotc/wotc-state-submission.jpg';
 
 export const axleContent = {
   title: 'Axle Workout',
@@ -284,6 +296,51 @@ export const hrlPortalContent = {
     {
       image: HrlPortalLockedProduct,
       imageDark: HrlPortalLockedProductDark,
+      position: 'e',
+    },
+  ],
+};
+
+export const wotcContent = {
+  title: 'HRlogics | WOTC',
+  subtitle: 'Tax Credit Platform Redesign',
+  description:
+    'WOTC screened new hires for the federal Work Opportunity Tax Credit, filed qualifying ' +
+    'applicants with each state workforce agency, read the determination letters automatically, ' +
+    'and tracked every credit from the 120-hour mark to its maximum. I owned its product strategy ' +
+    'and UX, and I built the suite’s design system with WOTC as its first target: the redesign ' +
+    'was a one-for-one component swap that kept the layouts clients knew, changed only what ' +
+    'responsive screens needed, and brought WOTC in line with the rest of the suite. It never ' +
+    'shipped and the Figma files were lost, so I rebuilt five core screens on the design system ' +
+    'with demo data.',
+  poweredBy: 'React + Inertia.js / Design System',
+  toolsUsed: 'React, TypeScript, SCSS Modules, Figma, Playwright',
+  logo: WotcLogo,
+  logoLight: WotcLogoLight,
+  gallery: [
+    {
+      image: WotcStateSubmission,
+      imageDark: WotcStateSubmissionDark,
+      position: 'a',
+    },
+    {
+      image: WotcApplicants,
+      imageDark: WotcApplicantsDark,
+      position: 'b',
+    },
+    {
+      image: WotcClients,
+      imageDark: WotcClientsDark,
+      position: 'c',
+    },
+    {
+      image: WotcClientSettings,
+      imageDark: WotcClientSettingsDark,
+      position: 'd',
+    },
+    {
+      image: WotcApplicant,
+      imageDark: WotcApplicantDark,
       position: 'e',
     },
   ],

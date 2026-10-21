@@ -273,6 +273,78 @@
   }
 }
 
+// --- Site's own theme -------------------------------------------------
+// Screenshots that come in both themes open in light; the card's switch,
+// not the visitor's system or Kismet's theme, flips them.
+// The dark shot sits on top of the light one (same size) and fades in, so
+// the switch crossfades instead of cutting.
+.website-screenshots .website-body:has(.shot-dark) {
+  position: relative;
+}
+
+.shot-dark {
+  display: block;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: opacity 0.4s ease;
+  width: 100%;
+}
+
+.site-dark .shot-dark {
+  opacity: 1;
+}
+
+.site-theme {
+  align-items: center;
+  align-self: flex-start;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: inline-flex;
+  font: inherit;
+  gap: 10px;
+  margin-top: 16px;
+  padding: 4px 0;
+
+  &:focus-visible {
+    border-radius: 4px;
+    outline: 2px solid var(--primary-main);
+    outline-offset: 4px;
+  }
+}
+
+.site-theme-track {
+  background: rgba(127, 127, 127, .35);
+  border-radius: 999px;
+  display: inline-flex;
+  flex: none;
+  height: 22px;
+  padding: 3px;
+  transition: background .2s;
+  width: 40px;
+
+  [aria-checked="true"] > & {
+    background: var(--primary-main);
+  }
+}
+
+.site-theme-thumb {
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .3);
+  height: 16px;
+  transition: transform .2s;
+  width: 16px;
+
+  [aria-checked="true"] & {
+    transform: translateX(18px);
+  }
+}
+
 // --- Gated clients -----------------------------------------------------
 // Default (unlocked) shows the real card and hides the ghost; the
 // .password-protected body class swaps them. Pure CSS, same pattern as the
