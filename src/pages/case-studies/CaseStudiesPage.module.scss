@@ -193,3 +193,95 @@
     margin-top: var(--size-1);
   }
 }
+
+// --- stats ------------------------------------------------------------
+.stats {
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--size-2);
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--size-2);
+    border-radius: 6px;
+    border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  }
+
+  dt {
+    order: 2;
+    font-size: .8rem;
+    opacity: .75;
+  }
+
+  dd {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+  }
+}
+
+.source {
+  font-size: .78rem;
+  opacity: .7;
+  margin-top: calc(var(--size-2) * -1);
+}
+
+// --- audit: what I found, what shipped ---------------------------------
+.audit {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--size-2);
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    display: flex;
+    flex-direction: column;
+    gap: var(--size-1);
+    padding: var(--size-2);
+    border-radius: 6px;
+    border: 1px solid color-mix(in srgb, currentColor 16%, transparent);
+  }
+
+  blockquote {
+    margin: 0;
+    font-style: italic;
+    opacity: .8;
+
+    &::before { content: '“'; }
+    &::after { content: '”'; }
+  }
+
+  p {
+    margin: 0;
+    font-size: .9rem;
+  }
+
+  span {
+    font-size: .74rem;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+    opacity: .7;
+  }
+}
+
+// A wide sheet beside a tall one, top-aligned like the other rows.
+.library {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--size-3);
+  align-items: start;
+
+  @media all and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}

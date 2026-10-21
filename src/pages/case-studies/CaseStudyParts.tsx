@@ -27,3 +27,18 @@ export const Section = ({ eyebrow, title, lead, children }: any) => (
     {children}
   </section>
 );
+
+// A row of headline numbers, with where they came from underneath.
+export const Stats = ({ items, source }: any) => (
+  <React.Fragment>
+    <dl className={s.stats}>
+      {items.map(({ value, label }: any) => (
+        <div key={label}>
+          <dt>{label}</dt>
+          <dd>{value}</dd>
+        </div>
+      ))}
+    </dl>
+    {source && <p className={s.source}>{source}</p>}
+  </React.Fragment>
+);
