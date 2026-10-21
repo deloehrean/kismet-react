@@ -16,6 +16,8 @@ import GiftFront from 'src/assets/images/case-studies/solstice/gift-front.jpg';
 import Letterhead from 'src/assets/images/case-studies/solstice/letterhead.jpg';
 import SignPanelMark from 'src/assets/images/case-studies/solstice/sign-panel-mark.jpg';
 import WindowSign from 'src/assets/images/case-studies/solstice/window-sign.jpg';
+import AxleSlickBack from 'src/assets/images/graphics/print/axle-slick-back.jpg';
+import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
 import EmoryTableTin from 'src/assets/images/graphics/print/emory-table-tin.jpg';
 import FishbatSocialChecklist from 'src/assets/images/graphics/print/fishbat-social-checklist.jpg';
 import FishbatTradeShowBanner from 'src/assets/images/graphics/print/fishbat-trade-show-banner.jpg';
@@ -74,6 +76,8 @@ const ITEMS: GalleryItem[] = [
   { img: VoodooCocktailList, title: 'Cocktail list', meta: 'Voodoo Lounge · Kismet' },
   { img: MajesticCatering, title: 'Catering menu sign', meta: 'The Majestic Theatre · Kismet' },
   { img: EmoryTableTin, title: 'QR table tin', meta: 'The Emory · Kismet' },
+  { img: AxleSlickFront, title: 'Gym slick, front', meta: 'Axle Workout · Fishbat' },
+  { img: AxleSlickBack, title: 'Gym slick, back', meta: 'Axle Workout · Fishbat' },
   { img: FishbatTradeShowBanner, title: 'Trade-show banner', meta: 'Fishbat' },
   { img: FishbatSocialChecklist, title: 'Social media checklist', meta: 'Fishbat' },
   {
