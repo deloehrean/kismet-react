@@ -129,7 +129,9 @@ const SolsticeBody = () => (
         <Tile img={WebCompFinal} label={'2008 — final comp'} ratio={1.44} />
         <Tile img={Web2026} label={'2026 — rebuild'} ratio={1.54} />
       </div>
-      <LinkStyled to={'/websites'}>See the 2026 site &rarr;</LinkStyled>
+      <LinkStyled to={'/websites#site-solstice-massage-therapy'}>
+        See the 2026 site &rarr;
+      </LinkStyled>
     </Section>
   </React.Fragment>
 );
@@ -137,6 +139,8 @@ const SolsticeBody = () => (
 const solstice = {
   id: 'solstice',
   mark: Mark,
+  // the mark's own gold field, so the square tile reads as one piece
+  markFill: '#FAD382',
   markAlt: 'The Solstice mark',
   title: 'Solstice Massage Therapy',
   meta: 'Identity · Massage studio · Ferndale, MI · 2007, site rebuilt 2026',

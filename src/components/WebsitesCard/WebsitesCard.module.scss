@@ -20,6 +20,9 @@
 
 .root {
   margin-bottom: var(--size-4);
+  // Jump links (/websites#site-…) land the card just under the top edge; the
+  // app bar scrolls away with the page, so there is nothing to clear.
+  scroll-margin-top: var(--size-3);
 }
 
 // Locked visitors don't see every card, so the left/right alternation is

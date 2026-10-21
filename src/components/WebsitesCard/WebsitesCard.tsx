@@ -26,6 +26,15 @@ type WebsitesCardProps = {
   divider?: boolean;
 };
 
+// The card's jump-link target: "Lake Atitlán Project" -> "site-lake-atitlan-project".
+const siteAnchor = (title: string) =>
+  `site-${title
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')}`;
+
 const WebsitesCard: React.FC<WebsitesCardProps> = ({
   content,
   reverse = false,
@@ -171,8 +180,8 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         </Row>
       )}
       <Row
+        id={siteAnchor(content.title)}
         className={cn(s.website, s.root, sides, content.gated && s.gated)}
-        aria-label="axle-workout"
         gap={3}
         breakpoint={'md'}
       >

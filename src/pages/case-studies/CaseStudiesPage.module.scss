@@ -14,7 +14,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--size-1);
-  max-width: 62ch;
+  max-width: 88ch;
 }
 
 .lead {
@@ -283,5 +283,49 @@
 
   @media all and (max-width: 600px) {
     grid-template-columns: 1fr;
+  }
+}
+
+// --- code excerpts ------------------------------------------------------
+// One dark editor look in both themes, so the excerpts read as source.
+.code {
+  margin: 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-1);
+
+  pre {
+    margin: 0;
+    flex: 1;
+    padding: var(--size-2) var(--size-3);
+    border-radius: 6px;
+    background: #14181f;
+    color: #d6dde6;
+    font: .78rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    overflow-x: auto;
+  }
+
+  mark {
+    background: rgba(116, 255, 130, .2);
+    color: #a6ffaf;
+    border-radius: 3px;
+    padding: 0 2px;
+  }
+
+  figcaption {
+    font-size: .78rem;
+    opacity: .7;
+  }
+}
+
+// Before and after side by side, panels matched in height; stacked on phones.
+.codes {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--size-3);
+
+  @media all and (max-width: 767px) {
+    grid-template-columns: minmax(0, 1fr);
   }
 }

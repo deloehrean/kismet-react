@@ -8,7 +8,7 @@ import { resolveAccess } from 'src/lib/access';
 const isHome = (path: string) => path === '/' || path === '/home';
 
 function App() {
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
   // The pathname we last acted on, seeded with the one we landed on. A boolean
   // "have I rendered yet" flag cannot do this job: refs survive StrictMode's
   // simulated remount, so the second mount found the flag already spent and
@@ -52,9 +52,12 @@ function App() {
     // would be in the way, so it minimizes and the nav takes over.
     document.body.classList.add('pw-compact');
     // Routes keep the previous page's scroll offset, so you land part way down
-    // a page that is still building itself.
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
-  }, [pathname]);
+    // a page that is still building itself. A link to a spot on the page
+    // (/websites#site-…) leaves the scroll to that page instead.
+    if (!hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [pathname, hash]);
 
   return (
     <Layout>

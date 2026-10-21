@@ -6,13 +6,14 @@ import { RowStyles as s } from 'src/components';
 
 interface RowProps {
   className?: string;
+  id?: string;
   children?: React.ReactNode;
   el?: HTMLElement;
   gap?: number;
   breakpoint?: string;
 }
 
-const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0, breakpoint }) => {
+const Column: FC<RowProps> = ({ children, className, id, el = 'div', gap = 0, breakpoint }) => {
   const rootClassName = cn(
     className,
     s.root,
@@ -22,7 +23,11 @@ const Column: FC<RowProps> = ({ children, className, el = 'div', gap = 0, breakp
 
   const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
 
-  return <Component className={rootClassName}>{children}</Component>;
+  return (
+    <Component id={id} className={rootClassName}>
+      {children}
+    </Component>
+  );
 };
 
 export default Column;

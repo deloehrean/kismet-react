@@ -1,5 +1,6 @@
 import React from 'react';
 
+import CmsHeroEntry from 'src/assets/images/case-studies/fusion/cms-hero-entry.jpg';
 import SiteWordpress from 'src/assets/images/case-studies/fusion/fusion-2022-wordpress.jpg';
 import SiteRebrand from 'src/assets/images/case-studies/fusion/fusion-2023-rebrand.jpg';
 import LibraryButtons from 'src/assets/images/case-studies/fusion/library-buttons.jpg';
@@ -13,7 +14,7 @@ import RcCategory from 'src/assets/images/websites/rocketchips/rocketchips-categ
 import RcProduct from 'src/assets/images/websites/rocketchips/rocketchips-product.jpg';
 import { LinkStyled, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
-import { Section, Stats, Tile } from 'src/pages/case-studies/CaseStudyParts';
+import { Code, Section, Stats, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
 // Every number here is one Fusion or RocketChips published, or comes from the
 // repository itself - the source line under each row says which.
@@ -37,15 +38,54 @@ const SYSTEM = [
 ];
 
 const FUSION_ONLINE = [
+  { value: '$1.5B', label: 'Projected annual sales' },
   { value: '12,000+', label: 'Hardware products at launch' },
   { value: '675,000', label: 'Parts in the catalog today' },
   { value: '518', label: 'Manufacturers' },
 ];
 
+// From the CMS integration: the content blocks the page builder offers.
+const CMS = [
+  { value: '10', label: 'Content blocks to build pages from' },
+  { value: '0', label: 'Builds or releases needed to publish' },
+];
+
+// The homepage headline, before and after the CMS. Trimmed excerpts of the
+// real source.
+const HEADLINE = 'the future of electronic component sourcing';
+
+const HERO_BEFORE = `<Container className="homepage_hero_cta narrow-1000 flex flex-col center relative">
+  <h1>
+    ${HEADLINE}
+    <span className="trade">&trade;</span>
+  </h1>
+  <p>
+    Browse and buy from worldwide suppliers with actual pricing, 24/7.
+  </p>
+</Container>`;
+
+const HERO_AFTER = `... on Hero {
+  eyebrow
+  title
+  description
+  image { url description }
+  variant
+  shape
+}
+
+<Hero
+  eyebrow={eyebrow}
+  title={title}
+  description={description}
+  image={image}
+  variant={variant}
+  shape={shape}
+/>`;
+
 const MY_PART = [
-  { value: '$1.5B', label: 'Projected annual sales' },
-  { value: '756', label: 'Commits in eleven months' },
-  { value: '26%', label: 'Of the shipped front-end code' },
+  { value: '3', label: 'Sites designed and built in one year' },
+  { value: '25', label: 'Audit findings that became the roadmap' },
+  { value: '2', label: 'Brands carried by one codebase' },
 ];
 
 // Quotes from my audit of the build I inherited, November 2022.
@@ -107,7 +147,7 @@ const FusionOnlineBody = () => (
 
     <Section
       eyebrow={'02 — The audit'}
-      title={'Two dozen problems in my first month'}
+      title={'Twenty-five problems in my first month'}
       lead={
         'A month in, I walked the store end to end and wrote down everything that was broken or ' +
         'inconsistent: spacing, headings, mobile, registration, filters, the account dashboard, ' +
@@ -181,27 +221,53 @@ const FusionOnlineBody = () => (
       </div>
       <Stats
         items={FUSION_ONLINE}
-        source={'From the fusionww.com shop in 2025 and Fusion’s public catalog in 2026.'}
+        source={
+          'Sales projection from Fusion; product counts from the fusionww.com shop in 2025 and ' +
+          'Fusion’s public catalog in 2026.'
+        }
       />
     </Section>
 
     <Section
-      eyebrow={'06 — My part'}
-      title={'Design, direction, and code review'}
+      eyebrow={'06 — The CMS'}
+      title={'Content without a release'}
       lead={
-        'I owned the design and the direction from my audit to my last merged change. I set the ' +
-        'front-end architecture the team built on, reviewed every change, and wrote the largest ' +
-        'share of the code alongside them.'
+        'Every word on the old sites went through the developers and waited for the next ' +
+        'release. I brought in a headless CMS and built the pages from blocks the sales and ' +
+        'marketing teams could fill in themselves: heroes, stats, features, lead-gen forms, ' +
+        'benefit cards, and links across services, industries, and quality. When they publish, ' +
+        'the change goes live on its own, with no build and no release.'
       }
     >
-      <Stats
-        items={MY_PART}
-        source={'Sales projection from Fusion; commits and lines from the repository.'}
-      />
+      <Stats items={CMS} source={'From the CMS integration in the codebase.'} />
+      <Typography variant={'body2'} className={s.lead}>
+        Take the homepage headline. On RocketChips it was typed into the page itself, so changing it
+        meant a developer, a build, and a release. With the CMS, the same line is a field in a Hero
+        block, and the page simply lays out whatever marketing publishes.
+      </Typography>
+      <div className={s.codes}>
+        <Code code={HERO_BEFORE} highlight={HEADLINE} label={'Before: the headline in the code'} />
+        <Code code={HERO_AFTER} highlight={'title'} label={'After: the Hero block asks the CMS'} />
+      </div>
+      <Tile img={CmsHeroEntry} label={'The same line as a CMS entry (recreated)'} ratio={2.29} />
+    </Section>
+
+    <Section
+      eyebrow={'07 — My part'}
+      title={'Design, direction, and code review'}
+      lead={
+        'I owned the design and the direction for the whole rebrand: the new fusionww.com, ' +
+        'RocketChips, and Fusion Online, which brought the services, twelve industries, quality, ' +
+        'insights, and the shop together in one site, on a CMS the sales and marketing teams ' +
+        'could publish to themselves. I set the front-end architecture the team built on and ' +
+        'reviewed every change with them.'
+      }
+    >
+      <Stats items={MY_PART} source={'From my audit notes and the sites themselves.'} />
       <Typography variant={'body2'} className={s.lead}>
         The screenshots come from the real code, run against demo prices and a demo customer.
       </Typography>
-      <LinkStyled to={'/websites'}>See both stores on Websites &rarr;</LinkStyled>
+      <LinkStyled to={'/websites#site-rocketchips'}>See both stores on Websites &rarr;</LinkStyled>
     </Section>
   </React.Fragment>
 );

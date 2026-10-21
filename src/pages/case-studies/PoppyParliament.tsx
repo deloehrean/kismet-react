@@ -196,6 +196,8 @@ const PoppyParliamentBody = () => (
 const poppyParliament = {
   id: 'poppy-parliament',
   mark: MarkRed,
+  markFill: '#FFFFFF',
+  markInset: true,
   markAlt: 'The Poppy & Parliament mark',
   title: 'The Poppy & Parliament',
   meta: 'Identity · British pub · Huntsville, AL · 2019–2020',

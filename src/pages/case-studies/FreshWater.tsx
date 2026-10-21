@@ -44,7 +44,9 @@ const FreshWaterBody = () => (
         <Tile img={SiteForecasting} label={'Forecasting'} ratio={0.78} />
         <Tile img={SiteMonitoring} label={'Monitoring & data'} ratio={0.43} />
       </div>
-      <LinkStyled to={'/websites'}>See the build on Websites &rarr;</LinkStyled>
+      <LinkStyled to={'/websites#site-university-of-alabama-huntsville-nasa-lake-atitlan-project'}>
+        See the build on Websites &rarr;
+      </LinkStyled>
     </Section>
 
     <Section

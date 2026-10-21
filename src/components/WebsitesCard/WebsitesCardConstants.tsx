@@ -392,8 +392,8 @@ export const rocketChipsContent = {
     'sales across millions of SKUs, with real pricing, live stock, quotes, and credit terms in ' +
     'place of a phone call. As Senior Product Designer I designed it, moved its front end from ' +
     'Tailwind utilities to a custom component library, audited the experience from registration ' +
-    'to checkout, and was one of its two most active developers. The same codebase later became ' +
-    'Fusion Online. These screens are the production build run locally against Fusion’s public ' +
+    'to checkout, and set the front-end architecture the team built on, reviewing every change ' +
+    'with them. The same codebase later became Fusion Online. These screens are the production build run locally against Fusion’s public ' +
     'catalog, with demo prices and a demo customer.',
   poweredBy: 'Next.js + GraphQL / Custom Component Library',
   toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',

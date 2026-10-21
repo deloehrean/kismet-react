@@ -42,3 +42,21 @@ export const Stats = ({ items, source }: any) => (
     {source && <p className={s.source}>{source}</p>}
   </React.Fragment>
 );
+
+// A trimmed excerpt of real source, with the line that matters marked.
+export const Code = ({ code, highlight, label }: any) => (
+  <figure className={s.code}>
+    <pre>
+      <code>
+        {highlight
+          ? code
+              .split(highlight)
+              .flatMap((part: string, i: number) =>
+                i === 0 ? [part] : [<mark key={i}>{highlight}</mark>, part],
+              )
+          : code}
+      </code>
+    </pre>
+    <figcaption>{label}</figcaption>
+  </figure>
+);

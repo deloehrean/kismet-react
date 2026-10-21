@@ -8,6 +8,10 @@ interface CaseStudyProps {
   id: string;
   mark: string;
   markAlt: string;
+  /** Fills the tile around a mark that doesn't reach its edges. */
+  markFill?: string;
+  /** Pads a transparent mark in from the tile's edges. */
+  markInset?: boolean;
   title: string;
   meta: string;
   summary: React.ReactNode;
@@ -25,6 +29,8 @@ const CaseStudy: FC<CaseStudyProps> = ({
   id,
   mark,
   markAlt,
+  markFill,
+  markInset,
   title,
   meta,
   summary,
@@ -39,7 +45,12 @@ const CaseStudy: FC<CaseStudyProps> = ({
   return (
     <article id={`case-${id}`} className={cn(s.root, open && s.open, instant && s.instant)}>
       <header className={s.head}>
-        <img className={s.mark} src={mark} alt={markAlt} />
+        <img
+          className={cn(s.mark, markInset && s['mark-inset'])}
+          src={mark}
+          alt={markAlt}
+          style={markFill ? { background: markFill } : undefined}
+        />
         <div className={s.titles}>
           {/* The button carries the heading's name only; its ::after stretches
               over the whole header so the mark and summary click through too. */}

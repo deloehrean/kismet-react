@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+
+import { useLocation } from 'react-router-dom';
 
 import { Column, PageHeading, WebsitesCard } from 'src/components';
 import {
@@ -53,6 +55,21 @@ const cards = SITES.reduce<
 }, []);
 
 function WebsitesPage() {
+  const { hash } = useLocation();
+
+  // Case studies link straight to their site (/websites#site-rocketchips).
+  // Wait a beat for the page fade and the screenshots above to take their
+  // space, or the glide stops short of the card.
+  useEffect(() => {
+    if (!hash) {
+      return undefined;
+    }
+    const timer = window.setTimeout(() => {
+      document.getElementById(hash.slice(1))?.scrollIntoView({ behavior: 'smooth' });
+    }, 400);
+    return () => window.clearTimeout(timer);
+  }, [hash]);
+
   return (
     <Column gap={6}>
       <PageHeading
