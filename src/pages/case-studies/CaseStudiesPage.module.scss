@@ -22,7 +22,9 @@
 .section-head .section-title {
   font-family: var(--font-compact), serif;
   font-weight: 400;
-  letter-spacing: .02em;
+  // the face sets wide; pulled in so titles don't sprawl
+  letter-spacing: -.05em;
+  word-spacing: -.12em;
 }
 
 .lead {
@@ -232,7 +234,7 @@
     font-size: 1.9rem;
     font-weight: 400;
     line-height: 1.15;
-    letter-spacing: .02em;
+    letter-spacing: -.02em;
   }
 }
 

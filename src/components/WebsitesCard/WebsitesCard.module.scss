@@ -471,7 +471,9 @@
 .website-content .site-title {
   font-family: var(--font-compact), serif;
   font-weight: 400;
-  letter-spacing: .02em;
+  // the face sets wide; pulled in so titles don't sprawl
+  letter-spacing: -.05em;
+  word-spacing: -.12em;
   line-height: 1.15;
   text-transform: none;
   // the swash capitals hang below the baseline into the subtitle
