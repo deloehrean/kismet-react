@@ -11,6 +11,7 @@ import {
   lakeAtitlanContent,
   petersFruitContent,
   prosemiContent,
+  rocketChipsContent,
   sereneSpacesContent,
   solsticeContent,
   wotcContent,
@@ -23,6 +24,7 @@ type Site = { title: string; gated?: boolean };
 const SITES: Site[] = [
   hrlPortalContent,
   wotcContent,
+  rocketChipsContent,
   intelContent,
   clearAcaContent,
   prosemiContent,

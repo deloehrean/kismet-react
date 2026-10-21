@@ -65,6 +65,13 @@ import ProsemiLogo from 'src/assets/images/websites/prosemi/prosemi-logo-white.p
 import ProsemiQualityManagement from 'src/assets/images/websites/prosemi/prosemi-quality-management.jpg';
 import ProsemiRequestAQuote from 'src/assets/images/websites/prosemi/prosemi-request-a-quote.jpg';
 import ProsemiServices from 'src/assets/images/websites/prosemi/prosemi-services.jpg';
+import RocketChipsAccount from 'src/assets/images/websites/rocketchips/rocketchips-account.jpg';
+import RocketChipsCart from 'src/assets/images/websites/rocketchips/rocketchips-cart.jpg';
+import RocketChipsCategory from 'src/assets/images/websites/rocketchips/rocketchips-category.jpg';
+import RocketChipsHome from 'src/assets/images/websites/rocketchips/rocketchips-home.jpg';
+import RocketChipsLogoLight from 'src/assets/images/websites/rocketchips/rocketchips-logo-light.svg';
+import RocketChipsLogo from 'src/assets/images/websites/rocketchips/rocketchips-logo.svg';
+import RocketChipsProduct from 'src/assets/images/websites/rocketchips/rocketchips-product.jpg';
 import SereneSpacesPopup from 'src/assets/images/websites/serene-spaces/serene-spaces-category-popup.jpg';
 import SereneSpacesCategory from 'src/assets/images/websites/serene-spaces/serene-spaces-category.jpg';
 import SereneSpacesHomepage from 'src/assets/images/websites/serene-spaces/serene-spaces-home.jpg';
@@ -343,6 +350,31 @@ export const wotcContent = {
       imageDark: WotcApplicantDark,
       position: 'e',
     },
+  ],
+};
+
+export const rocketChipsContent = {
+  title: 'RocketChips',
+  subtitle: 'B2B Ecommerce Platform',
+  description:
+    'RocketChips was Fusion Worldwide’s self-service store for electronic components: a custom ' +
+    'enterprise B2B e-commerce platform built to support a projected $1.5 billion in annual ' +
+    'sales across millions of SKUs, with real pricing, live stock, quotes, and credit terms in ' +
+    'place of a phone call. As Senior Product Designer I designed it, moved its front end from ' +
+    'Tailwind utilities to a custom component library, audited the experience from registration ' +
+    'to checkout, and was one of its two most active developers. The same codebase later became ' +
+    'Fusion Online. These screens are the production build run locally against Fusion’s public ' +
+    'catalog, with demo prices and a demo customer.',
+  poweredBy: 'Next.js + GraphQL / Custom Component Library',
+  toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',
+  logo: RocketChipsLogo,
+  logoLight: RocketChipsLogoLight,
+  gallery: [
+    { image: RocketChipsHome, position: 'a' },
+    { image: RocketChipsCategory, position: 'b' },
+    { image: RocketChipsProduct, position: 'c' },
+    { image: RocketChipsCart, position: 'd' },
+    { image: RocketChipsAccount, position: 'e' },
   ],
 };
 
