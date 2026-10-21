@@ -21,10 +21,13 @@ import FishbatSocialChecklist from 'src/assets/images/graphics/print/fishbat-soc
 import FishbatTradeShowBanner from 'src/assets/images/graphics/print/fishbat-trade-show-banner.jpg';
 import MajesticCatering from 'src/assets/images/graphics/print/majestic-catering.jpg';
 import PoppyStPatricksBanner from 'src/assets/images/graphics/print/poppy-st-patricks-banner.jpg';
+import PoppySupportLocalBanner from 'src/assets/images/graphics/print/poppy-support-local-banner.jpg';
+import PoppyUpdatedHoursSign from 'src/assets/images/graphics/print/poppy-updated-hours-sign.jpg';
 import SkinThreadStarryNights from 'src/assets/images/graphics/print/skin-thread-starry-nights.jpg';
 import VillageIdiotHalloween from 'src/assets/images/graphics/print/village-idiot-halloween.jpg';
 import VoodooBeerList from 'src/assets/images/graphics/print/voodoo-beer-list.jpg';
 import VoodooCocktailList from 'src/assets/images/graphics/print/voodoo-cocktail-list.jpg';
+import WeakendStickerDeadman from 'src/assets/images/graphics/print/weakend-sticker-deadman.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
@@ -54,6 +57,16 @@ const ITEMS: GalleryItem[] = [
     title: 'St. Patrick’s Day banner',
     meta: 'The Poppy & Parliament · Kismet',
   },
+  {
+    img: PoppySupportLocalBanner,
+    title: 'Support Local Business banner',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  {
+    img: PoppyUpdatedHoursSign,
+    title: 'Updated hours sign',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
   { img: ShowBannerA, title: 'Trade-show banner', meta: 'HRlogics' },
   { img: ShowBannerB, title: 'Trade-show banner', meta: 'HRlogics' },
   { img: ShowTablecloth, title: 'Trade-show tablecloth', meta: 'HRlogics' },
@@ -73,6 +86,7 @@ const ITEMS: GalleryItem[] = [
     title: 'Halloween flyer',
     meta: 'The Village Idiot · Kismet, 2005',
   },
+  { img: WeakendStickerDeadman, title: 'Sticker', meta: 'The Weakend · Kismet, 2005' },
 ];
 
 function PrintPage() {
@@ -80,7 +94,7 @@ function PrintPage() {
     <GalleryPage
       title={'Print'}
       intro={
-        'Business cards, menus, signs, flyers, and trade-show booths, from show flyers in 2005 to QR menus and a full storefront identity.'
+        'Business cards, menus, signs, banners, flyers, and trade-show booths, from show flyers in 2005 to a full storefront identity.'
       }
       items={ITEMS}
     />

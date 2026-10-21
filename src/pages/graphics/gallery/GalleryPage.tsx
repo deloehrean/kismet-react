@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 import cn from 'clsx';
 
@@ -24,14 +24,22 @@ interface GalleryPageProps {
 // each opening full size.
 function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
   const [open, setOpen] = useState<GalleryItem | null>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
 
+  // Opening moves focus into the viewer; closing hands it back to the piece
+  // that opened it, so keyboard users don't lose their place in the grid.
   useEffect(() => {
     if (!open) {
       return undefined;
     }
+    closeRef.current?.focus();
     const close = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(null);
     window.addEventListener('keydown', close);
-    return () => window.removeEventListener('keydown', close);
+    return () => {
+      window.removeEventListener('keydown', close);
+      openerRef.current?.focus();
+    };
   }, [open]);
 
   return (
@@ -46,7 +54,14 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
       <div className={cn(s.grid, framed && s.framed)}>
         {items.map(item => (
           <figure key={item.img} className={s.piece}>
-            <button type={'button'} onClick={() => setOpen(item)} aria-label={`Open ${item.title}`}>
+            <button
+              type={'button'}
+              onClick={event => {
+                openerRef.current = event.currentTarget;
+                setOpen(item);
+              }}
+              aria-label={`Open ${item.title}`}
+            >
               <img src={item.img} alt={item.title} loading={'lazy'} />
             </button>
             <figcaption>
@@ -65,7 +80,7 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
             className={s.backdrop}
             onClick={() => setOpen(null)}
             aria-label={`Close ${open.title}`}
-            autoFocus
+            ref={closeRef}
           >
             <img src={open.img} alt={open.title} />
             <span className={s.caption}>

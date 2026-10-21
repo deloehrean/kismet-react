@@ -2,12 +2,19 @@ import React from 'react';
 
 import LinkedinBanner from 'src/assets/images/case-studies/hrlogics/linkedin-banner.jpg';
 import CampHappyHour from 'src/assets/images/case-studies/poppy/camp-happy-hour.jpg';
+import CampHuttonSmith from 'src/assets/images/case-studies/poppy/camp-hutton-smith.jpg';
+import CampIndustryNight from 'src/assets/images/case-studies/poppy/camp-industry-night.jpg';
 import CampMardiGras from 'src/assets/images/case-studies/poppy/camp-mardi-gras.jpg';
+import CampNewYears from 'src/assets/images/case-studies/poppy/camp-new-years.jpg';
+import CampPhoneBox from 'src/assets/images/case-studies/poppy/camp-phone-box.jpg';
+import CampRugbyNight from 'src/assets/images/case-studies/poppy/camp-rugby-night.jpg';
 import CampRugbyWorldCup from 'src/assets/images/case-studies/poppy/camp-rugby-world-cup.jpg';
 import CampStPatricksDay from 'src/assets/images/case-studies/poppy/camp-st-patricks-day.jpg';
 import CampTrivia from 'src/assets/images/case-studies/poppy/camp-trivia.jpg';
 import CampValentinesTea from 'src/assets/images/case-studies/poppy/camp-valentines-tea.jpg';
+import CovidAnnouncement from 'src/assets/images/case-studies/poppy/covid-announcement.jpg';
 import CovidKitMoscowMule from 'src/assets/images/case-studies/poppy/covid-kit-moscow-mule.jpg';
+import CovidSickDeals from 'src/assets/images/case-studies/poppy/covid-sick-deals.jpg';
 import AcmWireDiscount from 'src/assets/images/graphics/ads/acm-wire-discount.jpg';
 import AcmWireSeals from 'src/assets/images/graphics/ads/acm-wire-seals.jpg';
 import AssisiHappyCatMonth from 'src/assets/images/graphics/ads/assisi-happy-cat-month.jpg';
@@ -26,6 +33,11 @@ import JloftsEmail from 'src/assets/images/graphics/ads/jlofts-email.jpg';
 import LoopLoc40Years from 'src/assets/images/graphics/ads/loop-loc-40-years.jpg';
 import LoopLocGiftOfSafety from 'src/assets/images/graphics/ads/loop-loc-gift-of-safety.jpg';
 import ModelYearCloseout from 'src/assets/images/graphics/ads/model-year-closeout.jpg';
+import PoppyFoundersTap from 'src/assets/images/graphics/ads/poppy-founders-tap.jpg';
+import PoppyKitKentuckyMule from 'src/assets/images/graphics/ads/poppy-kit-kentucky-mule.jpg';
+import PoppyKitTennesseeMule from 'src/assets/images/graphics/ads/poppy-kit-tennessee-mule.jpg';
+import PoppyKitVodkaSoda from 'src/assets/images/graphics/ads/poppy-kit-vodka-soda.jpg';
+import PoppyMontyPython from 'src/assets/images/graphics/ads/poppy-monty-python.jpg';
 import Viv1 from 'src/assets/images/graphics/ads/viv-1.jpg';
 import Viv2 from 'src/assets/images/graphics/ads/viv-2.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
@@ -33,13 +45,45 @@ import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage
 const ITEMS: GalleryItem[] = [
   { img: CampStPatricksDay, title: 'St. Patrick’s Day', meta: 'The Poppy & Parliament · Kismet' },
   { img: CampRugbyWorldCup, title: 'Rugby World Cup', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CampNewYears, title: 'New Year’s party', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CampIndustryNight, title: 'Industry night', meta: 'The Poppy & Parliament · Kismet' },
   { img: CampTrivia, title: 'Trivia night', meta: 'The Poppy & Parliament · Kismet' },
   { img: CampMardiGras, title: 'Mardi Gras', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CampPhoneBox, title: 'Phone box selfie', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CampRugbyNight, title: 'Rugby night', meta: 'The Poppy & Parliament · Kismet' },
   { img: CampValentinesTea, title: 'Valentine’s tea', meta: 'The Poppy & Parliament · Kismet' },
+  {
+    img: CampHuttonSmith,
+    title: 'Hutton & Smith tap takeover',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  {
+    img: PoppyFoundersTap,
+    title: 'Founders tap takeover',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  { img: PoppyMontyPython, title: 'Monty Python night', meta: 'The Poppy & Parliament · Kismet' },
   { img: CampHappyHour, title: 'Happy hour', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CovidAnnouncement, title: 'Updated hours', meta: 'The Poppy & Parliament · Kismet' },
+  { img: CovidSickDeals, title: 'Still slingin’ beers', meta: 'The Poppy & Parliament · Kismet' },
   {
     img: CovidKitMoscowMule,
-    title: 'Cocktail kit, Moscow mule',
+    title: 'Starter kit, Moscow mule',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  {
+    img: PoppyKitKentuckyMule,
+    title: 'Starter kit, Kentucky mule',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  {
+    img: PoppyKitTennesseeMule,
+    title: 'Starter kit, Tennessee mule',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
+  {
+    img: PoppyKitVodkaSoda,
+    title: 'Starter kit, vodka soda',
     meta: 'The Poppy & Parliament · Kismet',
   },
   { img: LinkedinBanner, title: 'LinkedIn banner', meta: 'HRlogics' },
