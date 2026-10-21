@@ -30,6 +30,13 @@ import FareriLanding2 from 'src/assets/images/websites/extra/fareri-landing-page
 import GhostHomepage from 'src/assets/images/websites/extra/ghost-network-web-template_home.jpg';
 import GhostInner from 'src/assets/images/websites/extra/ghost-network-web-template_inner_dropdown.jpg';
 import ToadliTemplate from 'src/assets/images/websites/extra/toadli-deal-wall-template.jpg';
+import FusionOnlineAccount from 'src/assets/images/websites/fusion-online/fusion-online-account.jpg';
+import FusionOnlineCart from 'src/assets/images/websites/fusion-online/fusion-online-cart.jpg';
+import FusionOnlineCategory from 'src/assets/images/websites/fusion-online/fusion-online-category.jpg';
+import FusionOnlineHome from 'src/assets/images/websites/fusion-online/fusion-online-home.jpg';
+import FusionOnlineLogoLight from 'src/assets/images/websites/fusion-online/fusion-online-logo-light.svg';
+import FusionOnlineLogo from 'src/assets/images/websites/fusion-online/fusion-online-logo.svg';
+import FusionOnlineProduct from 'src/assets/images/websites/fusion-online/fusion-online-product.jpg';
 import HrlPortalDashboardDark from 'src/assets/images/websites/hrl-portal/hrl-portal-dashboard-dark.jpg';
 import HrlPortalDashboard from 'src/assets/images/websites/hrl-portal/hrl-portal-dashboard.jpg';
 import HrlPortalEditOrganizationDark from 'src/assets/images/websites/hrl-portal/hrl-portal-edit-organization-dark.jpg';
@@ -350,6 +357,29 @@ export const wotcContent = {
       imageDark: WotcApplicantDark,
       position: 'e',
     },
+  ],
+};
+
+export const fusionOnlineContent = {
+  title: 'Fusion Online',
+  subtitle: 'B2B Ecommerce Platform Redesign',
+  description:
+    'Fusion Online folded RocketChips into Fusion Worldwide’s own site: one search-first store ' +
+    'and company site on the same codebase, rebranded in Fusion’s green and rebuilt on a new ' +
+    'component library, with type-ahead search and a reworked catalog, product page, cart, and ' +
+    'account dashboard. I designed it and helped build it through 2023, and it launched in 2024 ' +
+    'as the shop on fusionww.com. These screens come from my last merged change on the project, ' +
+    'run locally against Fusion’s public catalog with demo prices and a demo customer.',
+  poweredBy: 'Next.js + GraphQL / Custom Component Library',
+  toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',
+  logo: FusionOnlineLogo,
+  logoLight: FusionOnlineLogoLight,
+  gallery: [
+    { image: FusionOnlineHome, position: 'a' },
+    { image: FusionOnlineCategory, position: 'b' },
+    { image: FusionOnlineProduct, position: 'c' },
+    { image: FusionOnlineCart, position: 'd' },
+    { image: FusionOnlineAccount, position: 'e' },
   ],
 };
 
