@@ -1,0 +1,81 @@
+import React, { useEffect, useState } from 'react';
+
+import cn from 'clsx';
+
+import { Container, Typography } from 'src/components';
+import s from 'src/pages/graphics/gallery/GalleryPage.module.scss';
+
+export interface GalleryItem {
+  img: string;
+  title: string;
+  /** Client or band, then era - "Fishbat · 2017". */
+  meta: string;
+}
+
+interface GalleryPageProps {
+  title: string;
+  intro: string;
+  items: GalleryItem[];
+  /** Logos sit on a white card so they all read at the same weight. */
+  framed?: boolean;
+}
+
+// One page for each body of print, logo, and ad work: a masonry of the pieces,
+// each opening full size.
+function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
+  const [open, setOpen] = useState<GalleryItem | null>(null);
+
+  useEffect(() => {
+    if (!open) {
+      return undefined;
+    }
+    const close = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(null);
+    window.addEventListener('keydown', close);
+    return () => window.removeEventListener('keydown', close);
+  }, [open]);
+
+  return (
+    <section className={s.root}>
+      <Container direction={'column'} gap={1}>
+        <Typography variant={'h4'}>{title}</Typography>
+        <Typography variant={'body2'} className={s.intro}>
+          {intro}
+        </Typography>
+      </Container>
+
+      <div className={cn(s.grid, framed && s.framed)}>
+        {items.map(item => (
+          <figure key={item.img} className={s.piece}>
+            <button type={'button'} onClick={() => setOpen(item)} aria-label={`Open ${item.title}`}>
+              <img src={item.img} alt={item.title} loading={'lazy'} />
+            </button>
+            <figcaption>
+              <strong>{item.title}</strong>
+              <span>{item.meta}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      {open && (
+        <div
+          className={s.viewer}
+          role={'dialog'}
+          aria-modal
+          aria-label={open.title}
+          onClick={() => setOpen(null)}
+        >
+          <img src={open.img} alt={open.title} />
+          <p>
+            <strong>{open.title}</strong> · {open.meta}
+          </p>
+          <button type={'button'} className={s.close} aria-label={'Close'}>
+            +
+          </button>
+        </div>
+      )}
+    </section>
+  );
+}
+
+export default GalleryPage;
