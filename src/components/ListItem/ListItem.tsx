@@ -63,7 +63,9 @@ const ListItem: FC<ListItemProps> = ({
         <div className={s.titles}>
           {title && (
             <Typography variant={dense ? 'menuPrimaryDense' : 'menuPrimary'}>
-              <span>{title.slice(0, 1)}</span>
+              <span className={s.initial} data-initial={title.slice(0, 1)}>
+                {title.slice(0, 1)}
+              </span>
               <span className={s.rest}>
                 <span>{title.slice(1)}</span>
               </span>

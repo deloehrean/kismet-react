@@ -138,6 +138,9 @@
     > span {
       min-width: 0;
       overflow: hidden;
+      // "Case Studies" has a space: squeezed to 0fr it wrapped a word per line,
+      // and the extra lines pushed its C up out of the middle of the tab.
+      white-space: nowrap;
     }
   }
 
@@ -147,10 +150,31 @@
       transition: grid-template-columns .45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
+    // Every collapsed tab is the same square, whatever its letter's advance
+    // width; min-width, not width, so the word can still grow back on hover.
     a {
-      padding: 12px var(--size-2);
+      display: flex;
+      align-items: center;
       justify-content: center;
+      min-width: 44px;
+      height: 44px;
+      padding: 0;
+      transition: padding .45s cubic-bezier(0.4, 0, 0.2, 1);
     }
+
+    .initial {
+      display: inline-block;
+      translate: var(--initial-x, 0) var(--initial-y, 0);
+      transition: translate .45s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    // Kaoly's side bearings are uneven and its capitals ride high, so a
+    // centred box still left each letter off-centre. Measured from the ink of
+    // each initial at 44px; the C's tail swings furthest right.
+    [data-initial='W'] { --initial-x: -1.5px; --initial-y: 2.5px; }
+    [data-initial='K'] { --initial-x: -3px; --initial-y: 1.5px; }
+    [data-initial='G'] { --initial-x: -3px; --initial-y: 3.5px; }
+    [data-initial='C'] { --initial-x: -7.5px; }
 
     // Touch has no hover to reveal with, and below 480px there is no room to
     // grow into - the word would run over the lockup. There the monogram is the
@@ -159,6 +183,18 @@
       .root:hover .rest,
       .root:focus-within .rest {
         grid-template-columns: 1fr;
+      }
+
+      // The nudges centre a lone letter; once the word is back they would
+      // push it into its neighbours, so they ease out as the padding returns.
+      .root:hover a,
+      .root:focus-within a {
+        padding-inline: var(--size-2);
+      }
+
+      .root:hover .initial,
+      .root:focus-within .initial {
+        translate: none;
       }
     }
   }
