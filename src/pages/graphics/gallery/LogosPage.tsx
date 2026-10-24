@@ -36,16 +36,13 @@ import Loop from 'src/assets/images/graphics/logos/loop.jpg';
 import MbGroupUsa from 'src/assets/images/graphics/logos/mb-group-usa.jpg';
 import Miraburst from 'src/assets/images/graphics/logos/miraburst.jpg';
 import Mirasweet from 'src/assets/images/graphics/logos/mirasweet.jpg';
-import PbdHoldings from 'src/assets/images/graphics/logos/pbd-holdings.jpg';
 import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
 import RyzeWotc from 'src/assets/images/graphics/logos/ryze-wotc.jpg';
 import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
-import SdMedicare from 'src/assets/images/graphics/logos/sd-medicare.jpg';
 import TeamYoungBmx from 'src/assets/images/graphics/logos/team-young-bmx.jpg';
 import TheEmory from 'src/assets/images/graphics/logos/the-emory.jpg';
 import TheShoppeBadge from 'src/assets/images/graphics/logos/the-shoppe-badge.jpg';
 import TheShoppe from 'src/assets/images/graphics/logos/the-shoppe.jpg';
-import TicaSeal from 'src/assets/images/graphics/logos/tica-seal.jpg';
 import TopSecretDistro from 'src/assets/images/graphics/logos/top-secret-distro.jpg';
 import TrueNorth from 'src/assets/images/graphics/logos/true-north.jpg';
 import Ucm from 'src/assets/images/graphics/logos/ucm.jpg';
@@ -89,15 +86,24 @@ const ITEMS: GalleryItem[] = [
   { img: CarolinaClassicSplat, title: 'Carolina Classic, splatter', meta: 'Carolina Classic' },
   { img: Alchemy521, title: 'Alchemy 521', meta: 'Alchemy 521' },
   { img: Aea, title: 'AEA', meta: 'AEA' },
-  { img: FoundMyAnimal, title: 'Found My Animal Rescue Mission', meta: 'To confirm' },
-  { img: FoundMyAnimalHeart, title: 'Found My Animal, heart', meta: 'To confirm' },
-  { img: TrueNorth, title: 'True North Pet Rescue Mission', meta: 'To confirm' },
-  { img: CalmerCanine, title: 'Calmer Canine', meta: 'To confirm' },
-  { img: FlapYou, title: 'Flap You', meta: 'To confirm' },
-  { img: HeartVenues, title: 'Heart Venues, Weddings & Events', meta: 'To confirm' },
-  { img: PbdHoldings, title: 'PBD Holdings', meta: 'To confirm' },
-  { img: SdMedicare, title: 'S&D MediCare', meta: 'To confirm' },
-  { img: TicaSeal, title: 'TICA Endorsement of Excellence seal', meta: 'To confirm' },
+  {
+    img: FoundMyAnimal,
+    title: 'Found My Animal Rescue Mission',
+    meta: 'Found My Animal Rescue Mission',
+  },
+  {
+    img: FoundMyAnimalHeart,
+    title: 'Found My Animal, heart',
+    meta: 'Found My Animal Rescue Mission',
+  },
+  { img: TrueNorth, title: 'True North Pet Rescue Mission', meta: 'True North Pet Rescue Mission' },
+  { img: CalmerCanine, title: 'Calmer Canine', meta: 'Calmer Canine' },
+  { img: FlapYou, title: 'Flap You', meta: 'Flap You' },
+  {
+    img: HeartVenues,
+    title: 'Heart Venues, Weddings & Events',
+    meta: 'Heart Venues, Weddings & Events',
+  },
   { img: Acm, title: 'ACM icon', meta: 'ACM · Fishbat' },
   { img: Bwella, title: 'Bwella', meta: 'Bwella · Fishbat' },
   { img: Loop, title: 'Loop', meta: 'Assisi Animal Health · Fishbat' },
