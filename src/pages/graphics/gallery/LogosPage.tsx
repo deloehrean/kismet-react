@@ -104,7 +104,7 @@ const ITEMS: GalleryItem[] = [
     meta: 'Carolina Classic · Fishbat',
   },
   { img: Alchemy521, title: 'Alchemy 521', meta: 'Alchemy 521 · Fishbat' },
-  { img: Aea, title: 'AEA', meta: 'AEA · Fishbat' },
+  { img: Aea, title: 'AEA', meta: 'AEA · Fishbat, 2013' },
   {
     img: FoundMyAnimal,
     title: 'Found My Animal Rescue Mission',
