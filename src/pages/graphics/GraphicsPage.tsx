@@ -42,6 +42,11 @@ function GraphicsPage() {
               Ads &amp; Social
             </LinkStyled>
           </li>
+          <li>
+            <LinkStyled to={'/graphics/illustrations'} className={s['subnav-btn']}>
+              Illustrations
+            </LinkStyled>
+          </li>
         </ul>
       </Row>
       <Divider spacing />

@@ -10,6 +10,7 @@ const TeesPage = lazy(() => import('src/pages/graphics/tees/TeesPage'));
 const LogosPage = lazy(() => import('src/pages/graphics/gallery/LogosPage'));
 const PrintPage = lazy(() => import('src/pages/graphics/gallery/PrintPage'));
 const AdsPage = lazy(() => import('src/pages/graphics/gallery/AdsPage'));
+const IllustrationsPage = lazy(() => import('src/pages/graphics/gallery/IllustrationsPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 // Process is off for launch: unfinished, and it clears the gate for the whole
 // visit. The page itself stays in src/pages/process until it's finished or cut.
@@ -55,6 +56,7 @@ export const routes: RoutePathDefinition[] = [
       { path: 'print', element: <PrintPage />, title: 'Print' },
       { path: 'logos', element: <LogosPage />, title: 'Logos' },
       { path: 'ads', element: <AdsPage />, title: 'Ads & Social' },
+      { path: 'illustrations', element: <IllustrationsPage />, title: 'Illustrations' },
     ],
   },
   // {

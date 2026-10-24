@@ -16,20 +16,44 @@ import GiftFront from 'src/assets/images/case-studies/solstice/gift-front.jpg';
 import Letterhead from 'src/assets/images/case-studies/solstice/letterhead.jpg';
 import SignPanelMark from 'src/assets/images/case-studies/solstice/sign-panel-mark.jpg';
 import WindowSign from 'src/assets/images/case-studies/solstice/window-sign.jpg';
+import AssisiBackwall from 'src/assets/images/graphics/print/assisi-backwall.jpg';
+import AssisiBannerStand from 'src/assets/images/graphics/print/assisi-banner-stand.jpg';
+import AssisiLoopAidFlyer from 'src/assets/images/graphics/print/assisi-loop-aid-flyer.jpg';
+import AxleGxVsGt from 'src/assets/images/graphics/print/axle-gx-vs-gt.jpg';
+import AxleRaiseTheBar from 'src/assets/images/graphics/print/axle-raise-the-bar.jpg';
 import AxleSlickBack from 'src/assets/images/graphics/print/axle-slick-back.jpg';
 import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
+import CassoneBrochure from 'src/assets/images/graphics/print/cassone-brochure.jpg';
+import ElephantomPoster from 'src/assets/images/graphics/print/elephantom-poster.jpg';
 import EmoryTableTin from 'src/assets/images/graphics/print/emory-table-tin.jpg';
+import EsudButtonGreen from 'src/assets/images/graphics/print/esud-button-green.jpg';
+import EsudButtonRed from 'src/assets/images/graphics/print/esud-button-red.jpg';
 import FishbatSocialChecklist from 'src/assets/images/graphics/print/fishbat-social-checklist.jpg';
 import FishbatTradeShowBanner from 'src/assets/images/graphics/print/fishbat-trade-show-banner.jpg';
+import FreethoughtMug from 'src/assets/images/graphics/print/freethought-mug.jpg';
+import GilbertExhibitFlyer from 'src/assets/images/graphics/print/gilbert-exhibit-flyer.jpg';
+import LaundryStationWrap from 'src/assets/images/graphics/print/laundry-station-wrap.jpg';
 import MajesticCatering from 'src/assets/images/graphics/print/majestic-catering.jpg';
+import PoppyHalloweenGiftCards from 'src/assets/images/graphics/print/poppy-halloween-gift-cards.jpg';
 import PoppyStPatricksBanner from 'src/assets/images/graphics/print/poppy-st-patricks-banner.jpg';
 import PoppySupportLocalBanner from 'src/assets/images/graphics/print/poppy-support-local-banner.jpg';
 import PoppyUpdatedHoursSign from 'src/assets/images/graphics/print/poppy-updated-hours-sign.jpg';
+import RosesdeadButtonBlack from 'src/assets/images/graphics/print/rosesdead-button-black.jpg';
+import RosesdeadButtonFlowers from 'src/assets/images/graphics/print/rosesdead-button-flowers.jpg';
+import RosesdeadButtonFrog from 'src/assets/images/graphics/print/rosesdead-button-frog.jpg';
 import SkinThreadStarryNights from 'src/assets/images/graphics/print/skin-thread-starry-nights.jpg';
 import VillageIdiotHalloween from 'src/assets/images/graphics/print/village-idiot-halloween.jpg';
 import VoodooBeerList from 'src/assets/images/graphics/print/voodoo-beer-list.jpg';
 import VoodooCocktailList from 'src/assets/images/graphics/print/voodoo-cocktail-list.jpg';
+import WeakendCassetteRelease from 'src/assets/images/graphics/print/weakend-cassette-release.jpg';
+import WeakendDollarMenuTour from 'src/assets/images/graphics/print/weakend-dollar-menu-tour.jpg';
+import WeakendHereavvPoster from 'src/assets/images/graphics/print/weakend-hereavv-poster.jpg';
+import WeakendSparrowPoster from 'src/assets/images/graphics/print/weakend-sparrow-poster.jpg';
 import WeakendStickerDeadman from 'src/assets/images/graphics/print/weakend-sticker-deadman.jpg';
+import WerewolvesOfDetroitWide from 'src/assets/images/graphics/print/werewolves-of-detroit-wide.jpg';
+import WerewolvesOfDetroit from 'src/assets/images/graphics/print/werewolves-of-detroit.jpg';
+import ZornsFamilyFlyer from 'src/assets/images/graphics/print/zorns-family-flyer.jpg';
+import ZornsMenu from 'src/assets/images/graphics/print/zorns-menu.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
@@ -69,6 +93,11 @@ const ITEMS: GalleryItem[] = [
     title: 'Updated hours sign',
     meta: 'The Poppy & Parliament · Kismet',
   },
+  {
+    img: PoppyHalloweenGiftCards,
+    title: 'Halloween gift cards',
+    meta: 'The Poppy & Parliament · Kismet',
+  },
   { img: ShowBannerA, title: 'Trade-show banner', meta: 'HRlogics' },
   { img: ShowBannerB, title: 'Trade-show banner', meta: 'HRlogics' },
   { img: ShowTablecloth, title: 'Trade-show tablecloth', meta: 'HRlogics' },
@@ -78,8 +107,19 @@ const ITEMS: GalleryItem[] = [
   { img: EmoryTableTin, title: 'QR table tin', meta: 'The Emory · Kismet' },
   { img: AxleSlickFront, title: 'Gym slick, front', meta: 'Axle Workout · Fishbat' },
   { img: AxleSlickBack, title: 'Gym slick, back', meta: 'Axle Workout · Fishbat' },
+  { img: AxleGxVsGt, title: 'GX vs. GT comparison', meta: 'Axle Workout · Fishbat' },
+  { img: AxleRaiseTheBar, title: 'Raise the Bar flyer', meta: 'Axle Workout · Fishbat' },
+  { img: AssisiBannerStand, title: 'Three-banner stand', meta: 'Assisi Animal Health · Fishbat' },
+  { img: AssisiBackwall, title: 'Backwall banners', meta: 'Assisi Animal Health · Fishbat' },
+  { img: AssisiLoopAidFlyer, title: 'Loop-Aid flyer', meta: 'Assisi Animal Health · Fishbat' },
   { img: FishbatTradeShowBanner, title: 'Trade-show banner', meta: 'Fishbat' },
   { img: FishbatSocialChecklist, title: 'Social media checklist', meta: 'Fishbat' },
+  { img: FreethoughtMug, title: 'Mug', meta: 'Freethought Coffee Co.' },
+  { img: LaundryStationWrap, title: 'Locker wrap', meta: 'Laundry Station' },
+  { img: ZornsMenu, title: 'Menu', meta: 'Zorn’s' },
+  { img: ZornsFamilyFlyer, title: 'Feed a family of four flyer', meta: 'Zorn’s' },
+  { img: CassoneBrochure, title: 'Brochure cover', meta: 'Cassone' },
+  { img: GilbertExhibitFlyer, title: 'Turn the volume up flyer', meta: 'Gilbert Exhibition' },
   {
     img: SkinThreadStarryNights,
     title: 'Starry Nights show flyer',
@@ -91,6 +131,26 @@ const ITEMS: GalleryItem[] = [
     meta: 'The Village Idiot · Kismet, 2005',
   },
   { img: WeakendStickerDeadman, title: 'Sticker', meta: 'The Weakend · Kismet, 2005' },
+  {
+    img: WeakendHereavvPoster,
+    title: 'How Everyone Ruins Everything poster',
+    meta: 'The Weakend · Kismet',
+  },
+  { img: WeakendSparrowPoster, title: 'Sparrow poster', meta: 'The Weakend · Kismet' },
+  { img: WerewolvesOfDetroit, title: 'Werewolves of Detroit poster', meta: 'The Weakend · Kismet' },
+  {
+    img: WerewolvesOfDetroitWide,
+    title: 'Werewolves of Detroit, wide',
+    meta: 'The Weakend · Kismet',
+  },
+  { img: WeakendDollarMenuTour, title: 'Dollar Menu Tour poster', meta: 'The Weakend · Kismet' },
+  { img: WeakendCassetteRelease, title: 'Cassette release poster', meta: 'The Weakend · Kismet' },
+  { img: ElephantomPoster, title: 'Wall poster', meta: 'Elephantom · Kismet' },
+  { img: RosesdeadButtonBlack, title: 'Button', meta: 'Rosesdead · Kismet' },
+  { img: RosesdeadButtonFlowers, title: 'Button', meta: 'Rosesdead · Kismet' },
+  { img: RosesdeadButtonFrog, title: 'Button', meta: 'Rosesdead · Kismet' },
+  { img: EsudButtonGreen, title: 'Button', meta: 'Eight Seconds Upside Down · Kismet' },
+  { img: EsudButtonRed, title: 'Button', meta: 'Eight Seconds Upside Down · Kismet' },
 ];
 
 function PrintPage() {
