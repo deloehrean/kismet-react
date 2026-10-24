@@ -105,7 +105,7 @@ const ITEMS: GalleryItem[] = [
   { img: VoodooBeerList, title: 'Beer list', meta: 'Voodoo Lounge · Kismet' },
   { img: VoodooCocktailList, title: 'Cocktail list', meta: 'Voodoo Lounge · Kismet' },
   { img: MajesticCatering, title: 'Catering menu sign', meta: 'The Majestic Theatre · Kismet' },
-  { img: EmoryTableTin, title: 'QR table tin', meta: 'The Emory · Kismet' },
+  { img: EmoryTableTin, title: 'QR table tin', meta: 'The Emory' },
   { img: AxleSlickFront, title: 'Gym slick, front', meta: 'Axle Workout · Fishbat' },
   { img: AxleSlickBack, title: 'Gym slick, back', meta: 'Axle Workout · Fishbat' },
   { img: AxleGxVsGt, title: 'GX vs. GT comparison', meta: 'Axle Workout · Fishbat' },

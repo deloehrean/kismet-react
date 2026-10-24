@@ -20,6 +20,7 @@ import CinderellaBrides from 'src/assets/images/graphics/logos/cinderella-brides
 import ClearI9 from 'src/assets/images/graphics/logos/clear-i9.jpg';
 import ClearVerify from 'src/assets/images/graphics/logos/clear-verify.jpg';
 import EugeneAuction from 'src/assets/images/graphics/logos/eugene-auction.jpg';
+import FishbatWhalePaper from 'src/assets/images/graphics/logos/fishbat-whale-paper.jpg';
 import FlapYou from 'src/assets/images/graphics/logos/flap-you.jpg';
 import FoundMyAnimalHeart from 'src/assets/images/graphics/logos/found-my-animal-heart.jpg';
 import FoundMyAnimal from 'src/assets/images/graphics/logos/found-my-animal.jpg';
@@ -40,7 +41,6 @@ import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parli
 import RyzeWotc from 'src/assets/images/graphics/logos/ryze-wotc.jpg';
 import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
 import TeamYoungBmx from 'src/assets/images/graphics/logos/team-young-bmx.jpg';
-import TheEmory from 'src/assets/images/graphics/logos/the-emory.jpg';
 import TheShoppeBadge from 'src/assets/images/graphics/logos/the-shoppe-badge.jpg';
 import TheShoppe from 'src/assets/images/graphics/logos/the-shoppe.jpg';
 import TopSecretDistro from 'src/assets/images/graphics/logos/top-secret-distro.jpg';
@@ -69,7 +69,6 @@ const ITEMS: GalleryItem[] = [
   { img: Mark, title: 'The Solstice sun', meta: 'Solstice Massage Therapy · Kismet' },
   { img: IkigaiColorSeal, title: 'Ikigai seal', meta: 'Ikigai · Kismet' },
   { img: IkigaiBestVersion, title: 'The best version of you', meta: 'Ikigai · Kismet' },
-  { img: TheEmory, title: 'The Emory', meta: 'The Emory · Kismet' },
   { img: VoodooLounge, title: 'The Voodoo Lounge', meta: 'Voodoo Lounge · Kismet' },
   { img: EugeneAuction, title: 'Eugene Auction', meta: 'Eugene Auction · Kismet, 2019' },
   { img: FountainOfLife, title: 'Fountain of Life', meta: 'Fountain of Life Malawi · Pro bono' },
@@ -104,6 +103,7 @@ const ITEMS: GalleryItem[] = [
     title: 'Heart Venues, Weddings & Events',
     meta: 'Heart Venues, Weddings & Events',
   },
+  { img: FishbatWhalePaper, title: 'Fishbat', meta: 'Fishbat' },
   { img: Acm, title: 'ACM icon', meta: 'ACM · Fishbat' },
   { img: Bwella, title: 'Bwella', meta: 'Bwella · Fishbat' },
   { img: Loop, title: 'Loop', meta: 'Assisi Animal Health · Fishbat' },
