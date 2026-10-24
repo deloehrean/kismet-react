@@ -41,6 +41,7 @@ import PoppyUpdatedHoursSign from 'src/assets/images/graphics/print/poppy-update
 import RosesdeadButtonBlack from 'src/assets/images/graphics/print/rosesdead-button-black.jpg';
 import RosesdeadButtonFlowers from 'src/assets/images/graphics/print/rosesdead-button-flowers.jpg';
 import RosesdeadButtonFrog from 'src/assets/images/graphics/print/rosesdead-button-frog.jpg';
+import RosesdeadButtonZombie from 'src/assets/images/graphics/print/rosesdead-button-zombie.jpg';
 import SkinThreadStarryNights from 'src/assets/images/graphics/print/skin-thread-starry-nights.jpg';
 import VillageIdiotHalloween from 'src/assets/images/graphics/print/village-idiot-halloween.jpg';
 import VoodooBeerList from 'src/assets/images/graphics/print/voodoo-beer-list.jpg';
@@ -149,6 +150,7 @@ const ITEMS: GalleryItem[] = [
   { img: RosesdeadButtonBlack, title: 'Button', meta: 'Rosesdead · Kismet' },
   { img: RosesdeadButtonFlowers, title: 'Button', meta: 'Rosesdead · Kismet' },
   { img: RosesdeadButtonFrog, title: 'Button', meta: 'Rosesdead · Kismet' },
+  { img: RosesdeadButtonZombie, title: 'Button', meta: 'Rosesdead · Kismet' },
   { img: EsudButtonGreen, title: 'Button', meta: 'Eight Seconds Upside Down · Kismet' },
   { img: EsudButtonRed, title: 'Button', meta: 'Eight Seconds Upside Down · Kismet' },
 ];

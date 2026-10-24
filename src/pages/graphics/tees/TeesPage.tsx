@@ -17,7 +17,6 @@ import NightAwayWords from 'src/assets/images/tees/night-away-words-tee.png';
 import PoppyPints from 'src/assets/images/tees/poppy-pints-tee.png';
 import RosesdeadBloodyHands from 'src/assets/images/tees/rosesdead-bloody-hands-tee.png';
 import RosesdeadBuilding from 'src/assets/images/tees/rosesdead-building-tee.png';
-import RosesdeadZombie from 'src/assets/images/tees/rosesdead-zombie-tee.png';
 import RoydenBuildings from 'src/assets/images/tees/royden-buildings-tee.png';
 import RoydenMetal from 'src/assets/images/tees/royden-metal-tee.png';
 import RoydenSpike from 'src/assets/images/tees/royden-spike-tee.png';
@@ -44,9 +43,7 @@ import WeakendZombies from 'src/assets/images/tees/weakend-zombies-tee.png';
 import WHIVLion from 'src/assets/images/tees/whiv-lion-tee.png';
 import WHIVRobot from 'src/assets/images/tees/whiv-robot-tee.png';
 import Woodward1 from 'src/assets/images/tees/woodward-1-tee.png';
-import WoodwardBlack from 'src/assets/images/tees/woodward-black-tee.png';
 import WoodwardSwirl from 'src/assets/images/tees/woodward-swirl-tee.png';
-import WoodwardTree from 'src/assets/images/tees/woodward-tree-tee.png';
 import { Container, Typography } from 'src/components';
 import s from 'src/pages/graphics/tees/TeesPage.module.scss';
 
@@ -91,10 +88,7 @@ const teeDesigns = [
   WHIVLion,
   WHIVRobot,
   Woodward1,
-  WoodwardTree,
-  WoodwardBlack,
   WoodwardSwirl,
-  RosesdeadZombie,
   SkinThreadBabies,
 ];
 
