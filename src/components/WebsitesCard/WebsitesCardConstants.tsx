@@ -1,3 +1,9 @@
+import AeaAbout from 'src/assets/images/websites/aea/aea-about.jpg';
+import AeaBerries from 'src/assets/images/websites/aea/aea-berries.jpg';
+import AeaHomepage from 'src/assets/images/websites/aea/aea-homepage.jpg';
+import AeaLogo from 'src/assets/images/websites/aea/aea-logo.png';
+import AeaPlantHealthPyramid from 'src/assets/images/websites/aea/aea-plant-health-pyramid.jpg';
+import AeaProducts from 'src/assets/images/websites/aea/aea-products.jpg';
 import AxleBlog from 'src/assets/images/websites/axle-workout/axle-blog-template.jpg';
 import AxleBuyIt from 'src/assets/images/websites/axle-workout/axle-buy-it-template.jpg';
 import AxlePartner from 'src/assets/images/websites/axle-workout/axle-find-it-become-partner-template.jpg';
@@ -523,6 +529,38 @@ export const fountainOfLifeContent = {
     },
     {
       image: FountainOfLifeMission,
+      position: 'e',
+    },
+  ],
+};
+
+export const aeaContent = {
+  title: 'Advancing Eco Agriculture',
+  subtitle: 'Marketing website',
+  description:
+    'Advancing Eco Agriculture is a regenerative farming company in Middlefield, Ohio, founded by John Kempf. They make plant nutrition products and consult with growers on crop health. I designed their logo and built their site around it, setting the mark in a ring of the crops they serve, in the purple and gold of the brand.',
+  poweredBy: 'Concrete CMS',
+  toolsUsed: 'CSS, PHP, jQuery',
+  logo: AeaLogo,
+  gallery: [
+    {
+      image: AeaHomepage,
+      position: 'a',
+    },
+    {
+      image: AeaProducts,
+      position: 'b',
+    },
+    {
+      image: AeaBerries,
+      position: 'c',
+    },
+    {
+      image: AeaPlantHealthPyramid,
+      position: 'd',
+    },
+    {
+      image: AeaAbout,
       position: 'e',
     },
   ],

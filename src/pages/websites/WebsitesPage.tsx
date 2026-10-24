@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 
 import { Column, PageHeading, WebsitesCard } from 'src/components';
 import {
+  aeaContent,
   axleContent,
   bangoContent,
   bravoContent,
@@ -35,6 +36,7 @@ const SITES: Site[] = [
   prosemiContent,
   lakeAtitlanContent,
   fountainOfLifeContent,
+  aeaContent,
   bangoContent,
   sereneSpacesContent,
   axleContent,
