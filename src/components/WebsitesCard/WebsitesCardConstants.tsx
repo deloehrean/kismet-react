@@ -30,6 +30,13 @@ import FareriLanding2 from 'src/assets/images/websites/extra/fareri-landing-page
 import GhostHomepage from 'src/assets/images/websites/extra/ghost-network-web-template_home.jpg';
 import GhostInner from 'src/assets/images/websites/extra/ghost-network-web-template_inner_dropdown.jpg';
 import ToadliTemplate from 'src/assets/images/websites/extra/toadli-deal-wall-template.jpg';
+import FountainOfLifeGovernmentReports from 'src/assets/images/websites/fountain-of-life/fountain-of-life-government-reports.jpg';
+import FountainOfLifeHomepage from 'src/assets/images/websites/fountain-of-life/fountain-of-life-homepage.jpg';
+import FountainOfLifeLogoDark from 'src/assets/images/websites/fountain-of-life/fountain-of-life-logo-dark.png';
+import FountainOfLifeLogo from 'src/assets/images/websites/fountain-of-life/fountain-of-life-logo.png';
+import FountainOfLifeMission from 'src/assets/images/websites/fountain-of-life/fountain-of-life-mission.jpg';
+import FountainOfLifeOurTeam from 'src/assets/images/websites/fountain-of-life/fountain-of-life-our-team.jpg';
+import FountainOfLifeSponsorship from 'src/assets/images/websites/fountain-of-life/fountain-of-life-sponsorship.jpg';
 import FusionOnlineAccount from 'src/assets/images/websites/fusion-online/fusion-online-account.jpg';
 import FusionOnlineCart from 'src/assets/images/websites/fusion-online/fusion-online-cart.jpg';
 import FusionOnlineCategory from 'src/assets/images/websites/fusion-online/fusion-online-category.jpg';
@@ -483,6 +490,39 @@ export const lakeAtitlanContent = {
     },
     {
       image: LakeAtitlanMonitoring,
+      position: 'e',
+    },
+  ],
+};
+
+export const fountainOfLifeContent = {
+  title: 'Fountain of Life Malawi',
+  subtitle: 'Pro bono nonprofit website',
+  description:
+    'Fountain of Life supports survivors of sexual violence in Malawi, most of them young girls, through counseling, One Stop Centers, and community education. I designed their logo and built their site pro bono, so the team in Malawi could publish their own reports, blog posts, and donation campaigns.',
+  poweredBy: 'Concrete CMS',
+  toolsUsed: 'LESS, PHP, jQuery, Gumby Framework',
+  logo: FountainOfLifeLogo,
+  logoDark: FountainOfLifeLogoDark,
+  gallery: [
+    {
+      image: FountainOfLifeHomepage,
+      position: 'a',
+    },
+    {
+      image: FountainOfLifeOurTeam,
+      position: 'b',
+    },
+    {
+      image: FountainOfLifeGovernmentReports,
+      position: 'c',
+    },
+    {
+      image: FountainOfLifeSponsorship,
+      position: 'd',
+    },
+    {
+      image: FountainOfLifeMission,
       position: 'e',
     },
   ],

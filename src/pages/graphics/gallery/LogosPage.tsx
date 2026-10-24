@@ -12,6 +12,7 @@ import AssisiTreeOfLife from 'src/assets/images/graphics/logos/assisi-tree-of-li
 import Bwella from 'src/assets/images/graphics/logos/bwella.jpg';
 import ClearI9 from 'src/assets/images/graphics/logos/clear-i9.jpg';
 import ClearVerify from 'src/assets/images/graphics/logos/clear-verify.jpg';
+import FountainOfLife from 'src/assets/images/graphics/logos/fountain-of-life.jpg';
 import Hrlogics from 'src/assets/images/graphics/logos/hrlogics.jpg';
 import HyacinthCrest from 'src/assets/images/graphics/logos/hyacinth-crest.jpg';
 import IAmThePilotCrest from 'src/assets/images/graphics/logos/i-am-the-pilot-crest.jpg';
@@ -55,6 +56,7 @@ const ITEMS: GalleryItem[] = [
   { img: IkigaiBestVersion, title: 'The best version of you', meta: 'Ikigai · Kismet' },
   { img: IkigaiOutline, title: 'Ikigai, one color', meta: 'Ikigai · Kismet' },
   { img: TheEmory, title: 'The Emory', meta: 'The Emory · Kismet' },
+  { img: FountainOfLife, title: 'Fountain of Life', meta: 'Fountain of Life Malawi · Pro bono' },
   { img: Acm, title: 'ACM icon', meta: 'ACM · Fishbat' },
   { img: Bwella, title: 'Bwella', meta: 'Bwella · Fishbat' },
   { img: Loop, title: 'Loop', meta: 'Assisi Animal Health · Fishbat' },
