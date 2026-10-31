@@ -103,3 +103,7 @@
     transform: rotate(180deg);
   }
 }
+
+:global(.password-protected) .gated {
+  display: none;
+}

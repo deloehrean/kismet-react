@@ -10,6 +10,7 @@ interface CaseStudyProps {
   markAlt: string;
   markFill?: string;
   markInset?: boolean;
+  gated?: boolean;
   title: string;
   meta: string;
   summary: React.ReactNode;
@@ -25,6 +26,7 @@ const CaseStudy: FC<CaseStudyProps> = ({
   markAlt,
   markFill,
   markInset,
+  gated,
   title,
   meta,
   summary,
@@ -44,7 +46,10 @@ const CaseStudy: FC<CaseStudyProps> = ({
   }, [open]);
 
   return (
-    <article id={`case-${id}`} className={cn(s.root, open && s.open, instant && s.instant)}>
+    <article
+      id={`case-${id}`}
+      className={cn(s.root, open && s.open, instant && s.instant, gated && s.gated)}
+    >
       <header className={s.head}>
         <img
           className={cn(s.mark, markInset && s['mark-inset'])}
