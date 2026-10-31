@@ -75,9 +75,28 @@
 }
 
 .viewer {
-  inset: 0;
+  bottom: 50vh;
+  left: 0;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
   position: fixed;
+  right: 0;
+  top: 50vh;
+  transition: all 0.3s ease-in-out;
   z-index: 100;
+
+  &.active {
+    bottom: 0;
+    opacity: 1;
+    pointer-events: auto;
+    top: 0;
+
+    .close {
+      opacity: 1;
+      transform: rotate(45deg);
+    }
+  }
 }
 
 .backdrop {
@@ -95,8 +114,9 @@
 
   img {
     border-radius: 4px;
-    max-height: calc(100vh - 8rem);
+    max-height: calc(100% - 4rem);
     max-width: min(1200px, 100%);
+    min-height: 0;
     object-fit: contain;
   }
 
@@ -123,9 +143,10 @@
     sans-serif;
   height: 40px;
   justify-content: center;
+  opacity: 0;
   position: absolute;
   right: var(--size-2);
   top: var(--size-2);
-  transform: rotate(45deg);
+  transition: all 0.3s ease-in-out;
   width: 40px;
 }

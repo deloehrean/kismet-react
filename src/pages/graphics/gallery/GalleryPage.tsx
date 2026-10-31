@@ -20,6 +20,7 @@ interface GalleryPageProps {
 
 function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
   const [open, setOpen] = useState<GalleryItem | null>(null);
+  const [shown, setShown] = useState<GalleryItem | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const openerRef = useRef<HTMLElement | null>(null);
 
@@ -53,6 +54,7 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
               onClick={event => {
                 openerRef.current = event.currentTarget;
                 setOpen(item);
+                setShown(item);
               }}
               aria-label={`Open ${item.title}`}
             >
@@ -66,25 +68,32 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
         ))}
       </div>
 
-      {open && (
-        <div className={s.viewer} role={'dialog'} aria-modal aria-label={open.title}>
+      <div
+        className={cn(s.viewer, open && s.active)}
+        role={'dialog'}
+        aria-modal
+        aria-label={shown?.title}
+        aria-hidden={!open}
+      >
+        {shown && (
           <button
             type={'button'}
             className={s.backdrop}
             onClick={() => setOpen(null)}
-            aria-label={`Close ${open.title}`}
+            aria-label={`Close ${shown.title}`}
+            tabIndex={open ? 0 : -1}
             ref={closeRef}
           >
-            <img src={open.img} alt={open.title} />
+            <img src={shown.img} alt={shown.title} />
             <span className={s.caption}>
-              <strong>{open.title}</strong> · {open.meta}
+              <strong>{shown.title}</strong> · {shown.meta}
             </span>
             <span className={s.close} aria-hidden>
               +
             </span>
           </button>
-        </div>
-      )}
+        )}
+      </div>
     </section>
   );
 }
