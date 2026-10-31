@@ -6,20 +6,15 @@
   "packageManager": "yarn@4.1.1",
   "type": "module",
   "scripts": {
-    "// bootstrap scripts": "",
-    "bootstrap": "yarn install && yarn build:packages",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx",
     "lint:fix": "yarn lint --fix",
     "format": "prettier --write \"src/**/*.{ts,tsx,scss}\"",
     "format:check": "prettier --check \"src/**/*.{ts,tsx,scss}\"",
     "typecheck": "tsc --noEmit",
-    "test": "vitest run",
     "start": "vite",
-    "// clean scripts": "",
     "clean": "rm -rf node_modules build .env",
-    "clean:cache": "rm -rf node_modules/.vite",
-    "clean:generated-types": "rm -rf src/shared/types/graphql/__generated__"
+    "clean:cache": "rm -rf node_modules/.vite"
   },
   "dependencies": {
     "clsx": "^2.1.1",
@@ -39,7 +34,6 @@
     "eslint": "8.57.1",
     "eslint-config-airbnb": "19.0.4",
     "eslint-config-prettier": "9.1.0",
-    "eslint-import-resolver-typescript": "^3.6.1",
     "eslint-plugin-import": "2.32.0",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-prettier": "5.5.4",
@@ -49,13 +43,10 @@
     "prettier": "3.6.2",
     "prettier-plugin-css-order": "2.1.2",
     "sass": "^1.103.1",
-    "stylelint": "^16.26.1",
-    "stylelint-config-standard-scss": "^13.1.0",
     "typescript": "5.9.3",
     "vite": "7.3.6",
     "vite-plugin-checker": "0.14.5",
-    "vite-plugin-svgr": "5.2.0",
-    "vitest": "3.2.7"
+    "vite-plugin-svgr": "5.2.0"
   },
   "resolutions": {
     "fast-uri": "^3.1.5",
