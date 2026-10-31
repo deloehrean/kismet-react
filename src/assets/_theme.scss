@@ -164,34 +164,86 @@
   --background-elevation-23: #{material.$white-100};
   --background-elevation-24: #{material.$white-100};
   --shadow-elevation-1: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  --shadow-elevation-2: 0px 3px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-3: 0px 3px 3px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-4: 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 1px 10px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-5: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 8px rgba(0, 0, 0, 0.14), 0px 1px 14px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-6: 0px 3px 5px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14), 0px 1px 18px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-7: 0px 4px 5px rgba(0, 0, 0, 0.2), 0px 7px 10px rgba(0, 0, 0, 0.14), 0px 2px 16px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-8: 0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-9: 0px 5px 6px rgba(0, 0, 0, 0.2), 0px 9px 12px rgba(0, 0, 0, 0.14), 0px 3px 16px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-10: 0px 6px 6px rgba(0, 0, 0, 0.2), 0px 10px 14px rgba(0, 0, 0, 0.14), 0px 4px 18px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-11: 0px 6px 7px rgba(0, 0, 0, 0.2), 0px 11px 15px rgba(0, 0, 0, 0.14), 0px 4px 20px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-12: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 12px 17px rgba(0, 0, 0, 0.14), 0px 5px 22px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-13: 0px 7px 8px rgba(0, 0, 0, 0.2), 0px 13px 19px rgba(0, 0, 0, 0.14), 0px 5px 24px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-14: 0px 7px 9px rgba(0, 0, 0, 0.2), 0px 14px 21px rgba(0, 0, 0, 0.14), 0px 5px 26px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-15: 0px 8px 9px rgba(0, 0, 0, 0.2), 0px 15px 22px rgba(0, 0, 0, 0.14), 0px 6px 28px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-16: 0px 8px 10px rgba(0, 0, 0, 0.2), 0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-17: 0px 8px 11px rgba(0, 0, 0, 0.2), 0px 17px 26px rgba(0, 0, 0, 0.14), 0px 6px 32px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-18: 0px 9px 11px rgba(0, 0, 0, 0.2), 0px 18px 28px rgba(0, 0, 0, 0.14), 0px 7px 34px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-19: 0px 9px 12px rgba(0, 0, 0, 0.2), 0px 19px 29px rgba(0, 0, 0, 0.14), 0px 7px 36px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-20: 0px 10px 13px rgba(0, 0, 0, 0.2), 0px 20px 31px rgba(0, 0, 0, 0.14), 0px 8px 38px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-21: 0px 10px 13px rgba(0, 0, 0, 0.2), 0px 21px 33px rgba(0, 0, 0, 0.14), 0px 8px 40px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-22: 0px 10px 14px rgba(0, 0, 0, 0.2), 0px 22px 35px rgba(0, 0, 0, 0.14), 0px 8px 42px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-23: 0px 11px 14px rgba(0, 0, 0, 0.2), 0px 23px 36px rgba(0, 0, 0, 0.14), 0px 9px 44px rgba(0, 0, 0, 0.12);
-  --shadow-elevation-24: 0px 11px 15px rgba(0, 0, 0, 0.2), 0px 24px 38px rgba(0, 0, 0, 0.14), 0px 9px 46px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-2:
+    0px 3px 1px rgba(0, 0, 0, 0.2), 0px 2px 2px rgba(0, 0, 0, 0.14), 0px 1px 5px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-3:
+    0px 3px 3px rgba(0, 0, 0, 0.2), 0px 3px 4px rgba(0, 0, 0, 0.14), 0px 1px 8px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-4:
+    0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 5px rgba(0, 0, 0, 0.14),
+    0px 1px 10px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-5:
+    0px 3px 5px rgba(0, 0, 0, 0.2), 0px 5px 8px rgba(0, 0, 0, 0.14),
+    0px 1px 14px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-6:
+    0px 3px 5px rgba(0, 0, 0, 0.2), 0px 6px 10px rgba(0, 0, 0, 0.14),
+    0px 1px 18px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-7:
+    0px 4px 5px rgba(0, 0, 0, 0.2), 0px 7px 10px rgba(0, 0, 0, 0.14),
+    0px 2px 16px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-8:
+    0px 5px 5px rgba(0, 0, 0, 0.2), 0px 8px 10px rgba(0, 0, 0, 0.14),
+    0px 3px 14px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-9:
+    0px 5px 6px rgba(0, 0, 0, 0.2), 0px 9px 12px rgba(0, 0, 0, 0.14),
+    0px 3px 16px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-10:
+    0px 6px 6px rgba(0, 0, 0, 0.2), 0px 10px 14px rgba(0, 0, 0, 0.14),
+    0px 4px 18px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-11:
+    0px 6px 7px rgba(0, 0, 0, 0.2), 0px 11px 15px rgba(0, 0, 0, 0.14),
+    0px 4px 20px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-12:
+    0px 7px 8px rgba(0, 0, 0, 0.2), 0px 12px 17px rgba(0, 0, 0, 0.14),
+    0px 5px 22px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-13:
+    0px 7px 8px rgba(0, 0, 0, 0.2), 0px 13px 19px rgba(0, 0, 0, 0.14),
+    0px 5px 24px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-14:
+    0px 7px 9px rgba(0, 0, 0, 0.2), 0px 14px 21px rgba(0, 0, 0, 0.14),
+    0px 5px 26px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-15:
+    0px 8px 9px rgba(0, 0, 0, 0.2), 0px 15px 22px rgba(0, 0, 0, 0.14),
+    0px 6px 28px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-16:
+    0px 8px 10px rgba(0, 0, 0, 0.2), 0px 16px 24px rgba(0, 0, 0, 0.14),
+    0px 6px 30px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-17:
+    0px 8px 11px rgba(0, 0, 0, 0.2), 0px 17px 26px rgba(0, 0, 0, 0.14),
+    0px 6px 32px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-18:
+    0px 9px 11px rgba(0, 0, 0, 0.2), 0px 18px 28px rgba(0, 0, 0, 0.14),
+    0px 7px 34px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-19:
+    0px 9px 12px rgba(0, 0, 0, 0.2), 0px 19px 29px rgba(0, 0, 0, 0.14),
+    0px 7px 36px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-20:
+    0px 10px 13px rgba(0, 0, 0, 0.2), 0px 20px 31px rgba(0, 0, 0, 0.14),
+    0px 8px 38px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-21:
+    0px 10px 13px rgba(0, 0, 0, 0.2), 0px 21px 33px rgba(0, 0, 0, 0.14),
+    0px 8px 40px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-22:
+    0px 10px 14px rgba(0, 0, 0, 0.2), 0px 22px 35px rgba(0, 0, 0, 0.14),
+    0px 8px 42px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-23:
+    0px 11px 14px rgba(0, 0, 0, 0.2), 0px 23px 36px rgba(0, 0, 0, 0.14),
+    0px 9px 44px rgba(0, 0, 0, 0.12);
+  --shadow-elevation-24:
+    0px 11px 15px rgba(0, 0, 0, 0.2), 0px 24px 38px rgba(0, 0, 0, 0.14),
+    0px 9px 46px rgba(0, 0, 0, 0.12);
   --background-contrast: #{material.$slate-900};
   --elevation-outlined: var(--components-divider);
   --elevation-outlined-dark: var(--components-divider-dark);
-  --background-gradient-primary: linear-gradient(90deg, var(--primary-main) 11%, var(--primary-dark) 100%);
-  --background-gradient-primary-45: linear-gradient(37.19deg, var(--primary-main) 21%, var(--primary-dark) 89%);
+  --background-gradient-primary: linear-gradient(
+    90deg,
+    var(--primary-main) 11%,
+    var(--primary-dark) 100%
+  );
+  --background-gradient-primary-45: linear-gradient(
+    37.19deg,
+    var(--primary-main) 21%,
+    var(--primary-dark) 89%
+  );
   --background-gradient-aqua: linear-gradient(91.1deg, #4a9d93 0%, #2479dc 100%);
   --background-gradient-dusk: linear-gradient(91.1deg, #4776e6 0%, #8e54e9 100%);
   --background-gradient-purple: linear-gradient(91.1deg, #fc5c7d 0%, #9e50ff 100%);
@@ -264,8 +316,7 @@
 PALETTE - DARK MODE
 *******************/
 
-[data-theme="dark-theme"] {
-
+[data-theme='dark-theme'] {
   // Text
   --text-primary: #{material.$white-100};
   --text-secondary: #{material.$white-80};

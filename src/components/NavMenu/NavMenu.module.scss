@@ -25,7 +25,8 @@
       > li:first-of-type {
         background: var(--primary-main);
 
-        a, svg {
+        a,
+        svg {
           color: var(--primary-contrast);
         }
       }
@@ -37,7 +38,8 @@
       > li {
         background: var(--action-selected);
 
-        a, svg {
+        a,
+        svg {
           color: var(--text-primary);
         }
       }
@@ -45,10 +47,10 @@
   }
 
   .list {
+    gap: 1px;
+    max-height: 500px;
     overflow: hidden;
     padding: var(--size-1) calc(var(--size-1) / 2);
-    max-height: 500px;
-    gap: 1px;
 
     .list {
       padding: calc(var(--size-1) / 2);
@@ -62,8 +64,8 @@
   }
 
   &.tabs {
-    flex-direction: row;
     border-radius: 0;
+    flex-direction: row;
 
     p {
       font-family: var(--font-fancy), sans-serif;
@@ -76,7 +78,6 @@
       @include m.breakpoint(sm, min) {
         padding: calc(var(--size-1) / 2) var(--size-2);
       }
-
     }
 
     @media all and (max-width: 960px) {

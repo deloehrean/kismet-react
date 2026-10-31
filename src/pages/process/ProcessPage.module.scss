@@ -7,70 +7,68 @@
     .scroll-wrap {
       background: var(--background-elevation-5);
       height: calc(100vh - (var(--appbar-height) + var(--footer-height)));
-      position: relative;
-      scroll-snap-type: block mandatory;
-      scroll-snap-stop: normal;
       overflow-x: scroll;
+      position: relative;
+      scroll-snap-stop: normal;
+      scroll-snap-type: block mandatory;
 
       .frame {
         background: var(--background-elevation-5);
-        scroll-snap-align: end;
         height: calc(100vh - (var(--appbar-height) + var(--footer-height)));
-
+        scroll-snap-align: end;
 
         &:nth-child(odd) {
           background: var(--background-elevation-0);
         }
 
         &.frame-1 {
-
         }
       }
     }
 
     .content-wrap {
-      position: absolute;
-      top: 0;
+      align-items: center;
       bottom: 0;
+      display: flex;
       height: 100%;
-      width: 100%;
+      justify-content: center;
       overflow: scroll;
       pointer-events: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      position: absolute;
+      top: 0;
+      width: 100%;
 
       .crop-wrap {
-        max-width: 70%;
-        height: 100%;
-        display: flex;
         align-items: center;
+        display: flex;
+        height: 100%;
         justify-content: center;
-
+        max-width: 70%;
 
         .website-wrap {
-          transition: all 0.3s ease-in-out;
           position: relative;
+          transition: all 0.3s ease-in-out;
 
           .website-topper {
-            position: absolute;
             bottom: 100%;
-            right: 0;
             left: 0;
+            position: absolute;
+            right: 0;
           }
 
-          .img, img {
+          .img,
+          img {
             max-height: calc(90vh - (var(--appbar-height) + var(--footer-height)));
           }
 
           .markup {
-            transition: all 0.3s ease-in-out;
-            position: absolute;
-            top: 0;
             bottom: 0;
             left: 0;
-            right: 0;
             opacity: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: all 0.3s ease-in-out;
 
             .mark svg path {
               animation: swipeInLtR 1s ease forwards;
@@ -78,7 +76,7 @@
             }
 
             .comment {
-              animation: fadeIn .2s ease forwards;
+              animation: fadeIn 0.2s ease forwards;
               animation-play-state: paused;
             }
 
@@ -93,14 +91,14 @@
               }
 
               .comment {
-                animation: fadeIn .2s ease forwards;
+                animation: fadeIn 0.2s ease forwards;
                 animation-play-state: revert;
               }
             }
 
             .mark {
-              transition: all 0.3s ease-in-out;
               position: absolute;
+              transition: all 0.3s ease-in-out;
 
               svg {
                 height: 100%;
@@ -108,10 +106,10 @@
               }
 
               &.mark-1 {
-                top: 1.7%;
+                bottom: 87.5%;
                 left: 0.6%;
                 right: 84%;
-                bottom: 87.5%;
+                top: 1.7%;
 
                 svg path {
                   stroke-dasharray: 350;
@@ -120,297 +118,297 @@
               }
 
               &.mark-2 {
-                top: 7.5%;
+                bottom: 83.8%;
                 left: 7%;
                 right: 89.9%;
-                bottom: 83.8%;
+                top: 7.5%;
 
                 svg path {
+                  animation-delay: 1s;
+                  animation-duration: 0.75s;
                   stroke-dasharray: 350;
                   stroke-dashoffset: 350;
-                  animation-delay: 1s;
-                  animation-duration: .75s;
                 }
               }
 
               &.mark-3 {
-                top: 10%;
+                bottom: 81.5%;
                 left: 16%;
                 right: 20.4%;
-                bottom: 81.5%;
+                top: 10%;
 
                 svg path {
+                  animation-delay: 2s;
                   stroke-dasharray: 1400;
                   stroke-dashoffset: 1400;
-                  animation-delay: 2s;
                 }
               }
 
               &.mark-4 {
-                top: 10%;
+                bottom: 81.5%;
                 left: 76%;
                 right: 15.4%;
-                bottom: 81.5%;
+                top: 10%;
 
                 svg path {
+                  animation-delay: 3.05s;
                   stroke-dasharray: 200;
                   stroke-dashoffset: 200;
-                  animation-delay: 3.05s;
                 }
               }
 
               &.mark-5 {
-                top: 7.7%;
+                bottom: 81.1%;
                 left: 84.25%;
                 right: 14.25%;
-                bottom: 81.1%;
+                top: 7.7%;
 
                 svg path {
+                  animation-delay: 2.75s;
+                  animation-duration: 0.15s;
                   stroke-dasharray: 200;
                   stroke-dashoffset: 200;
-                  animation-duration: .15s;
-                  animation-delay: 2.75s;
                 }
               }
 
               &.mark-6 {
-                top: 7.7%;
+                bottom: 81.1%;
                 left: 14.25%;
                 right: 84.25%;
-                bottom: 81.1%;
+                top: 7.7%;
 
                 svg path {
+                  animation-delay: 3s;
+                  animation-duration: 0.15s;
                   stroke-dasharray: 200;
                   stroke-dashoffset: 200;
-                  animation-duration: .15s;
-                  animation-delay: 3s;
                 }
               }
 
               &.mark-7 {
-                top: -3%;
+                bottom: 94.1%;
                 left: 70%;
                 right: 0;
-                bottom: 94.1%;
+                top: -3%;
 
                 svg path {
+                  animation-delay: 4.5s;
                   stroke-dasharray: 650;
                   stroke-dashoffset: 650;
-                  animation-delay: 4.5s;
                 }
               }
 
               &.mark-8 {
-                top: -1%;
+                bottom: 98.6%;
                 left: 70%;
                 right: 0;
-                bottom: 98.6%;
+                top: -1%;
 
                 svg path {
+                  animation-delay: 5.25s;
                   stroke-dasharray: 1100;
                   stroke-dashoffset: 1100;
-                  animation-delay: 5.25s;
                 }
               }
 
               &.mark-9 {
-                top: 2.5%;
+                bottom: 88.5%;
                 left: 23%;
                 right: 20%;
-                bottom: 88.5%;
+                top: 2.5%;
 
                 svg path {
+                  animation-delay: 6s;
                   stroke-dasharray: 1100;
                   stroke-dashoffset: 1100;
-                  animation-delay: 6s;
                 }
               }
 
               &.mark-10 {
-                top: -1.5%;
+                bottom: 91.5%;
                 left: 55%;
                 right: 37%;
-                bottom: 91.5%;
+                top: -1.5%;
 
                 svg path {
+                  animation-delay: 6.75s;
                   stroke-dasharray: 250;
                   stroke-dashoffset: 250;
-                  animation-delay: 6.75s;
                 }
               }
 
               &.mark-11 {
-                top: -4%;
+                bottom: 100%;
                 left: 0;
                 right: 0;
-                bottom: 100%;
+                top: -4%;
 
                 svg path {
+                  animation-delay: 7.25s;
                   stroke-dasharray: 3000;
                   stroke-dashoffset: 3000;
-                  animation-delay: 7.25s;
                 }
               }
 
               &.mark-12 {
-                top: -4%;
+                bottom: -4%;
                 left: 49%;
                 right: 49%;
-                bottom: -4%;
+                top: -4%;
 
                 svg path {
+                  animation-delay: 8s;
                   stroke-dasharray: 850;
                   stroke-dashoffset: 850;
-                  animation-delay: 8s;
                 }
               }
 
               &.mark-13 {
-                top: 29%;
+                bottom: 41%;
                 left: 30%;
                 right: 49%;
-                bottom: 41%;
+                top: 29%;
 
                 svg path {
+                  animation-delay: 8.75s;
                   stroke-dasharray: 550;
                   stroke-dashoffset: 550;
-                  animation-delay: 8.75s;
                 }
               }
 
               &.mark-14 {
-                top: 41%;
+                bottom: 48%;
                 left: 24%;
                 right: 58%;
-                bottom: 48%;
+                top: 41%;
 
                 svg path {
+                  animation-delay: 9.4s;
                   stroke-dasharray: 550;
                   stroke-dashoffset: 550;
-                  animation-delay: 9.4s;
                 }
               }
 
               &.mark-15 {
-                top: 95%;
+                bottom: 0.6%;
                 left: -1.5%;
                 right: 88%;
-                bottom: 0.6%;
+                top: 95%;
 
                 svg path {
+                  animation-delay: 10s;
                   stroke-dasharray: 300;
                   stroke-dashoffset: 300;
-                  animation-delay: 10s;
                 }
               }
 
               &.mark-16 {
-                top: 95%;
+                bottom: 0.6%;
                 left: 6.5%;
                 right: 49%;
-                bottom: 0.6%;
+                top: 95%;
 
                 svg path {
+                  animation-delay: 10.5s;
                   stroke-dasharray: 600;
                   stroke-dashoffset: 600;
-                  animation-delay: 10.5s;
                 }
               }
             }
 
             .comment {
-              position: absolute;
-              opacity: 0;
-              text-align: center;
-              text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
-              font-weight: 800;
-              font-size: 1.2vw;
-              padding: var(--size-1) var(--size-2);
               background: var(--action-focus);
               color: #d50000;
+              font-size: 1.2vw;
+              font-weight: 800;
+              opacity: 0;
+              padding: var(--size-1) var(--size-2);
+              position: absolute;
+              text-align: center;
+              text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 
               &.comment-1 {
-                top: 17%;
-                left: -3%;
                 animation-delay: 1.2s;
+                left: -3%;
+                top: 17%;
                 transform: rotate(-8deg);
               }
 
               &.comment-2 {
-                top: 18%;
-                right: 50%;
                 animation-delay: 3.6s;
+                right: 50%;
+                top: 18%;
                 transform: rotate(-8deg);
               }
 
               &.comment-3 {
-                top: 5.5%;
-                right: 1%;
                 animation-delay: 5.5s;
+                right: 1%;
+                top: 5.5%;
                 transform: rotate(-8deg);
               }
 
               &.comment-4 {
-                top: -1%;
-                left: 20%;
-                right: 20%;
-                margin: 0 auto;
                 animation-delay: 7.5s;
+                left: 20%;
+                margin: 0 auto;
+                right: 20%;
+                top: -1%;
                 transform: rotate(-8deg);
               }
 
               &.comment-5 {
-                top: 52%;
-                left: 32%;
                 animation-delay: 9.75s;
+                left: 32%;
+                top: 52%;
                 transform: rotate(-8deg);
               }
 
               &.comment-6 {
-                top: 93%;
-                left: 7%;
                 animation-delay: 11s;
+                left: 7%;
+                top: 93%;
                 transform: rotate(-8deg);
               }
             }
           }
 
           .menu-wrap {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-block-start: 13%;
-            margin-inline-end: 12%;
-            transform-origin: top right;
             bottom: 0;
             left: 0;
+            margin-block-start: 13%;
+            margin-inline-end: 12%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform-origin: top right;
 
             nav ul {
-              transition: all 0s ease-in-out;
               opacity: 0;
-              top: 0;
-              right: 0;
               position: absolute;
+              right: 0;
+              top: 0;
+              transition: all 0s ease-in-out;
             }
 
             &.before nav ul {
-              border: 1px solid #000;
               background: var(--common-white-main);
-              color: #004975;
-              font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-              gap: 0;
-              padding: 4px 0;
-              margin-inline: 0;
+              border: 1px solid #000;
               border-radius: 0;
               box-shadow: 6px 10px 16px -8px #000;
+              color: #004975;
+              font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+              gap: 0;
+              margin-inline: 0;
               overflow: visible;
+              padding: 4px 0;
 
               li {
-                position: relative;
-                padding: 2px 2px;
-                height: auto;
                 background: none;
                 border-radius: 0;
+                height: auto;
+                padding: 2px 2px;
+                position: relative;
 
                 > div > div {
                   width: 100%;
@@ -421,9 +419,9 @@
                 }
 
                 p {
-                  white-space: nowrap;
                   font-size: 10px;
                   font-weight: 500;
+                  white-space: nowrap;
                 }
 
                 svg {
@@ -436,32 +434,32 @@
                 }
 
                 &.hover {
-                  color: #fff;
                   background: #004975;
+                  color: #fff;
                 }
               }
 
               div {
-                border: none;
                 background: none;
+                border: none;
               }
 
               ul {
-                top: 24px;
                 right: 95%;
+                top: 24px;
               }
             }
 
             .cursor {
-              transition: all .5s ease-in-out;
-              opacity: 0;
-              transform: translate(0);
-              position: absolute;
-              top: 0;
-              right: 0;
-              z-index: 20;
               height: 24px;
+              opacity: 0;
+              position: absolute;
+              right: 0;
+              top: 0;
+              transform: translate(0);
+              transition: all 0.5s ease-in-out;
               width: 24px;
+              z-index: 20;
             }
           }
         }
@@ -480,7 +478,6 @@
           .website-wrap {
             transform: scale(2) translate(-14.5%, 16.5%);
 
-
             nav > ul {
               animation: menuInstant 0s linear forwards;
               animation-delay: 0.6s;
@@ -491,9 +488,9 @@
               }
 
               > div:nth-child(2) {
-                border-radius: 0;
                 animation: menuItemInstant 1.1s linear alternate;
                 animation-delay: 1.7s;
+                border-radius: 0;
 
                 > ul {
                   > div:nth-child(1) {
@@ -502,9 +499,9 @@
                   }
 
                   > div:nth-child(2) {
-                    border-radius: 0;
                     animation: menuItemInstant 1.2s linear alternate;
                     animation-delay: 2.8s;
+                    border-radius: 0;
 
                     > ul {
                       > div:nth-child(1) {
@@ -513,45 +510,45 @@
                       }
 
                       > div:nth-child(2) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.2s linear alternate;
                         animation-delay: 5.15s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(3) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear alternate;
                         animation-delay: 5.45s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(4) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear alternate;
                         animation-delay: 5.55s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(5) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear alternate;
                         animation-delay: 5.67s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(6) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear alternate;
                         animation-delay: 5.76s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(7) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear alternate;
                         animation-delay: 5.85s;
+                        border-radius: 0;
                       }
 
                       > div:nth-child(8) {
-                        border-radius: 0;
                         animation: menuItemInstant 0.1s linear forwards;
                         animation-delay: 6.02s;
+                        border-radius: 0;
                       }
                     }
                   }
@@ -570,12 +567,12 @@
 
                       > div:nth-child(8) {
                         > ul {
-                          right: auto;
-                          left: 97%;
-                          top: 48%;
-                          z-index: 20;
                           animation: menuInstant 0s linear forwards;
                           animation-delay: 6s;
+                          left: 97%;
+                          right: auto;
+                          top: 48%;
+                          z-index: 20;
                         }
                       }
                     }
@@ -586,16 +583,16 @@
 
             @keyframes menuItemInstant {
               0% {
-                color: #004975;
                 background: none;
+                color: #004975;
               }
               1% {
-                color: #FFF;
                 background: #004975;
+                color: #fff;
               }
               100% {
-                color: #FFF;
                 background: #004975;
+                color: #fff;
               }
             }
 
@@ -609,58 +606,57 @@
             }
 
             .cursor {
-              opacity: 1;
               animation: cursorAnim1 6s ease-in-out forwards;
+              opacity: 1;
             }
 
             @keyframes cursorAnim1 {
               0% {
-                margin-top: 0;
                 margin-right: -200px;
+                margin-top: 0;
               }
               10% {
-                margin-top: -20px;
                 margin-right: 86px;
+                margin-top: -20px;
               }
               20% {
-                margin-top: -14px;
                 margin-right: 80px;
+                margin-top: -14px;
               }
               30% {
-                margin-top: 26px;
                 margin-right: 50px;
+                margin-top: 26px;
               }
               40% {
-                margin-top: 26px;
                 margin-right: 50px;
+                margin-top: 26px;
               }
               50% {
-                margin-top: 50px;
                 margin-right: 140px;
+                margin-top: 50px;
               }
               60% {
-                margin-top: 50px;
                 margin-right: 140px;
+                margin-top: 50px;
               }
               70% {
-                margin-top: 56px;
                 margin-right: 340px;
+                margin-top: 56px;
               }
               80% {
-                margin-top: 56px;
                 margin-right: 340px;
+                margin-top: 56px;
               }
               90% {
-                margin-top: 80px;
                 margin-right: 300px;
+                margin-top: 80px;
               }
               100% {
-                margin-top: 200px;
                 margin-right: 260px;
+                margin-top: 200px;
               }
             }
           }
-
         }
       }
 
@@ -686,6 +682,6 @@
   }
   100% {
     opacity: 1;
-    transform: scale(1)
+    transform: scale(1);
   }
 }

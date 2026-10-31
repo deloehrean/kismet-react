@@ -9,9 +9,9 @@
     color: var(--link-primary-hover);
   }
 
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     color: var(--link-primary-disabled);
-    position: relative;
     cursor: not-allowed;
+    position: relative;
   }
 }

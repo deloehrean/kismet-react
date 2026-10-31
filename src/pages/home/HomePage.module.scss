@@ -5,29 +5,29 @@
 }
 
 .lede {
-  max-width: 68ch;
   font-size: 1.12rem;
   line-height: 1.55;
+  max-width: 68ch;
 }
 
 .proof {
+  display: grid;
+  gap: var(--size-3);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  list-style: none;
   margin: 0;
   padding: 0;
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--size-3);
 
   @media all and (max-width: 767px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   li {
+    border-left: 3px solid var(--primary-main);
     display: flex;
     flex-direction: column;
     gap: 2px;
     padding-left: var(--size-2);
-    border-left: 3px solid var(--primary-main);
   }
 
   strong {
@@ -36,19 +36,19 @@
   }
 
   span {
-    font-size: .82rem;
-    opacity: .78;
+    font-size: 0.82rem;
+    opacity: 0.78;
   }
 }
 
 .capabilities {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--size-4);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   @media all and (max-width: 900px) {
-    grid-template-columns: 1fr;
     gap: var(--size-3);
+    grid-template-columns: 1fr;
   }
 
   section {
@@ -60,8 +60,8 @@
 
 .work {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--size-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
   @media all and (max-width: 767px) {
     grid-template-columns: 1fr;
@@ -69,44 +69,46 @@
 }
 
 .work-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: var(--size-1);
   padding: var(--size-3);
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, .18);
-  background: rgba(255, 255, 255, .05);
-  transition: background .2s ease, transform .2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 
   &:hover,
   &:focus-visible {
-    background: rgba(255, 255, 255, .1);
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-2px);
   }
 
   .more {
+    font-size: 0.82rem;
     margin-top: auto;
+    opacity: 0.8;
     padding-top: var(--size-1);
-    font-size: .82rem;
-    opacity: .8;
   }
 }
 
 .paths {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--size-3);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 
   @media all and (max-width: 767px) {
     grid-template-columns: 1fr;
   }
 
   section {
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
     gap: var(--size-1);
     padding: var(--size-3);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, .18);
   }
 }

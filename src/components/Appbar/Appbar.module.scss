@@ -3,14 +3,14 @@
   display: flex;
   flex-direction: row;
   height: calc(0vh + var(--appbar-height));
-  width: 100%;
   position: relative;
   transition: height 1s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 100%;
 
   .content {
     flex: 1;
-    position: relative;
     justify-content: space-between;
+    position: relative;
 
     @media all and (max-width: 680px) {
       gap: 0;
@@ -18,28 +18,28 @@
   }
 
   .spacer {
-    height: 0;
-    flex: none;
-    overflow: hidden;
-    position: sticky;
-    top: 0;
-    z-index: 5;
-    display: flex;
     align-items: center;
     background: var(--background-default);
     box-shadow: var(--shadow-elevation-1);
+    display: flex;
+    flex: none;
+    height: 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
     transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 5;
 
     .password-bar {
-      display: flex;
       align-items: center;
+      display: flex;
+      gap: var(--size-1);
       height: 100%;
       justify-content: flex-end;
-      gap: var(--size-1);
-      width: 100%;
-      max-width: 2000px;
       margin-inline: auto;
+      max-width: 2000px;
       padding-inline: var(--size-3);
+      width: 100%;
 
       @media all and (max-width: 680px) {
         justify-content: center;
@@ -48,19 +48,19 @@
     }
 
     .field {
-      position: relative;
-      display: flex;
       align-items: center;
+      display: flex;
+      position: relative;
 
       input {
-        width: 15rem;
         padding-right: calc(var(--size-2) + 32px);
+        width: 15rem;
 
         @media all and (max-width: 680px) {
           width: 11rem;
         }
         background: color-mix(in srgb, var(--text-primary) 40%, transparent);
-        transition: background .25s ease;
+        transition: background 0.25s ease;
 
         &:focus,
         &:focus-visible {
@@ -68,19 +68,19 @@
         }
       }
 
-      button[type="submit"] {
-        position: absolute;
-        right: 2px;
-        display: flex;
+      button[type='submit'] {
         align-items: center;
-        justify-content: center;
         background: var(--common-black-main);
-        width: 32px;
-        height: 32px;
-        padding: 0;
         border-radius: 50%;
         color: var(--text-contrast);
         cursor: pointer;
+        display: flex;
+        height: 32px;
+        justify-content: center;
+        padding: 0;
+        position: absolute;
+        right: 2px;
+        width: 32px;
 
         &:hover,
         &:focus-visible {
@@ -91,10 +91,10 @@
     }
 
     .sr-only {
-      position: absolute;
-      width: 1px;
       height: 1px;
       overflow: hidden;
+      position: absolute;
+      width: 1px;
       clip: rect(0 0 0 0);
       white-space: nowrap;
     }
@@ -121,40 +121,43 @@
   }
 
   .collage-carousel {
-    position: absolute;
-    opacity: 0.5;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    box-shadow: inset 0 -8px 10px rgba(0, 0, 0, .5), inset 0 -16px 24px rgba(0, 0, 0, .24), inset 0 -6px 32px rgba(0, 0, 0, .24);
-    background: url("/src/assets/images/homepage-collage.webp") repeat center 40%;
-    background-size: 100%;
-    width: 100vw;
     animation: bgSlide 720s linear infinite;
+    background: url('/src/assets/images/homepage-collage.webp') repeat center 40%;
+    background-size: 100%;
+    bottom: 0;
+    box-shadow:
+      inset 0 -8px 10px rgba(0, 0, 0, 0.5),
+      inset 0 -16px 24px rgba(0, 0, 0, 0.24),
+      inset 0 -6px 32px rgba(0, 0, 0, 0.24);
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100vw;
   }
 
   .logo {
+    flex: 2;
     gap: 0;
     width: 100%;
-    flex: 2;
 
     @media all and (max-width: 680px) {
       flex: unset;
     }
 
     a {
+      align-items: center;
       display: flex;
       margin-inline: var(--size-1);
-      align-items: center;
-      width: 100%;
-      max-width: 301px;
       max-height: 106px;
+      max-width: 301px;
       transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+      width: 100%;
 
       svg {
-        width: 100%;
         height: auto;
+        width: 100%;
 
         path {
           -webkit-filter: drop-shadow(0 0 8px var(--text-contrast));
@@ -165,20 +168,20 @@
   }
 
   .password-wrap {
-    margin-inline: auto;
-    width: 100vw;
-    gap: 0;
-    max-width: 2000px;
     align-items: center;
+    gap: 0;
     justify-content: flex-start;
+    margin-inline: auto;
+    max-width: 2000px;
+    width: 100vw;
 
     @media all and (max-width: 680px) {
-      width: 100%;
-      flex-direction: column;
       align-items: flex-start;
+      flex-direction: column;
       height: var(--appbar-height);
       justify-content: center;
       pointer-events: none;
+      width: 100%;
 
       .logo {
         pointer-events: auto;
@@ -199,16 +202,16 @@
       flex: 1;
       max-width: 0;
       min-width: 0;
-      overflow: hidden;
       opacity: 0;
+      overflow: hidden;
     }
 
     .login {
       align-items: flex-end;
-      opacity: 0;
-      max-height: 0;
       filter: blur(100px);
-      transition: all .85s ease-in-out;
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.85s ease-in-out;
 
       @media all and (max-width: 680px) {
         align-items: center;
@@ -220,15 +223,15 @@
     height: 0;
 
     @media all and (max-width: 680px) {
-      position: absolute;
-      left: 0;
-      right: 0;
+      align-items: flex-end;
       bottom: 0;
       display: flex;
       height: var(--appbar-height);
-      align-items: flex-end;
       justify-content: flex-end;
+      left: 0;
       pointer-events: none;
+      position: absolute;
+      right: 0;
 
       > * {
         pointer-events: auto;
@@ -247,8 +250,8 @@
   }
 
   .collage-carousel {
-    opacity: .2;
     background-size: 150%;
+    opacity: 0.2;
 
     @media all and (max-width: 680px) {
       background-size: 300%;
@@ -264,8 +267,8 @@
       }
 
       a {
-        max-width: 700px;
         max-height: unset;
+        max-width: 700px;
       }
     }
   }
@@ -280,9 +283,9 @@
       }
 
       .nav {
-        position: static;
-        height: auto;
         align-items: center;
+        height: auto;
+        position: static;
       }
     }
   }
@@ -300,8 +303,8 @@
     }
 
     .collage-carousel {
-      opacity: .2;
       background-size: 150%;
+      opacity: 0.2;
 
       @media all and (max-width: 680px) {
         background-size: 300%;
@@ -320,8 +323,8 @@
       }
 
       .password-wrap {
-        max-width: 800px;
         gap: var(--size-4);
+        max-width: 800px;
         pointer-events: all;
 
         @media all and (max-width: 680px) {
@@ -344,29 +347,28 @@
           }
 
           a {
-            max-width: 700px;
-            max-height: unset;
-            margin: 0;
-            opacity: 1;
             filter: blur(0);
+            margin: 0;
+            max-height: unset;
+            max-width: 700px;
+            opacity: 1;
             transform: scale(1);
-
           }
         }
 
         .login {
-          opacity: 1;
-          max-height: 300px;
           filter: blur(0);
+          max-height: 300px;
+          opacity: 1;
           transition-delay: 2s;
         }
 
         .resume {
+          align-items: flex-start;
           max-width: 300px;
           min-width: 200px;
-          overflow: visible;
           opacity: 1;
-          align-items: flex-start;
+          overflow: visible;
 
           @media all and (max-width: 680px) {
             align-self: center;
@@ -380,11 +382,11 @@
 
       .nav {
         @media all and (max-width: 680px) {
-          position: static;
-          right: auto;
+          align-items: center;
           bottom: auto;
           height: auto;
-          align-items: center;
+          position: static;
+          right: auto;
         }
       }
     }
@@ -406,11 +408,11 @@
       }
 
       .content .nav {
-        position: absolute;
-        right: 0;
+        align-items: flex-end;
         bottom: 0;
         height: var(--appbar-height);
-        align-items: flex-end;
+        position: absolute;
+        right: 0;
       }
 
       .content {
@@ -420,9 +422,9 @@
 
     .content .password-wrap {
       gap: 0;
-      width: 100%;
-      max-width: 2000px;
       justify-content: flex-start;
+      max-width: 2000px;
+      width: 100%;
 
       @media all and (max-width: 680px) {
         height: var(--appbar-height);
@@ -435,8 +437,8 @@
       }
 
       .logo {
-        gap: 0;
         align-items: flex-start;
+        gap: 0;
 
         a {
           max-width: 301px;
@@ -445,21 +447,21 @@
             max-width: 140px;
           }
           margin-inline: var(--size-1);
-          transition-duration: .4s;
+          transition-duration: 0.4s;
         }
       }
 
       .login {
-        opacity: 0;
-        max-height: 0;
         filter: blur(40px);
+        max-height: 0;
+        opacity: 0;
         transition-delay: 0s;
       }
 
       .divider {
+        margin: 0;
         max-width: 0;
         min-width: 0;
-        margin: 0;
         opacity: 0;
         overflow: hidden;
       }
@@ -490,15 +492,15 @@
         .password-wrap {
           .logo {
             a {
-              opacity: 0;
               filter: blur(100px);
+              opacity: 0;
               transform: scale(2);
             }
           }
 
           .login {
-            opacity: 0;
             max-height: 0;
+            opacity: 0;
           }
         }
       }
@@ -508,18 +510,18 @@
 
 input {
   background: var(--text-primary);
-  color: var(--text-contrast);
   border: none;
-  padding: var(--size-1) var(--size-2);
-  outline: none;
   border-radius: var(--size-4);
+  color: var(--text-contrast);
   font-weight: 500;
+  outline: none;
+  padding: var(--size-1) var(--size-2);
 }
 
-button[type="submit"] {
-  padding: var(--size-1) var(--size-3);
-  border-radius: var(--size-4);
+button[type='submit'] {
   background: var(--text-contrast);
+  border-radius: var(--size-4);
+  padding: var(--size-1) var(--size-3);
 
   &:hover {
     background: var(--primary-main);

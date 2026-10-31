@@ -5,24 +5,24 @@
 }
 
 .expand-close {
-  display: flex;
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  cursor: pointer;
-  background: var(--slate-main);
-  color: #FFFFFF;
-  top: calc(50% - 20px);
-  left: calc(50% - 20px);
-  font-size: 30px;
   align-items: center;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--slate-main);
   border-radius: 50%;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  height: 40px;
+  justify-content: center;
+  left: calc(50% - 20px);
   opacity: 0;
-  transition: all 0.2s ease-in-out;
-  z-index: 20;
+  position: absolute;
+  top: calc(50% - 20px);
   transform: translate3d(0, 0, 5vw);
+  transition: all 0.2s ease-in-out;
+  width: 40px;
+  z-index: 20;
 
   &:hover {
     transform: translate3d(0, 0, 12vw);
@@ -31,8 +31,8 @@
 
 .content-frame-container {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
 
   // ALBUMS STYLES
   .album-group {
@@ -54,42 +54,42 @@
     }
 
     .active-reset {
-      position: relative;
-      transition: all 1s ease-in-out;
+      height: 100%;
       perspective: 134vw;
       perspective-origin: center;
+      position: relative;
       transform-style: preserve-3d;
-      height: 100%;
+      transition: all 1s ease-in-out;
       width: 100%;
 
       &:after {
-        content: " ";
+        background: rgba(0, 0, 0, 0);
+        bottom: 0;
+        content: ' ';
+        height: 100%;
         position: absolute;
         top: 0;
-        bottom: 0;
-        height: 100%;
-        z-index: -1;
-        background: rgba(0, 0, 0, 0);
         transition: all 1s ease-in-out;
+        z-index: -1;
       }
     }
 
     .graphic-item {
+      filter: saturate(0.3) blur(2px) opacity(0.7);
       position: absolute;
       top: 0;
       transition: all 0.2s ease-in-out;
-      filter: saturate(0.3) blur(2px) opacity(0.7);
 
       picture {
-        display: flex;
         box-shadow: 0 3px 3px 2px rgba(0, 0, 0, 0.35);
+        display: flex;
       }
 
       &.album-cover,
       &.album-face,
       &.tape-face {
-        filter: saturate(1);
         display: block;
+        filter: saturate(1);
       }
 
       &.album-cover {
@@ -111,13 +111,13 @@
       }
 
       &.tray-in {
-        z-index: 2;
         transform: translate3d(67%, -48%, -100vw) rotate3d(0, 0, 1, 8deg);
+        z-index: 2;
       }
 
       &.tray-out {
-        z-index: 2;
         transform: translate3d(57%, 75%, -100vw) rotate3d(0, 0, 1, 18deg);
+        z-index: 2;
       }
 
       &.longboi1,
@@ -131,12 +131,11 @@
 
         picture {
           transition: transform linear;
-          transition-duration: .7s;
+          transition-duration: 0.7s;
         }
       }
 
       &.longboi1 {
-
       }
 
       &.longboi2 {
@@ -144,7 +143,6 @@
       }
 
       &.medboi1 {
-
       }
 
       &.medboi2 {
@@ -152,28 +150,28 @@
       }
 
       &.shortboi1 {
-        z-index: 1;
         transform: translate3d(-12%, 66%, -2vw) rotate3d(0, 0, 1, -22deg);
+        z-index: 1;
       }
 
       &.shortboi2 {
-        z-index: 1;
         transform: translate3d(13%, -15%, -22vw) rotate3d(0, 0, 1, 22deg);
+        z-index: 1;
       }
 
       &.lonelyboi {
-        z-index: 1;
         transform: scale(1.05) translate3d(-4%, 27%, -2vw) rotate3d(0, 0, 1, 32deg);
+        z-index: 1;
       }
 
       &.tray-only {
-        z-index: 1;
         transform: scale(0.85) translate3d(43%, 46%, -40vw) rotate3d(0, 0, 1, -11deg);
+        z-index: 1;
       }
     }
 
-    &:hover { // Album Group Hover
-      z-index: 2;
+    &:hover {
+      z-index: 2; // Album Group Hover
 
       .expand-close {
         opacity: 1;
@@ -188,8 +186,8 @@
       }
 
       .album-face {
-        transition: transform 0.45s ease;
         transform: scale(0.72) translate3d(0%, -14%, 0vw);
+        transition: transform 0.45s ease;
       }
 
       .shortboi2 {
@@ -218,18 +216,18 @@
       }
     }
 
-    &.active { // Album Group Active Class
-      z-index: 50;
+    &.active {
+      z-index: 50; // Album Group Active Class
 
       .expand-close {
-        opacity: 1;
-        transition-duration: 1s !important;
-        transform: translate3d(-3.5vw, -36px, 66vw) scale(0.4) rotate(315deg);
-        perspective: 104vw;
-        z-index: 15;
-        perspective-origin: center;
-        transform-style: preserve-3d;
         box-shadow: var(--shadow-elevation-6);
+        opacity: 1;
+        perspective: 104vw;
+        perspective-origin: center;
+        transform: translate3d(-3.5vw, -36px, 66vw) scale(0.4) rotate(315deg);
+        transform-style: preserve-3d;
+        transition-duration: 1s !important;
+        z-index: 15;
 
         &:hover {
           background-color: var(--slate-light);
@@ -243,18 +241,18 @@
 
       // ALBUM COVER ACTIVE ANIMATION - CD
       .album-cover {
-        transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
         transform: translate3d(44%, 20%, 60vw) rotate3d(0, 0.3, 0, 20deg);
+        transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
       }
 
       // ALBUM FACE ANIMATION
       .album-face {
-        transition: all 1s ease-in-out;
-        transform: translate3d(135%, 20%, 60vw);
-        z-index: 4;
         perspective: 100vw;
         perspective-origin: center;
+        transform: translate3d(135%, 20%, 60vw);
         transform-style: preserve-3d;
+        transition: all 1s ease-in-out;
+        z-index: 4;
 
         picture {
           animation: cdRock forwards 3s ease-in-out;
@@ -293,8 +291,8 @@
       }
 
       .tray-in {
-        transition-duration: 1.15s;
         transform: translate3d(163%, 165%, 42vw) rotate3d(1, 10, 0.3, -26deg);
+        transition-duration: 1.15s;
 
         @include m.breakpoint(md, min) {
           transform: translate3d(269%, 15%, 42vw) rotate3d(1, 37, 0.7, -49deg);
@@ -302,8 +300,8 @@
       }
 
       .tray-out {
-        transition-duration: 1.65s;
         transform: translate3d(121%, 234%, 49vw) rotate3d(-3, 30, -1, -7deg);
+        transition-duration: 1.65s;
 
         @include m.breakpoint(md, min) {
           transform: translate3d(231%, 99%, 51vw) rotate3d(-3, 30, -1, -47deg);
@@ -322,9 +320,9 @@
       .longboi2,
       .medboi1,
       .medboi2 {
-        transform: scale(2) translate3d(40%, 300%, 30vw) rotate3d(2, 0.7, -0.6, 60deg);
         perspective: 3vw;
         perspective-origin: center;
+        transform: scale(2) translate3d(40%, 300%, 30vw) rotate3d(2, 0.7, -0.6, 60deg);
         transform-style: preserve-3d;
       }
 
@@ -360,9 +358,9 @@
 
       .shortboi1,
       .shortboi2 {
-        transform: scale(1.65) translate3d(43%, 184%, 34vw) rotate3d(14.9, 1.3, -3.7, 60deg);
         perspective: 3vw;
         perspective-origin: center;
+        transform: scale(1.65) translate3d(43%, 184%, 34vw) rotate3d(14.9, 1.3, -3.7, 60deg);
         transform-style: preserve-3d;
 
         picture {
@@ -391,10 +389,10 @@
       }
 
       .active-reset {
+        height: 100%;
         perspective: 134vw;
         perspective-origin: right center;
         transform-style: preserve-3d;
-        height: 100%;
         width: 100%;
       }
 
@@ -567,7 +565,7 @@
       }
 
       .graphic-item {
-        transition-duration: .45s;
+        transition-duration: 0.45s;
 
         &.album-cover {
         }
@@ -613,20 +611,19 @@
 
       &.active {
         .album-cover {
-          transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
           transform: translate3d(49%, 22%, 65vw) rotate3d(0.4, 1.3, 0, 20deg);
+          transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
         }
 
         .album-face {
-          transition: all 1s ease-in-out;
-          transform: translate3d(132%, 24%, 66vw);
           perspective: 100vw;
           perspective-origin: center;
+          transform: translate3d(132%, 24%, 66vw);
           transform-style: preserve-3d;
+          transition: all 1s ease-in-out;
 
           @include m.breakpoint(md, min) {
             transform: translate3d(180%, 24%, 66vw);
-
           }
         }
 
@@ -650,8 +647,8 @@
           transform: translate3d(0, 16%, -20vw) rotate3d(0, 0, 1, 10deg);
 
           picture {
-            border-radius: 6px;
             background: rgba(0, 0, 0, 0.35);
+            border-radius: 6px;
           }
         }
 
@@ -680,8 +677,8 @@
 
       &.active {
         .tape-face {
-          transition: transform 1s ease-in-out;
           transform: translate3d(138%, 48%, 55vw) rotate3d(0, 0, 1, 22deg);
+          transition: transform 1s ease-in-out;
 
           @include m.breakpoint(md, min) {
             transform: translate3d(140%, 67%, 55vw) rotate3d(0, 0, 1, 52deg);
@@ -697,8 +694,8 @@
         }
 
         .lonelyboi {
-          transition: transform 1.15s ease-in-out;
           transform: translate3d(46%, 25%, 62vw) rotate3d(2, 10, 0.1, 20deg);
+          transition: transform 1.15s ease-in-out;
         }
       }
     }
@@ -706,8 +703,8 @@
     &.no-jacket {
       &.active {
         .album-cover {
-          transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
           transform: translate3d(40%, 20%, 60vw) rotate3d(0.7, 4.5, -0.1, 9deg);
+          transition: transform 1s cubic-bezier(0.6, 0.25, 0.6, 1.2);
 
           @media only screen and (min-width: 767px) {
             transform: translate3d(25%, 38%, 50vw) rotate3d(0.7, 4.5, -0.1, 20deg);
@@ -729,45 +726,45 @@
 // TEES STYLES
 .tee-wrap {
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
+  flex-wrap: wrap;
   justify-content: center;
 
   .single-tee {
     cursor: pointer;
-    width: 80px;
     transition: all 0.2s ease-in-out;
+    width: 80px;
 
     @media only screen and (min-width: 786px) {
       width: 150px;
     }
 
     &.rotateNone {
-      transform: rotate(0)
+      transform: rotate(0);
     }
 
     &.rotateLeftLess {
-      transform: rotate(-2.5deg)
+      transform: rotate(-2.5deg);
     }
 
     &.rotateRightLess {
-      transform: rotate(2.5deg)
+      transform: rotate(2.5deg);
     }
 
     &.rotateLeft {
-      transform: rotate(-5deg)
+      transform: rotate(-5deg);
     }
 
     &.rotateRight {
-      transform: rotate(5deg)
+      transform: rotate(5deg);
     }
 
     &.rotateLeftMore {
-      transform: rotate(-7.5deg)
+      transform: rotate(-7.5deg);
     }
 
     &.rotateRightMore {
-      transform: rotate(7.5deg)
+      transform: rotate(7.5deg);
     }
 
     &:hover {
@@ -784,30 +781,30 @@
 
 .single-tee-hires-wrap,
 .album-hires-wrap {
-  background: var(--background-modal);
-  position: fixed;
-  top: 50vh;
-  bottom: 50vh;
-  left: 0vw;
-  right: 0vw;
-  opacity: 0;
-  transition: all 0.5s ease-in-out !important;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background: var(--background-modal);
+  bottom: 50vh;
+  display: flex;
   flex-direction: column;
+  justify-content: center;
+  left: 0vw;
+  opacity: 0;
+  position: fixed;
+  right: 0vw;
+  top: 50vh;
+  transition: all 0.5s ease-in-out !important;
   //padding: 30px;
 
   &.active {
-    top: 15vh;
     bottom: 15vh;
     opacity: 1;
+    top: 15vh;
     z-index: 100;
 
     .expand-close {
-      top: 10px;
       left: 10px;
       opacity: 1;
+      top: 10px;
       transform: rotate(45deg);
 
       &:hover {
@@ -827,93 +824,93 @@
 }
 
 .album-hires-wrap {
-  position: absolute;
-  top: 50%;
   bottom: 50%;
-  right: auto;
   left: calc(((100vw - 100%) / 2) * -1);
+  position: absolute;
+  right: auto;
+  top: 50%;
   width: 100vw;
 
   &.active {
+    bottom: 54%;
     cursor: pointer;
     top: 2%;
-    bottom: 54%;
     z-index: 40;
 
     &.modal-wrap-2,
     &.modal-wrap-3 {
-      top: 10%;
       bottom: 46%;
+      top: 10%;
     }
 
     &.modal-wrap-4,
     &.modal-wrap-5 {
-      top: 30%;
       bottom: 26%;
+      top: 30%;
     }
 
     &.modal-wrap-6,
     &.modal-wrap-7 {
-      top: 58%;
       bottom: 10%;
+      top: 58%;
     }
 
     &.modal-wrap-8,
     &.modal-wrap-9 {
-      top: 65%;
       bottom: -2%;
+      top: 65%;
     }
 
     @include m.breakpoint(sm, min) {
       &.modal-wrap-0,
       &.modal-wrap-1,
       &.modal-wrap-2 {
-        top: 2%;
         bottom: 18%;
+        top: 2%;
       }
 
       &.modal-wrap-3,
       &.modal-wrap-4,
       &.modal-wrap-5 {
-        top: 7.33%;
         bottom: 12.67%;
+        top: 7.33%;
       }
 
       &.modal-wrap-6,
       &.modal-wrap-7,
       &.modal-wrap-8 {
-        top: 32%;
         bottom: 7.33%;
+        top: 32%;
       }
 
       &.modal-wrap-9 {
-        top: 37.67%;
         bottom: 2%;
+        top: 37.67%;
       }
     }
 
     @include m.breakpoint(md, min) {
-      top: 3%;
       bottom: 33%;
+      top: 3%;
 
       &.modal-wrap-4,
       &.modal-wrap-5,
       &.modal-wrap-6,
       &.modal-wrap-7 {
-        top: 18%;
         bottom: 18%;
+        top: 18%;
       }
 
       &.modal-wrap-8,
       &.modal-wrap-9 {
-        top: 33%;
         bottom: 3%;
+        top: 33%;
       }
     }
 
     @include m.breakpoint(lg, min) {
-      top: 4% !important;
       bottom: 4% !important;
+      top: 4% !important;
     }
 
     //.expand-close {

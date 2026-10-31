@@ -1,25 +1,25 @@
 .root {
+  border-radius: var(--size-1);
   display: flex;
   flex-direction: column;
-  justify-items: center;
   gap: var(--size-1);
-  border-radius: var(--size-1);
-  transition: all 0.2s ease;
   height: 48px;
+  justify-items: center;
+  transition: all 0.2s ease;
 
   &::after {
-    content: "";
-    display: block;
-    position: absolute;
     background: black;
+    content: '';
+    display: block;
     height: 0;
-    top: auto;
-    margin-top: 44px;
     left: 0;
+    margin-top: 44px;
+    position: absolute;
     right: 100vw;
+    top: auto;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     width: 100vw;
     z-index: 2;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &.isCollapsed {
@@ -31,8 +31,8 @@
 
     & + ul {
       max-height: 0;
-      padding-block: 0 !important;
       opacity: 0;
+      padding-block: 0 !important;
     }
   }
 
@@ -45,8 +45,8 @@
   }
 
   .content {
-    display: flex;
     align-items: center;
+    display: flex;
 
     .titles {
       flex: 1;
@@ -54,9 +54,9 @@
   }
 
   a {
-    padding: 10px var(--size-1);
     color: var(--text-primary);
     flex: 1;
+    padding: 10px var(--size-1);
 
     &:hover {
       color: var(--text-primary);
@@ -67,8 +67,8 @@
     background: var(--action-hover);
 
     &::after {
-      opacity: 1;
       height: 12px;
+      opacity: 1;
       z-index: 3;
     }
   }
@@ -77,10 +77,12 @@
     background: var(--action-selected);
 
     &::after {
-      transition: height 0.25s ease-in-out, opacity 2s ease-in-out;
       height: var(--main-body-max-height);
       opacity: 0;
       pointer-events: none;
+      transition:
+        height 0.25s ease-in-out,
+        opacity 2s ease-in-out;
       z-index: 4;
     }
 
@@ -90,8 +92,8 @@
   }
 
   &.disabled {
-    opacity: 0.65;
     cursor: not-allowed;
+    opacity: 0.65;
 
     a {
       cursor: not-allowed;
@@ -99,23 +101,28 @@
     }
   }
 
-  &.rust, &.rust::after {
+  &.rust,
+  &.rust::after {
     background: var(--home-page-color);
   }
 
-  &.olive, &.olive::after {
+  &.olive,
+  &.olive::after {
     background: var(--graphics-page-color);
   }
 
-  &.dusk, &.dusk::after {
+  &.dusk,
+  &.dusk::after {
     background: var(--webdev-page-color);
   }
 
-  &.aqua, &.aqua::after {
+  &.aqua,
+  &.aqua::after {
     background: var(--branding-page-color);
   }
 
-  &.plum, &.plum::after {
+  &.plum,
+  &.plum::after {
     background: var(--ecommerce-page-color);
   }
 }
@@ -135,29 +142,40 @@
   @media all and (max-width: 960px) {
     .rest {
       grid-template-columns: 0fr;
-      transition: grid-template-columns .45s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: grid-template-columns 0.45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     a {
-      display: flex;
       align-items: center;
+      display: flex;
+      height: 44px;
       justify-content: center;
       min-width: 44px;
-      height: 44px;
       padding: 0;
-      transition: padding .45s cubic-bezier(0.4, 0, 0.2, 1);
+      transition: padding 0.45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     .initial {
       display: inline-block;
+      transition: translate 0.45s cubic-bezier(0.4, 0, 0.2, 1);
       translate: var(--initial-x, 0) var(--initial-y, 0);
-      transition: translate .45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    [data-initial='W'] { --initial-x: -1.5px; --initial-y: 2.5px; }
-    [data-initial='K'] { --initial-x: -3px; --initial-y: 1.5px; }
-    [data-initial='G'] { --initial-x: -3px; --initial-y: 3.5px; }
-    [data-initial='C'] { --initial-x: -7.5px; }
+    [data-initial='W'] {
+      --initial-x: -1.5px;
+      --initial-y: 2.5px;
+    }
+    [data-initial='K'] {
+      --initial-x: -3px;
+      --initial-y: 1.5px;
+    }
+    [data-initial='G'] {
+      --initial-x: -3px;
+      --initial-y: 3.5px;
+    }
+    [data-initial='C'] {
+      --initial-x: -7.5px;
+    }
 
     @media (hover: hover) and (min-width: 480px) {
       .root:hover .rest,

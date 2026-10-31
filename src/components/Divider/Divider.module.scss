@@ -4,10 +4,10 @@
   padding: unset;
 
   &.horizontal {
-    width: 100%;
-    min-width: 40px;
-    height: 1px;
     background-color: var(--divider);
+    height: 1px;
+    min-width: 40px;
+    width: 100%;
 
     &.spacing {
       margin-block: var(--size-3);
@@ -15,10 +15,10 @@
   }
 
   &.vertical {
-    width: 1px;
-    min-height: 20px;
-    height: 100%;
     background-color: var(--divider);
+    height: 100%;
+    min-height: 20px;
+    width: 1px;
 
     &.spacing {
       margin-inline: var(--size-3);

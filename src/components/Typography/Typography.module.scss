@@ -40,8 +40,8 @@
   &.h4 {
     font-family: var(--font-sans), sans-serif;
     font-size: 1.85rem;
-    line-height: 1;
     font-weight: 300;
+    line-height: 1;
     text-transform: uppercase;
 
     @include m.breakpoint(md, max) {
@@ -62,8 +62,8 @@
   &.h6 {
     font-family: var(--font-sans), sans-serif;
     font-size: 1.5rem;
-    line-height: 1;
     font-weight: 300;
+    line-height: 1;
     text-transform: uppercase;
 
     @include m.breakpoint(md, max) {
@@ -118,9 +118,9 @@
 
   &.tooltip {
     font-family: var(--font-sans), sans-serif;
-    text-transform: uppercase;
     font-size: 0.75rem;
     font-weight: 200;
+    text-transform: uppercase;
   }
 
   &.menuPrimary {

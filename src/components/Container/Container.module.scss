@@ -137,8 +137,8 @@
   }
 
   &.darkish {
-    border: 1px solid var(--divider-dark);
     background: var(--background-darker-50);
+    border: 1px solid var(--divider-dark);
   }
 
   &.green {
@@ -154,7 +154,12 @@
   }
 }
 
-.column, .row, .full, .left, .center, .right {
+.column,
+.row,
+.full,
+.left,
+.center,
+.right {
   display: flex;
 }
 

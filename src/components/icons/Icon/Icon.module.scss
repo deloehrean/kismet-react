@@ -1,8 +1,8 @@
 .root {
+  align-items: center;
   color: var(--action-active);
   display: flex;
   justify-content: center;
-  align-items: center;
 
   &.x-large {
     height: 48px;
@@ -43,7 +43,6 @@
       width: 12px;
     }
   }
-
 
   &.inherit {
     height: 16px;

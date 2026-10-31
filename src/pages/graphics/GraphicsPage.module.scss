@@ -31,14 +31,14 @@
         display: block;
 
         &:not(:last-child) {
-          border-right: 1px solid #FFFFFF;
+          border-right: 1px solid #ffffff;
           padding-right: 6px;
         }
 
         button {
-          border: none;
           background: none;
-          color: #FFFFFF;
+          border: none;
+          color: #ffffff;
           cursor: pointer;
           display: block;
           font-family: 'Titillium Web', Helvetica, Arial, sans-serif;
@@ -48,12 +48,12 @@
           transition: all 0.2s ease-in-out;
 
           &:hover {
-            color: #CED798;
+            color: #ced798;
           }
 
           &.active {
-            color: #FFFFFF;
-            text-shadow: 0 0 8px #FFFFFF;
+            color: #ffffff;
+            text-shadow: 0 0 8px #ffffff;
           }
 
           @media screen and (min-width: 767px) {
@@ -66,15 +66,14 @@
 
   .button {
     background: var(--background-default);
+    border-radius: var(--size-1);
+    font-weight: bold;
     padding: var(--size-1) var(--size-3);
     text-align: center;
     text-transform: uppercase;
-    font-weight: bold;
-    border-radius: var(--size-1);
 
     &:hover {
       background: var(--background-darker-25);
     }
   }
 }
-
