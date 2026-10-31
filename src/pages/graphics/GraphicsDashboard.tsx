@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import ShowBannerA from 'src/assets/images/case-studies/hrlogics/show-banner-a.jpg';
 import CampStPatricksDay from 'src/assets/images/case-studies/poppy/camp-st-patricks-day.jpg';
 import GiftCards from 'src/assets/images/case-studies/poppy/gift-cards.jpg';
-import MarkLockup from 'src/assets/images/case-studies/solstice/mark-lockup.png';
 import AssisiHealingHome from 'src/assets/images/graphics/ads/assisi-healing-home.jpg';
 import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer.jpg';
 import HosForeverCollection from 'src/assets/images/graphics/ads/hos-forever-collection.jpg';
@@ -15,6 +14,7 @@ import FlosMascot from 'src/assets/images/graphics/illustrations/flos-mascot.jpg
 import Tapebot from 'src/assets/images/graphics/illustrations/tapebot.jpg';
 import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
 import Hrlogics from 'src/assets/images/graphics/logos/hrlogics.jpg';
+import IkigaiColorSeal from 'src/assets/images/graphics/logos/ikigai-color-seal.jpg';
 import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
 import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
 import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
@@ -219,7 +219,7 @@ function GraphicsDashboard() {
             { img: Hrlogics, alt: 'HRlogics logo' },
             { img: Ryze, alt: 'Ryze logo' },
             { img: PoppyParliamentStacked, alt: 'The Poppy & Parliament logo' },
-            { img: MarkLockup, alt: 'Solstice Massage Therapy logo' },
+            { img: IkigaiColorSeal, alt: 'Ikigai seal' },
           ]}
         />
       </Row>

@@ -3,8 +3,6 @@ import React from 'react';
 import Logos2024 from 'src/assets/images/case-studies/hrlogics/logos-2024.jpg';
 import LogoFullBlack from 'src/assets/images/case-studies/poppy/logo-full-black.png';
 import MarkRed from 'src/assets/images/case-studies/poppy/mark-red.svg';
-import MarkLockup from 'src/assets/images/case-studies/solstice/mark-lockup.png';
-import Mark from 'src/assets/images/case-studies/solstice/mark.png';
 import Acm from 'src/assets/images/graphics/logos/acm.jpg';
 import Aea from 'src/assets/images/graphics/logos/aea.jpg';
 import Alchemy521 from 'src/assets/images/graphics/logos/alchemy-521.jpg';
@@ -65,8 +63,6 @@ const ITEMS: GalleryItem[] = [
     meta: 'The Poppy & Parliament · 2019',
   },
   { img: MarkRed, title: 'The Poppy mark', meta: 'The Poppy & Parliament · 2019' },
-  { img: MarkLockup, title: 'Solstice Massage Therapy', meta: 'Solstice Massage Therapy · 2007' },
-  { img: Mark, title: 'The Solstice sun', meta: 'Solstice Massage Therapy · 2007' },
   { img: IkigaiColorSeal, title: 'Ikigai seal', meta: 'Ikigai · 2019' },
   { img: IkigaiBestVersion, title: 'The best version of you', meta: 'Ikigai · 2020' },
   { img: VoodooLounge, title: 'The Voodoo Lounge', meta: 'Voodoo Lounge · 2020' },

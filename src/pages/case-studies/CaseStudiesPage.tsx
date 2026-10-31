@@ -9,9 +9,8 @@ import freshWater from 'src/pages/case-studies/FreshWater';
 import fusionOnline from 'src/pages/case-studies/FusionOnline';
 import hrlogics from 'src/pages/case-studies/HRlogics';
 import poppyParliament from 'src/pages/case-studies/PoppyParliament';
-import solstice from 'src/pages/case-studies/Solstice';
 
-const CASES = [fusionOnline, hrlogics, designSystem, freshWater, poppyParliament, solstice];
+const CASES = [fusionOnline, hrlogics, designSystem, freshWater, poppyParliament];
 
 const caseTop = (id: string) =>
   document.getElementById(`case-${id}`)?.getBoundingClientRect().top ?? 0;

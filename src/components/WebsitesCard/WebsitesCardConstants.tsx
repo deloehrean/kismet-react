@@ -736,11 +736,11 @@ export const solsticeContent = {
   subtitle: 'Marketing Website with Online Booking',
   year: '2026',
   description:
-    'Solstice has been on Woodward Avenue since 2007, and so has the identity I designed for its ' +
-    'grand opening. The original website, built by someone else in 2008, went down suddenly. I gathered the old ' +
-    'files and rebuilt it as a modern, responsive site, cutting the fat and filling in what the ' +
-    'original was missing. It has the full service menu and pricing, the therapist bio, ' +
-    'directions, and online booking through Booksy.',
+    'Solstice is a massage studio that has been on Woodward Avenue since 2007. Its original ' +
+    'website went down suddenly, so I gathered the old files and redesigned it as a modern, ' +
+    'responsive site, cutting the fat and filling in what the original was missing. It has the ' +
+    'full service menu and pricing, the therapist bio, directions, and online booking through ' +
+    'Booksy.',
   poweredBy: 'React + Vite / Netlify',
   toolsUsed: 'React, React Router, CSS Modules, Booksy',
   logo: SolsticeLogo,

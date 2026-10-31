@@ -8,14 +8,6 @@ import MenuBeer from 'src/assets/images/case-studies/poppy/menu-beer.jpg';
 import MenuCask from 'src/assets/images/case-studies/poppy/menu-cask.jpg';
 import MenuDraft from 'src/assets/images/case-studies/poppy/menu-draft.jpg';
 import MenuHuttonSmithDraft from 'src/assets/images/case-studies/poppy/menu-hutton-smith-draft.jpg';
-import AdGrandOpening from 'src/assets/images/case-studies/solstice/ad-grand-opening.jpg';
-import CardBack from 'src/assets/images/case-studies/solstice/card-back.jpg';
-import CardFront from 'src/assets/images/case-studies/solstice/card-front.jpg';
-import GiftBack from 'src/assets/images/case-studies/solstice/gift-back.jpg';
-import GiftFront from 'src/assets/images/case-studies/solstice/gift-front.jpg';
-import Letterhead from 'src/assets/images/case-studies/solstice/letterhead.jpg';
-import SignPanelMark from 'src/assets/images/case-studies/solstice/sign-panel-mark.jpg';
-import WindowSign from 'src/assets/images/case-studies/solstice/window-sign.jpg';
 import AssisiBackwall from 'src/assets/images/graphics/print/assisi-backwall.jpg';
 import AssisiBannerStand from 'src/assets/images/graphics/print/assisi-banner-stand.jpg';
 import AssisiLoopAidFlyer from 'src/assets/images/graphics/print/assisi-loop-aid-flyer.jpg';
@@ -58,18 +50,6 @@ import ZornsMenu from 'src/assets/images/graphics/print/zorns-menu.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
-  { img: CardFront, title: 'Business card, front', meta: 'Solstice Massage Therapy · 2007' },
-  { img: CardBack, title: 'Business card, back', meta: 'Solstice Massage Therapy · 2007' },
-  { img: GiftFront, title: 'Gift certificate, front', meta: 'Solstice Massage Therapy · 2007' },
-  { img: GiftBack, title: 'Gift certificate, back', meta: 'Solstice Massage Therapy · 2007' },
-  { img: Letterhead, title: 'Letterhead', meta: 'Solstice Massage Therapy · 2007' },
-  { img: AdGrandOpening, title: 'Grand-opening ad', meta: 'Solstice Massage Therapy · 2007' },
-  { img: WindowSign, title: 'Window sign', meta: 'Solstice Massage Therapy · 2007' },
-  {
-    img: SignPanelMark,
-    title: 'Exterior sign, mark panel',
-    meta: 'Solstice Massage Therapy · 2007',
-  },
   { img: MenuDraft, title: 'Draft menu', meta: 'The Poppy & Parliament · 2019' },
   { img: MenuBeer, title: 'Beer menu', meta: 'The Poppy & Parliament · 2019' },
   { img: MenuCask, title: 'Cask menu', meta: 'The Poppy & Parliament · 2019' },
@@ -168,7 +148,7 @@ function PrintPage() {
     <GalleryPage
       title={'Print'}
       intro={
-        'Business cards, menus, signs, banners, flyers, and trade-show booths, from show flyers in 2005 to a full storefront identity.'
+        'Business cards, menus, signs, banners, flyers, and trade-show booths, from show flyers in 2005 to the HRlogics trade-show booth in 2025.'
       }
       items={ITEMS}
     />
