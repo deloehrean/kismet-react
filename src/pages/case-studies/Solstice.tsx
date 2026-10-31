@@ -16,7 +16,6 @@ import SignPanelMark from 'src/assets/images/case-studies/solstice/sign-panel-ma
 import SignPanelType from 'src/assets/images/case-studies/solstice/sign-panel-type.jpg';
 import SignWordmark from 'src/assets/images/case-studies/solstice/sign-wordmark.jpg';
 import Web2026 from 'src/assets/images/case-studies/solstice/web-2026.jpg';
-import WebCompFirst from 'src/assets/images/case-studies/solstice/web-comp-01.jpg';
 import WebCompFinal from 'src/assets/images/case-studies/solstice/web-comp-final.jpg';
 import WindowSign from 'src/assets/images/case-studies/solstice/window-sign.jpg';
 import { LinkStyled, Typography } from 'src/components';
@@ -116,15 +115,16 @@ const SolsticeBody = () => (
       eyebrow={'04 — On screen'}
       title={'The same sun, two websites apart'}
       lead={
-        'The 2008 site reused the print system: the mark as the centre panel of the header, the ' +
-        'brush texture either side, and the orange band carrying the descriptor. The 2026 rebuild ' +
-        'started from scratch, and the mark was the one thing that came along unchanged.'
+        'Her original site, built by someone else in 2008, carried the print system onto the ' +
+        'screen: the mark as the center panel of the header, the brush texture either side, and ' +
+        'the orange band carrying the descriptor. When it went down suddenly, I gathered the old ' +
+        'files and rebuilt it as a modern site, cutting the fat and filling in what the original ' +
+        'was missing. The mark was the one thing that came along unchanged.'
       }
     >
-      <div className={s.row3}>
-        <Tile img={WebCompFirst} label={'2008 — first comp'} ratio={2.49} />
-        <Tile img={WebCompFinal} label={'2008 — final comp'} ratio={1.44} />
-        <Tile img={Web2026} label={'2026 — rebuild'} ratio={1.54} />
+      <div className={s.pair}>
+        <Tile img={WebCompFinal} label={'2008 — the original site'} ratio={1.44} />
+        <Tile img={Web2026} label={'2026 — my rebuild'} ratio={1.54} />
       </div>
       <LinkStyled to={'/websites#site-solstice-massage-therapy'}>
         See the 2026 site &rarr;
