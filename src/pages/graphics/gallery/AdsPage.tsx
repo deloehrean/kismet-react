@@ -70,6 +70,30 @@ import HosTurin from 'src/assets/images/graphics/ads/hos-turin.jpg';
 import IslandFishHiring from 'src/assets/images/graphics/ads/island-fish-hiring.jpg';
 import IslandFishReef from 'src/assets/images/graphics/ads/island-fish-reef.jpg';
 import JloftsEmail from 'src/assets/images/graphics/ads/jlofts-email.jpg';
+import Locox2xlPenny from 'src/assets/images/graphics/ads/locox-2xl-penny.jpg';
+import LocoxAnswerWinningCombo from 'src/assets/images/graphics/ads/locox-answer-winning-combo.jpg';
+import LocoxAraiVector2 from 'src/assets/images/graphics/ads/locox-arai-vector-2.jpg';
+import LocoxBellMoto9 from 'src/assets/images/graphics/ads/locox-bell-moto-9.jpg';
+import LocoxBellPantSagginHelmet from 'src/assets/images/graphics/ads/locox-bell-pant-saggin-helmet.jpg';
+import LocoxFastfinder from 'src/assets/images/graphics/ads/locox-fastfinder.jpg';
+import LocoxFlyRacingSale from 'src/assets/images/graphics/ads/locox-fly-racing-sale.jpg';
+import LocoxFoxA1 from 'src/assets/images/graphics/ads/locox-fox-a1.jpg';
+import LocoxFoxCasualCloseouts from 'src/assets/images/graphics/ads/locox-fox-casual-closeouts.jpg';
+import LocoxFoxGearSale from 'src/assets/images/graphics/ads/locox-fox-gear-sale.jpg';
+import LocoxFreeShipping from 'src/assets/images/graphics/ads/locox-free-shipping.jpg';
+import LocoxGiftCardGiveaway from 'src/assets/images/graphics/ads/locox-gift-card-giveaway.jpg';
+import LocoxMsr2012 from 'src/assets/images/graphics/ads/locox-msr-2012.jpg';
+import LocoxOneGearCombos from 'src/assets/images/graphics/ads/locox-one-gear-combos.jpg';
+import LocoxOnePracticeGear from 'src/assets/images/graphics/ads/locox-one-practice-gear.jpg';
+import LocoxPantSaggin from 'src/assets/images/graphics/ads/locox-pant-saggin.jpg';
+import LocoxRockstarGiveaway from 'src/assets/images/graphics/ads/locox-rockstar-giveaway.jpg';
+import LocoxShopLifestyle from 'src/assets/images/graphics/ads/locox-shop-lifestyle.jpg';
+import LocoxShopMotocross from 'src/assets/images/graphics/ads/locox-shop-motocross.jpg';
+import LocoxShopSportBike from 'src/assets/images/graphics/ads/locox-shop-sport-bike.jpg';
+import LocoxStealOfTheDay from 'src/assets/images/graphics/ads/locox-steal-of-the-day.jpg';
+import LocoxThorAtlSx11 from 'src/assets/images/graphics/ads/locox-thor-atl-sx11.jpg';
+import LocoxThorNewGear from 'src/assets/images/graphics/ads/locox-thor-new-gear.jpg';
+import LocoxThorWonA1 from 'src/assets/images/graphics/ads/locox-thor-won-a1.jpg';
 import LoopLoc40Years from 'src/assets/images/graphics/ads/loop-loc-40-years.jpg';
 import LoopLocAquaXtreme from 'src/assets/images/graphics/ads/loop-loc-aqua-xtreme.jpg';
 import LoopLocGiftOfSafety from 'src/assets/images/graphics/ads/loop-loc-gift-of-safety.jpg';
@@ -273,6 +297,34 @@ const ITEMS: GalleryItem[] = [
     meta: 'PlasticPlace · Fishbat, 2021',
   },
   { img: EstellesFreeGift, title: 'Free gift', meta: 'Estelle’s · Fishbat' },
+  { img: LocoxFoxA1, title: 'Fox A1 limited edition gear', meta: 'LocoX · 2011' },
+  { img: LocoxThorWonA1, title: 'Wear the gear that won A1', meta: 'LocoX · 2011' },
+  { img: LocoxThorAtlSx11, title: 'The ATL SX11 winning combo', meta: 'LocoX · 2011' },
+  { img: LocoxAnswerWinningCombo, title: 'Answer’s winning combo', meta: 'LocoX · 2011' },
+  { img: LocoxOneGearCombos, title: 'New One Industries gear combos', meta: 'LocoX · 2011' },
+  { img: LocoxThorNewGear, title: 'Great new gear from Thor', meta: 'LocoX · 2011' },
+  { img: LocoxBellMoto9, title: 'New Bell Moto-9', meta: 'LocoX · 2011' },
+  { img: LocoxAraiVector2, title: 'New Arai Vector-2 helmets', meta: 'LocoX · 2011' },
+  { img: LocoxFoxCasualCloseouts, title: 'Fox casual closeouts', meta: 'LocoX · 2011' },
+  { img: LocoxOnePracticeGear, title: 'A truckload of practice gear', meta: 'LocoX · 2011' },
+  { img: Locox2xlPenny, title: '2XL headphones for a penny', meta: 'LocoX · 2011' },
+  { img: LocoxFlyRacingSale, title: '2011 Fly Racing gear sale', meta: 'LocoX · 2011' },
+  { img: LocoxFoxGearSale, title: '2011 Fox gear sale', meta: 'LocoX · 2011' },
+  { img: LocoxMsr2012, title: 'Pre-order 2012 MSR gear', meta: 'LocoX · 2011' },
+  { img: LocoxPantSaggin, title: 'Pant Saggin socks, belts, and tees', meta: 'LocoX · 2011' },
+  { img: LocoxStealOfTheDay, title: 'Steal of the Day', meta: 'LocoX · 2011' },
+  { img: LocoxShopMotocross, title: 'Shop Motocross & ATV', meta: 'LocoX · 2011' },
+  { img: LocoxShopSportBike, title: 'Shop Sport Bike & Stunt', meta: 'LocoX · 2011' },
+  { img: LocoxShopLifestyle, title: 'Shop Lifestyle & Casual', meta: 'LocoX · 2011' },
+  { img: LocoxFreeShipping, title: 'Always free shipping', meta: 'LocoX · 2010' },
+  { img: LocoxGiftCardGiveaway, title: '$100 weekly gift card giveaway', meta: 'LocoX · 2010' },
+  { img: LocoxRockstarGiveaway, title: 'Autographed gear set giveaway', meta: 'LocoX · 2011' },
+  {
+    img: LocoxBellPantSagginHelmet,
+    title: 'Win a custom Bell × Pant Saggin helmet',
+    meta: 'LocoX · 2011',
+  },
+  { img: LocoxFastfinder, title: 'FastFinder parts search', meta: 'LocoX · 2011' },
 ];
 
 function AdsPage() {
@@ -280,7 +332,7 @@ function AdsPage() {
     <GalleryPage
       title={'Ads & Social'}
       intro={
-        'Social posts, display ads, and email campaigns for my own clients at Kismet and for agency clients at Fishbat, each built to its platform’s sizes.'
+        'Social posts, display ads, and email campaigns for my own clients at Kismet, for agency clients at Fishbat, and for LocoX as its in-house designer, each built to its platform’s sizes.'
       }
       items={ITEMS}
     />
