@@ -16,7 +16,6 @@ import {
 import { Resume } from 'src/components/Resume';
 import { routes } from 'src/lib/routes/routes';
 import { ACCESS_PASSWORD, grantAccess } from 'src/lib/access';
-import { isPasswordProtected } from 'src/lib/utils';
 
 type AppbarProps = {
   // eslint-disable-next-line react/no-unused-prop-types
@@ -25,7 +24,6 @@ type AppbarProps = {
 };
 
 const Appbar = ({ color }: AppbarProps) => {
-  const [isPasswordAccepted, setIsPasswordAccepted] = useState(!isPasswordProtected);
   const [inputValue, setInputValue] = useState('');
   const [error, setError] = useState('');
 
@@ -48,15 +46,11 @@ const Appbar = ({ color }: AppbarProps) => {
     } else if (inputValue !== ACCESS_PASSWORD) {
       setError('Password is incorrect');
     } else {
-      setIsPasswordAccepted(true);
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
       });
       grantAccess();
-      setInterval(() => {
-        return isPasswordProtected();
-      }, 2000);
     }
   };
 

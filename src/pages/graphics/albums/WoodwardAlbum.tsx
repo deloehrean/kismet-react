@@ -7,7 +7,6 @@ import WoodwardCdBookletOut from 'src/assets/images/albums/woodward/woodward-cd-
 import WoodwardCdCoverBack from 'src/assets/images/albums/woodward/woodward-cd-cover-back.jpg';
 import WoodwardCdCoverFront from 'src/assets/images/albums/woodward/woodward-cd-cover-front.jpg';
 import WoodwardCdFace from 'src/assets/images/albums/woodward/woodward-cd-face-520.png';
-import WoodwardCdTrayIn from 'src/assets/images/albums/woodward/woodward-cd-tray-in.jpg';
 
 import s from './AlbumsPage.module.scss';
 

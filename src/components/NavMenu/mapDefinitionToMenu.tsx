@@ -22,8 +22,7 @@ export function mapDefinitionToMenu(
         let to: string | undefined;
         try {
           to = generatePath(builtPath);
-          // eslint-disable-next-line id-denylist
-        } catch (err) {
+        } catch {
           /* empty */
         }
 

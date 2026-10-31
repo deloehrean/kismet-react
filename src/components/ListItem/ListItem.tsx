@@ -47,13 +47,13 @@ const ListItem: FC<ListItemProps> = ({
   const matchEnd = useMatch({ path: resolved.pathname, end: true });
 
   const collapseToggle = () => {
-    // eslint-disable-next-line no-unused-expressions
-    isCollapsed ? setIsCollapsed(false) : setIsCollapsed(true);
+    setIsCollapsed(!isCollapsed);
   };
 
   useEffect(() => {
-    // eslint-disable-next-line no-unused-expressions
-    matchEnd && collapseToggle();
+    if (matchEnd) {
+      collapseToggle();
+    }
   }, []);
 
   const renderTitles = (title: string, subtitle: string | undefined) => {

@@ -105,6 +105,7 @@ module.exports = {
     'jsx-a11y/alt-text': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'jsx-a11y/no-static-element-interactions': 'warn',
+    'jsx-a11y/label-has-associated-control': ['error', { assert: 'either' }],
 
     'import/no-extraneous-dependencies': [
       'error',
