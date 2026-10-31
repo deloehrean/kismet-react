@@ -58,9 +58,7 @@ const CaseStudy: FC<CaseStudyProps> = ({
               {title.split(' ').map((word, i) => (
                 <React.Fragment key={i}>
                   {i > 0 && ' '}
-                  <span className={cn(i > 0 && word.startsWith('T') && s['swash-t'])}>
-                    {word}
-                  </span>
+                  <span className={cn(i > 0 && word.startsWith('T') && s['swash-t'])}>{word}</span>
                 </React.Fragment>
               ))}
             </button>

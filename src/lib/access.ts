@@ -16,14 +16,12 @@ const safeStore = {
   set(v: string) {
     try {
       window.localStorage.setItem(STORE_KEY, v);
-    } catch {
-    }
+    } catch {}
   },
   clear() {
     try {
       window.localStorage.removeItem(STORE_KEY);
-    } catch {
-    }
+    } catch {}
   },
 };
 

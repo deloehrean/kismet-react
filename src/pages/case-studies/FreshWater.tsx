@@ -77,8 +77,8 @@ const freshWater = {
   summary: (
     <React.Fragment>
       A public site and forecasting dashboard for a UAH research team, working with NASA, Microsoft,
-      and National Geographic, that used satellite imagery and AI to predict algal blooms on the lake &mdash; worked out with the scientists,
-      built for the people who had to act on it.
+      and National Geographic, that used satellite imagery and AI to predict algal blooms on the
+      lake &mdash; worked out with the scientists, built for the people who had to act on it.
     </React.Fragment>
   ),
   Body: FreshWaterBody,

@@ -39,9 +39,17 @@ const CAPABILITIES = [
 ];
 
 const WORK = [
-  { to: '/case-studies', title: 'Case Studies', body: 'Identity systems and data products, from first sketch to shipped.' },
+  {
+    to: '/case-studies',
+    title: 'Case Studies',
+    body: 'Identity systems and data products, from first sketch to shipped.',
+  },
   { to: '/websites', title: 'Websites', body: 'Commerce, marketing, and compliance platforms.' },
-  { to: '/graphics', title: 'Graphics', body: 'Album art, apparel, and two decades of illustration.' },
+  {
+    to: '/graphics',
+    title: 'Graphics',
+    body: 'Album art, apparel, and two decades of illustration.',
+  },
 ];
 
 function HomePage() {
@@ -94,9 +102,9 @@ function HomePage() {
         <section>
           <Typography variant="h5">Hiring for a product role?</Typography>
           <Typography variant="body2">
-            I&rsquo;m looking for Director of Product work at a mid-size company — remote, ideally in
-            HR/compliance SaaS or e-commerce. The resume below has the full history; the case studies
-            show how the work actually turned out.
+            I&rsquo;m looking for Director of Product work at a mid-size company — remote, ideally
+            in HR/compliance SaaS or e-commerce. The resume below has the full history; the case
+            studies show how the work actually turned out.
           </Typography>
           <LinkStyled to={'/case-studies'}>See a case study →</LinkStyled>
         </section>
