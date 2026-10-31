@@ -1,10 +1,11 @@
-import React, { FC, useEffect } from 'react';
+import React, { FC } from 'react';
 
 import cn from 'clsx';
 import { To, useMatch, useResolvedPath } from 'react-router-dom';
 import { Tooltip } from 'react-tooltip';
 
 import { Divider, Icon, LinkStyled, ListItemStyles as s, Row, Typography } from 'src/components';
+import type { IconName } from 'src/components/icons/Icon';
 
 interface ListItemProps {
   className?: string;
@@ -14,8 +15,8 @@ interface ListItemProps {
   divider?: boolean;
   dense?: boolean;
   color?: 'olive' | 'dusk' | 'aqua' | 'rust' | 'plum' | null;
-  startIcon?: any;
-  endIcon?: any;
+  startIcon?: IconName;
+  endIcon?: IconName;
   expandBtn?: boolean;
   disabled?: boolean;
   tooltipContent?: string | undefined;
@@ -40,21 +41,15 @@ const ListItem: FC<ListItemProps> = ({
     return document.body.classList.contains('password-protected');
   };
 
-  const [isCollapsed, setIsCollapsed] = React.useState(true);
-
   const resolved = useResolvedPath(href || '');
   const match = useMatch({ path: resolved.pathname, end: false });
   const matchEnd = useMatch({ path: resolved.pathname, end: true });
 
+  const [isCollapsed, setIsCollapsed] = React.useState(!matchEnd);
+
   const collapseToggle = () => {
     setIsCollapsed(!isCollapsed);
   };
-
-  useEffect(() => {
-    if (matchEnd) {
-      collapseToggle();
-    }
-  }, []);
 
   const renderTitles = (title: string, subtitle: string | undefined) => {
     return (
@@ -79,11 +74,11 @@ const ListItem: FC<ListItemProps> = ({
     );
   };
 
-  const renderStartIcon = (startIcon: any) => {
+  const renderStartIcon = (startIcon: IconName) => {
     return <Icon name={startIcon} size={'inherit'} />;
   };
 
-  const renderEndIcon = (endIcon: any) => {
+  const renderEndIcon = (endIcon: IconName) => {
     return <Icon name={endIcon} size={'inherit'} />;
   };
 

@@ -14,8 +14,8 @@ import {
   Typography,
 } from 'src/components';
 import { Resume } from 'src/components/Resume';
-import { routes } from 'src/lib/routes/routes';
 import { ACCESS_PASSWORD, grantAccess } from 'src/lib/access';
+import { routes } from 'src/lib/routes/routes';
 
 type AppbarProps = {
   // eslint-disable-next-line react/no-unused-prop-types

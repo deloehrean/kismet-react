@@ -13,9 +13,29 @@ import {
   WebsitesCardStyles as s,
   WebsiteTopper,
 } from 'src/components';
+import { onEnterOrSpace } from 'src/lib/utils';
+
+export type WebsiteContent = {
+  title: string;
+  subtitle: string;
+  description: string;
+  poweredBy: string;
+  toolsUsed: string;
+  logo: string;
+  logoLight?: string;
+  logoDark?: string;
+  gated?: boolean;
+  gallery: {
+    image: string;
+    imageDark?: string;
+    position: string;
+    ratio?: number;
+    bumpUp?: boolean;
+  }[];
+};
 
 type WebsitesCardProps = {
-  content?: any;
+  content: WebsiteContent;
   reverse?: boolean;
   reverseLocked?: boolean;
   ghost?: boolean;
@@ -41,9 +61,9 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
 }) => {
   const sides = cn(reverse && s.reverse, reverseLocked && s['reverse-locked']);
   const [loading, setLoading] = useState('loading');
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [siteDark, setSiteDark] = useState(false);
-  const hasDarkShots = content.gallery?.some(image => image.imageDark);
+  const hasDarkShots = content.gallery.some(image => image.imageDark);
 
   useEffect(() => {
     setTimeout(() => {
@@ -54,7 +74,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
     }, 1000);
   }, []);
 
-  const activeAction = (index, activeIndex) => {
+  const activeAction = (index: number, activeIndex: number | null) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
@@ -79,7 +99,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
     );
   };
 
-  const renderedGallery = content.gallery?.map((image, index) => {
+  const renderedGallery = content.gallery.map((image, index) => {
     const active = index === activeIndex ? 'active' : '';
 
     return (
@@ -91,14 +111,17 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           active && s.active,
         )}
         key={index}
+        role={'button'}
+        tabIndex={0}
         onClick={() => activeAction(index, activeIndex)}
+        onKeyDown={onEnterOrSpace(() => activeAction(index, activeIndex))}
       >
         {WebsiteTopper}
         <div className={s['website-body']}>
           <img src={image.image} alt="" className={cn(image.imageDark && s['shot-light'])} />
           {image.imageDark && <img src={image.imageDark} alt="" className={s['shot-dark']} />}
         </div>
-        <span className={s['expand-close']} onClick={() => activeAction(index, activeIndex)}>
+        <span className={s['expand-close']} aria-hidden>
           +
         </span>
       </div>
@@ -140,7 +163,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
             </div>
           </Container>
           <Container className={cn(s['website-screenshots'], s.active, s.prepared)}>
-            {(content.gallery || []).map((image, index) => (
+            {content.gallery.map((image, index) => (
               <div
                 key={index}
                 className={cn(
@@ -155,7 +178,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
                 <div className={s['website-body']}>
                   <span
                     className={s['glass-fill']}
-                    style={{ ['--pane-ratio' as any]: image.ratio ?? 0.6 }}
+                    style={{ '--pane-ratio': image.ratio ?? 0.6 } as React.CSSProperties}
                   />
                 </div>
               </div>

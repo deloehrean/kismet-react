@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import { Column, PageHeading, WebsitesCard } from 'src/components';
+import type { WebsiteContent } from 'src/components/WebsitesCard/WebsitesCard';
 import {
   aeaContent,
   axleContent,
@@ -24,9 +25,7 @@ import {
   wotcContent,
 } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
-type Site = { title: string; gated?: boolean };
-
-const SITES: Site[] = [
+const SITES: WebsiteContent[] = [
   hrlPortalContent,
   wotcContent,
   rocketChipsContent,
@@ -51,7 +50,7 @@ const firstGated = SITES.findIndex(site => site.gated);
 const lockedCount = SITES.filter(site => site.gated).length;
 
 const cards = SITES.reduce<
-  { content: Site; reverse: boolean; reverseLocked: boolean; ghost: boolean }[]
+  { content: WebsiteContent; reverse: boolean; reverseLocked: boolean; ghost: boolean }[]
 >((list, content, i) => {
   const ghost = !content.gated || i === firstGated;
   const shownLocked = list.filter(card => card.ghost).length;

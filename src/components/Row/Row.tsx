@@ -8,7 +8,7 @@ interface RowProps {
   className?: string;
   id?: string;
   children?: React.ReactNode;
-  el?: HTMLElement;
+  el?: React.ElementType;
   gap?: number;
   breakpoint?: string;
 }
@@ -21,7 +21,7 @@ const Column: FC<RowProps> = ({ children, className, id, el = 'div', gap = 0, br
     breakpoint && s[`break-${breakpoint}`],
   );
 
-  const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
+  const Component = el;
 
   return (
     <Component id={id} className={rootClassName}>

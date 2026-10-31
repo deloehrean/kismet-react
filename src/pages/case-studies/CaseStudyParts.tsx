@@ -3,14 +3,28 @@ import React from 'react';
 import { Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 
-export const Tile = ({ img, label, ratio = 1 }: any) => (
+type TileProps = { img: string; label: string; ratio?: number };
+
+export const Tile = ({ img, label, ratio = 1 }: TileProps) => (
   <figure className={s.tile}>
-    <img src={img} alt={label} loading={'lazy'} style={{ ['--tile-ratio' as any]: ratio }} />
+    <img
+      src={img}
+      alt={label}
+      loading={'lazy'}
+      style={{ '--tile-ratio': ratio } as React.CSSProperties}
+    />
     <figcaption>{label}</figcaption>
   </figure>
 );
 
-export const Section = ({ eyebrow, title, lead, children }: any) => (
+type SectionProps = {
+  eyebrow: string;
+  title: React.ReactNode;
+  lead?: React.ReactNode;
+  children?: React.ReactNode;
+};
+
+export const Section = ({ eyebrow, title, lead, children }: SectionProps) => (
   <section className={s.section}>
     <div className={s['section-head']}>
       <Typography variant={'overline'} color={'primary'}>
@@ -29,10 +43,12 @@ export const Section = ({ eyebrow, title, lead, children }: any) => (
   </section>
 );
 
-export const Stats = ({ items, source }: any) => (
+type StatsProps = { items: { value: React.ReactNode; label: string }[]; source?: React.ReactNode };
+
+export const Stats = ({ items, source }: StatsProps) => (
   <React.Fragment>
     <dl className={s.stats}>
-      {items.map(({ value, label }: any) => (
+      {items.map(({ value, label }) => (
         <div key={label}>
           <dt>{label}</dt>
           <dd>{value}</dd>
@@ -43,16 +59,16 @@ export const Stats = ({ items, source }: any) => (
   </React.Fragment>
 );
 
-export const Code = ({ code, highlight, label }: any) => (
+type CodeProps = { code: string; highlight?: string; label: string };
+
+export const Code = ({ code, highlight, label }: CodeProps) => (
   <figure className={s.code}>
     <pre>
       <code>
         {highlight
           ? code
               .split(highlight)
-              .flatMap((part: string, i: number) =>
-                i === 0 ? [part] : [<mark key={i}>{highlight}</mark>, part],
-              )
+              .flatMap((part, i) => (i === 0 ? [part] : [<mark key={i}>{highlight}</mark>, part]))
           : code}
       </code>
     </pre>

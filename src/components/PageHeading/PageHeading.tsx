@@ -3,7 +3,7 @@ import React from 'react';
 import { Container, Divider, PageHeadingStyles as s, Typography } from 'src/components';
 
 type PageHeadingProps = {
-  title: string | any;
+  title: React.ReactNode;
   subtitle?: string;
   divider?: boolean;
 };

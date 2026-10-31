@@ -17,7 +17,7 @@ import WoodwardAlbum from 'src/pages/graphics/albums/WoodwardAlbum';
 
 function AlbumsPage() {
   // const [active, setActive] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [exit, setExit] = useState(false);
 
   const albums = [
@@ -42,7 +42,7 @@ function AlbumsPage() {
     },
   ];
 
-  const activeAction = (index, activeIndex) => {
+  const activeAction = (index: number | null, activeIndex: number | null) => {
     setExit(false);
     if (activeIndex === index) {
       setActiveIndex(null);
@@ -71,14 +71,7 @@ function AlbumsPage() {
         >
           <div className={s['active-reset']}>
             {album.content}
-            <span
-              className={s['expand-close']}
-              onClick={() => {
-                if (activeIndex !== null) {
-                  activeAction(null, null);
-                }
-              }}
-            >
+            <span className={s['expand-close']} aria-hidden>
               +
             </span>
           </div>
@@ -103,6 +96,7 @@ function AlbumsPage() {
           activeIndex !== null && s.active,
           s[`modal-wrap-${activeIndex}`],
         )}
+        role={'presentation'}
         onClick={() => {
           activeAction(null, null);
         }}

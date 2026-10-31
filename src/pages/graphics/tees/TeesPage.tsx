@@ -45,6 +45,7 @@ import WHIVRobot from 'src/assets/images/tees/whiv-robot-tee.png';
 import Woodward1 from 'src/assets/images/tees/woodward-1-tee.png';
 import WoodwardSwirl from 'src/assets/images/tees/woodward-swirl-tee.png';
 import { Container, Typography } from 'src/components';
+import { onEnterOrSpace } from 'src/lib/utils';
 import s from 'src/pages/graphics/tees/TeesPage.module.scss';
 
 const teeDesigns = [
@@ -140,7 +141,7 @@ function TeesPage() {
 
   const [hiResTee, setHiResTee] = useState<string | undefined>(undefined);
 
-  const activeAction = (index, activeIndex) => {
+  const activeAction = (index: number, activeIndex: number | null) => {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
@@ -160,7 +161,10 @@ function TeesPage() {
       <div
         className={cn(s['single-tee'], s[`${transforms[rand]}`], active && s.active)}
         key={index}
+        role={'button'}
+        tabIndex={0}
         onClick={() => activeAction(index, activeIndex)}
+        onKeyDown={onEnterOrSpace(() => activeAction(index, activeIndex))}
       >
         <img src={tee} alt={teeName(tee)} />
       </div>
@@ -181,9 +185,8 @@ function TeesPage() {
 
       <div
         className={cn(s['single-tee-hires-wrap'], activeIndex !== null && s.active)}
-        onClick={() => {
-          activeAction(null, null);
-        }}
+        role={'presentation'}
+        onClick={() => setActiveIndex(null)}
       >
         <div className={s['expand-close']}>+</div>
         <div className={s['hires-img']}>

@@ -31,7 +31,7 @@ function ProcessPage() {
   document.body.classList.remove('password-protected'); // TODO: Remove when complete
 
   const scrollWrapRef = useRef<HTMLInputElement>(null);
-  const frameRef = useRef([]);
+  const frameRef = useRef<(HTMLDivElement | null)[]>([]);
   const numberOfFrames = 8;
 
   const cropWrapRef = useRef<HTMLDivElement>(null);
@@ -146,8 +146,7 @@ function ProcessPage() {
           {Array.from(Array(numberOfFrames)).map((_, index) => (
             <div
               key={index}
-              // @ts-ignore
-              ref={index => frameRef.current.push(index)}
+              ref={el => frameRef.current.push(el)}
               className={cn(s.frame, s[`frame-${index + 1}`])}
             >
               {/* {contentGoesHere} */}

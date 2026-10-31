@@ -6,7 +6,7 @@ function FourOhFourPage() {
       <PageHeading title={'404'} subtitle={'Well, well, well...'} divider />
       <Container>
         <Typography variant={'body1'}>
-          Looks like you stepped out of line. Go home, you're drunk.
+          Looks like you stepped out of line. Go home, you&apos;re drunk.
         </Typography>
       </Container>
     </Column>

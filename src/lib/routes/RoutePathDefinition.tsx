@@ -1,3 +1,4 @@
+import type { IconName } from 'src/components/icons/Icon';
 import { RouteObject } from 'react-router-dom';
 
 export type RoutePathDefinition = RouteObject & {
@@ -6,8 +7,8 @@ export type RoutePathDefinition = RouteObject & {
   subtitle?: string;
   nav?: boolean;
   color?: 'olive' | 'dusk' | 'aqua' | 'rust' | 'plum';
-  startIcon?: string;
-  endIcon?: string;
+  startIcon?: IconName;
+  endIcon?: IconName;
   tree?: string;
   parent?: string;
   children?: RoutePathDefinition[];

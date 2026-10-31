@@ -7,7 +7,7 @@ import { ContainerStyles as s } from 'src/components';
 interface ContainerProps {
   className?: string;
   children?: React.ReactNode;
-  el?: HTMLElement;
+  el?: React.ElementType;
   styled?: boolean;
   direction?: 'column' | 'row';
   align?: 'start' | 'center' | 'end';
@@ -65,7 +65,7 @@ const Container: FC<ContainerProps> = ({
     transition,
   };
 
-  const Component: React.ComponentType<React.HTMLAttributes<HTMLDivElement>> = el as any;
+  const Component = el;
 
   return (
     <Component

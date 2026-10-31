@@ -77,7 +77,7 @@ const CaseStudy: FC<CaseStudyProps> = ({
         role={'region'}
         aria-labelledby={headId}
         className={s.body}
-        {...({ inert: open ? undefined : '' } as any)}
+        inert={open ? undefined : ''}
       >
         <div className={s.inner}>
           <div className={s.content}>{children}</div>

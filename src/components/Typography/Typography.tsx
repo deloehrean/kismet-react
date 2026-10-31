@@ -30,7 +30,7 @@ interface TypographyProps {
   children?: React.ReactNode;
 }
 
-const variantsMapping: any = {
+const variantsMapping: Record<NonNullable<TypographyProps['variant']>, React.ElementType> = {
   h1: 'h1',
   h2: 'h2',
   h3: 'h3',
@@ -59,17 +59,17 @@ const Typography: React.FC<TypographyProps> = ({
   children,
   ...props
 }) => {
-  const Component = variant ? variantsMapping[variant] : 'p';
+  const Component = variantsMapping[variant];
 
   return (
     <Component
       className={cn(
         className,
         s.root,
-        variant && s[variant],
-        color && s[color],
-        align && s[align],
-        transform && s[transform],
+        s[variant],
+        s[color],
+        s[align],
+        s[transform],
         gutter && s.gutter,
       )}
       {...props}
