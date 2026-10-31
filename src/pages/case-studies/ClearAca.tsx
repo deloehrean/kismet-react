@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Mark from 'src/assets/images/case-studies/clear-aca/mark.svg';
+import OldAdminMenu from 'src/assets/images/case-studies/clear-aca/old-admin-menu.jpg';
 import ReportingCritique from 'src/assets/images/case-studies/clear-aca/reporting-critique.jpg';
 import ReportingBefore from 'src/assets/images/process/process-1-reporting-page-review.jpg';
 import AddEmployee from 'src/assets/images/websites/clear-aca/clear-aca-add-employee.jpg';
@@ -93,6 +94,13 @@ const ClearAcaBody = () => (
         'collapsible sidebar, and the admin tools moved into short, labeled groups.'
       }
     >
+      <div className={s.library}>
+        <Tile
+          img={OldAdminMenu}
+          label={'The old admin menu, recreated from its real structure'}
+          ratio={1.23}
+        />
+      </div>
       <Stats items={NAVIGATION} source={'Counted from the old admin menu.'} />
     </Section>
 
