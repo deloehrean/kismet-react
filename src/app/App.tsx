@@ -33,10 +33,9 @@ function App() {
       document.body.classList.remove('pw-loading');
     }, 1000);
     if (unlocked) {
-      document.body.classList.add('intro');
-      setTimeout(() => {
-        document.body.classList.remove('intro');
-      }, 2600);
+      if (isHome(pathname)) {
+        document.body.classList.add('intro');
+      }
       return;
     }
     if (!isHome(pathname)) {
@@ -55,6 +54,7 @@ function App() {
     }
     actedOn.current = pathname;
     document.body.classList.add('pw-compact');
+    document.body.classList.remove('intro');
     if (!hash) {
       window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
     }

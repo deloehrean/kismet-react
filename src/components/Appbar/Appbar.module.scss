@@ -255,9 +255,30 @@
     .logo {
       gap: var(--size-3);
 
+      @media all and (max-width: 680px) {
+        padding-inline: var(--size-3);
+      }
+
       a {
         max-width: 700px;
         max-height: unset;
+      }
+    }
+  }
+
+  @media all and (max-width: 680px) {
+    .content {
+      gap: var(--size-4);
+
+      .password-wrap {
+        flex: 1;
+        height: auto;
+      }
+
+      .nav {
+        position: static;
+        height: auto;
+        align-items: center;
       }
     }
   }
