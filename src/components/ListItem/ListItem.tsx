@@ -6,6 +6,7 @@ import { Tooltip } from 'react-tooltip';
 
 import { Divider, Icon, LinkStyled, ListItemStyles as s, Row, Typography } from 'src/components';
 import type { IconName } from 'src/components/icons/Icon';
+import { isPasswordProtected } from 'src/lib/utils';
 
 interface ListItemProps {
   className?: string;
@@ -37,9 +38,6 @@ const ListItem: FC<ListItemProps> = ({
   tooltipContent = undefined,
 }) => {
   const rootClassName = cn(className, s.root, dense && s.dense, color && s[color]);
-  const isPasswordProtected = () => {
-    return document.body.classList.contains('password-protected');
-  };
 
   const resolved = useResolvedPath(href || '');
   const match = useMatch({ path: resolved.pathname, end: false });

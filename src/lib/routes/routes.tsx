@@ -15,9 +15,6 @@ const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
 // const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
 const CaseStudiesPage = lazy(() => import('src/pages/case-studies/CaseStudiesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
-const isPasswordProtected = () => {
-  return document.body.classList.contains('password-protected');
-};
 
 export const routes: RoutePathDefinition[] = [
   { path: '/', element: <Homepage />, title: 'Kismet', color: 'rust', index: true },

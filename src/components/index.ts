@@ -1,5 +1,4 @@
 export * from './Appbar';
-export * from './Breadbrumbs';
 export * from './CaseStudy';
 export * from './Column';
 export * from './Container';
