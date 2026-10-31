@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 import ShowBannerA from 'src/assets/images/case-studies/hrlogics/show-banner-a.jpg';
 import CampStPatricksDay from 'src/assets/images/case-studies/poppy/camp-st-patricks-day.jpg';
-import CampValentinesTea from 'src/assets/images/case-studies/poppy/camp-valentines-tea.jpg';
+import GiftCards from 'src/assets/images/case-studies/poppy/gift-cards.jpg';
 import MarkLockup from 'src/assets/images/case-studies/solstice/mark-lockup.png';
 import AssisiHealingHome from 'src/assets/images/graphics/ads/assisi-healing-home.jpg';
 import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer.jpg';
@@ -34,7 +34,7 @@ import ElephantomAlbum from 'src/pages/graphics/albums/ElephantomAlbum';
 import RoydenAlbum from 'src/pages/graphics/albums/RoydenAlbum';
 import teesStyles from 'src/pages/graphics/tees/TeesPage.module.scss';
 
-type Thumb = { img: string; alt: string };
+type Thumb = { img: string; alt: string; contain?: boolean };
 
 type GalleryCardProps = {
   title: string;
@@ -63,6 +63,7 @@ const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardP
           <Link
             key={thumb.alt}
             to={to}
+            className={cn(thumb.contain && s.contain)}
             aria-label={`${thumb.alt}, view all ${title.toLowerCase()}`}
           >
             <img src={thumb.img} alt={thumb.alt} loading={'lazy'} />
@@ -197,7 +198,11 @@ function GraphicsDashboard() {
           to={'/graphics/print'}
           thumbs={[
             { img: GilbertExhibitFlyer, alt: 'Gilbert Exhibition flyer' },
-            { img: CampValentinesTea, alt: 'The Poppy & Parliament afternoon tea' },
+            {
+              img: GiftCards,
+              alt: 'The Poppy & Parliament afternoon tea gift card',
+              contain: true,
+            },
             { img: ShowBannerA, alt: 'HRlogics trade-show banner' },
             { img: AxleSlickFront, alt: 'Axle Workout gym slick' },
           ]}

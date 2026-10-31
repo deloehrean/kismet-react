@@ -78,7 +78,7 @@ const ITEMS: GalleryItem[] = [
     title: 'Hutton & Smith draft menu',
     meta: 'The Poppy & Parliament · 2019',
   },
-  { img: GiftCards, title: 'Gift cards', meta: 'The Poppy & Parliament · 2019' },
+  { img: GiftCards, title: 'Afternoon tea gift card', meta: 'The Poppy & Parliament · 2019' },
   {
     img: PoppyStPatricksBanner,
     title: 'St. Patrick’s Day banner',

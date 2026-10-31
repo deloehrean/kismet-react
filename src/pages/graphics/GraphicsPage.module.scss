@@ -104,11 +104,10 @@
     width: 100%;
   }
 
-  &.framed {
-    a {
-      background: #ffffff;
-      padding: var(--size-2);
-    }
+  a.contain,
+  &.framed a {
+    background: #ffffff;
+    padding: var(--size-2);
 
     img {
       object-fit: contain;
