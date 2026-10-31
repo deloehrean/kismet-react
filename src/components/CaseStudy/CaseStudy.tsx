@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect, useRef } from 'react';
 
 import cn from 'clsx';
 
@@ -35,6 +35,13 @@ const CaseStudy: FC<CaseStudyProps> = ({
 }) => {
   const headId = `case-${id}-head`;
   const bodyId = `case-${id}-body`;
+  const bodyRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (bodyRef.current) {
+      bodyRef.current.inert = !open;
+    }
+  }, [open]);
 
   return (
     <article id={`case-${id}`} className={cn(s.root, open && s.open, instant && s.instant)}>
@@ -72,13 +79,7 @@ const CaseStudy: FC<CaseStudyProps> = ({
           <Icon name={'chevronDownIcon'} />
         </span>
       </header>
-      <div
-        id={bodyId}
-        role={'region'}
-        aria-labelledby={headId}
-        className={s.body}
-        inert={open ? undefined : ''}
-      >
+      <div id={bodyId} role={'region'} aria-labelledby={headId} className={s.body} ref={bodyRef}>
         <div className={s.inner}>
           <div className={s.content}>{children}</div>
         </div>

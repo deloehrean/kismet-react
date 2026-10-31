@@ -1,5 +1,6 @@
-import type { IconName } from 'src/components/icons/Icon';
 import { RouteObject } from 'react-router-dom';
+
+import type { IconName } from 'src/components/icons/Icon';
 
 export type RoutePathDefinition = RouteObject & {
   title: string;

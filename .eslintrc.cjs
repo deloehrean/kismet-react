@@ -113,7 +113,8 @@ module.exports = {
         devDependencies: true,
       },
     ],
-    'import/prefer-default-export': 'warn',
+    'import/prefer-default-export': 'off',
+    'no-empty': ['error', { allowEmptyCatch: true }],
     'import/extensions': 'off',
     'import/no-unresolved': 'off',
 

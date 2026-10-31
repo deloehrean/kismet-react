@@ -1,9 +1,11 @@
 import { PathMatch } from 'react-router-dom';
+
 import {
   concatPaths,
   matchPatternInPath,
   isPathActiveForLocation,
 } from 'src/lib/routes/routeHelpers';
+
 import { ActiveRoutePath } from './ActiveRoutePath';
 import { RoutePathDefinition } from './RoutePathDefinition';
 
@@ -23,13 +25,9 @@ export function mapDefinitionToActivePath(
 
     if (isResolvedAsActive(match.pathname, locationPathname, definition)) {
       const activeRoutePath: ActiveRoutePath = {
-        definition: definition,
-        title:
-          typeof definition.title === 'function'
-            ? // @ts-ignore
-              definition.title({ definition, match, locationPathname: locationPathname })
-            : definition.title,
-        match: match,
+        definition,
+        title: definition.title,
+        match,
       };
       addActiveRoutePathIfPossible(activeRoutePaths, activeRoutePath);
 
