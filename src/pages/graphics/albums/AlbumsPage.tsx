@@ -21,24 +21,27 @@ function AlbumsPage() {
   const [exit, setExit] = useState(false);
 
   const albums = [
-    { content: <AlucardAlbum /> },
+    { content: <AlucardAlbum />, year: '2006' },
     {
       content: <AndrewLoehrAlbum />,
       extra: 'vinyl',
+      year: '2020',
     },
-    { content: <RoydenAlbum /> },
-    { content: <ElephantomAlbum /> },
-    { content: <EightSecondsUpsideDownAlbum /> },
-    { content: <AsecondtoolateAlbum /> },
-    { content: <WoodwardAlbum /> },
-    { content: <ElleAndTheFontsAlbum /> },
+    { content: <RoydenAlbum />, year: '2006' },
+    { content: <ElephantomAlbum />, year: '2007' },
+    { content: <EightSecondsUpsideDownAlbum />, year: '2005' },
+    { content: <AsecondtoolateAlbum />, year: '2005' },
+    { content: <WoodwardAlbum />, year: '2006' },
+    { content: <ElleAndTheFontsAlbum />, year: '2005' },
     {
       content: <WeakendHEREAVVTape />,
       extra: 'cassette',
+      year: '2017',
     },
     {
       content: <WeakendTDTape />,
       extra: 'cassette',
+      year: '2017',
     },
   ];
 
@@ -69,6 +72,7 @@ function AlbumsPage() {
           )}
           onClick={() => activeAction(index, activeIndex)}
         >
+          <span className={s.year}>{album.year}</span>
           <div className={s['active-reset']}>
             {album.content}
             <span className={s['expand-close']} aria-hidden>

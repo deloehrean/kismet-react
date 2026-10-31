@@ -100,6 +100,51 @@ const teeFlats = import.meta.glob<string>('/src/assets/images/tees/*.jpg', {
 
 const teeSlug = (src: string) => /([a-z0-9-]+?)-tee(?:-[\w-]{8})?\.png$/.exec(src)?.[1];
 
+const teeYears: Record<string, string> = {
+  'weakend-burning-house': '2003',
+  'weakend-butterflies': '2003',
+  'weakend-circle-girl': '2003',
+  'weakend-ribcage': '2003',
+  'a-sundial-map': '2005',
+  'cinematic-sunrise-rollercoaster': '2005',
+  'cinematic-sunrise-sun': '2005',
+  'cinematic-sunrise-tigers': '2005',
+  'eight-seconds-upside-down-car-gauges': '2005',
+  'fine-line-dog-thrift': '2005',
+  'fine-line-gun-girl': '2005',
+  'fine-line-swirl': '2005',
+  'hotness-fairy': '2005',
+  'night-away-words': '2005',
+  'rosesdead-bloody-hands': '2005',
+  'rosesdead-building': '2005',
+  'royden-spike': '2005',
+  'showcase-suicide': '2005',
+  'skin-thread-babies': '2005',
+  'skin-thread-skull': '2005',
+  'skin-thread-tv': '2005',
+  'skin-thread-unicycle': '2005',
+  'stop-the-revolution-trex': '2005',
+  'weakend-archer': '2005',
+  'weakend-bronto': '2005',
+  'weakend-bttf': '2005',
+  'weakend-cowboy': '2005',
+  'weakend-griffins-mess': '2005',
+  'weakend-gun-dismantle': '2005',
+  'weakend-swirled-splotches': '2005',
+  'weakend-voltron': '2005',
+  'weakend-zombies': '2005',
+  'alucard-black': '2006',
+  'alucard-red': '2006',
+  'royden-buildings': '2006',
+  'royden-metal': '2006',
+  'team-goldie-boombox': '2006',
+  'whiv-lion': '2006',
+  'whiv-robot': '2006',
+  'woodward-1': '2006',
+  'woodward-swirl': '2006',
+  'poppy-pints': '2019',
+};
+
 const teeName = (src: string) => {
   const words = (teeSlug(src) ?? 'Tee shirt').replace(/-/g, ' ');
   return `${words.charAt(0).toUpperCase()}${words.slice(1)} tee`;
@@ -167,6 +212,7 @@ function TeesPage() {
         onKeyDown={onEnterOrSpace(() => activeAction(index, activeIndex))}
       >
         <img src={tee} alt={teeName(tee)} />
+        <span className={s.year}>{teeYears[teeSlug(tee) ?? '']}</span>
       </div>
     );
   });

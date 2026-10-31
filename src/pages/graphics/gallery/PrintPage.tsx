@@ -92,7 +92,7 @@ const ITEMS: GalleryItem[] = [
   {
     img: PoppyUpdatedHoursSign,
     title: 'Updated hours sign',
-    meta: 'The Poppy & Parliament',
+    meta: 'The Poppy & Parliament · 2020',
   },
   {
     img: PoppyHalloweenGiftCards,

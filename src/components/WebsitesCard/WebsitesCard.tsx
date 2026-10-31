@@ -18,6 +18,7 @@ import { onEnterOrSpace } from 'src/lib/utils';
 export type WebsiteContent = {
   title: string;
   subtitle: string;
+  year: string;
   description: string;
   poweredBy: string;
   toolsUsed: string;
@@ -200,7 +201,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           )}
           {content.subtitle && (
             <Typography variant={'subtitle1'} transform={'uppercase'} gutter>
-              {content.subtitle}
+              {content.subtitle} · {content.year}
             </Typography>
           )}
           {content.description && (

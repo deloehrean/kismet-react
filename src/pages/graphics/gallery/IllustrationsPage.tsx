@@ -12,11 +12,11 @@ import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robo
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
-  { img: EarlV1Sketch, title: 'Earl, first sketch', meta: 'Zorn’s · Fishbat' },
-  { img: EarlV1Color, title: 'Earl, first color pass', meta: 'Zorn’s · Fishbat' },
-  { img: EarlV2Sketch, title: 'Earl, second sketch', meta: 'Zorn’s · Fishbat' },
-  { img: EarlV2Color, title: 'Earl, second color pass', meta: 'Zorn’s · Fishbat' },
-  { img: EarlPencil, title: 'Earl, pencil on paper', meta: 'Zorn’s · Fishbat' },
+  { img: EarlV1Sketch, title: 'Earl, first sketch', meta: 'Zorn’s · Fishbat, 2014' },
+  { img: EarlV1Color, title: 'Earl, first color pass', meta: 'Zorn’s · Fishbat, 2014' },
+  { img: EarlV2Sketch, title: 'Earl, second sketch', meta: 'Zorn’s · Fishbat, 2014' },
+  { img: EarlV2Color, title: 'Earl, second color pass', meta: 'Zorn’s · Fishbat, 2014' },
+  { img: EarlPencil, title: 'Earl, pencil on paper', meta: 'Zorn’s · Fishbat, 2014' },
   { img: FlosMascot, title: 'Flo', meta: 'Flo’s · Fishbat, 2018' },
   { img: Tapebot, title: 'Tapebot', meta: 'Andrew Michael' },
   { img: RandomBooks, title: 'Stack of books', meta: 'Personal' },

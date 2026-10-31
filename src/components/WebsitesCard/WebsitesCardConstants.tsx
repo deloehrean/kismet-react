@@ -131,6 +131,7 @@ import WotcStateSubmission from 'src/assets/images/websites/wotc/wotc-state-subm
 export const axleContent = {
   title: 'Axle Workout',
   subtitle: 'Marketing Website',
+  year: '2018',
   description:
     'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren’t looking strictly for strength training.',
   poweredBy: 'WordPress',
@@ -164,6 +165,7 @@ export const axleContent = {
 export const bangoContent = {
   title: 'Bango Bowls',
   subtitle: 'Marketing Website with Store Locator',
+  year: '2017',
   description:
     'Bango Bowls is an açaí and smoothie restaurant with locations across the Northeast. They needed a site with a store locator and a full menu for each location, tied into their online ordering.',
   poweredBy: 'Concrete CMS',
@@ -197,6 +199,7 @@ export const bangoContent = {
 export const bravoContent = {
   title: 'Bravo Actual',
   subtitle: 'Ecommerce Website',
+  year: '2018',
   description:
     'Bravo Actual is a workout supplement company that wanted off its X-Cart storefront and onto a platform that could carry both a small store and a lot of content. Rebuilding the site on Concrete CMS with its e-commerce add-on covered both and left room to grow.',
   poweredBy: 'Concrete CMS w/ Ecommerce Add-on',
@@ -227,6 +230,7 @@ export const clearAcaContent = {
   gated: true,
   title: 'Clear ACA',
   subtitle: 'Compliance Platform',
+  year: '2024',
   description:
     'Clear ACA was the HRlogics platform for Affordable Care Act compliance. It started life as ' +
     'SyncStream, and I took it through a full rebrand onto a refactored front end, doing both the ' +
@@ -295,6 +299,7 @@ export const extraImages = [
 export const hrlPortalContent = {
   title: 'HRlogics Portal',
   subtitle: 'Single Sign-On Platform',
+  year: '2026',
   description:
     'The HRlogics Portal was the single sign-on hub for the whole HRlogics suite: Clear I-9, ' +
     'Ryze, WOTC, Clear Verify, and UCM. Clients signed in once and launched every product they ' +
@@ -339,6 +344,7 @@ export const hrlPortalContent = {
 export const wotcContent = {
   title: 'HRlogics | WOTC',
   subtitle: 'Tax Credit Platform Redesign',
+  year: '2025',
   description:
     'WOTC screened new hires for the federal Work Opportunity Tax Credit, filed qualifying ' +
     'applicants with each state workforce agency, read the determination letters automatically, ' +
@@ -384,6 +390,7 @@ export const wotcContent = {
 export const fusionOnlineContent = {
   title: 'Fusion Online',
   subtitle: 'B2B Ecommerce Platform Redesign',
+  year: '2023',
   description:
     'Fusion Online folded RocketChips into Fusion Worldwide’s own site: one search-first store ' +
     'and company site on the same codebase, rebranded in Fusion’s green and rebuilt on a new ' +
@@ -407,6 +414,7 @@ export const fusionOnlineContent = {
 export const rocketChipsContent = {
   title: 'RocketChips',
   subtitle: 'B2B Ecommerce Platform',
+  year: '2023',
   description:
     'RocketChips was Fusion Worldwide’s self-service store for electronic components: a custom ' +
     'enterprise B2B e-commerce platform built to support a projected $1.5 billion in annual ' +
@@ -433,6 +441,7 @@ export const intelContent = {
   gated: true,
   title: 'Intel Design-In Tools',
   subtitle: 'B2B Ecommerce Website',
+  year: '2021',
 
   description:
     'I led development and customization of a headless React theme, built on ScandiPWA, for ' +
@@ -476,6 +485,7 @@ export const intelContent = {
 export const lakeAtitlanContent = {
   title: 'University of Alabama Huntsville & NASA: Lake Atitlán Project',
   subtitle: 'Algal Satellite & Data Solution',
+  year: '2020',
   description:
     'I designed and built a joint platform with NASA, Microsoft, and National Geographic that integrated NASA satellite data into a University of Alabama in Huntsville nonprofit initiative tracking algal growth in Lake Atitlán. Using AI and satellite remote sensing, it told authorities when blooms were expected, so they could act before the economic and environmental damage set in.',
   poweredBy: 'Concrete CMS / Sentinel-2 Explorer / GEE Planet Labs',
@@ -505,6 +515,7 @@ export const lakeAtitlanContent = {
 export const fountainOfLifeContent = {
   title: 'Fountain of Life Malawi',
   subtitle: 'Pro Bono Nonprofit Website',
+  year: '2014',
   description:
     'Fountain of Life supports survivors of sexual violence in Malawi, most of them young girls, through counseling, One Stop Centers, and community education. I designed their logo and built their site pro bono, so the team in Malawi could publish their own reports, blog posts, and donation campaigns.',
   poweredBy: 'Concrete CMS',
@@ -538,6 +549,7 @@ export const fountainOfLifeContent = {
 export const aeaContent = {
   title: 'Advancing Eco Agriculture',
   subtitle: 'Marketing Website',
+  year: '2014',
   description:
     'Advancing Eco Agriculture is a regenerative farming company in Middlefield, Ohio, founded by John Kempf. They make plant nutrition products and consult with growers on crop health. I designed their logo, setting the mark in a ring of the crops they serve in the brand’s purple and gold, and built their site around it.',
   poweredBy: 'Concrete CMS',
@@ -570,6 +582,7 @@ export const aeaContent = {
 export const fishbatContent = {
   title: 'Fishbat',
   subtitle: 'Agency Website',
+  year: '2016',
   description:
     'Fishbat is a digital marketing agency on Long Island, New York. I designed and built their 2016 site as an underwater world: a looping ocean video behind the hero, and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
   poweredBy: 'Concrete CMS',
@@ -602,6 +615,7 @@ export const fishbatContent = {
 export const psdContent = {
   title: 'Pant Saggin Dezign',
   subtitle: 'Online Store',
+  year: '2011',
   description:
     'Pant Saggin Dezign is the clothing brand brothers Ryan and Curt Flaitz started in Upstate New York in 2007, out of the motocross, skate, and music scenes. I designed and built their store as the brand broke into the mainstream, with tees, hoods, hats, and the underwear line that took over. Today the brand is PSD, sold worldwide.',
   poweredBy: 'BigCommerce',
@@ -631,6 +645,7 @@ export const psdContent = {
 export const petersFruitContent = {
   title: `Peter's Fruit`,
   subtitle: 'Marketing Website',
+  year: '2016',
   description: `Peter's Fruit Company needed a way to show all the produce available in each rotating season. I built a simple dynamic site that let them move produce in and out of categories themselves, with no developer support.`,
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
@@ -655,6 +670,7 @@ export const petersFruitContent = {
 export const prosemiContent = {
   title: 'Prosemi',
   subtitle: 'Marketing Website',
+  year: '2022',
   logo: ProsemiLogo,
   logoLight: ProsemiLogoLight,
   description:
@@ -684,6 +700,7 @@ export const prosemiContent = {
 export const sereneSpacesContent = {
   title: 'Serene Spaces Living',
   subtitle: 'Ecommerce Website',
+  year: '2014',
   description:
     'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. A Magento store let them do that, and they sold on it for years.',
   poweredBy: 'Magento',
@@ -717,6 +734,7 @@ export const sereneSpacesContent = {
 export const solsticeContent = {
   title: 'Solstice Massage Therapy',
   subtitle: 'Marketing Website with Online Booking',
+  year: '2026',
   description:
     'Solstice has been on Woodward Avenue since 2007, and so has the identity I designed for its ' +
     'grand opening. The original website, built by someone else in 2008, went down suddenly. I gathered the old ' +
