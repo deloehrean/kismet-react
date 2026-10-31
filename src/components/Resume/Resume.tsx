@@ -26,7 +26,7 @@ const Resume: FC<ResumeProps> = ({ inAppbar = false }) => {
             Resume Download
           </Typography>
           <Typography variant={'overline'} color={'secondary'} gutter>
-            Hire me!
+            Director of Product
           </Typography>
         </React.Fragment>
       )}

@@ -126,8 +126,7 @@ const PoppyParliamentBody = () => (
         <Tile img={GiftCards} label={'Gift cards'} ratio={1.29} />
       </div>
       <Typography variant={'body2'} className={s.lead}>
-        The menus were where the identity did its daily work &mdash; four lists, reprinted as the
-        taps changed.
+        The menus did the identity’s daily work: four lists, reprinted as the taps changed.
       </Typography>
       <div className={s.row4}>
         <Tile img={MenuDraft} label={'Draft list'} ratio={0.71} />
@@ -137,9 +136,7 @@ const PoppyParliamentBody = () => (
       </div>
       <figure className={s.banner}>
         <img src={Banner} alt={"St Patrick's Day banner"} />
-        <figcaption>
-          St Patrick&rsquo;s Day banner &mdash; supplied as AI, EPS, PSD, and SVG
-        </figcaption>
+        <figcaption>St. Patrick&rsquo;s Day banner, supplied as AI, EPS, PSD, and SVG</figcaption>
       </figure>
     </Section>
 
@@ -161,7 +158,7 @@ const PoppyParliamentBody = () => (
       eyebrow={'05 — March 2020'}
       title={'The same system, under pressure'}
       lead={
-        'Within three weeks the pub went from booking tap events to closing its doors. The artwork did not get redesigned — it got reissued.'
+        'Within three weeks the pub went from booking tap events to closing its doors. Instead of a redesign, I reissued the existing artwork.'
       }
     >
       <div className={s.pair}>
@@ -199,9 +196,9 @@ const poppyParliament = {
   meta: 'Identity · British pub · Huntsville, AL · 2019–2020',
   summary: (
     <React.Fragment>
-      A full identity for a British pub &mdash; mark, type system, menus, merch, print, and a year
-      of social campaigns. Then March 2020 arrived, and the same system had to carry closure notices
-      and a takeout pivot.
+      I designed a full identity for a British pub: the mark, type system, menus, merch, print, and
+      a year of social campaigns. Then March 2020 arrived, and the same system had to carry closure
+      notices and a takeout pivot.
     </React.Fragment>
   ),
   Body: PoppyParliamentBody,

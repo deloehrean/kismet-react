@@ -94,8 +94,8 @@ const Appbar = ({ color }: AppbarProps) => {
                 color={'primary'}
                 align={isMobile() ? 'center' : 'right'}
               >
-                Some client work is shown by invitation
-                <br /> download my resume and get in touch for the access link
+                Some client work is shown by invitation.
+                <br /> Download my resume and get in touch for the access link.
               </Typography>
             </Column>
           </Column>

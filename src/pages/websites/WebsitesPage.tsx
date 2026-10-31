@@ -74,7 +74,7 @@ function WebsitesPage() {
     <Column gap={6}>
       <PageHeading
         title={'Websites'}
-        subtitle={'Custom-built commerce, marketing, and compliance platforms'}
+        subtitle={'Commerce, marketing, and compliance sites, from small business to enterprise'}
         divider
       />
       {cards.map(card => (

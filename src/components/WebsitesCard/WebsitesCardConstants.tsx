@@ -133,7 +133,7 @@ export const axleContent = {
   subtitle: 'Marketing Website',
   description:
     'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren’t looking strictly for strength training.',
-  poweredBy: 'Wordpress',
+  poweredBy: 'WordPress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
   logoLight: AxleLogoLight,
@@ -165,7 +165,7 @@ export const bangoContent = {
   title: 'Bango Bowls',
   subtitle: 'Marketing Website with Store Locator',
   description:
-    'Bango Bowls is an açaí and smoothie restaurant based out of the Northeast. They have multiple locations and needed a website to showcase them all as well as their full menu for each location with an integrated online ordering tool.',
+    'Bango Bowls is an açaí and smoothie restaurant with locations across the Northeast. They needed a site with a store locator and a full menu for each location, tied into their online ordering.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Composer',
   logo: BangoLogo,
@@ -196,9 +196,9 @@ export const bangoContent = {
 
 export const bravoContent = {
   title: 'Bravo Actual',
-  subtitle: 'Ecommerce website',
+  subtitle: 'Ecommerce Website',
   description:
-    'Bravo Actual is a workout supplement company. They wanted to move away from their X-Cart storefront but be put on a website platform that could both support a small Ecommerce plugin and be content-rich. Rebuilding their website on a Concrete CMS solution did exactly that and allowed for expansions in the future.',
+    'Bravo Actual is a workout supplement company that wanted off its X-Cart storefront and onto a platform that could carry both a small store and a lot of content. Rebuilding the site on Concrete CMS with its e-commerce add-on covered both and left room to grow.',
   poweredBy: 'Concrete CMS w/ Ecommerce Add-on',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: BravoLogo,
@@ -235,7 +235,7 @@ export const clearAcaContent = {
     'improved every metric we tracked, and its look and feel helped lead to the product being ' +
     'sold to another company.',
   poweredBy: 'React + Vite / Python',
-  toolsUsed: 'React, Typescript, SCSS, Node.js, Yarn, GraphQL',
+  toolsUsed: 'React, TypeScript, SCSS, Node.js, Yarn, GraphQL',
   logo: ClearAcaLogo,
   logoLight: ClearAcaLogoLight,
   gallery: [
@@ -346,7 +346,7 @@ export const wotcContent = {
     'and UX, and I built the suite’s design system with WOTC as its first target: the redesign ' +
     'was a one-for-one component swap that kept the layouts clients knew, changed only what ' +
     'responsive screens needed, and brought WOTC in line with the rest of the suite. It never ' +
-    'shipped and the Figma files were lost, so I rebuilt five core screens on the design system ' +
+    'shipped and the original design files didn’t survive, so I rebuilt five core screens on the design system ' +
     'with demo data.',
   poweredBy: 'React + Inertia.js / Design System',
   toolsUsed: 'React, TypeScript, SCSS Modules, Figma, Playwright',
@@ -388,7 +388,7 @@ export const fusionOnlineContent = {
     'Fusion Online folded RocketChips into Fusion Worldwide’s own site: one search-first store ' +
     'and company site on the same codebase, rebranded in Fusion’s green and rebuilt on a new ' +
     'component library, with type-ahead search and a reworked catalog, product page, cart, and ' +
-    'account dashboard. I designed it and helped build it through 2023, and it launched in 2024 ' +
+    'account dashboard. I designed it and led the build through 2023, and it launched in 2024 ' +
     'as the shop on fusionww.com. These screens come from my last merged change on the project, ' +
     'run locally against Fusion’s public catalog with demo prices and a demo customer.',
   poweredBy: 'Next.js + GraphQL / Custom Component Library',
@@ -410,7 +410,7 @@ export const rocketChipsContent = {
   description:
     'RocketChips was Fusion Worldwide’s self-service store for electronic components: a custom ' +
     'enterprise B2B e-commerce platform built to support a projected $1.5 billion in annual ' +
-    'sales across millions of SKUs, with real pricing, live stock, quotes, and credit terms in ' +
+    'sales, with real pricing, live stock, quotes, and credit terms in ' +
     'place of a phone call. As Senior Product Designer I designed it, moved its front end from ' +
     'Tailwind utilities to a custom component library, audited the experience from registration ' +
     'to checkout, and set the front-end architecture the team built on, reviewing every change ' +
@@ -435,12 +435,10 @@ export const intelContent = {
   subtitle: 'B2B Ecommerce Website',
 
   description:
-    'Led the development and customization of a specialized React.js headless theme for an ' +
-    'Enterprise Magento B2B platform. Managed semantic versioning of deployments using Gitlab ' +
-    'and Azure for precise version control. Integrated custom components, including tailored ' +
-    'product views, specialized payment methods, B2B invoicing, bulk international shipping ' +
-    'options, complex cart discounts, coupon configurations, and a streamlined customer-facing ' +
-    'quoting system.',
+    'I led development and customization of a headless React theme, built on ScandiPWA, for ' +
+    'Intel’s Enterprise Magento B2B store. The custom work included product views, payment ' +
+    'methods, B2B invoicing, bulk international shipping, cart discounts and coupons, and a ' +
+    'customer-facing quoting tool. I managed versioned releases through GitLab and Azure.',
   poweredBy: 'Magento Enterprise Cloud / ScandiPWA',
   toolsUsed: 'React, PHP, SCSS, Composer, Node.js, Yarn, GraphQL, Docker',
   logo: IntelLogo,
@@ -506,7 +504,7 @@ export const lakeAtitlanContent = {
 
 export const fountainOfLifeContent = {
   title: 'Fountain of Life Malawi',
-  subtitle: 'Pro bono nonprofit website',
+  subtitle: 'Pro Bono Nonprofit Website',
   description:
     'Fountain of Life supports survivors of sexual violence in Malawi, most of them young girls, through counseling, One Stop Centers, and community education. I designed their logo and built their site pro bono, so the team in Malawi could publish their own reports, blog posts, and donation campaigns.',
   poweredBy: 'Concrete CMS',
@@ -539,9 +537,9 @@ export const fountainOfLifeContent = {
 
 export const aeaContent = {
   title: 'Advancing Eco Agriculture',
-  subtitle: 'Marketing website',
+  subtitle: 'Marketing Website',
   description:
-    'Advancing Eco Agriculture is a regenerative farming company in Middlefield, Ohio, founded by John Kempf. They make plant nutrition products and consult with growers on crop health. I designed their logo and built their site around it, setting the mark in a ring of the crops they serve, in the purple and gold of the brand.',
+    'Advancing Eco Agriculture is a regenerative farming company in Middlefield, Ohio, founded by John Kempf. They make plant nutrition products and consult with growers on crop health. I designed their logo, setting the mark in a ring of the crops they serve in the brand’s purple and gold, and built their site around it.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'CSS, PHP, jQuery',
   logo: AeaLogo,
@@ -571,7 +569,7 @@ export const aeaContent = {
 
 export const fishbatContent = {
   title: 'Fishbat',
-  subtitle: 'Agency website',
+  subtitle: 'Agency Website',
   description:
     'Fishbat is a digital marketing agency on Long Island, New York. I designed and built their 2016 site as an underwater world: a looping ocean video behind the hero, and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
   poweredBy: 'Concrete CMS',
@@ -603,7 +601,7 @@ export const fishbatContent = {
 
 export const psdContent = {
   title: 'Pant Saggin Dezign',
-  subtitle: 'Online store',
+  subtitle: 'Online Store',
   description:
     'Pant Saggin Dezign is the clothing brand brothers Ryan and Curt Flaitz started in Upstate New York in 2007, out of the motocross, skate, and music scenes. I designed and built their store as the brand broke into the mainstream, with tees, hoods, hats, and the underwear line that took over. Today the brand is PSD, sold worldwide.',
   poweredBy: 'BigCommerce',
@@ -632,7 +630,7 @@ export const psdContent = {
 
 export const petersFruitContent = {
   title: `Peter's Fruit`,
-  subtitle: 'Marketing website',
+  subtitle: 'Marketing Website',
   description: `Peter's Fruit Company needed a way to show all the produce available in each rotating season. I built a simple dynamic site that let them move produce in and out of categories themselves, with no developer support.`,
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
@@ -660,7 +658,7 @@ export const prosemiContent = {
   logo: ProsemiLogo,
   logoLight: ProsemiLogoLight,
   description:
-    'As the leading semiconductor testing facility in the world, Prosemi needed a new website to reflect its updated facilities and gather requests for quotes.',
+    'Prosemi tests semiconductors and needed a new website to show its updated facilities and take requests for quotes.',
   poweredBy: 'Gatsby / Contentful',
   toolsUsed: 'React, Node.js, SCSS, Yarn, GraphQL',
   gallery: [
@@ -685,9 +683,9 @@ export const prosemiContent = {
 
 export const sereneSpacesContent = {
   title: 'Serene Spaces Living',
-  subtitle: 'Ecommerce website',
+  subtitle: 'Ecommerce Website',
   description:
-    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. A Magento store was exactly what they needed, and they sold on it successfully for years.',
+    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. A Magento store let them do that, and they sold on it for years.',
   poweredBy: 'Magento',
   toolsUsed: 'PHP, LESS, jQuery, Composer',
   logo: SereneSpacesLogo,
@@ -721,7 +719,7 @@ export const solsticeContent = {
   subtitle: 'Marketing Website with Online Booking',
   description:
     'Solstice has been on Woodward Avenue since 2007, and so has the identity I designed for its ' +
-    'grand opening. Her original website, up since 2008, went down suddenly. I gathered the old ' +
+    'grand opening. The original website, built by someone else in 2008, went down suddenly. I gathered the old ' +
     'files and rebuilt it as a modern, responsive site, cutting the fat and filling in what the ' +
     'original was missing. It has the full service menu and pricing, the therapist bio, ' +
     'directions, and online booking through Booksy.',

@@ -102,8 +102,8 @@ const SolsticeBody = () => (
         <Tile img={WindowSign} label={'Window sign'} ratio={0.64} />
       </div>
       <Typography variant={'body2'} className={s.lead}>
-        At sign scale the system drops to its essentials &mdash; the mark on one panel, the promise
-        and the phone number on the other.
+        At sign scale the system drops to its essentials: the mark on one panel, the promise and the
+        phone number on the other.
       </Typography>
       <div className={s.pair}>
         <Tile img={SignPanelMark} label={'Exterior sign — mark panel'} ratio={2.73} />
@@ -115,7 +115,7 @@ const SolsticeBody = () => (
       eyebrow={'04 — On screen'}
       title={'The same sun, two websites apart'}
       lead={
-        'Her original site, built by someone else in 2008, carried the print system onto the ' +
+        'The studio’s original site, built by someone else in 2008, carried the print system onto the ' +
         'screen: the mark as the center panel of the header, the brush texture either side, and ' +
         'the orange band carrying the descriptor. When it went down suddenly, I gathered the old ' +
         'files and rebuilt it as a modern site, cutting the fat and filling in what the original ' +
@@ -142,9 +142,9 @@ const solstice = {
   meta: 'Identity · Massage studio · Ferndale, MI · 2007, site rebuilt 2026',
   summary: (
     <React.Fragment>
-      A grand-opening identity for a massage studio on Woodward Avenue &mdash; a painted sun, two
-      warm oranges, and one serif family, carried from the business card to the storefront sign to
-      the website.
+      The identity I designed for a massage studio’s 2007 grand opening on Woodward Avenue: a
+      painted sun, two warm oranges, and one serif family, carried from the business card to the
+      storefront sign to the site I rebuilt in 2026.
     </React.Fragment>
   ),
   Body: SolsticeBody,

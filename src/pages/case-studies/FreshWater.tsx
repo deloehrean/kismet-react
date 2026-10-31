@@ -76,9 +76,10 @@ const freshWater = {
   meta: 'Product & UX · Research platform · Lake Atitlán, Guatemala · 2020',
   summary: (
     <React.Fragment>
-      A public site and forecasting dashboard for a UAH research team, working with NASA, Microsoft,
-      and National Geographic, that used satellite imagery and AI to predict algal blooms on the
-      lake &mdash; worked out with the scientists, built for the people who had to act on it.
+      I designed and built a public site and forecasting dashboard for a UAH research team working
+      with NASA, Microsoft, and National Geographic. It used satellite imagery and AI to predict
+      algal blooms on Lake Atitlán, and I worked each screen out with the scientists before building
+      it for the officials who had to act on the forecasts.
     </React.Fragment>
   ),
   Body: FreshWaterBody,

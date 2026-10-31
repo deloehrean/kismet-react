@@ -6,35 +6,23 @@ import { HomePageStyles as s } from 'src/pages';
 
 const PROOF = [
   { figure: '25+', label: 'years in product, design, and engineering' },
-  { figure: '400+', label: 'enterprise clients managed' },
-  { figure: '$1.5B', label: 'projected annual client sales' },
+  { figure: '400+', label: 'enterprise clients served' },
+  { figure: '$1.5B', label: 'projected annual sales on a B2B platform I led' },
   { figure: '1M+', label: 'product SKUs cataloged' },
 ];
 
 const CAPABILITIES = [
   {
     title: 'Product leadership',
-    body: `I led product and creative teams for over a decade — building a creative team across
-      graphic, web, software, and marketing at an agency, owning product direction for a B2B
-      commerce platform supporting a projected $1.5 billion in annual sales, and running product
-      strategy, roadmapping, and end-to-end UX for an enterprise compliance suite serving 400+
-      clients. There I launched an SSO portal that gave clients a single entry point into every
-      product, and defined the vision for evolving it into one browser-based workspace.`,
+    body: `I led product and creative teams for over a decade. At an agency I built a creative team across graphic, web, software, and marketing. At Fusion Worldwide I owned product direction for a B2B commerce platform projected to carry $1.5 billion in annual sales. At HRlogics I ran product strategy, roadmapping, and end-to-end UX for a compliance suite serving 400+ enterprise clients, launched the SSO portal that gave them one entry point into every product, and defined the vision for turning it into a single browser-based workspace.`,
   },
   {
     title: 'Design systems & UX',
-    body: `Twenty-five years of building identity and interface systems that had to hold together
-      across every surface — brand systems for bands, bars, and nonprofits through the 2000s, a
-      custom component library that replaced Tailwind on an enterprise B2B platform, and a
-      company-wide rebrand that reached into the product itself, where I designed and built the
-      shared TypeScript component library that became the suite's design system.`,
+    body: `I've spent twenty-five years building identity and interface systems: brand systems for bands, bars, and nonprofits through the 2000s, a custom component library that replaced Tailwind on an enterprise B2B platform, and the HRlogics rebrand, which carried into the product itself. There I designed and built the TypeScript component library that became the suite's design system.`,
   },
   {
     title: 'Full-stack delivery',
-    body: `I shipped the code as well as the design from the start: clean product data for over a
-      million SKUs on a multi-million-dollar storefront, a React.js headless theme on enterprise
-      Magento B2B, and more recent work on Vercel, Supabase, and Next.js. On every Kismet
-      engagement I owned the work from discovery through launch.`,
+    body: `I've shipped code alongside the design from the start: clean product data for over a million SKUs on a multi-million-dollar storefront, a headless React theme on Enterprise Magento B2B, and HRL Portal on Laravel, React, and AWS, which I led from first commit to its April 2026 launch. On every Kismet engagement I owned the work from discovery through launch.`,
   },
 ];
 
@@ -42,13 +30,13 @@ const WORK = [
   {
     to: '/case-studies',
     title: 'Case Studies',
-    body: 'Identity systems and data products, from first sketch to shipped.',
+    body: 'Product platforms, design systems, and identities, from first audit to launch.',
   },
   { to: '/websites', title: 'Websites', body: 'Commerce, marketing, and compliance platforms.' },
   {
     to: '/graphics',
     title: 'Graphics',
-    body: 'Album art, apparel, and two decades of illustration.',
+    body: 'Logos, print, ads, album art, and tee shirts from two decades of design.',
   },
 ];
 
@@ -57,14 +45,14 @@ function HomePage() {
     <Column className={s.root} gap={5}>
       <PageHeading
         title="Andrew Loehr"
-        subtitle="Product leader with 25+ years across design, engineering, and enterprise SaaS — based in Detroit, working remote."
+        subtitle="Product leader with 25+ years across design, engineering, and enterprise SaaS. Detroit-based, working remote."
         divider
       />
 
       <Typography variant="body1" className={s.lede}>
-        I sit where product, design, and engineering meet. I can define the roadmap, draw the
-        interface and ship the code — which means I can carry an idea from a discovery call through
-        to production without it getting lost in a handoff.
+        I work where product, design, and engineering meet. I can set the roadmap, design the
+        interface, and ship the code, so an idea gets from a discovery call to production without
+        getting lost in a handoff.
       </Typography>
 
       <ul className={s.proof}>
@@ -102,8 +90,8 @@ function HomePage() {
         <section>
           <Typography variant="h5">Hiring for a product role?</Typography>
           <Typography variant="body2">
-            I&rsquo;m looking for Director of Product work at a mid-size company — remote, ideally
-            in HR/compliance SaaS or e-commerce. The resume below has the full history; the case
+            I&rsquo;m looking for Director of Product work at a mid-size company, remote, ideally in
+            HR/compliance SaaS or e-commerce. The resume below has the full history; the case
             studies show how the work actually turned out.
           </Typography>
           <LinkStyled to={'/case-studies'}>See a case study →</LinkStyled>
@@ -111,9 +99,9 @@ function HomePage() {
         <section>
           <Typography variant="h5">Need something built?</Typography>
           <Typography variant="body2">
-            Kismet has run for 10+ years across retail, finance, healthcare, hospitality, and
-            nonprofit work — brand, site, store, or the whole thing end to end. One person, no
-            handoffs, no agency overhead.
+            Kismet, my studio, has taken on retail, finance, healthcare, hospitality, and nonprofit
+            work for 10+ years: a brand, a site, a store, or all of it end to end. I do the work
+            myself, from the first call to launch.
           </Typography>
           <LinkStyled to={'/websites'}>See the work →</LinkStyled>
         </section>
