@@ -120,17 +120,7 @@
   }
 }
 
-// Appbar tabs, once the labels no longer fit beside the logo. The labelled
-// strip is 611px wide and the lockup ends at 309px, so below ~960px they start
-// running over each other - on a phone the strip is wider than the viewport
-// itself. Below that each tab collapses to its own initial, which in
-// --font-fancy is the same letterform as the lockup, and grows the rest of the
-// word back on hover. `icon-tabs` is set on the tab list in
-// mapDefinitionToTabs - a global hook, because the label lives in this module
-// and the list class lives in NavMenu's.
 :global(.icon-tabs) {
-  // 0fr -> 1fr animates to the word's own intrinsic width, which a max-width
-  // guess cannot do. Above the breakpoint it sits at 1fr and reads as one word.
   .rest {
     display: inline-grid;
     grid-template-columns: 1fr;
@@ -138,8 +128,6 @@
     > span {
       min-width: 0;
       overflow: hidden;
-      // "Case Studies" has a space: squeezed to 0fr it wrapped a word per line,
-      // and the extra lines pushed its C up out of the middle of the tab.
       white-space: nowrap;
     }
   }
@@ -150,8 +138,6 @@
       transition: grid-template-columns .45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    // Every collapsed tab is the same square, whatever its letter's advance
-    // width; min-width, not width, so the word can still grow back on hover.
     a {
       display: flex;
       align-items: center;
@@ -168,25 +154,17 @@
       transition: translate .45s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    // Kaoly's side bearings are uneven and its capitals ride high, so a
-    // centred box still left each letter off-centre. Measured from the ink of
-    // each initial at 44px; the C's tail swings furthest right.
     [data-initial='W'] { --initial-x: -1.5px; --initial-y: 2.5px; }
     [data-initial='K'] { --initial-x: -3px; --initial-y: 1.5px; }
     [data-initial='G'] { --initial-x: -3px; --initial-y: 3.5px; }
     [data-initial='C'] { --initial-x: -7.5px; }
 
-    // Touch has no hover to reveal with, and below 480px there is no room to
-    // grow into - the word would run over the lockup. There the monogram is the
-    // whole tab.
     @media (hover: hover) and (min-width: 480px) {
       .root:hover .rest,
       .root:focus-within .rest {
         grid-template-columns: 1fr;
       }
 
-      // The nudges centre a lone letter; once the word is back they would
-      // push it into its neighbours, so they ease out as the padding returns.
       .root:hover a,
       .root:focus-within a {
         padding-inline: var(--size-2);

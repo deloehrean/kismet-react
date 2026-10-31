@@ -34,9 +34,6 @@ body {
   position: relative;
 }
 
-// The appbar's spacer animates from 0 to 4rem above the fold. Scroll anchoring
-// compensates for that height change by nudging scrollTop, which leaves the
-// page a few pixels down and the password bar looking off-centre.
 html,
 body {
   overflow-anchor: none;

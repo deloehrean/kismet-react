@@ -20,13 +20,9 @@
 
 .root {
   margin-bottom: var(--size-4);
-  // Jump links (/websites#site-…) land the card just under the top edge; the
-  // app bar scrolls away with the page, so there is nothing to clear.
   scroll-margin-top: var(--size-3);
 }
 
-// Locked visitors don't see every card, so the left/right alternation is
-// counted separately for them (.reverse-locked) - the body class picks which.
 :global(body:not(.password-protected)) .root.reverse {
   @include reversed;
 }
@@ -259,9 +255,6 @@
   }
 }
 
-// --- Theme-matched screenshots ------------------------------------------
-// Screenshots and logos that come in both themes ship both; the site's own
-// theme picks one.
 .theme-dark {
   display: none;
 }
@@ -276,11 +269,6 @@
   }
 }
 
-// --- Site's own theme -------------------------------------------------
-// Screenshots that come in both themes open in light; the card's switch,
-// not the visitor's system or Kismet's theme, flips them.
-// The dark shot sits on top of the light one (same size) and fades in, so
-// the switch crossfades instead of cutting.
 .website-screenshots .website-body:has(.shot-dark) {
   position: relative;
 }
@@ -348,10 +336,6 @@
   }
 }
 
-// --- Gated clients -----------------------------------------------------
-// Default (unlocked) shows the real card and hides the ghost; the
-// .password-protected body class swaps them. Pure CSS, same pattern as the
-// appbar's staged states.
 .gated-placeholder {
   display: none;
 }
@@ -366,18 +350,10 @@
   }
 }
 
-// Blank sheets of glass standing in for the screenshots. These sit on the
-// same .website-image position classes as the real stack, so the composition
-// is identical - only the contents are missing.
 .glass {
-  // Sized by the same contents as a real frame (see .glass-fill), so the
-  // stack's max-height crops it exactly where it crops the screenshot. An
-  // aspect-ratio on the pane itself narrowed it under that cap instead.
   height: auto;
-  // Matte, not glossy: one flat wash, no specular gradient or sweep.
   background: rgba(255, 255, 255, .06);
   border-radius: 6px;
-  // the edge is an inset shadow, not a border, so it adds nothing to the size
   box-shadow:
     inset 0 0 0 3px rgba(255, 255, 255, .16),
     0 0 34px -16px rgba(0, 0, 0, .65);
@@ -386,18 +362,15 @@
   overflow: hidden;
   cursor: default;
 
-  // the real cards draw their frame with ::after; keep the glass clean
   &::after {
     display: none;
   }
 
-  // the browser bar holds its height but never shows
   > img {
     visibility: hidden;
   }
 }
 
-// Stands in for the screenshot: full width at its width/height ratio.
 .glass-fill {
   display: block;
   width: 100%;
@@ -464,18 +437,12 @@
   color: var(--primary-contrast);
 }
 
-
-// Restless Youth sets lowercase as small caps and capitals as swashes, so the
-// title keeps its own case - h4's uppercase would turn every letter into a
-// swash. Kaoly stays with the page heading; this is the level below it.
 .website-content .site-title {
   font-family: var(--font-compact), serif;
   font-weight: 400;
-  // the face sets wide; pulled in so titles don't sprawl
   letter-spacing: -.05em;
   word-spacing: -.12em;
   line-height: 1.15;
   text-transform: none;
-  // the swash capitals hang below the baseline into the subtitle
   margin-bottom: var(--size-1);
 }

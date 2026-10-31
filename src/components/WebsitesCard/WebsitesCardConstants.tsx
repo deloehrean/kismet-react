@@ -280,10 +280,6 @@ export const extraImages = [
   },
 ];
 
-// Captured Oct 2026 from a local copy of v1.3.0 (Auth0 local-only, no AWS)
-// seeded with Faker organizations and example.* users only: short pages at
-// 1440x1260, tall ones at 1440x1800. `imageDark` swaps in with the site's
-// dark theme.
 export const hrlPortalContent = {
   title: 'HRlogics Portal',
   subtitle: 'Single Sign-On Platform',
@@ -421,11 +417,6 @@ export const rocketChipsContent = {
   ],
 };
 
-// `gated: true` swaps this card for a locked placeholder until the password is
-// entered. Add the flag to any other client that shouldn't be public.
-// `ratio` is each screenshot's width/height, measured from the file. The
-// locked placeholder uses it to size its glass panes so the composition
-// matches the real stack without shipping anything about the image itself.
 export const intelContent = {
   gated: true,
   title: 'Intel Design-In Tools',

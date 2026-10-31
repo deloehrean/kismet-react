@@ -22,8 +22,6 @@ import {
   wotcContent,
 } from 'src/components/WebsitesCard/WebsitesCardConstants';
 
-// Top to bottom. The first gated site is the one locked visitors see as a ghost;
-// any later gated site is simply left out for them.
 type Site = { title: string; gated?: boolean };
 
 const SITES: Site[] = [
@@ -48,8 +46,6 @@ const SITES: Site[] = [
 const firstGated = SITES.findIndex(site => site.gated);
 const lockedCount = SITES.filter(site => site.gated).length;
 
-// Alternate sides twice: across every site, and across only the sites a locked
-// visitor sees, so neither view puts two cards on the same side in a row.
 const cards = SITES.reduce<
   { content: Site; reverse: boolean; reverseLocked: boolean; ghost: boolean }[]
 >((list, content, i) => {
@@ -61,9 +57,6 @@ const cards = SITES.reduce<
 function WebsitesPage() {
   const { hash } = useLocation();
 
-  // Case studies link straight to their site (/websites#site-rocketchips).
-  // Wait a beat for the page fade and the screenshots above to take their
-  // space, or the glide stops short of the card.
   useEffect(() => {
     if (!hash) {
       return undefined;

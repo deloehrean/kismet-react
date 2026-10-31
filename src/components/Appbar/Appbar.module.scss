@@ -13,16 +13,12 @@
     justify-content: space-between;
 
     @media all and (max-width: 680px) {
-      // the hero re-adds this to stack; in the bar it was pushing the logo a
-      // full --size-4 below the top of a 70px header
       gap: 0;
     }
   }
 
   .spacer {
     height: 0;
-    // Fixed-height bar: never let flex steal from it when .content is short
-    // (in .pw-compact the header is only --appbar-height + 3.2rem tall).
     flex: none;
     overflow: hidden;
     position: sticky;
@@ -37,8 +33,6 @@
     .password-bar {
       display: flex;
       align-items: center;
-      // the bar is the full height of the spacer, so its own centring is what
-      // positions the field - no odd-pixel rounding from the parent
       height: 100%;
       justify-content: flex-end;
       gap: var(--size-1);
@@ -59,7 +53,6 @@
       align-items: center;
 
       input {
-        // explicit so the flight's start offset can be derived in CSS
         width: 15rem;
         padding-right: calc(var(--size-2) + 32px);
 
@@ -138,8 +131,6 @@
     background: url("/src/assets/images/homepage-collage.jpg") repeat center 40%;
     background-size: 50%;
     width: 100vw;
-    // Runs in every state. It used to live only under .password-protected, so
-    // the montage froze the moment anyone unlocked.
     animation: bgSlide 240s linear infinite;
   }
 
@@ -159,9 +150,6 @@
       width: 100%;
       max-width: 301px;
       max-height: 106px;
-      // .logo (the column) carries .login-transition, but the anchor does not -
-      // so its own max-width/margin changes were applying instantly and the
-      // logo snapped size whenever max-width became the binding constraint.
       transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
 
       svg {
@@ -188,9 +176,6 @@
       width: 100%;
       flex-direction: column;
       align-items: flex-start;
-      // Owns the whole phone appbar and centres the logo in it. NOT
-      // height:0/opacity:0 - that hid the logo too, so the minimized appbar had
-      // no brand on mobile at all.
       height: var(--appbar-height);
       justify-content: center;
       pointer-events: none;
@@ -199,15 +184,10 @@
         pointer-events: auto;
 
         a {
-          // 301px is the desktop lockup; at phone width it leaves no room for
-          // the tabs and overflows the 70px bar vertically.
           max-width: 140px;
         }
       }
 
-      // Stacked, these still claimed height and pushed the logo off the bottom
-      // of the bar - .resume is flex: 1, so it ate the whole column. The hero
-      // opens them back up.
       .divider,
       .resume {
         max-height: 0;
@@ -240,14 +220,7 @@
     height: 0;
 
     @media all and (max-width: 680px) {
-      // The phone bar is a single --appbar-height row. Taking the tabs out of
-      // the column is what lets them sit beside the logo instead of under it -
-      // in flow they pushed themselves 50px past the bottom of the header.
       position: absolute;
-      // Full width, tabs pushed right. The nav is the containing block for the
-      // tab swipe (ListItem ::after, left: 0; width: 100vw), so a nav only as
-      // wide as its tabs started the swipe under the tabs instead of the
-      // viewport's left edge. It spans the logo, so clicks pass through to it.
       left: 0;
       right: 0;
       bottom: 0;
@@ -264,9 +237,6 @@
   }
 }
 
-// The build-in for visitors who arrive already unlocked. Same hero geometry as
-// the gated state, without any of the password UI - the logo resolves large,
-// holds, then settles into the appbar when .intro is dropped.
 :global(.intro) {
   .root {
     height: calc((100vh + 500px) / 2);
@@ -340,9 +310,6 @@
           gap: var(--size-3);
           transition-duration: 1s;
 
-          // On a phone 700px never binds, so the lockup ran edge to edge and
-          // the K's swash was cut off by the screen. The gutter goes on the
-          // column, which carries the transition - the anchor would snap.
           @media all and (max-width: 680px) {
             padding-inline: var(--size-3);
           }
@@ -372,7 +339,6 @@
           opacity: 1;
           align-items: flex-start;
 
-          // stacked under the logo, so it centres with everything else
           @media all and (max-width: 680px) {
             align-self: center;
           }
@@ -385,7 +351,6 @@
 
       .nav {
         @media all and (max-width: 680px) {
-          // the hero is tall enough to stack; put the tabs back in the column
           position: static;
           right: auto;
           bottom: auto;
@@ -396,9 +361,6 @@
     }
   }
 
-  // Stage 2 - hero minimizes to the same geometry as the unlocked appbar while
-  // the spacer (password bar) stays, and the resume card rides the gust up into
-  // it. Both happen off this one class; the sequencing is delays, not JS.
   &:global(.pw-compact) {
     .root {
       height: calc(var(--appbar-height) + 3.2rem);
@@ -411,13 +373,9 @@
 
     @media all and (max-width: 680px) {
       .root {
-        // the hero pins this to 770px on mobile, and min-height outranks the
-        // compact `height` - without clearing it the bar never minimized here
         min-height: 0;
       }
 
-      // back out of the hero's mobile stacking - the minimized bar is a single
-      // row again, same geometry as the unlocked appbar
       .content .nav {
         position: absolute;
         right: 0;
@@ -426,17 +384,11 @@
         align-items: flex-end;
       }
 
-      // the hero's stacking gap is still in play here - it was dropping the
-      // logo a full --size-4 below the spacer and out the bottom of the bar
       .content {
         gap: 0;
       }
     }
 
-    // Geometry here must match the UNLOCKED appbar exactly - this state
-    // transitions straight into it, so any difference reads as a jump. The
-    // logo keeps its own --size-1 margin (no wrap padding) so it lands on the
-    // same left edge either way.
     .content .password-wrap {
       gap: 0;
       width: 100%;
@@ -444,7 +396,6 @@
       justify-content: flex-start;
 
       @media all and (max-width: 680px) {
-        // owns the bar below the spacer and centres the logo in it
         height: var(--appbar-height);
         justify-content: center;
 
@@ -454,28 +405,17 @@
         }
       }
 
-      // flex/width are left at their base values (flex: 2, width: 100%) so this
-      // column is laid out identically to the unlocked appbar - overriding them
-      // here made the logo snap on unlock when the overrides disappeared.
       .logo {
         gap: 0;
         align-items: flex-start;
 
         a {
-          // max-width alone drives the size; the svg is height:auto so its
-          // height follows continuously. Setting max-height here snapped the
-          // logo 171px -> 106px instantly, because .password-protected leaves
-          // max-height at `unset` and unset -> <length> cannot be transitioned.
           max-width: 301px;
 
           @media all and (max-width: 680px) {
             max-width: 140px;
           }
-          // restores the base gutter that .password-protected zeroes out
           margin-inline: var(--size-1);
-          // .password-wrap widens 800px -> 2000px over the same second, so it
-          // stops constraining the logo part way through. max-width has to win
-          // the race or the logo balloons before it shrinks.
           transition-duration: .4s;
         }
       }
@@ -487,7 +427,6 @@
         transition-delay: 0s;
       }
 
-      // opacity alone left it holding its width in the row
       .divider {
         max-width: 0;
         min-width: 0;
@@ -497,9 +436,6 @@
       }
     }
 
-    // The hero card hands off to the flyer. It must collapse, not just fade:
-    // at 259px tall it was forcing .content past the compact header height,
-    // which pushed the logo and nav outside the header entirely.
     .content .password-wrap .resume {
       max-width: 0;
       min-width: 0;
@@ -508,7 +444,6 @@
       transition-delay: 0s;
     }
 
-    // the flyer has to be able to leave the bar while it flies
     .spacer {
       overflow: visible;
     }
@@ -566,8 +501,6 @@ button[type="submit"] {
   transition: all 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
 }
 
-// background-size is 50%, so one tile is 50vw and -100vw lands exactly two
-// tiles along - the loop point is invisible.
 @keyframes bgSlide {
   0% {
     background-position-x: 0;
@@ -583,4 +516,3 @@ button[type="submit"] {
     animation: none;
   }
 }
-

@@ -16,8 +16,6 @@ import { LinkStyled, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Code, Section, Stats, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
-// Every number here is one Fusion or RocketChips published, or comes from the
-// repository itself - the source line under each row says which.
 const FUSION_2023 = [
   { value: '$3B', label: 'Revenue' },
   { value: '62', label: 'Fortune 500 customers' },
@@ -44,14 +42,11 @@ const FUSION_ONLINE = [
   { value: '518', label: 'Manufacturers' },
 ];
 
-// From the CMS integration: the content blocks the page builder offers.
 const CMS = [
   { value: '10', label: 'Content blocks to build pages from' },
   { value: '0', label: 'Builds or releases needed to publish' },
 ];
 
-// The homepage headline, before and after the CMS. Trimmed excerpts of the
-// real source.
 const HEADLINE = 'the future of electronic component sourcing';
 
 const HERO_BEFORE = `<Container className="homepage_hero_cta narrow-1000 flex flex-col center relative">
@@ -88,7 +83,6 @@ const MY_PART = [
   { value: '2', label: 'Brands carried by one codebase' },
 ];
 
-// Quotes from my audit of the build I inherited, November 2022.
 const AUDIT = [
   {
     found: 'Mobile is a mess',

@@ -22,7 +22,6 @@
       background: var(--background-darker-25);
       border: 1px solid var(--divider);
 
-
       > li:first-of-type {
         background: var(--primary-main);
 
@@ -80,9 +79,6 @@
 
     }
 
-    // Icon-only below this width (see ListItem), so the strip can close up and
-    // stop running over the logo - at label width it was 611px wide against a
-    // lockup that ends at 309px.
     @media all and (max-width: 960px) {
       gap: 2px;
       margin-inline: var(--size-1);

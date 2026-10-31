@@ -11,17 +11,13 @@ import hrlogics from 'src/pages/case-studies/HRlogics';
 import poppyParliament from 'src/pages/case-studies/PoppyParliament';
 import solstice from 'src/pages/case-studies/Solstice';
 
-// One entry per brand; each brings its own header copy and case study body.
 const CASES = [fusionOnline, hrlogics, designSystem, freshWater, poppyParliament, solstice];
 
 const caseTop = (id: string) =>
   document.getElementById(`case-${id}`)?.getBoundingClientRect().top ?? 0;
 
 function CaseStudiesPage() {
-  // Accordion: opening one brand rolls up whichever was open before.
   const [openId, setOpenId] = useState<string | null>(null);
-  // Switching brands swaps the panels without the roll animation - a smooth
-  // scroll racing a collapse thousands of pixels tall throws the page around.
   const [switching, setSwitching] = useState(false);
 
   const toggle = (id: string) => {
@@ -31,8 +27,6 @@ function CaseStudiesPage() {
       return;
     }
 
-    // Swap the panels, pin the clicked header where it was on screen, then
-    // glide it to the top.
     const before = caseTop(id);
     flushSync(() => {
       setSwitching(true);

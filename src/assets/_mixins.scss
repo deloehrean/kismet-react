@@ -44,9 +44,6 @@ $breakpoints: (
   }
 }
 
-// The page build-in. Pages made of Containers get this for free - Container
-// fades itself in on mount (0 -> 1 over 1s, after .5s). Pages laid out without
-// one use this on their root to match, or they pop in under the tab swipe.
 @mixin page-fade-in {
   animation: page-fade-in 1s ease .5s both;
 

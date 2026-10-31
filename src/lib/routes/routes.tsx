@@ -12,8 +12,6 @@ const PrintPage = lazy(() => import('src/pages/graphics/gallery/PrintPage'));
 const AdsPage = lazy(() => import('src/pages/graphics/gallery/AdsPage'));
 const IllustrationsPage = lazy(() => import('src/pages/graphics/gallery/IllustrationsPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
-// Process is off for launch: unfinished, and it clears the gate for the whole
-// visit. The page itself stays in src/pages/process until it's finished or cut.
 // const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
 const CaseStudiesPage = lazy(() => import('src/pages/case-studies/CaseStudiesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));

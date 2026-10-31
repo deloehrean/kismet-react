@@ -17,16 +17,12 @@ import {
 type WebsitesCardProps = {
   content?: any;
   reverse?: boolean;
-  /** Side to side for locked visitors, who see fewer cards. Defaults to `reverse`. */
   reverseLocked?: boolean;
-  /** Gated cards only: false hides the card from locked visitors instead of showing a ghost. */
   ghost?: boolean;
-  /** How many projects the access link opens, shown on the ghost. */
   lockedCount?: number;
   divider?: boolean;
 };
 
-// The card's jump-link target: "Lake Atitlán Project" -> "site-lake-atitlan-project".
 const siteAnchor = (title: string) =>
   `site-${title
     .normalize('NFD')
@@ -46,8 +42,6 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
   const sides = cn(reverse && s.reverse, reverseLocked && s['reverse-locked']);
   const [loading, setLoading] = useState('loading');
   const [activeIndex, setActiveIndex] = useState(null);
-  // Sites that ship both themes open in light, whatever the visitor's system
-  // or Kismet theme says; the switch beside the copy is theirs to flip.
   const [siteDark, setSiteDark] = useState(false);
   const hasDarkShots = content.gallery?.some(image => image.imageDark);
 
@@ -68,8 +62,6 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
     }
   };
 
-  // `logo` is the default art; `logoLight` / `logoDark` override it for one
-  // theme, so a logo only needs a second file when it can't read on both.
   const renderLogo = () => {
     const forLight = content.logoLight ?? content.logo;
     const forDark = content.logoDark ?? content.logo;
@@ -115,11 +107,6 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
 
   return (
     <React.Fragment>
-      {/* Gated clients render a ghost of the real card: the screenshot stack
-          becomes blank sheets of glass in the same positions, and the copy
-          side becomes a widget explaining how to unlock. Both this and the
-          real card are rendered; CSS picks which is visible, so there is no
-          polling and no re-render on unlock. */}
       {content.gated && ghost && (
         <Row
           className={cn(s.website, s.root, sides, s['gated-placeholder'])}
@@ -164,9 +151,6 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
                 )}
                 aria-hidden
               >
-                {/* The real frame's contents, invisible: the bar plus a box at
-                    the screenshot's ratio, so the pane takes the frame's exact
-                    size - including where the stack's height cap crops it. */}
                 {WebsiteTopper}
                 <div className={s['website-body']}>
                   <span
@@ -240,7 +224,6 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         </Container>
       </Row>
       {divider && (
-        // a hidden card takes its divider with it
         <Container className={cn(content.gated && !ghost && s.gated)}>
           <Divider />
         </Container>

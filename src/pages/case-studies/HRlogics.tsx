@@ -38,7 +38,6 @@ import { LinkStyled, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Section, Stats, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
-// The core four, as the brand's own color file names them.
 const PALETTE = [
   { hex: '#110B48', name: 'Dark Blue' },
   { hex: '#22168F', name: 'Bright Blue' },
@@ -46,8 +45,6 @@ const PALETTE = [
   { hex: '#F39D00', name: 'Yellow' },
 ];
 
-// Every number here is one the 2025 hrlogics.com published, on the homepage
-// and the product pages.
 const PUBLISHED = [
   { value: '$64.4M', label: 'Liability removed' },
   { value: '$3B', label: 'Captured tax credits' },

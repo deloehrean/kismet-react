@@ -8,7 +8,6 @@ import s from 'src/pages/graphics/gallery/GalleryPage.module.scss';
 export interface GalleryItem {
   img: string;
   title: string;
-  /** Client or band, then era - "Fishbat · 2017". */
   meta: string;
 }
 
@@ -16,19 +15,14 @@ interface GalleryPageProps {
   title: string;
   intro: string;
   items: GalleryItem[];
-  /** Logos sit on a white card so they all read at the same weight. */
   framed?: boolean;
 }
 
-// One page for each body of print, logo, and ad work: a masonry of the pieces,
-// each opening full size.
 function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
   const [open, setOpen] = useState<GalleryItem | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
   const openerRef = useRef<HTMLElement | null>(null);
 
-  // Opening moves focus into the viewer; closing hands it back to the piece
-  // that opened it, so keyboard users don't lose their place in the grid.
   useEffect(() => {
     if (!open) {
       return undefined;
@@ -74,7 +68,6 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
 
       {open && (
         <div className={s.viewer} role={'dialog'} aria-modal aria-label={open.title}>
-          {/* The whole backdrop closes it, so it is one real button. */}
           <button
             type={'button'}
             className={s.backdrop}

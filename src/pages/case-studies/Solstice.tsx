@@ -23,8 +23,6 @@ import { LinkStyled, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Section, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
-// Sampled from the print PDFs - the type and band colour are one swatch, the
-// brush strokes a lighter one laid over the gold.
 const PALETTE = [
   { hex: '#DE6A26', name: 'Band Orange' },
   { hex: '#EB7D31', name: 'Brush Orange' },
@@ -32,7 +30,6 @@ const PALETTE = [
   { hex: '#FFFFFF', name: 'Paper' },
 ];
 
-// One family throughout - packaged with every InDesign file.
 const TYPE = [
   { face: 'Garamond Regular', role: 'Wordmark, addresses' },
   { face: 'Garamond, letterspaced', role: '"massage therapy" descriptor' },
@@ -139,7 +136,6 @@ const SolsticeBody = () => (
 const solstice = {
   id: 'solstice',
   mark: Mark,
-  // the mark's own gold field, so the square tile reads as one piece
   markFill: '#FAD382',
   markAlt: 'The Solstice mark',
   title: 'Solstice Massage Therapy',

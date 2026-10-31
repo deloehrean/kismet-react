@@ -1,10 +1,7 @@
-// Rules between brands only - the page heading's divider already sits above
-// the first, and the last runs into the footer.
 .root + .root {
   border-top: 1px solid var(--divider);
 }
 
-// --- header / trigger ---------------------------------------------------
 .head {
   position: relative;
   display: flex;
@@ -14,16 +11,12 @@
   border-radius: var(--size-1);
   transition: background .2s ease;
 
-  // A tint of the text colour, not --action-hover: that is 64% white in the
-  // dark theme and washes the white title out. Hover-capable devices only -
-  // on touch the hover state sticks after the tap.
   @media (hover: hover) {
     &:hover {
       background: color-mix(in srgb, currentColor 8%, transparent);
     }
   }
 
-  // the focus ring belongs to the whole header, not the title text
   &:has(.trigger:focus-visible) {
     outline: 2px solid var(--primary-main);
     outline-offset: 2px;
@@ -35,8 +28,6 @@
     gap: var(--size-2);
   }
 
-  // Every brand's mark sits in the same tile: square, with the corner the
-  // Fusion mark is drawn with (14 of its 120 units).
   .mark {
     width: 132px;
     aspect-ratio: 1;
@@ -54,8 +45,6 @@
   }
 }
 
-// Kaoly's swash T hangs a third of an em left of its advance - wider than the
-// space before it - so mid-title it ran into the previous word ("MassageTherapy")
 .swash-t {
   margin-left: 0.33em;
 }
@@ -83,10 +72,6 @@
   }
 }
 
-// --- rolled-up body -----------------------------------------------------
-// 0fr -> 1fr animates to the case study's own height, which a max-height
-// guess cannot do. Padding lives on .content, inside the clipped row - on the
-// row itself it would hold the closed panel open by its own padding.
 .body {
   display: grid;
   grid-template-rows: 0fr;

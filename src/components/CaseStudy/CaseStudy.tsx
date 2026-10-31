@@ -8,23 +8,17 @@ interface CaseStudyProps {
   id: string;
   mark: string;
   markAlt: string;
-  /** Fills the tile around a mark that doesn't reach its edges. */
   markFill?: string;
-  /** Pads a transparent mark in from the tile's edges. */
   markInset?: boolean;
   title: string;
   meta: string;
   summary: React.ReactNode;
   open: boolean;
-  /** Open or close without the roll animation. */
   instant?: boolean;
   onToggle: (id: string) => void;
   children?: React.ReactNode;
 }
 
-// One accordion panel: the header is the trigger, the case study rolls out
-// beneath it. Open/closed is the parent's call, so a page of these can keep
-// just one open at a time.
 const CaseStudy: FC<CaseStudyProps> = ({
   id,
   mark,
@@ -52,8 +46,6 @@ const CaseStudy: FC<CaseStudyProps> = ({
           style={markFill ? { background: markFill } : undefined}
         />
         <div className={s.titles}>
-          {/* The button carries the heading's name only; its ::after stretches
-              over the whole header so the mark and summary click through too. */}
           <Typography variant={'h2'}>
             <button
               id={headId}
@@ -87,8 +79,6 @@ const CaseStudy: FC<CaseStudyProps> = ({
         role={'region'}
         aria-labelledby={headId}
         className={s.body}
-        // closed panels keep their layout for the animation, so take them out
-        // of the tab order and the accessibility tree instead of `hidden`
         {...({ inert: open ? undefined : '' } as any)}
       >
         <div className={s.inner}>

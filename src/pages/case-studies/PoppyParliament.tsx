@@ -40,7 +40,6 @@ import { Divider, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Section, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
-// Palette read straight out of the logo SVGs
 const PALETTE = [
   { hex: '#CF1C21', name: 'Poppy Red' },
   { hex: '#26110F', name: 'Ink' },
@@ -55,9 +54,6 @@ const TYPE = [
   { face: 'Archivo Narrow', role: 'Body / listings' },
 ];
 
-// Each piece was cut to a platform spec - square for Instagram, 1.91:1 for a
-// Facebook share, 4:1 for a printed banner. `ratio` is the file's true
-// width/height, so nothing gets cropped and no caption loses its wording.
 const CAMPAIGNS = [
   { img: CampRugbyWorldCup, label: 'Rugby World Cup', ratio: 1 },
   { img: CampTrivia, label: 'Trivia', ratio: 1 },

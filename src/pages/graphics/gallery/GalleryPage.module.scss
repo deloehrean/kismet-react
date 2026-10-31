@@ -14,8 +14,6 @@
   opacity: .85;
 }
 
-// Columns, not a grid: the pieces run from banner-wide to email-tall, and a
-// masonry keeps each at its own shape without cropping.
 .grid {
   columns: 4 240px;
   column-gap: var(--size-3);
@@ -66,8 +64,6 @@
   }
 }
 
-// Logos come in every shape and background; a white card with even padding
-// makes them read as one set.
 .framed .piece button {
   background: #ffffff;
   padding: var(--size-3);

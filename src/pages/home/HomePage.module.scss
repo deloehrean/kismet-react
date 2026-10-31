@@ -10,7 +10,6 @@
   line-height: 1.55;
 }
 
-// --- proof strip ------------------------------------------------------
 .proof {
   margin: 0;
   padding: 0;
@@ -42,7 +41,6 @@
   }
 }
 
-// --- capability blocks ------------------------------------------------
 .capabilities {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -60,7 +58,6 @@
   }
 }
 
-// --- selected work ----------------------------------------------------
 .work {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -95,7 +92,6 @@
   }
 }
 
-// --- two audiences ----------------------------------------------------
 .paths {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

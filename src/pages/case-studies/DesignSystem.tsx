@@ -18,7 +18,6 @@ import { LinkStyled, Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Code, Section, Stats, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
-// From the library's release history: what shipped, not how many commits it took.
 const LIBRARY = [
   { value: '52', label: 'Components' },
   { value: '7', label: 'Hooks' },
@@ -36,8 +35,6 @@ const AI = [
   { value: '51', label: 'HRL Portal files built on the library' },
 ];
 
-// Trimmed excerpts of the real source: the variants defined once in the
-// library, then a dialog footer in HRL Portal that only picks from them.
 const BUTTON_VARIANTS = `export const buttonVariants = cva(s.button, {
   variants: {
     variant: {
@@ -50,7 +47,6 @@ const BUTTON_VARIANTS = `export const buttonVariants = cva(s.button, {
       secondary: s['button--secondary'],
       destructive: s['button--destructive'],
       info: s['button--info'],
-      // …warning, success, slate, inherit
     },
     size: { xs: …, sm: …, md: …, lg: … },
   },

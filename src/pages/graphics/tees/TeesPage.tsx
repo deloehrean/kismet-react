@@ -92,8 +92,6 @@ const teeDesigns = [
   SkinThreadBabies,
 ];
 
-// "…/royden-spike-tee-Ab12_cD3.png" -> "Royden spike tee". Works on the hashed
-// build filenames as well as the dev ones, since the hash follows "-tee".
 const teeName = (src: string) => {
   const slug = /([a-z0-9-]+?)-tee(?:-[\w-]{8})?\.png$/.exec(src)?.[1] ?? 'Tee shirt';
   const words = slug.replace(/-/g, ' ');
