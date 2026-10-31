@@ -253,8 +253,8 @@ const FusionOnlineBody = () => (
         'I owned the design and the direction for the whole rebrand: the new fusionww.com, ' +
         'RocketChips, and Fusion Online, which brought the services, twelve industries, quality, ' +
         'insights, and the shop together in one site, on a CMS the sales and marketing teams ' +
-        'could publish to themselves. I set the front-end architecture the team built on and ' +
-        'reviewed every change with them.'
+        'could publish to themselves. I led a team of three to five developers, set the front-end ' +
+        'architecture they built on, and reviewed every change with them.'
       }
     >
       <Stats items={MY_PART} source={'From my audit notes and the sites themselves.'} />

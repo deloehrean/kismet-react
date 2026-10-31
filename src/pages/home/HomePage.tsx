@@ -6,7 +6,7 @@ import { HomePageStyles as s } from 'src/pages';
 
 const PROOF = [
   { figure: '25+', label: 'years in product, design, and engineering' },
-  { figure: '400+', label: 'enterprise clients served' },
+  { figure: '400+', label: 'enterprise clients across the suite' },
   { figure: '$1.5B', label: 'projected annual sales on a B2B platform I led' },
   { figure: '1M+', label: 'product SKUs cataloged' },
 ];
@@ -14,7 +14,7 @@ const PROOF = [
 const CAPABILITIES = [
   {
     title: 'Product leadership',
-    body: `I led product and creative teams for over a decade. At an agency I built a creative team across graphic, web, software, and marketing. At Fusion Worldwide I owned product direction for a B2B commerce platform projected to carry $1.5 billion in annual sales. At HRlogics I ran product strategy, roadmapping, and end-to-end UX for a compliance suite serving 400+ enterprise clients, launched the SSO portal that gave them one entry point into every product, and defined the vision for turning it into a single browser-based workspace.`,
+    body: `I led product and creative teams for over a decade. At an agency I built and led a creative team of five to ten across graphic, web, software, and marketing. At Fusion Worldwide I owned product direction for a B2B commerce platform projected to carry $1.5 billion in annual sales and led a team of three to five developers. At HRlogics I led close to 20 people, including other directors and a development team of about 12. I ran product strategy, roadmapping, and end-to-end UX for a compliance suite serving 400+ enterprise clients, launched the SSO portal that gave them one entry point into every product, and defined the vision for turning it into a single browser-based workspace.`,
   },
   {
     title: 'Design systems & UX',

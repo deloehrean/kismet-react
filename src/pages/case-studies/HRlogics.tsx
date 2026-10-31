@@ -49,7 +49,7 @@ const PUBLISHED = [
   { value: '$64.4M', label: 'Liability removed' },
   { value: '$3B', label: 'Captured tax credits' },
   { value: '27,000', label: 'Data records in four months' },
-  { value: '300+', label: 'Customers' },
+  { value: '300+', label: 'HRlogics customers' },
 ];
 
 const HRlogicsBody = () => (
@@ -130,7 +130,7 @@ const HRlogicsBody = () => (
       eyebrow={'06 — The portal rebrand'}
       title={'Redrawn for one sign-on'}
       lead={
-        'When HRL Portal brought every product behind a single sign-on in 2025, I redrew the ' +
+        'As HRL Portal took shape in 2025 to bring every product behind a single sign-on, I redrew the ' +
         'logos for it. The gradients came out for a flat orange, the navy moved to a slightly ' +
         'darker blue, every product took the same light wordmark signed “by HRlogics,” and Ryze ' +
         'joined the family under the HRlogics umbrella.'
