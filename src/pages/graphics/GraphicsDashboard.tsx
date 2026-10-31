@@ -5,8 +5,7 @@ import { Link } from 'react-router-dom';
 
 import ShowBannerA from 'src/assets/images/case-studies/hrlogics/show-banner-a.jpg';
 import CampStPatricksDay from 'src/assets/images/case-studies/poppy/camp-st-patricks-day.jpg';
-import MenuDraft from 'src/assets/images/case-studies/poppy/menu-draft.jpg';
-import CardFront from 'src/assets/images/case-studies/solstice/card-front.jpg';
+import CampValentinesTea from 'src/assets/images/case-studies/poppy/camp-valentines-tea.jpg';
 import MarkLockup from 'src/assets/images/case-studies/solstice/mark-lockup.png';
 import AssisiHealingHome from 'src/assets/images/graphics/ads/assisi-healing-home.jpg';
 import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer.jpg';
@@ -19,6 +18,7 @@ import Hrlogics from 'src/assets/images/graphics/logos/hrlogics.jpg';
 import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
 import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
 import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
+import GilbertExhibitFlyer from 'src/assets/images/graphics/print/gilbert-exhibit-flyer.jpg';
 import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
 import tee1 from 'src/assets/images/tees/royden-spike-tee.png';
 import tee4 from 'src/assets/images/tees/skin-thread-tv-tee.png';
@@ -196,8 +196,8 @@ function GraphicsDashboard() {
           }
           to={'/graphics/print'}
           thumbs={[
-            { img: CardFront, alt: 'Solstice business card' },
-            { img: MenuDraft, alt: 'The Poppy & Parliament draft menu' },
+            { img: GilbertExhibitFlyer, alt: 'Gilbert Exhibition flyer' },
+            { img: CampValentinesTea, alt: 'The Poppy & Parliament afternoon tea' },
             { img: ShowBannerA, alt: 'HRlogics trade-show banner' },
             { img: AxleSlickFront, alt: 'Axle Workout gym slick' },
           ]}
