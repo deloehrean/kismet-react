@@ -92,9 +92,15 @@ const teeDesigns = [
   SkinThreadBabies,
 ];
 
+const teeFlats = import.meta.glob<string>('/src/assets/images/tees/*.jpg', {
+  eager: true,
+  import: 'default',
+});
+
+const teeSlug = (src: string) => /([a-z0-9-]+?)-tee(?:-[\w-]{8})?\.png$/.exec(src)?.[1];
+
 const teeName = (src: string) => {
-  const slug = /([a-z0-9-]+?)-tee(?:-[\w-]{8})?\.png$/.exec(src)?.[1] ?? 'Tee shirt';
-  const words = slug.replace(/-/g, ' ');
+  const words = (teeSlug(src) ?? 'Tee shirt').replace(/-/g, ' ');
   return `${words.charAt(0).toUpperCase()}${words.slice(1)} tee`;
 };
 
@@ -114,19 +120,19 @@ function TeesPage() {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
-    const shuffledTees: any = shuffle([...teeDesigns]);
+    const shuffledTees = shuffle(teeDesigns);
     // const shuffledTransforms: any = shuffle([...transforms]);
     setShuffledTees(shuffledTees);
     // setShuffledTransforms(shuffledTransforms);
   }, []);
 
   // Fisher-Yates shuffle algorithm
-  function shuffle(array) {
+  function shuffle<T>(array: T[]) {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      const temp = shuffledArray[i];
-      shuffledArray[i] = shuffledArray[j];
+      const temp = shuffledArray[i] as T;
+      shuffledArray[i] = shuffledArray[j] as T;
       shuffledArray[j] = temp;
     }
     return shuffledArray;
@@ -138,10 +144,10 @@ function TeesPage() {
     if (activeIndex === index) {
       setActiveIndex(null);
     } else {
-      const currentTeeReplace = shuffledTees[index]?.replace('-tee.png', '.jpg');
+      const slug = teeSlug(shuffledTees[index] ?? '');
 
       setActiveIndex(index);
-      setHiResTee(currentTeeReplace);
+      setHiResTee(slug && teeFlats[`/src/assets/images/tees/${slug}.jpg`]);
     }
   };
 
