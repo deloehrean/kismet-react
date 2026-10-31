@@ -77,3 +77,41 @@
     }
   }
 }
+
+.thumbs {
+  display: grid;
+  gap: var(--size-2);
+  grid-template-columns: repeat(4, 1fr);
+
+  a {
+    aspect-ratio: 1;
+    border-radius: 6px;
+    box-shadow: 0 10px 30px -14px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    transition: transform 0.2s ease;
+
+    @media (hover: hover) {
+      &:hover {
+        transform: translateY(-3px);
+      }
+    }
+  }
+
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  &.framed {
+    a {
+      background: #ffffff;
+      padding: var(--size-2);
+    }
+
+    img {
+      object-fit: contain;
+    }
+  }
+}

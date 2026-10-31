@@ -3,6 +3,22 @@ import React from 'react';
 import cn from 'clsx';
 import { Link } from 'react-router-dom';
 
+import ShowBannerA from 'src/assets/images/case-studies/hrlogics/show-banner-a.jpg';
+import CampStPatricksDay from 'src/assets/images/case-studies/poppy/camp-st-patricks-day.jpg';
+import MenuDraft from 'src/assets/images/case-studies/poppy/menu-draft.jpg';
+import CardFront from 'src/assets/images/case-studies/solstice/card-front.jpg';
+import MarkLockup from 'src/assets/images/case-studies/solstice/mark-lockup.png';
+import AssisiHealingHome from 'src/assets/images/graphics/ads/assisi-healing-home.jpg';
+import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer.jpg';
+import HosForeverCollection from 'src/assets/images/graphics/ads/hos-forever-collection.jpg';
+import EarlV1Color from 'src/assets/images/graphics/illustrations/earl-v1-color.jpg';
+import FlosMascot from 'src/assets/images/graphics/illustrations/flos-mascot.jpg';
+import Tapebot from 'src/assets/images/graphics/illustrations/tapebot.jpg';
+import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
+import Hrlogics from 'src/assets/images/graphics/logos/hrlogics.jpg';
+import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
+import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
+import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
 import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
 import tee1 from 'src/assets/images/tees/royden-spike-tee.png';
 import tee4 from 'src/assets/images/tees/skin-thread-tv-tee.png';
@@ -18,12 +34,53 @@ import ElephantomAlbum from 'src/pages/graphics/albums/ElephantomAlbum';
 import RoydenAlbum from 'src/pages/graphics/albums/RoydenAlbum';
 import teesStyles from 'src/pages/graphics/tees/TeesPage.module.scss';
 
+type Thumb = { img: string; alt: string };
+
+type GalleryCardProps = {
+  title: string;
+  overline: string;
+  body: string;
+  to: string;
+  thumbs: Thumb[];
+  framed?: boolean;
+};
+
+const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardProps) => (
+  <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
+    <Container direction={'column'} full gap={2}>
+      <Column>
+        <Typography variant={'h6'}>{title}</Typography>
+        <Typography variant={'overline'} color={'secondary'}>
+          {overline}
+        </Typography>
+      </Column>
+      <Divider />
+      <Typography variant={'body2'} gutter>
+        {body}
+      </Typography>
+      <div className={cn(s.thumbs, framed && s.framed)}>
+        {thumbs.map(thumb => (
+          <Link
+            key={thumb.alt}
+            to={to}
+            aria-label={`${thumb.alt}, view all ${title.toLowerCase()}`}
+          >
+            <img src={thumb.img} alt={thumb.alt} loading={'lazy'} />
+          </Link>
+        ))}
+      </div>
+      <LinkStyled className={s.button} to={to}>
+        View All
+      </LinkStyled>
+    </Container>
+  </Container>
+);
+
 function GraphicsDashboard() {
   return (
     <Column gap={4}>
       <Typography variant={'body1'}>
-        Here you will find a small selection of the best items from each child category displayed.
-        They will have links to go to the full category page.
+        A few favorites from each collection. Every card links to the full set.
       </Typography>
       <Row gap={2} breakpoint={'md'}>
         <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
@@ -129,6 +186,65 @@ function GraphicsDashboard() {
             </LinkStyled>
           </Container>
         </Container>
+      </Row>
+      <Row gap={2} breakpoint={'md'}>
+        <GalleryCard
+          title={'Print'}
+          overline={'Cards, menus, signs, and booths'}
+          body={
+            'I designed business cards, menus, signage, and trade-show booths, from band flyers in 2005 to the HRlogics booth in 2025.'
+          }
+          to={'/graphics/print'}
+          thumbs={[
+            { img: CardFront, alt: 'Solstice business card' },
+            { img: MenuDraft, alt: 'The Poppy & Parliament draft menu' },
+            { img: ShowBannerA, alt: 'HRlogics trade-show banner' },
+            { img: AxleSlickFront, alt: 'Axle Workout gym slick' },
+          ]}
+        />
+        <GalleryCard
+          title={'Logos'}
+          overline={'Marks and identity systems'}
+          body={
+            'I designed the HRlogics mark and every product logo in its suite, along with marks for my own clients at Kismet and for agency clients at Fishbat.'
+          }
+          to={'/graphics/logos'}
+          framed
+          thumbs={[
+            { img: Hrlogics, alt: 'HRlogics logo' },
+            { img: Ryze, alt: 'Ryze logo' },
+            { img: PoppyParliamentStacked, alt: 'The Poppy & Parliament logo' },
+            { img: MarkLockup, alt: 'Solstice Massage Therapy logo' },
+          ]}
+        />
+      </Row>
+      <Row gap={2} breakpoint={'md'}>
+        <GalleryCard
+          title={'Ads & Social'}
+          overline={'Social, display, and email'}
+          body={
+            'I designed social posts, display ads, and email campaigns for Kismet clients, for agency clients at Fishbat, and for LocoX, each sized for the platform it ran on.'
+          }
+          to={'/graphics/ads'}
+          thumbs={[
+            { img: CampStPatricksDay, alt: 'The Poppy & Parliament St. Patrick’s Day post' },
+            { img: FishbatInfluencer, alt: 'Fishbat influencer marketing post' },
+            { img: HosForeverCollection, alt: 'House of Staunton Forever Collection ad' },
+            { img: AssisiHealingHome, alt: 'Assisi Animal Health holiday ad' },
+          ]}
+        />
+        <GalleryCard
+          title={'Illustrations'}
+          overline={'Sketch to final color'}
+          body={'Mascots and characters, from the first pencil sketch to the finished color art.'}
+          to={'/graphics/illustrations'}
+          thumbs={[
+            { img: EarlV1Color, alt: 'Earl, the Zorn’s mascot' },
+            { img: FlosMascot, alt: 'Flo’s mascot' },
+            { img: Tapebot, alt: 'Tapebot' },
+            { img: WhyRobotsLoveFish, alt: 'Why Robots Love Fish cover' },
+          ]}
+        />
       </Row>
     </Column>
   );
