@@ -36,6 +36,12 @@ import FareriLanding2 from 'src/assets/images/websites/extra/fareri-landing-page
 import GhostHomepage from 'src/assets/images/websites/extra/ghost-network-web-template_home.jpg';
 import GhostInner from 'src/assets/images/websites/extra/ghost-network-web-template_inner_dropdown.jpg';
 import ToadliTemplate from 'src/assets/images/websites/extra/toadli-deal-wall-template.jpg';
+import FishbatBranding from 'src/assets/images/websites/fishbat/fishbat-branding.jpg';
+import FishbatClients from 'src/assets/images/websites/fishbat/fishbat-clients.jpg';
+import FishbatContact from 'src/assets/images/websites/fishbat/fishbat-contact.jpg';
+import FishbatHomepage from 'src/assets/images/websites/fishbat/fishbat-homepage.jpg';
+import FishbatLogo from 'src/assets/images/websites/fishbat/fishbat-logo.png';
+import FishbatPartner from 'src/assets/images/websites/fishbat/fishbat-partner.jpg';
 import FountainOfLifeGovernmentReports from 'src/assets/images/websites/fountain-of-life/fountain-of-life-government-reports.jpg';
 import FountainOfLifeHomepage from 'src/assets/images/websites/fountain-of-life/fountain-of-life-homepage.jpg';
 import FountainOfLifeLogoDark from 'src/assets/images/websites/fountain-of-life/fountain-of-life-logo-dark.png';
@@ -85,6 +91,12 @@ import ProsemiLogo from 'src/assets/images/websites/prosemi/prosemi-logo-white.p
 import ProsemiQualityManagement from 'src/assets/images/websites/prosemi/prosemi-quality-management.jpg';
 import ProsemiRequestAQuote from 'src/assets/images/websites/prosemi/prosemi-request-a-quote.jpg';
 import ProsemiServices from 'src/assets/images/websites/prosemi/prosemi-services.jpg';
+import PsdBlockBrief from 'src/assets/images/websites/psd/psd-block-brief.jpg';
+import PsdHomepage from 'src/assets/images/websites/psd/psd-homepage.jpg';
+import PsdLogoLight from 'src/assets/images/websites/psd/psd-logo-light.png';
+import PsdLogo from 'src/assets/images/websites/psd/psd-logo.png';
+import PsdPantSagCrew from 'src/assets/images/websites/psd/psd-pant-sag-crew.jpg';
+import PsdUndies from 'src/assets/images/websites/psd/psd-undies.jpg';
 import RocketChipsAccount from 'src/assets/images/websites/rocketchips/rocketchips-account.jpg';
 import RocketChipsCart from 'src/assets/images/websites/rocketchips/rocketchips-cart.jpg';
 import RocketChipsCategory from 'src/assets/images/websites/rocketchips/rocketchips-category.jpg';
@@ -552,6 +564,67 @@ export const aeaContent = {
     },
     {
       image: AeaAbout,
+      position: 'e',
+    },
+  ],
+};
+
+export const fishbatContent = {
+  title: 'Fishbat',
+  subtitle: 'Agency website',
+  description:
+    'Fishbat is a digital marketing agency on Long Island, New York. I designed and built their 2016 site as an underwater world: a looping ocean video behind the hero, and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
+  poweredBy: 'Concrete CMS',
+  toolsUsed: 'LESS, PHP, jQuery, Bootstrap',
+  logo: FishbatLogo,
+  gallery: [
+    {
+      image: FishbatHomepage,
+      position: 'a',
+    },
+    {
+      image: FishbatBranding,
+      position: 'b',
+    },
+    {
+      image: FishbatClients,
+      position: 'c',
+    },
+    {
+      image: FishbatPartner,
+      position: 'd',
+    },
+    {
+      image: FishbatContact,
+      position: 'e',
+    },
+  ],
+};
+
+export const psdContent = {
+  title: 'Pant Saggin Dezign',
+  subtitle: 'Online store',
+  description:
+    'Pant Saggin Dezign is the clothing brand brothers Ryan and Curt Flaitz started in Upstate New York in 2007, out of the motocross, skate, and music scenes. I designed and built their store as the brand broke into the mainstream, with tees, hoods, hats, and the underwear line that took over. Today the brand is PSD, sold worldwide.',
+  poweredBy: 'BigCommerce',
+  toolsUsed: 'CSS, HTML, jQuery',
+  logo: PsdLogo,
+  logoLight: PsdLogoLight,
+  gallery: [
+    {
+      image: PsdHomepage,
+      position: 'a',
+    },
+    {
+      image: PsdUndies,
+      position: 'b',
+    },
+    {
+      image: PsdBlockBrief,
+      position: 'c',
+    },
+    {
+      image: PsdPantSagCrew,
       position: 'e',
     },
   ],
