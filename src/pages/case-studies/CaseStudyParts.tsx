@@ -3,15 +3,17 @@ import React from 'react';
 import { Typography } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 
-type TileProps = { img: string; label: string; ratio?: number };
+type TileProps = { img: string; label: string; ratio?: number; top?: boolean };
 
-export const Tile = ({ img, label, ratio = 1 }: TileProps) => (
+export const Tile = ({ img, label, ratio = 1, top }: TileProps) => (
   <figure className={s.tile}>
     <img
       src={img}
       alt={label}
       loading={'lazy'}
-      style={{ '--tile-ratio': ratio } as React.CSSProperties}
+      style={
+        { '--tile-ratio': ratio, objectPosition: top ? 'top' : undefined } as React.CSSProperties
+      }
     />
     <figcaption>{label}</figcaption>
   </figure>
