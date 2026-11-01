@@ -18,8 +18,8 @@ const ITEMS: GalleryItem[] = [
   { img: EarlV2Color, title: 'Earl, second color pass', meta: 'Zorn’s · Fishbat, 2014' },
   { img: EarlPencil, title: 'Earl, pencil on paper', meta: 'Zorn’s · Fishbat, 2014' },
   { img: FlosMascot, title: 'Flo', meta: 'Flo’s · Fishbat, 2018' },
-  { img: Tapebot, title: 'Tapebot', meta: 'Andrew Michael' },
-  { img: RandomBooks, title: 'Stack of books', meta: 'Personal' },
+  { img: Tapebot, title: 'Tapebot', meta: 'Andrew Michael · 2005' },
+  { img: RandomBooks, title: 'Stack of books', meta: 'Personal · 2005' },
   { img: WhyRobotsLoveFish, title: 'Why Robots Love Fish, cover', meta: 'Personal · 2003' },
 ];
 

@@ -25,7 +25,7 @@ function AlbumsPage() {
     {
       content: <AndrewLoehrAlbum />,
       extra: 'vinyl',
-      year: '2020',
+      year: '2015',
     },
     { content: <RoydenAlbum />, year: '2006' },
     { content: <ElephantomAlbum />, year: '2007' },
