@@ -46,8 +46,9 @@ const AUDIT = [
 ];
 
 const NAVIGATION = [
-  { value: '24', label: 'Links in the old admin menu' },
-  { value: '4', label: 'Levels of nesting' },
+  { value: '100+', label: 'Links across the old menus' },
+  { value: '~30', label: 'Links in the new sidebar' },
+  { value: '24', label: 'In the admin menu alone, four levels deep' },
   { value: '8 → 6', label: 'Top-level menus to sidebar sections' },
 ];
 
@@ -87,11 +88,12 @@ const ClearAcaBody = () => (
 
     <Section
       eyebrow={'03 — Navigation'}
-      title={'Twenty-four links, four levels deep'}
+      title={'Over a hundred links down to about thirty'}
       lead={
-        'The admin menu alone held twenty-four links nested up to four levels deep, from data ' +
-        'cleanup to state XML downloads. Eight top-level menus became six sections in a ' +
-        'collapsible sidebar, and the admin tools moved into short, labeled groups.'
+        'The old navigation ran past a hundred links. The admin menu alone held twenty-four, ' +
+        'nested up to four levels deep, and the rest of the menus repeated close to a dozen ' +
+        'links to the same pages. Eight top-level menus became six sections in a collapsible ' +
+        'sidebar of about thirty links, with the admin tools in short, labeled groups.'
       }
     >
       <div className={s.library}>
@@ -101,7 +103,10 @@ const ClearAcaBody = () => (
           ratio={1.23}
         />
       </div>
-      <Stats items={NAVIGATION} source={'Counted from the old admin menu.'} />
+      <Stats
+        items={NAVIGATION}
+        source={'Old totals are approximate; the new count is from the shipped sidebar.'}
+      />
     </Section>
 
     <Section
