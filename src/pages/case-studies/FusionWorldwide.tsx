@@ -2,8 +2,6 @@ import React from 'react';
 
 import SiteWordpress from 'src/assets/images/case-studies/fusion/fusion-2022-wordpress.jpg';
 import SiteRebrand from 'src/assets/images/case-studies/fusion/fusion-2023-rebrand.jpg';
-import LibraryButtons from 'src/assets/images/case-studies/fusion/library-buttons.jpg';
-import LibraryForms from 'src/assets/images/case-studies/fusion/library-forms.jpg';
 import Mark from 'src/assets/images/case-studies/fusion/mark.svg';
 import ProsemiHome from 'src/assets/images/websites/prosemi/prosemi-homepage.jpg';
 import ProsemiQuality from 'src/assets/images/websites/prosemi/prosemi-quality-management.jpg';
@@ -27,11 +25,6 @@ const ROCKETCHIPS_PROMISES = [
   { value: '< 24h', label: 'Quote turnaround' },
   { value: '60 sec.', label: 'Credit approval' },
   { value: '24/7', label: 'Real pricing' },
-];
-
-const SYSTEM = [
-  { value: '871 → 102', label: 'Lines styled with utility classes' },
-  { value: '52 → 96', label: 'Component style modules' },
 ];
 
 const AUDIT = [
@@ -129,30 +122,7 @@ const FusionWorldwideBody = () => (
     </Section>
 
     <Section
-      eyebrow={'04 — The system'}
-      title={'Out of Tailwind, into a component library'}
-      lead={
-        'The agency build styled most of its pages inline with utility classes, so no two ' +
-        'headings or buttons quite matched. I designed a component library and the architecture ' +
-        'behind it, with a style module for each component. Rather than swap everything at once, ' +
-        'we decided as a team to migrate one component at a time, so the store kept shipping ' +
-        'while it changed underneath.'
-      }
-    >
-      <Stats items={SYSTEM} source={'From the repository, December 2022 to October 2023.'} />
-      <div className={s.library}>
-        <Tile img={LibraryButtons} label={'Buttons on dark and light'} ratio={1.18} />
-        <Tile img={LibraryForms} label={'Form fields and their states'} ratio={0.51} />
-      </div>
-      <Typography variant={'body2'} className={s.lead}>
-        Both are from the store’s component library page. I designed every piece and the
-        architecture it runs on, the team built on that foundation, and every change came through my
-        code review, so the whole library reads as one voice.
-      </Typography>
-    </Section>
-
-    <Section
-      eyebrow={'05 — RocketChips'}
+      eyebrow={'04 — RocketChips'}
       title={'Buying parts without a phone call'}
       lead={
         'The homepage made four promises, and the store had to keep them: search with real ' +

@@ -2,6 +2,8 @@ import React from 'react';
 
 import CmsHeroEntry from 'src/assets/images/case-studies/fusion/cms-hero-entry.jpg';
 import FusionLive from 'src/assets/images/case-studies/fusion/fusionww-2026.jpg';
+import LibraryButtons from 'src/assets/images/case-studies/fusion/library-buttons.jpg';
+import LibraryForms from 'src/assets/images/case-studies/fusion/library-forms.jpg';
 import Mark from 'src/assets/images/case-studies/fusion/rocketchips-mark.svg';
 import FoCategory from 'src/assets/images/websites/fusion-online/fusion-online-category.jpg';
 import FoHome from 'src/assets/images/websites/fusion-online/fusion-online-home.jpg';
@@ -58,6 +60,11 @@ const MY_PART = [
   { value: '2', label: 'Brands carried by one codebase' },
 ];
 
+const SYSTEM = [
+  { value: '871 → 102', label: 'Lines styled with utility classes' },
+  { value: '52 → 96', label: 'Component style modules' },
+];
+
 const CARRIED = [
   { value: '109 of 109', label: 'Design tokens from my last build still live' },
   { value: '102', label: 'With the same values' },
@@ -67,7 +74,30 @@ const CARRIED = [
 const FusionOnlineBody = () => (
   <React.Fragment>
     <Section
-      eyebrow={'01 — Fusion Online'}
+      eyebrow={'01 — The system'}
+      title={'Out of Tailwind, into a component library'}
+      lead={
+        'The agency build styled most of its pages inline with utility classes, so no two ' +
+        'headings or buttons quite matched. I designed a component library and the architecture ' +
+        'behind it, with a style module for each component. Rather than swap everything at once, ' +
+        'we decided as a team to migrate one component at a time, so the store kept shipping ' +
+        'while it changed underneath.'
+      }
+    >
+      <Stats items={SYSTEM} source={'From the repository, December 2022 to October 2023.'} />
+      <div className={s.library}>
+        <Tile img={LibraryButtons} label={'Buttons on dark and light'} ratio={1.18} />
+        <Tile img={LibraryForms} label={'Form fields and their states'} ratio={0.51} />
+      </div>
+      <Typography variant={'body2'} className={s.lead}>
+        Both are from the store’s component library page. I designed every piece and the
+        architecture it runs on, the team built on that foundation, and every change came through my
+        code review, so the whole library reads as one voice.
+      </Typography>
+    </Section>
+
+    <Section
+      eyebrow={'02 — Fusion Online'}
       title={'The same store under Fusion’s name'}
       lead={
         'Late in 2023, Fusion folded RocketChips into its own site. The same codebase took the ' +
@@ -90,7 +120,7 @@ const FusionOnlineBody = () => (
     </Section>
 
     <Section
-      eyebrow={'02 — The CMS'}
+      eyebrow={'03 — The CMS'}
       title={'Content without a release'}
       lead={
         'Every word on the old sites went through the developers and waited for the next ' +
@@ -114,7 +144,7 @@ const FusionOnlineBody = () => (
     </Section>
 
     <Section
-      eyebrow={'03 — What carried forward'}
+      eyebrow={'04 — What carried forward'}
       title={'Launched on the foundation I left'}
       lead={
         'My last change was merged in October 2023, before launch. The agency that took the ' +
@@ -135,7 +165,7 @@ const FusionOnlineBody = () => (
     </Section>
 
     <Section
-      eyebrow={'04 — My part'}
+      eyebrow={'05 — My part'}
       title={'Design, direction, and code review'}
       lead={
         'I owned the design and the direction for the whole rebrand: the new fusionww.com, ' +
@@ -162,9 +192,10 @@ const fusionOnline = {
   meta: 'Product & UX · B2B ecommerce · Fusion Worldwide · 2023, launched 2024',
   summary: (
     <React.Fragment>
-      RocketChips grew into Fusion Online, one store and company site on one codebase, in a new
-      green brand, on a CMS marketing could publish to. The team that took it to launch after I left
-      kept the brand I proposed and the foundation I set up, and it still runs on both today.
+      Once RocketChips was live, I moved it onto a component library, and it grew into Fusion
+      Online: one store and company site on one codebase, in a new green brand, on a CMS marketing
+      could publish to. The team that took it to launch after I left kept the brand I proposed and
+      the foundation I set up, and it still runs on both today.
     </React.Fragment>
   ),
   Body: FusionOnlineBody,
