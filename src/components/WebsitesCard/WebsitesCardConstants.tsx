@@ -133,7 +133,7 @@ export const axleContent = {
   subtitle: 'Marketing Website',
   year: '2018',
   description:
-    'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren’t looking strictly for strength training.',
+    'Axle is an Olympic barbell company that uses a wheel in place of weight plates. That makes for more of a total-body workout than straight weightlifting, and opens the barbell up to people who aren’t looking strictly for strength training. I designed and built their marketing site through Kismet.',
   poweredBy: 'WordPress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
@@ -167,7 +167,7 @@ export const bangoContent = {
   subtitle: 'Marketing Website with Store Locator',
   year: '2017',
   description:
-    'Bango Bowls is an açaí and smoothie restaurant with locations across the Northeast. They needed a site with a store locator and a full menu for each location, tied into their online ordering.',
+    'Bango Bowls is an açaí and smoothie restaurant with locations across the Northeast. They needed a site with a store locator and a full menu for each location, tied into their online ordering. I built it as a Fishbat project.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Composer',
   logo: BangoLogo,
@@ -201,7 +201,7 @@ export const bravoContent = {
   subtitle: 'Ecommerce Website',
   year: '2018',
   description:
-    'Bravo Actual is a workout supplement company that wanted off its X-Cart storefront and onto a platform that could carry both a small store and a lot of content. Rebuilding the site on Concrete CMS with its e-commerce add-on covered both and left room to grow.',
+    'Bravo Actual is a workout supplement company that wanted off its X-Cart storefront and onto a platform that could carry both a small store and a lot of content. I rebuilt the site through Kismet on Concrete CMS with its e-commerce add-on, which covered both and left room to grow.',
   poweredBy: 'Concrete CMS w/ Ecommerce Add-on',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: BravoLogo,
@@ -419,10 +419,10 @@ export const rocketChipsContent = {
     'RocketChips was Fusion Worldwide’s self-service store for electronic components: a custom ' +
     'enterprise B2B e-commerce platform built to support a projected $1.5 billion in annual ' +
     'sales, with real pricing, live stock, quotes, and credit terms in ' +
-    'place of a phone call. As Senior Product Designer I designed it, moved its front end from ' +
-    'Tailwind utilities to a custom component library, audited the experience from registration ' +
-    'to checkout, and set the front-end architecture my team of three to five developers built on, reviewing every change ' +
-    'with them. The same codebase later became Fusion Online. These screens are the production build run locally against Fusion’s public ' +
+    'place of a phone call. As Senior Product Designer I designed it, audited the experience ' +
+    'from registration to checkout, and set the front-end architecture my team of three to five ' +
+    'developers built on, reviewing every change with them. After launch I moved its front end ' +
+    'from Tailwind utilities to a custom component library. The same codebase later became Fusion Online. These screens are the production build run locally against Fusion’s public ' +
     'catalog, with demo prices and a demo customer.',
   poweredBy: 'Next.js + GraphQL / Custom Component Library',
   toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',
@@ -584,7 +584,7 @@ export const fishbatContent = {
   subtitle: 'Agency Website',
   year: '2016',
   description:
-    'Fishbat is a digital marketing agency on Long Island, New York. I designed and built their 2016 site as an underwater world: a looping ocean video behind the hero, and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
+    'Fishbat is the digital marketing agency on Long Island, New York, where I was Creative Director from 2013 to 2015, and I kept working with them after. In 2016 I designed and built their site as an underwater world: a looping ocean video behind the hero, and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Bootstrap',
   logo: FishbatLogo,
@@ -646,7 +646,7 @@ export const petersFruitContent = {
   title: `Peter's Fruit`,
   subtitle: 'Marketing Website',
   year: '2016',
-  description: `Peter's Fruit Company needed a way to show all the produce available in each rotating season. I built a simple dynamic site that let them move produce in and out of categories themselves, with no developer support.`,
+  description: `Peter's Fruit Company needed a way to show all the produce available in each rotating season. As a Fishbat project, I built a simple dynamic site that let them move produce in and out of categories themselves, with no developer support.`,
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: PetersFruitLogo,
@@ -702,7 +702,7 @@ export const sereneSpacesContent = {
   subtitle: 'Ecommerce Website',
   year: '2014',
   description:
-    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. A Magento store let them do that, and they sold on it for years.',
+    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan but needed a way to sell their backstock and inventory online. I built them a Magento store at Fishbat, and they sold on it for years.',
   poweredBy: 'Magento',
   toolsUsed: 'PHP, LESS, jQuery, Composer',
   logo: SereneSpacesLogo,
