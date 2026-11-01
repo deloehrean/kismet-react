@@ -4,6 +4,11 @@ import AeaHomepage from 'src/assets/images/websites/aea/aea-homepage.jpg';
 import AeaLogo from 'src/assets/images/websites/aea/aea-logo.png';
 import AeaPlantHealthPyramid from 'src/assets/images/websites/aea/aea-plant-health-pyramid.jpg';
 import AeaProducts from 'src/assets/images/websites/aea/aea-products.jpg';
+import AssisiHomepage from 'src/assets/images/websites/assisi/assisi-homepage.jpg';
+import AssisiLogo from 'src/assets/images/websites/assisi/assisi-logo.png';
+import AssisiPetOwners from 'src/assets/images/websites/assisi/assisi-pet-owners.jpg';
+import AssisiProduct from 'src/assets/images/websites/assisi/assisi-product.jpg';
+import AssisiTechnology from 'src/assets/images/websites/assisi/assisi-technology.jpg';
 import AxleBlog from 'src/assets/images/websites/axle-workout/axle-blog-template.jpg';
 import AxleBuyIt from 'src/assets/images/websites/axle-workout/axle-buy-it-template.jpg';
 import AxlePartner from 'src/assets/images/websites/axle-workout/axle-find-it-become-partner-template.jpg';
@@ -574,6 +579,38 @@ export const aeaContent = {
     },
     {
       image: AeaAbout,
+      position: 'e',
+    },
+  ],
+};
+
+export const assisiContent = {
+  title: 'Assisi Animal Health',
+  subtitle: 'Marketing Website',
+  year: '2014',
+  description:
+    'Assisi Animal Health makes the Assisi Loop, a drug-free device that uses targeted pulsed ' +
+    'electromagnetic fields to treat pain and inflammation in pets. I built their site at Fishbat ' +
+    'on Concrete5, with paths for veterinarians and pet owners, the science behind the Loop, a ' +
+    'research library, and a zip code search for approved providers.',
+  poweredBy: 'Concrete CMS',
+  toolsUsed: 'PHP, CSS, jQuery, bxSlider',
+  logo: AssisiLogo,
+  gallery: [
+    {
+      image: AssisiHomepage,
+      position: 'a',
+    },
+    {
+      image: AssisiProduct,
+      position: 'b',
+    },
+    {
+      image: AssisiTechnology,
+      position: 'c',
+    },
+    {
+      image: AssisiPetOwners,
       position: 'e',
     },
   ],

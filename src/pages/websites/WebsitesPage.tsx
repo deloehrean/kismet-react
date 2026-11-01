@@ -6,6 +6,7 @@ import { Column, PageHeading, WebsitesCard } from 'src/components';
 import type { WebsiteContent } from 'src/components/WebsitesCard/WebsitesCard';
 import {
   aeaContent,
+  assisiContent,
   axleContent,
   bangoContent,
   bravoContent,
@@ -36,6 +37,7 @@ const SITES: WebsiteContent[] = [
   lakeAtitlanContent,
   fountainOfLifeContent,
   aeaContent,
+  assisiContent,
   fishbatContent,
   psdContent,
   bangoContent,
