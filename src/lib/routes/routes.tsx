@@ -12,7 +12,6 @@ const PrintPage = lazy(() => import('src/pages/graphics/gallery/PrintPage'));
 const AdsPage = lazy(() => import('src/pages/graphics/gallery/AdsPage'));
 const IllustrationsPage = lazy(() => import('src/pages/graphics/gallery/IllustrationsPage'));
 const WebsitesPage = lazy(() => import('src/pages/websites/WebsitesPage'));
-// const ProcessPage = lazy(() => import('src/pages/process/ProcessPage'));
 const CaseStudiesPage = lazy(() => import('src/pages/case-studies/CaseStudiesPage'));
 const FourOhFourPage = lazy(() => import('src/pages/404'));
 
@@ -54,12 +53,6 @@ export const routes: RoutePathDefinition[] = [
       { path: 'illustrations', element: <IllustrationsPage />, title: 'Illustrations' },
     ],
   },
-  // {
-  //   path: '/process',
-  //   element: <ProcessPage />,
-  //   title: 'Process',
-  //   color: 'plum',
-  // },
   {
     path: '/case-studies',
     element: <CaseStudiesPage />,

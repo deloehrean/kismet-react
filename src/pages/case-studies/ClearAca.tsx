@@ -2,8 +2,8 @@ import React from 'react';
 
 import Mark from 'src/assets/images/case-studies/clear-aca/mark.svg';
 import OldAdminMenu from 'src/assets/images/case-studies/clear-aca/old-admin-menu.jpg';
+import ReportingBefore from 'src/assets/images/case-studies/clear-aca/reporting-before.jpg';
 import ReportingCritique from 'src/assets/images/case-studies/clear-aca/reporting-critique.jpg';
-import ReportingBefore from 'src/assets/images/process/process-1-reporting-page-review.jpg';
 import AddEmployee from 'src/assets/images/websites/clear-aca/clear-aca-add-employee.jpg';
 import AdminManagement from 'src/assets/images/websites/clear-aca/clear-aca-admin-management.jpg';
 import AllEmployees from 'src/assets/images/websites/clear-aca/clear-aca-all-employees.jpg';

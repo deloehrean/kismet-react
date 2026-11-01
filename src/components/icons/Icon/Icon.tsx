@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 
-import ChevronIcon from 'src/assets/images/process/chevron';
 import { IconStyles as s, LockIcon, StarIcon, TargetIcon } from 'src/components';
+import ChevronIcon from 'src/components/icons/ChevronIcon';
 
 export type IconName =
   | 'starIcon'

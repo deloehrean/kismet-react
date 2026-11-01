@@ -1,6 +1,6 @@
 import cn from 'clsx';
 
-import s from './chevron.module.scss';
+import s from './ChevronIcon.module.scss';
 
 type ChevronIconProps = {
   direction?: 'right' | 'left' | 'down' | 'up';
