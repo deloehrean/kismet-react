@@ -675,7 +675,7 @@ export const prosemiContent = {
   logoLight: ProsemiLogoLight,
   description:
     'Prosemi tests semiconductors and needed a new website to show its updated facilities and take requests for quotes.',
-  poweredBy: 'Gatsby / AWS',
+  poweredBy: 'Gatsby / Contentful',
   toolsUsed: 'React, Node.js, SCSS, Yarn, GraphQL',
   gallery: [
     {

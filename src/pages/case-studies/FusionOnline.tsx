@@ -2,7 +2,7 @@ import React from 'react';
 
 import CmsHeroEntry from 'src/assets/images/case-studies/fusion/cms-hero-entry.jpg';
 import FusionLive from 'src/assets/images/case-studies/fusion/fusionww-2026.jpg';
-import Mark from 'src/assets/images/case-studies/fusion/mark.svg';
+import Mark from 'src/assets/images/case-studies/fusion/rocketchips-mark.svg';
 import FoCategory from 'src/assets/images/websites/fusion-online/fusion-online-category.jpg';
 import FoHome from 'src/assets/images/websites/fusion-online/fusion-online-home.jpg';
 import FoProduct from 'src/assets/images/websites/fusion-online/fusion-online-product.jpg';
@@ -157,7 +157,7 @@ const FusionOnlineBody = () => (
 const fusionOnline = {
   id: 'fusion-online',
   mark: Mark,
-  markAlt: 'The Fusion mark',
+  markAlt: 'The RocketChips mark',
   title: 'RocketChips to Fusion Online',
   meta: 'Product & UX · B2B ecommerce · Fusion Worldwide · 2023, launched 2024',
   summary: (
