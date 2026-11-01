@@ -71,10 +71,10 @@ const ClearAcaBody = () => (
         'I started with the reporting page, the first screen most clients saw, and marked up ' +
         'everything working against them. Each note became part of the brief for the redesign.'
       }
-    >
-      <div className={s.library}>
+      figure={
         <Tile img={ReportingCritique} label={'My markup of the reporting page'} ratio={1.23} />
-      </div>
+      }
+    >
       <ul className={s.audit}>
         {AUDIT.map(a => (
           <li key={a.found}>
@@ -95,14 +95,14 @@ const ClearAcaBody = () => (
         'links to the same pages. Eight top-level menus became six sections in a collapsible ' +
         'sidebar of about thirty links, with the admin tools in short, labeled groups.'
       }
-    >
-      <div className={s.library}>
+      figure={
         <Tile
           img={OldAdminMenu}
           label={'The old admin menu, recreated from its real structure'}
           ratio={1.23}
         />
-      </div>
+      }
+    >
       <Stats
         items={NAVIGATION}
         source={'Old totals are approximate; the new count is from the shipped sidebar.'}

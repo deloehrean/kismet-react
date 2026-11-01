@@ -28,6 +28,17 @@
   opacity: 0.85;
 }
 
+.split {
+  align-items: center;
+  display: grid;
+  gap: var(--size-4);
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+
+  @media all and (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tile {
   display: flex;
   flex-direction: column;

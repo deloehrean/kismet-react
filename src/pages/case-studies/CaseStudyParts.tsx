@@ -24,10 +24,11 @@ type SectionProps = {
   title: React.ReactNode;
   lead?: React.ReactNode;
   children?: React.ReactNode;
+  figure?: React.ReactNode;
 };
 
-export const Section = ({ eyebrow, title, lead, children }: SectionProps) => (
-  <section className={s.section}>
+export const Section = ({ eyebrow, title, lead, figure, children }: SectionProps) => {
+  const head = (
     <div className={s['section-head']}>
       <Typography variant={'overline'} color={'primary'}>
         {eyebrow}
@@ -41,9 +42,22 @@ export const Section = ({ eyebrow, title, lead, children }: SectionProps) => (
         </Typography>
       )}
     </div>
-    {children}
-  </section>
-);
+  );
+
+  return (
+    <section className={s.section}>
+      {figure ? (
+        <div className={s.split}>
+          {head}
+          {figure}
+        </div>
+      ) : (
+        head
+      )}
+      {children}
+    </section>
+  );
+};
 
 type StatsProps = { items: { value: React.ReactNode; label: string }[]; source?: React.ReactNode };
 
