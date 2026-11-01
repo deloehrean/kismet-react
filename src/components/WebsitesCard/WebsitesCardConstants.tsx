@@ -590,7 +590,7 @@ export const assisiContent = {
   year: '2014',
   description:
     'Assisi Animal Health makes the Assisi Loop, a drug-free device that uses targeted pulsed ' +
-    'electromagnetic fields to treat pain and inflammation in pets. I built their site at Fishbat ' +
+    'electromagnetic fields to treat pain and inflammation in pets. I designed and built their site at Fishbat ' +
     'on Concrete5, with paths for veterinarians and pet owners, the science behind the Loop, a ' +
     'research library, a zip code search for approved providers, and a store where pet owners ' +
     'with a prescription could order the Loop directly.',
