@@ -15,23 +15,29 @@ import EarlV2Color from 'src/assets/images/graphics/illustrations/earl-v2-color.
 import EarlV2Sketch from 'src/assets/images/graphics/illustrations/earl-v2-sketch.jpg';
 import FairyInk from 'src/assets/images/graphics/illustrations/fairy-ink.jpg';
 import FlosMascot from 'src/assets/images/graphics/illustrations/flos-mascot.jpg';
+import FlowerInk from 'src/assets/images/graphics/illustrations/flower-ink.jpg';
+import FlowerSketch from 'src/assets/images/graphics/illustrations/flower-sketch.jpg';
 import GriffinColor from 'src/assets/images/graphics/illustrations/griffin-color.jpg';
 import GriffinInk from 'src/assets/images/graphics/illustrations/griffin-ink.jpg';
 import LionInk from 'src/assets/images/graphics/illustrations/lion-ink.jpg';
 import RandomBooks from 'src/assets/images/graphics/illustrations/random-books.jpg';
 import RobotInk from 'src/assets/images/graphics/illustrations/robot-ink.jpg';
+import ScreechingGriffinColor from 'src/assets/images/graphics/illustrations/screeching-griffin-color.jpg';
+import ScreechingGriffinInk from 'src/assets/images/graphics/illustrations/screeching-griffin-ink.jpg';
 import SkullGirl from 'src/assets/images/graphics/illustrations/skull-girl.jpg';
 import Sparrow from 'src/assets/images/graphics/illustrations/sparrow.jpg';
 import TapebotSketch from 'src/assets/images/graphics/illustrations/tapebot-sketch.jpg';
 import Tapebot from 'src/assets/images/graphics/illustrations/tapebot.jpg';
-import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
-import TrexSketch from 'src/assets/images/graphics/illustrations/trex-sketch.jpg';
-import TrexInk from 'src/assets/images/graphics/illustrations/trex-ink.jpg';
-import TvRobotSketch from 'src/assets/images/graphics/illustrations/tv-robot-sketch.jpg';
-import TvRobotInk from 'src/assets/images/graphics/illustrations/tv-robot-ink.jpg';
-import ZombiesInk from 'src/assets/images/graphics/illustrations/zombies-ink.jpg';
-import WrappedHand from 'src/assets/images/graphics/illustrations/wrapped-hand.jpg';
 import ThumbprintSkull from 'src/assets/images/graphics/illustrations/thumbprint-skull.jpg';
+import TrexInk from 'src/assets/images/graphics/illustrations/trex-ink.jpg';
+import TrexSketch from 'src/assets/images/graphics/illustrations/trex-sketch.jpg';
+import TvRobotInk from 'src/assets/images/graphics/illustrations/tv-robot-ink.jpg';
+import TvRobotSketch from 'src/assets/images/graphics/illustrations/tv-robot-sketch.jpg';
+import VampireKissInk from 'src/assets/images/graphics/illustrations/vampire-kiss-ink.jpg';
+import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
+import WrappedHand from 'src/assets/images/graphics/illustrations/wrapped-hand.jpg';
+import ZombiesInk from 'src/assets/images/graphics/illustrations/zombies-ink.jpg';
+import VampireKissColor from 'src/assets/images/graphics/illustrations/vampire-kiss-color.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
@@ -58,8 +64,18 @@ const ITEMS: GalleryItem[] = [
   { img: AstlLollipopGirl, title: 'Lollipop girl', meta: 'A Second Too Late · 2005' },
   { img: GriffinInk, title: 'Griffin, line art', meta: 'Royden · 2006' },
   { img: GriffinColor, title: 'Griffin, final color', meta: 'Royden · 2006' },
+  { img: ScreechingGriffinInk, title: 'Screeching griffin, line art', meta: 'Royden · 2006' },
+  { img: ScreechingGriffinColor, title: 'Screeching griffin, final color', meta: 'Royden · 2006' },
   { img: WrappedHand, title: 'Wrapped hand', meta: 'Alucard · 2006' },
   { img: Sparrow, title: 'Sparrow', meta: 'The Weakend · 2003' },
+  { img: FlowerSketch, title: 'Flower, pencil sketch', meta: 'The Weakend · 2005' },
+  { img: FlowerInk, title: 'Flower, final ink', meta: 'The Weakend · 2005' },
+  { img: VampireKissInk, title: 'Vampire kiss, ink', meta: 'The Weakend · 2005' },
+  {
+    img: VampireKissColor,
+    title: 'I’ve been walking with vampires, final color',
+    meta: 'The Weakend · 2005',
+  },
   { img: ThumbprintSkull, title: 'Thumbprint skull', meta: 'The Weakend · 2005' },
   { img: SkullGirl, title: 'Skull girl', meta: 'The Weakend · 2005' },
   { img: LionInk, title: 'Lion, line art', meta: 'What Happened in Vegas · 2006' },
