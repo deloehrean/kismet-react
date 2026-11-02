@@ -155,6 +155,7 @@ function PrintPage() {
         'Business cards, menus, signs, banners, flyers, and trade-show booths I designed, from show flyers in 2005 to the HRlogics trade-show booth in 2025.'
       }
       items={ITEMS}
+      mixed
     />
   );
 }

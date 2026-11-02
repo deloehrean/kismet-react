@@ -95,6 +95,7 @@ function IllustrationsPage() {
         'Mascots, characters, and drawings I made, many for the tees and albums elsewhere on this site. Where the original pencil sketch survived, it sits right next to the final ink, so you can see how each one came together.'
       }
       items={ITEMS}
+      mixed
     />
   );
 }

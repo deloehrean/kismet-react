@@ -149,6 +149,7 @@ function LogosPage() {
         'Marks I designed for my own clients at Kismet, for HRlogics and its products, for agency clients at fishbat, and for the bands and labels I worked with in the 2000s.'
       }
       items={ITEMS}
+      mixed
       framed
     />
   );
