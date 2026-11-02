@@ -71,7 +71,7 @@ const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardP
         ))}
       </div>
       <LinkStyled className={s.button} to={to}>
-        View All
+        View all
       </LinkStyled>
     </Container>
   </Container>
@@ -146,7 +146,7 @@ function GraphicsDashboard() {
             </Row>
             <Container direction={'column'} full justify={'end'} variant={'static'}>
               <LinkStyled className={s.button} to={'/graphics/albums'}>
-                View All
+                View all
               </LinkStyled>
             </Container>
           </Container>
@@ -183,7 +183,7 @@ function GraphicsDashboard() {
               </div>
             </Row>
             <LinkStyled className={s.button} to={'/graphics/tees'}>
-              View All
+              View all
             </LinkStyled>
           </Container>
         </Container>
