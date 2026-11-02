@@ -138,7 +138,7 @@ export const axleContent = {
   subtitle: 'Marketing Website',
   year: '2018',
   description:
-    'Axle makes an Olympic barbell that rolls on a wheel instead of carrying weight plates, which turns lifting into a total-body workout and opens the bar up to people who aren’t chasing pure strength. I designed and built their marketing site through Kismet to explain an unusual product quickly and make it feel approachable.',
+    'Axle makes an Olympic barbell that rolls on a wheel instead of carrying weight plates, which turns lifting into a total-body workout and opens the bar up to people who aren’t chasing pure strength. I designed and built their marketing site through Kismet to explain an unusual product quickly, give their brand an identity, and make it feel approachable.',
   poweredBy: 'WordPress',
   toolsUsed: 'SCSS, jQuery, PHP',
   logo: AxleLogo,
@@ -172,7 +172,7 @@ export const bangoContent = {
   subtitle: 'Marketing Website with Store Locator',
   year: '2017',
   description:
-    'Bango Bowls serves açaí and smoothie bowls at locations across the Northeast. As a fishbat project, I built their site around what a hungry visitor actually needs: a store locator, the full menu for each location, and a straight line into online ordering.',
+    'Bango Bowls serves açaí and smoothie bowls at locations across the Northeast. As a fishbat project, I built their site around what a hungry visitor actually needs: a store locator, the full menu for each location, and a straight line into online ordering before it was cool.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Composer',
   logo: BangoLogo,
@@ -206,7 +206,7 @@ export const bravoContent = {
   subtitle: 'Ecommerce Website',
   year: '2018',
   description:
-    'Bravo Actual makes workout supplements and had outgrown its X-Cart storefront. They needed a home that could sell a small catalog and still carry a lot of content, so through Kismet I rebuilt the site on Concrete CMS with its e-commerce add-on. It covered both needs and left them room to grow.',
+    'Bravo Actual makes workout supplements and had outgrown its X-Cart storefront (as so many have). They needed a home that could sell a small catalog and still carry a lot of content, so I created a site on Concrete5 (Concrete CMS) with its e-commerce add-on to give them exactly that. It covered both needs and left them room for... well... gains.',
   poweredBy: 'Concrete CMS w/ Ecommerce Add-on',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: BravoLogo,
@@ -237,7 +237,7 @@ export const clearAcaContent = {
   subtitle: 'Compliance Platform',
   year: '2024',
   description:
-    'Clear ACA was the HRlogics platform for Affordable Care Act compliance. It started life as SyncStream, and even after joining HRlogics it still looked like it. I took it through a full rebrand onto a refactored front end and did both the design and the build myself. That front end became the first version of the component library behind the entire HRlogics suite. The new experience improved every metric we tracked, and its look and feel helped the product sell to another company.',
+    'Clear ACA was the HRlogics platform for Affordable Care Act compliance. It started life as SyncStream, and even after joining HRlogics it still looked like it. I took it through a full rebrand onto a refactored front end and did both the design and the build myself. That front end became the first version of the component library behind the entire HRlogics suite. The new experience improved every tracked metric, addressed multiple customer complaints, and its new look and feel was instrumental in an enterprise acquisition.',
   poweredBy: 'React + Vite / Python',
   toolsUsed: 'React, TypeScript, SCSS, Node.js, Yarn, GraphQL',
   logo: ClearAcaLogo,
@@ -301,7 +301,7 @@ export const hrlPortalContent = {
   subtitle: 'Single Sign-On Platform',
   year: '2026',
   description:
-    'The HRlogics Portal was the front door to the whole HRlogics suite: Clear I-9, Ryze, WOTC, Clear Verify, and UCM. Clients signed in once and launched every product they owned from a hive of product tiles. Products they didn’t own opened a marketing panel instead, so the dashboard doubled as an introduction to the rest of the suite. Admins managed organizations, users, and per-product access, and clients could send payroll and census files into HRlogics securely. I designed it and led the build from the first commit to its April 2026 production launch, on the component library that became the suite’s design system.',
+    'The HRlogics Portal was the front door to the whole HRlogics suite: Clear I-9, Ryze, WOTC, Clear Verify, and UCM. Clients signed in once and launched every subscribed product from a hive of product tiles. Unsubscribed products opened a marketing panel instead, so the dashboard doubled as an introduction to the rest of the suite. Admins managed organizations, users, and per-product access, and clients could send payroll and census files into HRlogics securely. I designed it and led the build from the first commit to its April 2026 production launch, on the component library that became the suite’s design system.',
   poweredBy: 'Laravel + Inertia.js / PostgreSQL / AWS',
   toolsUsed: 'React, TypeScript, PHP, Auth0, Redis, Docker, Playwright',
   logo: HrlPortalLogo,
@@ -339,7 +339,7 @@ export const wotcContent = {
   subtitle: 'Tax Credit Platform Redesign',
   year: '2025',
   description:
-    'WOTC screened new hires for the federal Work Opportunity Tax Credit, filed qualifying applicants with each state workforce agency, read the determination letters automatically, and tracked every credit from the 120-hour mark to its maximum. I owned its product strategy and UX, and WOTC was the first product I moved onto the suite’s design system. I kept the redesign a one-for-one component swap, so clients kept the layouts they knew while the product finally matched the rest of the suite. It never shipped, and the original design files didn’t survive, so I rebuilt five core screens on the design system with demo data to show where it was headed.',
+    'WOTC screened new hires for the federal Work Opportunity Tax Credit, filed qualifying applicants with each state workforce agency, read the determination letters automatically, and tracked every credit from the 120-hour mark to its maximum. I owned its product strategy and UX, and WOTC was the first product I moved onto the suite’s design system. I kept the redesign a one-for-one component swap, so clients kept the layouts they knew while the product finally matched the rest of the suite. It never shipped, and the original design files didn’t survive, so five core screens were rebuilt on the design system with demo data to show where it was headed.',
   poweredBy: 'React + Inertia.js / Design System',
   toolsUsed: 'React, TypeScript, SCSS Modules, Figma, Playwright',
   logo: WotcLogo,
@@ -378,7 +378,7 @@ export const fusionOnlineContent = {
   subtitle: 'B2B Ecommerce Platform Redesign',
   year: '2023',
   description:
-    'Fusion Online folded RocketChips into Fusion Worldwide’s own site, so customers found one search-first store and company site instead of two. It was rebranded in Fusion’s green and rebuilt on a new component library, with type-ahead search and a reworked catalog, product page, cart, and account dashboard. I designed it and led the build through 2023, and it launched in 2024 as the shop on fusionww.com. These screens come from my last merged change, run locally against Fusion’s public catalog with demo prices and a demo customer.',
+    'Fusion Online folded RocketChips into Fusion Worldwide’s marketing site, so customers found one search-first store and company site instead of two. It was rebranded in Fusion’s green and refactored onto a new component library, with type-ahead search and a reworked catalog, product page, cart, and account dashboard. I designed and led the build through 2023, and it launched in 2024 as the shop on fusionww.com. These screens come from my last merged change, run locally against Fusion’s public catalog with demo prices and a demo customer.',
   poweredBy: 'Next.js + GraphQL / Custom Component Library',
   toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',
   logo: FusionOnlineLogo,
@@ -397,7 +397,7 @@ export const rocketChipsContent = {
   subtitle: 'B2B Ecommerce Platform',
   year: '2023',
   description:
-    'RocketChips was Fusion Worldwide’s self-service store for electronic components, a custom B2B platform built to support a projected $1.5 billion in annual sales. The whole idea was to give buyers real pricing, live stock, quotes, and credit terms without picking up the phone. As Senior Product Designer I designed it, audited the experience from registration to checkout, and set the front-end architecture my team of three to five developers built on, reviewing every change with them. After launch I moved the front end from Tailwind utilities onto a custom component library, and that same codebase later became Fusion Online. These screens are the production build, run locally against Fusion’s public catalog with demo prices and a demo customer.',
+    'RocketChips was Fusion Worldwide’s self-service store for electronic components, a custom B2B platform built to support a projected $1.5 billion in annual sales. The whole idea was to give buyers real pricing, live stock, quotes, and credit terms without picking up the phone. As Senior Product Designer I designed it, audited the experience from registration to checkout, and set the front-end architecture that was implemented by my team of developers, reviewing every change with them. After launch, I moved the front end from Tailwind utilities onto a custom component library, and that same codebase later became Fusion Online. These screens are the production build, run locally against Fusion’s public catalog with demo prices and a demo customer.',
   poweredBy: 'Next.js + GraphQL / Custom Component Library',
   toolsUsed: 'React, TypeScript, Next.js, Tailwind CSS, SCSS, Figma, Playwright',
   logo: RocketChipsLogo,
@@ -485,10 +485,10 @@ export const lakeAtitlanContent = {
 
 export const fountainOfLifeContent = {
   title: 'Fountain of Life Malawi',
-  subtitle: 'Pro Bono Nonprofit Website',
+  subtitle: 'Nonprofit Website',
   year: '2014',
   description:
-    'Fountain of Life supports survivors of sexual violence in Malawi, most of them young girls, through counseling, One Stop Centers, and community education. I designed their logo and built their site pro bono, and set it up so the team in Malawi could publish their own reports, blog posts, and donation campaigns without waiting on anyone.',
+    'Fountain of Life supports survivors of sexual violence in Malawi, most of them young girls, through counseling, One Stop Centers, and community education. I openly volunteered my services for this one, as its mission and heart share a place in my own, and set it up so the team in Malawi could publish their own reports, blog posts, and donation campaigns without the struggle of waiting for anyone. The whole point of building something special is to benefit those around you in a positive way and to help give a voice to the voiceless.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Gumby Framework',
   logo: FountainOfLifeLogo,
@@ -555,7 +555,7 @@ export const assisiContent = {
   subtitle: 'Marketing Website with Prescription Ordering',
   year: '2014',
   description:
-    'Assisi Animal Health makes the Assisi Loop, a drug-free device that uses targeted pulsed electromagnetic fields to treat pain and inflammation in pets. At fishbat I designed and built their site on Concrete5 for two very different audiences, veterinarians and pet owners, with the science behind the Loop, a research library, a zip code search for approved providers, and a store where pet owners with a prescription could order the Loop directly.',
+    'Assisi Animal Health makes the Assisi Loop, a drug-free device that uses targeted pulsed electromagnetic fields to treat pain and inflammation in pets. At fishbat, I designed and built their site on Concrete5 for two very different audiences, veterinarians and pet owners, with the science behind the Loop, a research library, a zip code search for approved providers, and a store where pet owners with a prescription could order the Loop directly. Getting to edit and adore pictures of Lil Bub was just an added bonus.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'PHP, CSS, jQuery, bxSlider',
   logo: AssisiLogo,
@@ -584,7 +584,7 @@ export const fishbatContent = {
   subtitle: 'Agency Website',
   year: '2016',
   description:
-    'fishbat is the digital marketing agency on Long Island, New York, where I was Creative Director from 2013 to 2015, and I kept working with them after I left. In 2016 I designed and built their site as an underwater world: a looping ocean video behind the hero and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer.',
+    'fishbat is the digital marketing agency on Long Island, New York, where I was Creative Director from 2013 to 2015, and I kept working with them after I left. In 2016 I designed and built their site as an underwater world: a looping ocean video behind the hero and origami sea creatures in folded paper. A pelican sat on the shore, a yellow submarine crossed the testimonials, a jellyfish drifted across the partner page, and a paper seabed ran along the footer. Branding is everything, but I never allowed it to take away from action.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery, Bootstrap',
   logo: FishbatLogo,
@@ -617,7 +617,7 @@ export const psdContent = {
   subtitle: 'Online Store',
   year: '2011',
   description:
-    'Pant Saggin Dezign is the clothing brand brothers Ryan and Curt Flaitz started in Upstate New York in 2007, out of the motocross, skate, and music scenes. I designed and built their store as the brand was breaking into the mainstream, with tees, hoods, hats, and the underwear line that eventually took over. Today the brand is PSD, sold worldwide.',
+    'Pant Saggin Dezign is a clothing brand that brothers Ryan and Curt Flaitz started in Upstate New York in 2007. Out of the dirt and grime of motocross, skate, and the hardcore and punk music scene to the glitz and glamour of fashionable underwear. I designed and built their store as the brand started breaking into the mainstream, with tees, hoodies, hats, and the underwear line that eventually took over. Today the brand is PSD, sold worldwide and can even now be found in Target. This online store was not only their humble beginning, it was also what launched me into eCommerce after my stint with Moosejaw Mountaineering.',
   poweredBy: 'BigCommerce',
   toolsUsed: 'CSS, HTML, jQuery',
   logo: PsdLogo,
@@ -647,7 +647,7 @@ export const petersFruitContent = {
   subtitle: 'Marketing Website',
   year: '2016',
   description:
-    'Peter’s Fruit Company’s produce changes with every season, and their site had to keep up. As a fishbat project, I built a simple dynamic site that let them move produce in and out of categories themselves, without needing a developer.',
+    'Peter’s Fruit Company’s produce changes with every season, and they needed a site that could stay up to speed. As a fishbat project, I built a simple dynamic site that allowed fluid movement of produce in and out of categories that they could control themselves, without needing a developer. An ever changing menu of product based on the season should never require tech more than once.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: PetersFruitLogo,
@@ -675,7 +675,7 @@ export const prosemiContent = {
   logo: ProsemiLogo,
   logoLight: ProsemiLogoLight,
   description:
-    'Prosemi is the semiconductor testing company in Southeast Asia that joined Fusion Worldwide, and it needed a new site to show off its updated facilities and take requests for quotes. I designed and built it in about two weeks, set in the same typeface as Fusion so the two read as family.',
+    'Prosemi is a semiconductor testing company in Southeast Asia that joined Fusion Worldwide, and it needed a new site to show off its updated facilities and take requests for quotes. I designed and built it in about two weeks, set in the same typeface and experience as Fusion so the two read as family and added Contentful endpoints in each content area to allow for their team to easily continue updating without the need of a developer.',
   poweredBy: 'Gatsby / Contentful',
   toolsUsed: 'React, Node.js, SCSS, Yarn, GraphQL',
   gallery: [
@@ -703,7 +703,7 @@ export const sereneSpacesContent = {
   subtitle: 'Ecommerce Website',
   year: '2014',
   description:
-    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan and backstock with nowhere to go, so at fishbat I built them a Magento store, and they sold on it for years.',
+    'Serene Spaces Living sells handmade home goods, decorations, and luxury accessories, most of them made by street vendors around the world and imported to the US. They had a brick-and-mortar store in Manhattan and backstock with nowhere to go, so my team and I at fishbat put together their first online store on Magento, which continued to run and sell original and handmade goods for a full decade.',
   poweredBy: 'Magento',
   toolsUsed: 'PHP, LESS, jQuery, Composer',
   logo: SereneSpacesLogo,
