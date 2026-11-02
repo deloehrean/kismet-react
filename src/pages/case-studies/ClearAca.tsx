@@ -58,9 +58,7 @@ const ClearAcaBody = () => (
       eyebrow={'01 — Before'}
       title={'A new name on an old product'}
       lead={
-        'Clear ACA started life as SyncStream, a platform employers used to track and report ' +
-        'Affordable Care Act compliance. When it joined HRlogics, the only sign of the change was ' +
-        'a banner announcing the new name, above the old logo, the old navigation, and a 2015 footer.'
+        'Clear ACA started life as SyncStream, a platform employers used to track and report Affordable Care Act compliance. When it joined HRlogics, the only sign of the change was a banner announcing the new name, sitting on top of the old logo, the old navigation, and a 2015 footer. Clients deserved better than that.'
       }
     />
 
@@ -68,8 +66,7 @@ const ClearAcaBody = () => (
       eyebrow={'02 — The audit'}
       title={'Marking up the page every client opened'}
       lead={
-        'I started with the reporting page, the first screen most clients saw, and marked up ' +
-        'everything working against them. Each note became part of the brief for the redesign.'
+        'I started with the reporting page, the first screen most clients saw, and marked up everything working against them. None of it was cosmetic for its own sake, and each note became part of the brief for the redesign.'
       }
       figure={
         <Tile img={ReportingCritique} label={'My markup of the reporting page'} ratio={1.23} />
@@ -90,10 +87,7 @@ const ClearAcaBody = () => (
       eyebrow={'03 — Navigation'}
       title={'Over a hundred links down to about thirty'}
       lead={
-        'The old navigation ran past a hundred links. The admin menu alone held twenty-four, ' +
-        'nested up to four levels deep, and the rest of the menus repeated close to a dozen ' +
-        'links to the same pages. Eight top-level menus became six sections in a collapsible ' +
-        'sidebar of about thirty links, with the admin tools in short, labeled groups.'
+        'The old navigation ran past a hundred links. The admin menu alone held twenty-four, nested up to four levels deep, and the rest of the menus repeated close to a dozen links to the same pages. If you didn’t already know where something lived, you weren’t going to find it. Eight top-level menus became six sections in a collapsible sidebar of about thirty links, with the admin tools in short, labeled groups.'
       }
       figure={
         <Tile
@@ -113,9 +107,7 @@ const ClearAcaBody = () => (
       eyebrow={'04 — The redesign'}
       title={'The same data, with room to read it'}
       lead={
-        'Reporting Home kept every number clients relied on and gave each set its own card: ' +
-        'current year plans, the employee breakdown, offers of coverage, employee counts, and ' +
-        'child companies, with the actions for each card inside it.'
+        'Clients relied on every number on Reporting Home, so nothing came off the page. Instead, each set got its own card: current year plans, the employee breakdown, offers of coverage, employee counts, and child companies, with the actions for that card right inside it.'
       }
     >
       <div className={s.pair}>
@@ -128,8 +120,7 @@ const ClearAcaBody = () => (
       eyebrow={'05 — Across the product'}
       title={'One system on every screen'}
       lead={
-        'The same cards, tables, forms, and sidebar carried through the rest of the platform, ' +
-        'from employee tracking to the year-end process to company administration.'
+        'The same cards, tables, forms, and sidebar carried through the rest of the platform, from employee tracking to the year-end process to company administration, so once you learned one screen, you knew them all.'
       }
     >
       <div className={s.row3}>
@@ -143,10 +134,7 @@ const ClearAcaBody = () => (
       eyebrow={'06 — What it led to'}
       title={'The first version of the design system'}
       lead={
-        'I did both the design and the build, on a refactored front end. Its components became ' +
-        'the first version of the library behind the whole HRlogics suite. The new experience ' +
-        'improved every metric we tracked, and its look and feel helped lead to the product ' +
-        'being sold to another company.'
+        'I did both the design and the build, on a refactored front end. Its components became the first version of the library behind the whole HRlogics suite. The new experience improved every metric we tracked, and its look and feel helped the product sell to another company.'
       }
     >
       <LinkStyled to={'/websites#site-clear-aca'}>See Clear ACA on Websites &rarr;</LinkStyled>

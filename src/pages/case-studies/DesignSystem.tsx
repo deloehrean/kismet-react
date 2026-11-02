@@ -74,9 +74,7 @@ const DesignSystemBody = () => (
       eyebrow={'01 — The problem'}
       title={'A brand that only lived in logo files'}
       lead={
-        'The new apps were starting from a generic Tailwind and Radix starter kit and getting ' +
-        'styled one page at a time. The HRlogics brand needed to exist in code, once, so every ' +
-        'app would look and behave like part of the same suite.'
+        'The new apps were starting from a generic Tailwind and Radix starter kit and getting styled one page at a time, so every app was slowly drifting into its own look. The HRlogics brand needed to exist in code, once, so every app would look and behave like part of the same suite.'
       }
     >
       <Stats items={LIBRARY} source={'From the library’s release history, January to June 2026.'} />
@@ -86,9 +84,7 @@ const DesignSystemBody = () => (
       eyebrow={'02 — Tokens first'}
       title={'Re-theme every app from one place'}
       lead={
-        'Color, spacing, and type are tokens, redefined for dark mode, so a palette change ' +
-        'reaches every app at once. The April 2026 palette refresh moved Info to a slate-to-blue ' +
-        'midpoint and made Slate a full theme.'
+        'Color, spacing, and type are tokens, redefined for dark mode, so one change reaches every app at once instead of being chased through each codebase. When the April 2026 palette refresh moved Info to a slate-to-blue midpoint and made Slate a full theme, that one change was all it took.'
       }
     >
       <div className={s.pair}>
@@ -101,9 +97,7 @@ const DesignSystemBody = () => (
       eyebrow={'03 — The components'}
       title={'Fifty-two pieces, one look'}
       lead={
-        'Forms, tables, dialogs, navigation, and layout, each shipped as its own import so an ' +
-        'app only loads what it uses. Every component shows its variants and states in the ' +
-        'library’s own preview workspace.'
+        'Forms, tables, dialogs, navigation, and layout each ship as their own import, so an app only loads what it uses. Every component shows its variants and states in the library’s own preview workspace, so a developer can see exactly what they’re getting before they reach for it.'
       }
     >
       <div className={s.pair}>
@@ -122,9 +116,7 @@ const DesignSystemBody = () => (
       eyebrow={'04 — No outside UI runtime'}
       title={'Built in-house, down to the focus trap'}
       lead={
-        'Version 2.0 replaced all eleven Radix packages with the library’s own building blocks ' +
-        'for slots, focus trapping, scroll locking, and animation. The apps stopped inheriting ' +
-        'someone else’s upgrade cycle, and later releases cleared out the last Tailwind holdovers.'
+        'Version 2.0 replaced all eleven Radix packages with the library’s own building blocks for slots, focus trapping, scroll locking, and animation. Owning those pieces meant the apps stopped inheriting someone else’s upgrade cycle, and later releases cleared out the last Tailwind holdovers.'
       }
     >
       <Stats items={PRIMITIVES} source={'From the 2.0 release, April 6, 2026.'} />
@@ -134,9 +126,7 @@ const DesignSystemBody = () => (
       eyebrow={'05 — One pattern per job'}
       title={'Define it once, pick from it everywhere'}
       lead={
-        'Button, Chip, and Alert are the reference implementations. They set the file layout, ' +
-        'the variant rules, the theming, and the markup every other component follows. In an ' +
-        'app, a button is a choice from that list, never a new style.'
+        'Button, Chip, and Alert are the reference implementations. They set the file layout, the variant rules, the theming, and the markup every other component follows. In an app, a button is a choice from that list, never a new style someone invents on the spot.'
       }
     >
       <div className={s.codes}>
@@ -169,10 +159,7 @@ const DesignSystemBody = () => (
       eyebrow={'06 — Built for AI-assisted development'}
       title={'A library the coding assistants follow too'}
       lead={
-        'Each component category has a matching agent skill, a set of instructions AI coding ' +
-        'assistants read before they write code. A sync script, a drift check on install, and ' +
-        'pre-commit hooks keep HRL Portal and Corvus on the documented API, so code written with ' +
-        'AI help still looks like the rest of the suite.'
+        'AI coding assistants are part of how software gets written now, so I made sure they follow the same rules as everyone else. Each component category has a matching agent skill, a set of instructions the assistants read before they write code. A sync script, a drift check on install, and pre-commit hooks keep HRL Portal and Corvus on the documented API, so code written with AI help still looks like the rest of the suite.'
       }
     >
       <Stats items={AI} source={'From the library and the HRL Portal codebase.'} />
@@ -182,9 +169,7 @@ const DesignSystemBody = () => (
       eyebrow={'07 — In the products'}
       title={'Two apps, one system'}
       lead={
-        'HRL Portal and Corvus, the suite’s AI workforce analytics app, are both built on the ' +
-        'library. Corvus turns a plain-English question into an answer with metrics, a chart, ' +
-        'and a table, all made from the same parts.'
+        'HRL Portal and Corvus, the suite’s AI workforce analytics app, are both built on the library. Corvus turns a plain-English question into an answer with metrics, a chart, and a table, all made from the same parts, which is exactly the payoff a design system is for.'
       }
     >
       <div className={s.row3}>

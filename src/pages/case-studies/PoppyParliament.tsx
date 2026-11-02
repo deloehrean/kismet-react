@@ -74,7 +74,7 @@ const PoppyParliamentBody = () => (
       eyebrow={'01 — The mark'}
       title={'Three routes, one poppy'}
       lead={
-        'Early directions explored the pub name, the flower, and the parliament reference. The chosen route keeps the poppy as a standalone mark so it can shrink to a stamp.'
+        'Early directions explored the pub name, the flower, and the parliament reference. I went with the route that keeps the poppy as a standalone mark, because a pub’s logo has to work everywhere, down to the size of a stamp.'
       }
     >
       <div className={cn(s.row3, s.concepts)}>
@@ -118,7 +118,9 @@ const PoppyParliamentBody = () => (
     <Section
       eyebrow={'03 — In the wild'}
       title={'Merch, print, and gift cards'}
-      lead={'The same two colors and the standalone mark, applied across physical goods.'}
+      lead={
+        'The same two colors and the standalone mark carried across everything guests could hold, wear, or give.'
+      }
     >
       <div className={s.row3}>
         <Tile img={MerchTee} label={"St Patrick's Day tee"} ratio={1.49} />
@@ -126,7 +128,8 @@ const PoppyParliamentBody = () => (
         <Tile img={GiftCards} label={'Gift cards'} ratio={1.29} />
       </div>
       <Typography variant={'body2'} className={s.lead}>
-        The menus did the identity’s daily work: four lists, reprinted as the taps changed.
+        The menus were where the identity did its everyday work: four lists, reprinted every time
+        the taps changed.
       </Typography>
       <div className={s.row4}>
         <Tile img={MenuDraft} label={'Draft list'} ratio={0.71} />
@@ -143,7 +146,9 @@ const PoppyParliamentBody = () => (
     <Section
       eyebrow={'04 — Campaign cadence'}
       title={'A year of events'}
-      lead={'Thirteen campaigns across 2019 and early 2020, each sized for Instagram and Facebook.'}
+      lead={
+        'Thirteen campaigns across 2019 and early 2020, each sized for Instagram and Facebook, to give regulars a reason to keep coming back.'
+      }
     >
       <div className={s.grid}>
         {CAMPAIGNS.map(c => (
@@ -158,7 +163,7 @@ const PoppyParliamentBody = () => (
       eyebrow={'05 — March 2020'}
       title={'The same system, under pressure'}
       lead={
-        'Within three weeks the pub went from booking tap events to closing its doors. Instead of a redesign, I reissued the existing artwork.'
+        'Within three weeks the pub went from booking tap events to closing its doors. There was no time for a redesign, and there didn’t need to be. I reissued the existing artwork, and the identity held.'
       }
     >
       <div className={s.pair}>
@@ -175,7 +180,8 @@ const PoppyParliamentBody = () => (
         <Tile img={CovidSickDeals} label={'“Sick Deals” — trading through'} ratio={1} />
       </div>
       <Typography variant={'body2'} className={s.lead}>
-        Then the pivot: cocktail starter kits, sold to take home.
+        Then came the pivot: cocktail starter kits, sold to take home, in the same look as
+        everything before them.
       </Typography>
       <div className={s.row3}>
         <Tile img={KitMoscow} label={'Moscow Mule kit'} ratio={0.75} />

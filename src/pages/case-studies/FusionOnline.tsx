@@ -77,11 +77,7 @@ const FusionOnlineBody = () => (
       eyebrow={'01 — The system'}
       title={'Out of Tailwind, into a component library'}
       lead={
-        'The agency build styled most of its pages inline with utility classes, so no two ' +
-        'headings or buttons quite matched. I designed a component library and the architecture ' +
-        'behind it, with a style module for each component. Rather than swap everything at once, ' +
-        'we decided as a team to migrate one component at a time, so the store kept shipping ' +
-        'while it changed underneath.'
+        'The agency build styled most of its pages inline with utility classes, so no two headings or buttons quite matched, and every new page made it worse. I designed a component library and the architecture behind it, with a style module for each component. We agreed as a team not to rip everything out at once, and migrated one component at a time instead, so the store kept shipping while it changed underneath.'
       }
     >
       <Stats items={SYSTEM} source={'From the repository, December 2022 to October 2023.'} />
@@ -100,9 +96,7 @@ const FusionOnlineBody = () => (
       eyebrow={'02 — Fusion Online'}
       title={'The same store under Fusion’s name'}
       lead={
-        'Late in 2023, Fusion folded RocketChips into its own site. The same codebase took the ' +
-        'new green brand, and my last change was merged that October. It launched in 2024 as the ' +
-        'shop on fusionww.com.'
+        'Late in 2023, Fusion decided to fold RocketChips into its own site, so customers would find one place to learn about the company and buy from it. The same codebase took on the new green brand. My last change was merged that October, and it launched in 2024 as the shop on fusionww.com.'
       }
     >
       <div className={s.row3}>
@@ -123,11 +117,7 @@ const FusionOnlineBody = () => (
       eyebrow={'03 — The CMS'}
       title={'Content without a release'}
       lead={
-        'Every word on the old sites went through the developers and waited for the next ' +
-        'release. I brought in a headless CMS and built the pages from blocks the sales and ' +
-        'marketing teams could fill in themselves: heroes, stats, features, lead-gen forms, ' +
-        'benefit cards, and links across services, industries, and quality. When they publish, ' +
-        'the change goes live on its own, with no build and no release.'
+        'On the old sites, every word went through a developer and waited for the next release, which meant marketing was always waiting on engineering. I brought in a headless CMS and built pages from blocks the sales and marketing teams could fill in themselves: heroes, stats, features, lead-gen forms, benefit cards, and links across services, industries, and quality. When they hit publish, the change goes live on its own, with no build and no release.'
       }
     >
       <Stats items={CMS} source={'From the CMS integration in the codebase.'} />
@@ -147,11 +137,7 @@ const FusionOnlineBody = () => (
       eyebrow={'04 — What carried forward'}
       title={'Launched on the foundation I left'}
       lead={
-        'My last change was merged in October 2023, before launch. The agency that took the ' +
-        'project forward launched Fusion Online in 2024 on the branding I proposed, and built ' +
-        'the rest of fusionww.com on the shared foundation: the green palette, the type, the ' +
-        'design tokens, and the header, search, and navigation. Every design token in the ' +
-        'codebase when I left is still on the live site today.'
+        'I left in October 2023, before launch. The agency that picked the project up launched Fusion Online in 2024 on the branding I proposed, and built the rest of fusionww.com on the foundation I’d laid: the green palette, the type, the design tokens, and the header, search, and navigation. Every design token that was in the codebase when I left is still on the live site today, and a foundation that outlasts you is exactly what I set out to build.'
       }
     >
       <div className={s.pair}>
@@ -168,11 +154,7 @@ const FusionOnlineBody = () => (
       eyebrow={'05 — My part'}
       title={'Design, direction, and code review'}
       lead={
-        'I owned the design and the direction for the whole rebrand: the new fusionww.com, ' +
-        'Prosemi, RocketChips, and Fusion Online, which brought the services, twelve industries, quality, ' +
-        'insights, and the shop together in one site, on a CMS the sales and marketing teams ' +
-        'could publish to themselves. I led a team of three to five developers, set the front-end ' +
-        'architecture they built on, and reviewed every change with them.'
+        'I owned the design and direction for the whole rebrand: the new fusionww.com, Prosemi, RocketChips, and Fusion Online, which brought the services, twelve industries, quality, insights, and the shop together in one site that sales and marketing could publish to themselves. I led a team of three to five developers, set the front-end architecture they built on, and reviewed every change with them, so what we shipped stayed consistent from the first page to the last.'
       }
     >
       <Stats items={MY_PART} source={'From my audit notes and the sites themselves.'} />

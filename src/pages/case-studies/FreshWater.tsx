@@ -19,10 +19,7 @@ const FreshWaterBody = () => (
       eyebrow={'01 — Discovery'}
       title={'A mockup made of questions'}
       lead={
-        'The first layout, in April 2020, was mostly open questions set in place. False color or ' +
-        'optical imagery? What belongs on the dashboard, and what on a dedicated data page? Is ' +
-        'there room for citizen science? Each one went back to the science team before anything ' +
-        'was built.'
+        'I didn’t want to guess what the scientists needed, so the first layout, in April 2020, was mostly open questions set in place. False color or optical imagery? What belongs on the dashboard, and what on a dedicated data page? Is there room for citizen science? Each one went back to the science team before anything was built.'
       }
     >
       <div className={s.pair}>
@@ -35,8 +32,7 @@ const FreshWaterBody = () => (
       eyebrow={'02 — The site'}
       title={'One story, three depths'}
       lead={
-        'The build kept the mockup’s structure: an overview for the public, then a page each for ' +
-        'the forecasts and the raw monitoring data, for the officials who had to act on them.'
+        'The build kept the mockup’s structure: an overview for the public, then a page each for the forecasts and the raw monitoring data, for the officials who had to act on them. Each audience got as much depth as they needed, and no more.'
       }
     >
       <div className={s.row3}>
@@ -53,10 +49,7 @@ const FreshWaterBody = () => (
       eyebrow={'03 — The dashboard'}
       title={'From a sidebar to the whole screen'}
       lead={
-        'The first dashboard answered one question, whether a bloom was likely, beside a single ' +
-        'satellite image. The July redesign gave the screen to the lake: imagery edge to edge, any ' +
-        'of the team’s datasets on demand, and bloom probability lined up against lake and land ' +
-        'temperature on one timeline, so the readings can be compared at a glance.'
+        'The first dashboard answered one question, whether a bloom was likely, beside a single satellite image. It worked, but it kept the lake small. The July redesign gave the screen to the lake: imagery edge to edge, any of the team’s datasets on demand, and bloom probability lined up against lake and land temperature on one timeline, so the readings can be compared at a glance.'
       }
     >
       <Tile img={DashboardFirst} label={'First dashboard'} ratio={1.74} />

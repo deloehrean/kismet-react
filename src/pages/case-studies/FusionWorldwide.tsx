@@ -70,10 +70,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'01 — The starting point'}
       title={'A $3 billion distributor that sold by phone'}
       lead={
-        'In 2022 Fusion’s website was a WordPress brochure. Every sale started with a phone call ' +
-        'or a quote form. RocketChips, a self-service store built by an agency, was meant to ' +
-        'change that, and it was half finished when I joined. I rebuilt fusionww.com in the 2023 ' +
-        'rebrand, and it sent buyers to RocketChips.'
+        'When I joined in 2022, Fusion’s website was a WordPress brochure, and every sale still started with a phone call or a quote form. RocketChips, a self-service store an agency had started, was supposed to change that, and it was only half finished. I rebuilt fusionww.com as part of the 2023 rebrand and pointed it at RocketChips, because the company site should have been the front door to the store, not a dead end.'
       }
     >
       <div className={s.pair}>
@@ -87,10 +84,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'02 — Prosemi'}
       title={'A second site in two weeks'}
       lead={
-        'Prosemi, an electronics testing company in Southeast Asia that joined Fusion, needed a ' +
-        'site to show its facilities and take requests for quotes. I designed and built it in ' +
-        'November 2022 on Gatsby, set in Graphik like Fusion, and shipped it in two ' +
-        'weeks.'
+        'Prosemi, an electronics testing company in Southeast Asia, had just joined Fusion and needed a site that showed off its facilities and made it easy to ask for a quote. I designed and built it on Gatsby in November 2022 and set it in Graphik, the same typeface as Fusion, so the two would read as family from day one. It shipped in two weeks.'
       }
     >
       <div className={s.row3}>
@@ -105,9 +99,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'03 — The audit'}
       title={'Twenty-five problems in my first month'}
       lead={
-        'A month in, I walked the store end to end and wrote down everything that was broken or ' +
-        'inconsistent: spacing, headings, mobile, registration, filters, the account dashboard, ' +
-        'and a checkout you could reach with an empty cart. That list became the team’s roadmap.'
+        'A month in, I sat down and used the store the way a buyer would, end to end, and wrote down everything that got in the way: inconsistent spacing and headings, a rough mobile experience, registration, filters, the account dashboard, and a checkout you could reach with an empty cart. I wrote it as a plan, not a complaint, and it became the team’s roadmap.'
       }
     >
       <ul className={s.audit}>
@@ -125,9 +117,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'04 — RocketChips'}
       title={'Buying parts without a phone call'}
       lead={
-        'The homepage made four promises, and the store had to keep them: search with real ' +
-        'pricing, quotes back within a day, credit approved in a minute, and a checkout with no ' +
-        'salesperson in the way.'
+        'The homepage made buyers four promises: search with real pricing, quotes back within a day, credit approved in a minute, and a checkout with no salesperson in the way. My job was making sure the store actually kept them.'
       }
     >
       <Stats items={ROCKETCHIPS_PROMISES} source={'From the RocketChips homepage, 2023.'} />
@@ -137,7 +127,7 @@ const FusionWorldwideBody = () => (
         <Tile img={RcAccount} label={'Order history'} ratio={1.14} />
       </div>
       <Typography variant={'body2'} className={s.lead}>
-        RocketChips went on to become Fusion Online, the next case study.
+        RocketChips didn’t stop there. It grew into Fusion Online, which is the next case study.
       </Typography>
     </Section>
   </React.Fragment>

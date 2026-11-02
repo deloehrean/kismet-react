@@ -58,9 +58,7 @@ const HRlogicsBody = () => (
       eyebrow={'01 — Before'}
       title={'Two brands, two websites'}
       lead={
-        'OnCentive sold tax credits and incentives. Clear I-9 sold Form I-9 compliance. They ' +
-        'belonged to the same company, but each had its own site, its own colors, and its own ' +
-        'voice.'
+        'OnCentive sold tax credits and incentives. Clear I-9 sold Form I-9 compliance. They belonged to the same company, but you’d never know it: each had its own site, its own colors, and its own voice.'
       }
     >
       <div className={s.pair}>
@@ -73,10 +71,7 @@ const HRlogicsBody = () => (
       eyebrow={'02 — The hive'}
       title={'One name for the whole suite'}
       lead={
-        'Trak Capital was bringing its compliance products together under a single sign-on as ' +
-        'HRlogics. I was brought in to finish the hive and build the brand around it for the ' +
-        'April 3, 2023 launch: a network of hexagons for a suite of connected products, in navy, ' +
-        'orange, and gold.'
+        'Trak Capital was bringing its compliance products together under a single sign-on as HRlogics. I was brought in to finish the hive and build a brand around it in time for the April 3, 2023 launch: a network of hexagons for a suite of products that connect to each other, in navy, orange, and gold.'
       }
     >
       <div className={s.pair}>
@@ -89,10 +84,7 @@ const HRlogicsBody = () => (
       eyebrow={'03 — The product system'}
       title={'One guide for every product'}
       lead={
-        'Once the products shared one platform, they needed shared rules. The product branding ' +
-        'guide set a palette for the interface, an alert color with one job each, a rounded type ' +
-        'family with Montserrat for anything in caps, and two tiers: Clear for software only, ' +
-        'Total for software plus service.'
+        'Once the products shared one platform, they needed to share one set of rules, or they would drift apart again. The product branding guide set a palette for the interface, an alert color with exactly one job each, a rounded type family with Montserrat for anything in caps, and two tiers: Clear for software only, Total for software plus service.'
       }
     >
       <div className={s.pair}>
@@ -107,9 +99,7 @@ const HRlogicsBody = () => (
       eyebrow={'04 — The logo system'}
       title={'Every mark, at every size'}
       lead={
-        'The guide grew into the hive’s original logo system: a wordmark for each product in ' +
-        'both tiers, a bold standalone mark for each with an orange gradient, and exports at ' +
-        'every size, in color and one color, for light and dark backgrounds.'
+        'The guide grew into the hive’s original logo system. Every product got a wordmark in both tiers and a bold standalone mark with an orange gradient, exported at every size, in full color and one color, for light and dark backgrounds, so nobody ever had to improvise one.'
       }
     >
       <Tile img={Logos2024} label={'The original logo system, v0.7, January 2024'} ratio={2.76} />
@@ -119,8 +109,7 @@ const HRlogicsBody = () => (
       eyebrow={'05 — Ryze'}
       title={'A name of its own for tax credits'}
       lead={
-        'Tax credits got their own brand. Ryze rises on a single phoenix stroke, and WOTC ' +
-        'became ryze WOTC by HRlogics.'
+        'Tax credits deserved a brand of their own. Ryze rises on a single phoenix stroke, and WOTC became ryze WOTC by HRlogics.'
       }
     >
       <Tile img={RyzeLogos} label={'Ryze, Ryze by HRlogics, and ryze WOTC'} ratio={5.22} />
@@ -130,10 +119,7 @@ const HRlogicsBody = () => (
       eyebrow={'06 — The portal rebrand'}
       title={'Redrawn for one sign-on'}
       lead={
-        'As HRL Portal took shape in 2025 to bring every product behind a single sign-on, I redrew the ' +
-        'logos for it. The gradients came out for a flat orange, the navy moved to a slightly ' +
-        'darker blue, every product took the same light wordmark signed “by HRlogics,” and Ryze ' +
-        'joined the family under the HRlogics umbrella.'
+        'As HRL Portal took shape in 2025 to bring every product behind a single sign-on, the logos were about to sit side by side on one dashboard, so I redrew them for it. The gradients gave way to a flat orange, the navy moved to a slightly darker blue, every product took the same light wordmark signed “by HRlogics,” and Ryze joined the family under the HRlogics umbrella.'
       }
     >
       <div className={s.library}>
@@ -150,9 +136,7 @@ const HRlogicsBody = () => (
       eyebrow={'07 — The 2025 website'}
       title={'HR compliance, without the “corporate”'}
       lead={
-        'I redesigned hrlogics.com in the new colors the same year. The hive stayed front and ' +
-        'center, and each product page got an illustration that pairs the software with a ' +
-        'number that matters to the buyer.'
+        'I redesigned hrlogics.com in the new colors the same year, and I wanted it to feel human rather than corporate. The hive stayed front and center, and each product page got an illustration pairing the software with a number that matters to the buyer.'
       }
     >
       <div className={s.library}>
@@ -180,8 +164,7 @@ const HRlogicsBody = () => (
       eyebrow={'08 — Out in the world'}
       title={'Booths, backgrounds, and print'}
       lead={
-        'The same system carried the trade-show booth, the team’s video-call backgrounds, and ' +
-        'the company’s LinkedIn page.'
+        'The same system went everywhere the brand showed up: the trade-show booth, the team’s video-call backgrounds, and the company’s LinkedIn page.'
       }
     >
       <div className={s.row4}>
@@ -221,8 +204,7 @@ const HRlogicsBody = () => (
       eyebrow={'09 — Into the product'}
       title={'The brand inside the software'}
       lead={
-        'The 2026 set finished the redraw: every product in light and dark, plus product icons in ' +
-        'two weights. HRL Portal and the WOTC app were built in it.'
+        'The 2026 set finished the redraw: every product in light and dark, plus product icons in two weights. This is where the brand finally lived inside the software itself, because HRL Portal and the WOTC app were built in it.'
       }
     >
       <div className={s.pair}>
