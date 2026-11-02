@@ -13,10 +13,10 @@ import EarlV1Color from 'src/assets/images/graphics/illustrations/earl-v1-color.
 import FlosMascot from 'src/assets/images/graphics/illustrations/flos-mascot.jpg';
 import Tapebot from 'src/assets/images/graphics/illustrations/tapebot.jpg';
 import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
-import Hrlogics from 'src/assets/images/graphics/logos/hrlogics.jpg';
-import IkigaiColorSeal from 'src/assets/images/graphics/logos/ikigai-color-seal.jpg';
+import FishbatWhale from 'src/assets/images/graphics/logos/fishbat-whale-paper.jpg';
+import FreethoughtCoffee from 'src/assets/images/graphics/logos/freethought-coffee.jpg';
 import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
-import Ryze from 'src/assets/images/graphics/logos/ryze.jpg';
+import Ucm from 'src/assets/images/graphics/logos/ucm.jpg';
 import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
 import GilbertExhibitFlyer from 'src/assets/images/graphics/print/gilbert-exhibit-flyer.jpg';
 import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
@@ -193,7 +193,7 @@ function GraphicsDashboard() {
           title={'Print'}
           overline={'Cards, menus, signs, and booths'}
           body={
-            'I’ve designed business cards, menus, signage, and trade-show booths, from band flyers in 2005 to the HRlogics booth in 2025.'
+            'I’ve designed business cards, menus, signage, and corporate branding, from band concert fliers in 2005 to trade-show booths in 2025.'
           }
           to={'/graphics/print'}
           thumbs={[
@@ -216,10 +216,10 @@ function GraphicsDashboard() {
           to={'/graphics/logos'}
           framed
           thumbs={[
-            { img: Hrlogics, alt: 'HRlogics logo' },
-            { img: Ryze, alt: 'Ryze logo' },
+            { img: FreethoughtCoffee, alt: 'Freethought Coffee logo' },
+            { img: Ucm, alt: 'UCM logo' },
             { img: PoppyParliamentStacked, alt: 'The Poppy & Parliament logo' },
-            { img: IkigaiColorSeal, alt: 'Ikigai seal' },
+            { img: FishbatWhale, alt: 'fishbat logo' },
           ]}
         />
       </Row>
