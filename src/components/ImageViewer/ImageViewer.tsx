@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { createPortal } from 'react-dom';
 
 import cn from 'clsx';
+import { createPortal } from 'react-dom';
 
 import { ImageViewerStyles as s } from 'src/components';
 
@@ -14,7 +14,9 @@ type ImageViewerProps = {
 
 const ImageViewer = ({ image, onClose }: ImageViewerProps) => {
   const [shown, setShown] = useState<ViewerImage | null>(image);
+  const [loaded, setLoaded] = useState<string | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
+  const current = image ?? shown;
 
   useEffect(() => {
     if (!image) {
@@ -36,27 +38,29 @@ const ImageViewer = ({ image, onClose }: ImageViewerProps) => {
       className={cn(s.root, image && s.active)}
       role={'dialog'}
       aria-modal
-      aria-label={shown?.title}
+      aria-label={current?.title}
       aria-hidden={!image}
     >
-      {shown && (
+      {current && (
         <button
           type={'button'}
           className={s.backdrop}
           onClick={onClose}
-          aria-label={`Close ${shown.title}`}
+          aria-label={`Close ${current.title}`}
           tabIndex={image ? 0 : -1}
           ref={closeRef}
         >
           <img
-            src={shown.img}
-            alt={shown.title}
-            className={cn(shown.background && s.matted)}
-            style={{ background: shown.background }}
+            key={current.img}
+            src={current.img}
+            alt={current.title}
+            className={cn(current.background && s.matted, loaded === current.img && s.loaded)}
+            style={{ background: current.background }}
+            onLoad={() => setLoaded(current.img)}
           />
           <span className={s.caption}>
-            <strong>{shown.title}</strong>
-            {shown.meta && ` · ${shown.meta}`}
+            <strong>{current.title}</strong>
+            {current.meta && ` · ${current.meta}`}
           </span>
           <span className={s.close} aria-hidden>
             +

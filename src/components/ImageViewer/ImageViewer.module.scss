@@ -42,6 +42,12 @@
     max-width: min(1200px, 100%);
     min-height: 0;
     object-fit: contain;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+
+  .loaded {
+    opacity: 1;
   }
 
   .matted {

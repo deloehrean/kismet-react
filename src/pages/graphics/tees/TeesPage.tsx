@@ -44,7 +44,7 @@ import WHIVLion from 'src/assets/images/tees/whiv-lion-tee.png';
 import WHIVRobot from 'src/assets/images/tees/whiv-robot-tee.png';
 import Woodward1 from 'src/assets/images/tees/woodward-1-tee.png';
 import WoodwardSwirl from 'src/assets/images/tees/woodward-swirl-tee.png';
-import { Container, Typography } from 'src/components';
+import { Container, ImageViewer, Typography } from 'src/components';
 import { onEnterOrSpace } from 'src/lib/utils';
 import s from 'src/pages/graphics/tees/TeesPage.module.scss';
 
@@ -186,6 +186,8 @@ function TeesPage() {
 
   const [hiResTee, setHiResTee] = useState<string | undefined>(undefined);
 
+  const closeTee = React.useCallback(() => setActiveIndex(null), []);
+
   const activeAction = (index: number, activeIndex: number | null) => {
     if (activeIndex === index) {
       setActiveIndex(null);
@@ -229,16 +231,18 @@ function TeesPage() {
         <div className={s['tee-wrap']}>{renderedItems}</div>
       </Container>
 
-      <div
-        className={cn(s['single-tee-hires-wrap'], activeIndex !== null && s.active)}
-        role={'presentation'}
-        onClick={() => setActiveIndex(null)}
-      >
-        <div className={s['expand-close']}>+</div>
-        <div className={s['hires-img']}>
-          {hiResTee && <img src={hiResTee} alt={teeName(shuffledTees[activeIndex ?? 0] ?? '')} />}
-        </div>
-      </div>
+      <ImageViewer
+        image={
+          activeIndex !== null && hiResTee
+            ? {
+                img: hiResTee,
+                title: teeName(shuffledTees[activeIndex] ?? ''),
+                meta: teeYears[teeSlug(shuffledTees[activeIndex] ?? '') ?? ''],
+              }
+            : null
+        }
+        onClose={closeTee}
+      />
     </section>
   );
 }
