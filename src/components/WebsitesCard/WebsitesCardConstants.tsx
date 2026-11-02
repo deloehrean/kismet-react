@@ -647,7 +647,7 @@ export const petersFruitContent = {
   subtitle: 'Marketing Website',
   year: '2016',
   description:
-    'Peter’s Fruit Company’s produce changes with every season, and they needed a site that could stay up to speed. As a fishbat project, I built a simple dynamic site that allowed fluid movement of produce in and out of categories that they could control themselves, without needing a developer. An ever changing menu of product based on the season should never require tech more than once.',
+    'Peter’s Fruit Company’s produce changes with every season, and they needed a site that could stay up to speed. As a fishbat project, I built a simple dynamic site that allowed fluid movement of produce in and out of categories that they could control themselves, without needing a developer. An ever-changing menu of product based on the season should never require tech more than once.',
   poweredBy: 'Concrete CMS',
   toolsUsed: 'LESS, PHP, jQuery',
   logo: PetersFruitLogo,
@@ -675,7 +675,7 @@ export const prosemiContent = {
   logo: ProsemiLogo,
   logoLight: ProsemiLogoLight,
   description:
-    'Prosemi is a semiconductor testing company in Southeast Asia that joined Fusion Worldwide, and it needed a new site to show off its updated facilities and take requests for quotes. I designed and built it in about two weeks, set in the same typeface and experience as Fusion so the two read as family and added Contentful endpoints in each content area to allow for their team to easily continue updating without the need of a developer.',
+    'Prosemi is a semiconductor testing company in Southeast Asia that joined Fusion Worldwide, and it needed a new site to show off its updated facilities and take requests for quotes. I designed and built it in about two weeks, set in the same typeface and experience as Fusion so the two read as family, and added Contentful endpoints in each content area to allow for their team to easily continue updating without the need of a developer.',
   poweredBy: 'Gatsby / Contentful',
   toolsUsed: 'React, Node.js, SCSS, Yarn, GraphQL',
   gallery: [
