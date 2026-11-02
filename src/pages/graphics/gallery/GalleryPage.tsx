@@ -1,8 +1,8 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
 
 import cn from 'clsx';
 
-import { Container, Typography } from 'src/components';
+import { Container, ImageViewer, Typography } from 'src/components';
 import s from 'src/pages/graphics/gallery/GalleryPage.module.scss';
 
 export interface GalleryItem {
@@ -54,22 +54,7 @@ function GalleryPage({ title, intro, items, framed, mixed }: GalleryPageProps) {
     [items, mixed, mobile],
   );
   const [open, setOpen] = useState<GalleryItem | null>(null);
-  const [shown, setShown] = useState<GalleryItem | null>(null);
-  const closeRef = useRef<HTMLButtonElement>(null);
-  const openerRef = useRef<HTMLElement | null>(null);
-
-  useEffect(() => {
-    if (!open) {
-      return undefined;
-    }
-    closeRef.current?.focus();
-    const close = (event: KeyboardEvent) => event.key === 'Escape' && setOpen(null);
-    window.addEventListener('keydown', close);
-    return () => {
-      window.removeEventListener('keydown', close);
-      openerRef.current?.focus();
-    };
-  }, [open]);
+  const close = useCallback(() => setOpen(null), []);
 
   return (
     <section className={s.root}>
@@ -83,15 +68,7 @@ function GalleryPage({ title, intro, items, framed, mixed }: GalleryPageProps) {
       <div className={cn(s.grid, framed && s.framed)}>
         {ordered.map(item => (
           <figure key={item.img} className={s.piece}>
-            <button
-              type={'button'}
-              onClick={event => {
-                openerRef.current = event.currentTarget;
-                setOpen(item);
-                setShown(item);
-              }}
-              aria-label={`Open ${item.title}`}
-            >
+            <button type={'button'} onClick={() => setOpen(item)} aria-label={`Open ${item.title}`}>
               <img src={item.img} alt={item.title} loading={'lazy'} />
             </button>
             <figcaption>
@@ -102,32 +79,7 @@ function GalleryPage({ title, intro, items, framed, mixed }: GalleryPageProps) {
         ))}
       </div>
 
-      <div
-        className={cn(s.viewer, open && s.active)}
-        role={'dialog'}
-        aria-modal
-        aria-label={shown?.title}
-        aria-hidden={!open}
-      >
-        {shown && (
-          <button
-            type={'button'}
-            className={s.backdrop}
-            onClick={() => setOpen(null)}
-            aria-label={`Close ${shown.title}`}
-            tabIndex={open ? 0 : -1}
-            ref={closeRef}
-          >
-            <img src={shown.img} alt={shown.title} />
-            <span className={s.caption}>
-              <strong>{shown.title}</strong> · {shown.meta}
-            </span>
-            <span className={s.close} aria-hidden>
-              +
-            </span>
-          </button>
-        )}
-      </div>
+      <ImageViewer image={open} onClose={close} />
     </section>
   );
 }

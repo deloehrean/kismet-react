@@ -36,7 +36,7 @@ import MenuHutton from 'src/assets/images/case-studies/poppy/menu-hutton-smith-d
 import MerchTee from 'src/assets/images/case-studies/poppy/merch-st-pats-tee.jpg';
 import MerchBack from 'src/assets/images/case-studies/poppy/merch-support-local-back.jpg';
 import Banner from 'src/assets/images/case-studies/poppy/print-st-patricks-banner.svg';
-import { Divider, Typography } from 'src/components';
+import { Divider, Typography, Zoomable } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import { Section, Tile } from 'src/pages/case-studies/CaseStudyParts';
 
@@ -80,14 +80,18 @@ const PoppyParliamentBody = () => (
       <div className={cn(s.row3, s.concepts)}>
         {[Concept1, Concept2, Concept3].map((c, i) => (
           <figure key={i} className={s.tile}>
-            <img src={c} alt={`Logo concept ${i + 1}`} loading={'lazy'} />
+            <Zoomable img={c} title={`Logo concept ${i + 1}`}>
+              <img src={c} alt={`Logo concept ${i + 1}`} loading={'lazy'} />
+            </Zoomable>
             <figcaption>Concept {`0${i + 1}`}</figcaption>
           </figure>
         ))}
       </div>
       <div className={s.lockups}>
         <div className={s['lockup-light']}>
-          <img src={LogoBlack} alt={'Full lockup, dark on light'} />
+          <Zoomable img={LogoBlack} title={'Full lockup, dark on light'}>
+            <img src={LogoBlack} alt={'Full lockup, dark on light'} />
+          </Zoomable>
         </div>
         <div className={s['lockup-dark']}>
           <img src={MarkRed} alt={'Poppy mark'} />
@@ -138,7 +142,9 @@ const PoppyParliamentBody = () => (
         <Tile img={MenuHutton} label={'Hutton & Smith takeover'} ratio={0.71} />
       </div>
       <figure className={s.banner}>
-        <img src={Banner} alt={"St Patrick's Day banner"} />
+        <Zoomable img={Banner} title={"St. Patrick's Day banner"}>
+          <img src={Banner} alt={"St Patrick's Day banner"} />
+        </Zoomable>
         <figcaption>St. Patrick&rsquo;s Day banner, supplied as AI, EPS, PSD, and SVG</figcaption>
       </figure>
     </Section>

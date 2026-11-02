@@ -1,20 +1,22 @@
 import React from 'react';
 
-import { Typography } from 'src/components';
+import { Typography, Zoomable } from 'src/components';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 
 type TileProps = { img: string; label: string; ratio?: number; top?: boolean };
 
 export const Tile = ({ img, label, ratio = 1, top }: TileProps) => (
   <figure className={s.tile}>
-    <img
-      src={img}
-      alt={label}
-      loading={'lazy'}
-      style={
-        { '--tile-ratio': ratio, objectPosition: top ? 'top' : undefined } as React.CSSProperties
-      }
-    />
+    <Zoomable img={img} title={label}>
+      <img
+        src={img}
+        alt={label}
+        loading={'lazy'}
+        style={
+          { '--tile-ratio': ratio, objectPosition: top ? 'top' : undefined } as React.CSSProperties
+        }
+      />
+    </Zoomable>
     <figcaption>{label}</figcaption>
   </figure>
 );

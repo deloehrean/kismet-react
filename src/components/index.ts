@@ -4,6 +4,7 @@ export * from './Column';
 export * from './Container';
 export * from './Divider';
 export * from './Footer';
+export * from './ImageViewer';
 export * from './Layout';
 export * from './LinkStyled';
 export * from './ListItem';
