@@ -3,6 +3,7 @@
 
 .graphics-panel {
   position: relative;
+  width: 100%;
 
   .subnav-container {
     align-items: center;
@@ -174,5 +175,32 @@
     display: block;
     height: auto;
     width: 100%;
+  }
+}
+
+.row {
+  align-items: stretch;
+  width: 100%;
+}
+
+.shell {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.card {
+  container-type: inline-size;
+  flex: 1;
+
+  .button {
+    margin-top: auto;
+  }
+}
+
+@container (max-width: 527px) {
+  .thumbs,
+  .albums,
+  .tees {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

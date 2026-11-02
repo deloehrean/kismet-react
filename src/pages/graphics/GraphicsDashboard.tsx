@@ -44,8 +44,8 @@ type GalleryCardProps = {
 };
 
 const GalleryCard = ({ title, overline, body, to, thumbs, preview, framed }: GalleryCardProps) => (
-  <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-    <Container direction={'column'} full gap={2}>
+  <Container className={s.shell} styled variant={'darkish'} rounded={'extra'} full elevation={8}>
+    <Container className={s.card} direction={'column'} full gap={2}>
       <Column>
         <Typography variant={'h6'}>{title}</Typography>
         <Typography variant={'overline'} color={'secondary'}>
@@ -97,7 +97,7 @@ function GraphicsDashboard() {
       <Typography variant={'body1'}>
         A few favorites from each collection. Every card links to the full set.
       </Typography>
-      <Row gap={2} breakpoint={'md'}>
+      <Row className={s.row} gap={2} breakpoint={'md'}>
         <GalleryCard
           title={'Albums'}
           overline={'CD, vinyl, and cassette'}
@@ -140,7 +140,7 @@ function GraphicsDashboard() {
           }
         />
       </Row>
-      <Row gap={2} breakpoint={'md'}>
+      <Row className={s.row} gap={2} breakpoint={'md'}>
         <GalleryCard
           title={'Print'}
           overline={'Cards, menus, signs, and booths'}
@@ -175,7 +175,7 @@ function GraphicsDashboard() {
           ]}
         />
       </Row>
-      <Row gap={2} breakpoint={'md'}>
+      <Row className={s.row} gap={2} breakpoint={'md'}>
         <GalleryCard
           title={'Ads & Social'}
           overline={'Social, display, and email'}
