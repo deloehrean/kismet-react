@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 
 import cn from 'clsx';
 
@@ -16,9 +16,43 @@ interface GalleryPageProps {
   intro: string;
   items: GalleryItem[];
   framed?: boolean;
+  mixed?: boolean;
 }
 
-function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
+const brand = (item: GalleryItem) => item.meta.split(/ · |, /)[0] ?? item.meta;
+
+const interleave = (items: GalleryItem[]) => {
+  const groups = new Map<string, GalleryItem[]>();
+  items.forEach(item => groups.set(brand(item), [...(groups.get(brand(item)) ?? []), item]));
+  const queues = [...groups.values()];
+  const out: GalleryItem[] = [];
+  while (out.length < items.length) {
+    queues.forEach(queue => {
+      const next = queue.shift();
+      if (next) {
+        out.push(next);
+      }
+    });
+  }
+  return out;
+};
+
+const MOBILE = '(max-width: 600px)';
+
+function GalleryPage({ title, intro, items, framed, mixed }: GalleryPageProps) {
+  const [mobile, setMobile] = useState(() => window.matchMedia(MOBILE).matches);
+
+  useEffect(() => {
+    const query = window.matchMedia(MOBILE);
+    const update = () => setMobile(query.matches);
+    query.addEventListener('change', update);
+    return () => query.removeEventListener('change', update);
+  }, []);
+
+  const ordered = useMemo(
+    () => (mixed && mobile ? interleave(items) : items),
+    [items, mixed, mobile],
+  );
   const [open, setOpen] = useState<GalleryItem | null>(null);
   const [shown, setShown] = useState<GalleryItem | null>(null);
   const closeRef = useRef<HTMLButtonElement>(null);
@@ -47,7 +81,7 @@ function GalleryPage({ title, intro, items, framed }: GalleryPageProps) {
       </Container>
 
       <div className={cn(s.grid, framed && s.framed)}>
-        {items.map(item => (
+        {ordered.map(item => (
           <figure key={item.img} className={s.piece}>
             <button
               type={'button'}

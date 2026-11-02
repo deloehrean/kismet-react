@@ -15,11 +15,9 @@ import CampValentinesTea from 'src/assets/images/case-studies/poppy/camp-valenti
 import CovidAnnouncement from 'src/assets/images/case-studies/poppy/covid-announcement.jpg';
 import CovidKitMoscowMule from 'src/assets/images/case-studies/poppy/covid-kit-moscow-mule.jpg';
 import CovidSickDeals from 'src/assets/images/case-studies/poppy/covid-sick-deals.jpg';
-import AcmBoltDiscount from 'src/assets/images/graphics/ads/acm-bolt-discount.jpg';
 import AcmMarchMadness from 'src/assets/images/graphics/ads/acm-march-madness.jpg';
 import AcmWireDiscount from 'src/assets/images/graphics/ads/acm-wire-discount.jpg';
 import AcmWireSealsTools from 'src/assets/images/graphics/ads/acm-wire-seals-tools.jpg';
-import AcmWireSeals from 'src/assets/images/graphics/ads/acm-wire-seals.jpg';
 import AssisiAafp from 'src/assets/images/graphics/ads/assisi-aafp.jpg';
 import AssisiHappyCatMonth from 'src/assets/images/graphics/ads/assisi-happy-cat-month.jpg';
 import AssisiHealingHome from 'src/assets/images/graphics/ads/assisi-healing-home.jpg';
@@ -33,7 +31,6 @@ import CognitoysCyberMonday from 'src/assets/images/graphics/ads/cognitoys-cyber
 import CognitoysDino from 'src/assets/images/graphics/ads/cognitoys-dino.jpg';
 import CohensSoho from 'src/assets/images/graphics/ads/cohens-soho.jpg';
 import CohensStyleDays from 'src/assets/images/graphics/ads/cohens-style-days.jpg';
-import CtmNewsletter from 'src/assets/images/graphics/ads/ctm-newsletter.jpg';
 import CwcbExpo from 'src/assets/images/graphics/ads/cwcb-expo.jpg';
 import CwcbKeynote from 'src/assets/images/graphics/ads/cwcb-keynote.jpg';
 import CwcbNewsletter from 'src/assets/images/graphics/ads/cwcb-newsletter.jpg';
@@ -43,7 +40,6 @@ import FirstStar1 from 'src/assets/images/graphics/ads/first-star-1.jpg';
 import FirstStar2 from 'src/assets/images/graphics/ads/first-star-2.jpg';
 import FishbatBeacon from 'src/assets/images/graphics/ads/fishbat-beacon.jpg';
 import FishbatCmos from 'src/assets/images/graphics/ads/fishbat-cmos.jpg';
-import FishbatCompanyCulture from 'src/assets/images/graphics/ads/fishbat-company-culture.jpg';
 import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer.jpg';
 import FishbatNewMarkets from 'src/assets/images/graphics/ads/fishbat-new-markets.jpg';
 import FishbatPuzzle from 'src/assets/images/graphics/ads/fishbat-puzzle.jpg';
@@ -64,7 +60,6 @@ import HosGoldenCollector from 'src/assets/images/graphics/ads/hos-golden-collec
 import HosMammothIvory from 'src/assets/images/graphics/ads/hos-mammoth-ivory.jpg';
 import HosNewsletter from 'src/assets/images/graphics/ads/hos-newsletter.jpg';
 import HosSavano from 'src/assets/images/graphics/ads/hos-savano.jpg';
-import HosSignatureContemporary from 'src/assets/images/graphics/ads/hos-signature-contemporary.jpg';
 import HosSinquefield2016 from 'src/assets/images/graphics/ads/hos-sinquefield-2016.jpg';
 import HosTurin from 'src/assets/images/graphics/ads/hos-turin.jpg';
 import IslandFishHiring from 'src/assets/images/graphics/ads/island-fish-hiring.jpg';
@@ -74,25 +69,14 @@ import Locox2xlPenny from 'src/assets/images/graphics/ads/locox-2xl-penny.jpg';
 import LocoxAnswerWinningCombo from 'src/assets/images/graphics/ads/locox-answer-winning-combo.jpg';
 import LocoxAraiVector2 from 'src/assets/images/graphics/ads/locox-arai-vector-2.jpg';
 import LocoxBellMoto9 from 'src/assets/images/graphics/ads/locox-bell-moto-9.jpg';
-import LocoxBellPantSagginHelmet from 'src/assets/images/graphics/ads/locox-bell-pant-saggin-helmet.jpg';
-import LocoxFastfinder from 'src/assets/images/graphics/ads/locox-fastfinder.jpg';
 import LocoxFlyRacingSale from 'src/assets/images/graphics/ads/locox-fly-racing-sale.jpg';
 import LocoxFoxA1 from 'src/assets/images/graphics/ads/locox-fox-a1.jpg';
 import LocoxFoxCasualCloseouts from 'src/assets/images/graphics/ads/locox-fox-casual-closeouts.jpg';
-import LocoxFoxGearSale from 'src/assets/images/graphics/ads/locox-fox-gear-sale.jpg';
-import LocoxFreeShipping from 'src/assets/images/graphics/ads/locox-free-shipping.jpg';
-import LocoxGiftCardGiveaway from 'src/assets/images/graphics/ads/locox-gift-card-giveaway.jpg';
 import LocoxMsr2012 from 'src/assets/images/graphics/ads/locox-msr-2012.jpg';
 import LocoxOneGearCombos from 'src/assets/images/graphics/ads/locox-one-gear-combos.jpg';
 import LocoxOnePracticeGear from 'src/assets/images/graphics/ads/locox-one-practice-gear.jpg';
 import LocoxPantSaggin from 'src/assets/images/graphics/ads/locox-pant-saggin.jpg';
-import LocoxRockstarGiveaway from 'src/assets/images/graphics/ads/locox-rockstar-giveaway.jpg';
-import LocoxShopLifestyle from 'src/assets/images/graphics/ads/locox-shop-lifestyle.jpg';
-import LocoxShopMotocross from 'src/assets/images/graphics/ads/locox-shop-motocross.jpg';
-import LocoxShopSportBike from 'src/assets/images/graphics/ads/locox-shop-sport-bike.jpg';
 import LocoxStealOfTheDay from 'src/assets/images/graphics/ads/locox-steal-of-the-day.jpg';
-import LocoxThorAtlSx11 from 'src/assets/images/graphics/ads/locox-thor-atl-sx11.jpg';
-import LocoxThorNewGear from 'src/assets/images/graphics/ads/locox-thor-new-gear.jpg';
 import LocoxThorWonA1 from 'src/assets/images/graphics/ads/locox-thor-won-a1.jpg';
 import LoopLoc40Years from 'src/assets/images/graphics/ads/loop-loc-40-years.jpg';
 import LoopLocAquaXtreme from 'src/assets/images/graphics/ads/loop-loc-aqua-xtreme.jpg';
@@ -102,21 +86,15 @@ import LoopLocPearlessence from 'src/assets/images/graphics/ads/loop-loc-pearles
 import ModelYearCloseout from 'src/assets/images/graphics/ads/model-year-closeout.jpg';
 import OraKingAwardsStory from 'src/assets/images/graphics/ads/ora-king-awards-story.jpg';
 import OraKingChefsTour from 'src/assets/images/graphics/ads/ora-king-chefs-tour.jpg';
-import OraKingCountdownJapan from 'src/assets/images/graphics/ads/ora-king-countdown-japan.jpg';
 import OraKingForTheCircle from 'src/assets/images/graphics/ads/ora-king-for-the-circle.jpg';
 import OraKingNorthAmerica from 'src/assets/images/graphics/ads/ora-king-north-america.jpg';
 import PlasticplaceExtraStrong from 'src/assets/images/graphics/ads/plasticplace-extra-strong.jpg';
 import PlasticplaceIntegrity from 'src/assets/images/graphics/ads/plasticplace-integrity.jpg';
 import PoppyFoundersTap from 'src/assets/images/graphics/ads/poppy-founders-tap.jpg';
 import PoppyKitBloodyMary from 'src/assets/images/graphics/ads/poppy-kit-bloody-mary.jpg';
-import PoppyKitKentuckyMule from 'src/assets/images/graphics/ads/poppy-kit-kentucky-mule.jpg';
-import PoppyKitTennesseeMule from 'src/assets/images/graphics/ads/poppy-kit-tennessee-mule.jpg';
-import PoppyKitVodkaSoda from 'src/assets/images/graphics/ads/poppy-kit-vodka-soda.jpg';
-import PoppyKitVodkaTonic from 'src/assets/images/graphics/ads/poppy-kit-vodka-tonic.jpg';
 import PoppyMontyPython from 'src/assets/images/graphics/ads/poppy-monty-python.jpg';
 import UscfAmericanChessMagazine from 'src/assets/images/graphics/ads/uscf-american-chess-magazine.jpg';
 import UscfDannyKopec from 'src/assets/images/graphics/ads/uscf-danny-kopec.jpg';
-import UscfDgt3000 from 'src/assets/images/graphics/ads/uscf-dgt-3000.jpg';
 import UscfEndgameTees from 'src/assets/images/graphics/ads/uscf-endgame-tees.jpg';
 import UscfKasparovDeepThinking from 'src/assets/images/graphics/ads/uscf-kasparov-deep-thinking.jpg';
 import UscfMasterMethod from 'src/assets/images/graphics/ads/uscf-master-method.jpg';
@@ -155,26 +133,6 @@ const ITEMS: GalleryItem[] = [
     meta: 'The Poppy & Parliament · 2020',
   },
   {
-    img: PoppyKitKentuckyMule,
-    title: 'Starter kit, Kentucky mule',
-    meta: 'The Poppy & Parliament · 2020',
-  },
-  {
-    img: PoppyKitTennesseeMule,
-    title: 'Starter kit, Tennessee mule',
-    meta: 'The Poppy & Parliament · 2020',
-  },
-  {
-    img: PoppyKitVodkaSoda,
-    title: 'Starter kit, vodka soda',
-    meta: 'The Poppy & Parliament · 2020',
-  },
-  {
-    img: PoppyKitVodkaTonic,
-    title: 'Starter kit, vodka tonic',
-    meta: 'The Poppy & Parliament · 2020',
-  },
-  {
     img: PoppyKitBloodyMary,
     title: 'Starter kit, Bloody Mary',
     meta: 'The Poppy & Parliament · 2020',
@@ -199,11 +157,6 @@ const ITEMS: GalleryItem[] = [
     meta: 'House of Staunton · 2017',
   },
   { img: HosSavano, title: 'Savano Series', meta: 'House of Staunton · 2017' },
-  {
-    img: HosSignatureContemporary,
-    title: 'Signature Contemporary III boards',
-    meta: 'House of Staunton · 2017',
-  },
   { img: HosTurin, title: 'Turin Series', meta: 'House of Staunton · 2017' },
   { img: HosFathersDay, title: 'Father’s Day sale banner', meta: 'House of Staunton · 2017' },
   { img: HosNewsletter, title: 'Newsletter', meta: 'House of Staunton · 2017' },
@@ -214,7 +167,6 @@ const ITEMS: GalleryItem[] = [
     meta: 'US Chess Sales · 2017',
   },
   { img: UscfDannyKopec, title: 'Danny Kopec collection', meta: 'US Chess Sales · 2016' },
-  { img: UscfDgt3000, title: 'DGT 3000 clock', meta: 'US Chess Sales · 2017' },
   {
     img: UscfKasparovDeepThinking,
     title: 'Kasparov, Deep Thinking',
@@ -223,9 +175,7 @@ const ITEMS: GalleryItem[] = [
   { img: UscfMasterMethod, title: 'Master Method, Naroditsky', meta: 'US Chess Sales · 2017' },
   { img: UscfWildStyleBoards, title: 'Wild Style chess boards', meta: 'US Chess Sales · 2017' },
   { img: LinkedinBanner, title: 'LinkedIn banner', meta: 'HRlogics · 2025' },
-  { img: AcmWireSeals, title: 'Wire seals in stock', meta: 'ACM · fishbat, 2018' },
   { img: AcmWireDiscount, title: '15% off, display ad', meta: 'ACM · fishbat, 2019' },
-  { img: AcmBoltDiscount, title: '15% off, display ad', meta: 'ACM · fishbat, 2018' },
   { img: AcmWireSealsTools, title: 'Wire seals and sealing tools', meta: 'ACM · fishbat, 2018' },
   { img: AcmMarchMadness, title: 'March Madness seal event', meta: 'ACM · fishbat, 2018' },
   { img: AssisiHolidays, title: 'Holiday post', meta: 'Assisi Animal Health · fishbat, 2017' },
@@ -266,9 +216,7 @@ const ITEMS: GalleryItem[] = [
   { img: FishbatNewMarkets, title: 'New markets', meta: 'fishbat · 2017' },
   { img: FishbatCmos, title: 'The unsung heroes', meta: 'fishbat, 2017' },
   { img: FishbatWebinar, title: 'Webinar email', meta: 'fishbat · 2017' },
-  { img: FishbatCompanyCulture, title: 'Company culture', meta: 'fishbat, 2017' },
   { img: FishbatSoWhat, title: 'The “so what?”', meta: 'fishbat, 2017' },
-  { img: CtmNewsletter, title: 'Newsletter header', meta: 'CTM · fishbat, 2018' },
   { img: JloftsEmail, title: 'February email', meta: 'J Lofts · fishbat, 2017' },
   { img: CognitoysDino, title: 'Dino Toy', meta: 'CogniToys · fishbat, 2017' },
   { img: CognitoysClock, title: 'The clock is ticking', meta: 'CogniToys · fishbat, 2017' },
@@ -286,7 +234,6 @@ const ITEMS: GalleryItem[] = [
   { img: IslandFishHiring, title: 'We’re hiring', meta: 'Island Fish & Reef · fishbat, 2018' },
   { img: OraKingAwardsStory, title: 'Awards story', meta: 'Ora King · fishbat, 2017' },
   { img: OraKingNorthAmerica, title: 'North America awards', meta: 'Ora King · fishbat, 2017' },
-  { img: OraKingCountdownJapan, title: 'Countdown to Japan', meta: 'Ora King · fishbat, 2017' },
   {
     img: OraKingChefsTour,
     title: 'Exclusive chef’s tour of Japan',
@@ -315,32 +262,17 @@ const ITEMS: GalleryItem[] = [
   { img: EstellesFreeGift, title: 'Free gift', meta: 'Estelle’s · fishbat, 2017' },
   { img: LocoxFoxA1, title: 'Fox A1 limited edition gear', meta: 'LocoX · 2011' },
   { img: LocoxThorWonA1, title: 'Wear the gear that won A1', meta: 'LocoX · 2011' },
-  { img: LocoxThorAtlSx11, title: 'The ATL SX11 winning combo', meta: 'LocoX · 2011' },
   { img: LocoxAnswerWinningCombo, title: 'Answer’s winning combo', meta: 'LocoX · 2011' },
   { img: LocoxOneGearCombos, title: 'New One Industries gear combos', meta: 'LocoX · 2011' },
-  { img: LocoxThorNewGear, title: 'Great new gear from Thor', meta: 'LocoX · 2011' },
   { img: LocoxBellMoto9, title: 'New Bell Moto-9', meta: 'LocoX · 2011' },
   { img: LocoxAraiVector2, title: 'New Arai Vector-2 helmets', meta: 'LocoX · 2011' },
   { img: LocoxFoxCasualCloseouts, title: 'Fox casual closeouts', meta: 'LocoX · 2011' },
   { img: LocoxOnePracticeGear, title: 'A truckload of practice gear', meta: 'LocoX · 2011' },
   { img: Locox2xlPenny, title: '2XL headphones for a penny', meta: 'LocoX · 2011' },
   { img: LocoxFlyRacingSale, title: '2011 Fly Racing gear sale', meta: 'LocoX · 2011' },
-  { img: LocoxFoxGearSale, title: '2011 Fox gear sale', meta: 'LocoX · 2011' },
   { img: LocoxMsr2012, title: 'Pre-order 2012 MSR gear', meta: 'LocoX · 2011' },
   { img: LocoxPantSaggin, title: 'Pant Saggin socks, belts, and tees', meta: 'LocoX · 2011' },
   { img: LocoxStealOfTheDay, title: 'Steal of the Day', meta: 'LocoX · 2011' },
-  { img: LocoxShopMotocross, title: 'Shop Motocross & ATV', meta: 'LocoX · 2011' },
-  { img: LocoxShopSportBike, title: 'Shop Sport Bike & Stunt', meta: 'LocoX · 2011' },
-  { img: LocoxShopLifestyle, title: 'Shop Lifestyle & Casual', meta: 'LocoX · 2011' },
-  { img: LocoxFreeShipping, title: 'Always free shipping', meta: 'LocoX · 2010' },
-  { img: LocoxGiftCardGiveaway, title: '$100 weekly gift card giveaway', meta: 'LocoX · 2010' },
-  { img: LocoxRockstarGiveaway, title: 'Autographed gear set giveaway', meta: 'LocoX · 2011' },
-  {
-    img: LocoxBellPantSagginHelmet,
-    title: 'Win a custom Bell × Pant Saggin helmet',
-    meta: 'LocoX · 2011',
-  },
-  { img: LocoxFastfinder, title: 'FastFinder parts search', meta: 'LocoX · 2011' },
 ];
 
 function AdsPage() {
@@ -351,6 +283,7 @@ function AdsPage() {
         'Social posts, display ads, and email campaigns I designed for my own clients at Kismet, for agency clients at fishbat, and for LocoX as its in-house designer, each built to its platform’s sizes.'
       }
       items={ITEMS}
+      mixed
     />
   );
 }
