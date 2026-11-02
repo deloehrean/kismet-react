@@ -117,7 +117,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'04 — RocketChips'}
       title={'Buying parts without a phone call'}
       lead={
-        'The homepage made buyers four promises: search with real pricing, quotes back within a day, credit approved in a minute, and a checkout with no salesperson in the way. My job was making sure the store actually kept them.'
+        'The homepage made buyers four promises: search with real pricing, quotes back within a day, credit approved in a minute, and a checkout with no salesperson in the way. My job was making sure the store actually kept the customer.'
       }
     >
       <Stats items={ROCKETCHIPS_PROMISES} source={'From the RocketChips homepage, 2023.'} />
