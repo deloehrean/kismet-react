@@ -74,7 +74,7 @@ const PoppyParliamentBody = () => (
       eyebrow={'01 — The mark'}
       title={'Three routes, one poppy'}
       lead={
-        'Early directions explored the pub name, the flower, and the parliament reference. I went with the route that keeps the poppy as a standalone mark, because a pub’s logo has to work everywhere, down to the size of a stamp.'
+        'Early directions explored the pub name, the flower, and the parliament reference. I went with the route that keeps the poppy as a standalone mark, because a pub’s logo has to work everywhere: on a menu, a tee, a gift card, and all the way down to the size of a stamp.'
       }
     >
       <div className={cn(s.row3, s.concepts)}>
@@ -147,7 +147,7 @@ const PoppyParliamentBody = () => (
       eyebrow={'04 — Campaign cadence'}
       title={'A year of events'}
       lead={
-        'Thirteen campaigns across 2019 and early 2020, each sized for Instagram and Facebook, to give regulars a reason to keep coming back.'
+        'Thirteen campaigns across 2019 and early 2020, each sized for Instagram and Facebook, to give regulars a reason to keep coming back (and newcomers a reason to show up).'
       }
     >
       <div className={s.grid}>

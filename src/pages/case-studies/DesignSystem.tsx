@@ -74,7 +74,7 @@ const DesignSystemBody = () => (
       eyebrow={'01 — The problem'}
       title={'A brand that only lived in logo files'}
       lead={
-        'The new apps were starting from a generic Tailwind and Radix starter kit and getting styled one page at a time, so every app was slowly drifting into its own look. The HRlogics brand needed to exist in code, once, so every app would look and behave like part of the same suite.'
+        'The new apps were starting from a generic Tailwind and Radix starter kit and getting styled one page at a time, so every app was slowly drifting into a look of its own. A brand that only lives in logo files isn’t finished. HRlogics needed to exist in code, once, so every app would look and behave like part of the same suite.'
       }
     >
       <Stats items={LIBRARY} source={'From the library’s release history, January to June 2026.'} />
@@ -116,7 +116,7 @@ const DesignSystemBody = () => (
       eyebrow={'04 — No outside UI runtime'}
       title={'Built in-house, down to the focus trap'}
       lead={
-        'Version 2.0 replaced all eleven Radix packages with the library’s own building blocks for slots, focus trapping, scroll locking, and animation. Owning those pieces meant the apps stopped inheriting someone else’s upgrade cycle, and later releases cleared out the last Tailwind holdovers.'
+        'Version 2.0 replaced all eleven Radix packages with the library’s own building blocks for slots, focus trapping, scroll locking, and animation. Owning those pieces meant the apps stopped inheriting someone else’s upgrade cycle (and someone else’s bugs), and later releases cleared out the last Tailwind holdovers.'
       }
     >
       <Stats items={PRIMITIVES} source={'From the 2.0 release, April 6, 2026.'} />

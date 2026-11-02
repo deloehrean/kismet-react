@@ -58,7 +58,7 @@ const ClearAcaBody = () => (
       eyebrow={'01 — Before'}
       title={'A new name on an old product'}
       lead={
-        'Clear ACA started life as SyncStream, a platform employers used to track and report Affordable Care Act compliance. When it joined HRlogics, the only sign of the change was a banner announcing the new name, sitting on top of the old logo, the old navigation, and a 2015 footer. Clients deserved better than that.'
+        'Clear ACA started life as SyncStream, a platform employers used to track and report Affordable Care Act compliance. When it joined HRlogics, the only sign of the change was a banner announcing the new name, sitting right on top of the old logo, the old navigation, and a 2015 footer. Clients deserved better than a banner.'
       }
     />
 
@@ -66,7 +66,7 @@ const ClearAcaBody = () => (
       eyebrow={'02 — The audit'}
       title={'Marking up the page every client opened'}
       lead={
-        'I started with the reporting page, the first screen most clients saw, and marked up everything working against them. None of it was cosmetic for its own sake, and each note became part of the brief for the redesign.'
+        'I started with the reporting page, the first screen most clients saw, and marked up everything working against them. None of it was cosmetic for its own sake. Every note became part of the brief for the redesign.'
       }
       figure={
         <Tile img={ReportingCritique} label={'My markup of the reporting page'} ratio={1.23} />
@@ -134,7 +134,7 @@ const ClearAcaBody = () => (
       eyebrow={'06 — What it led to'}
       title={'The first version of the design system'}
       lead={
-        'I did both the design and the build, on a refactored front end. Its components became the first version of the library behind the whole HRlogics suite. The new experience improved every metric we tracked, and its look and feel helped the product sell to another company.'
+        'I did both the design and the build, on a refactored front end, and its components became the first version of the library behind the whole HRlogics suite. The new experience improved every tracked metric, addressed multiple customer complaints, and its new look and feel was instrumental in an enterprise acquisition.'
       }
     >
       <LinkStyled to={'/websites#site-clear-aca'}>See Clear ACA on Websites &rarr;</LinkStyled>

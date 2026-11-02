@@ -70,7 +70,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'01 — The starting point'}
       title={'A $3 billion distributor that sold by phone'}
       lead={
-        'When I joined in 2022, Fusion’s website was a WordPress brochure, and every sale still started with a phone call or a quote form. RocketChips, a self-service store an agency had started, was supposed to change that, and it was only half finished. I rebuilt fusionww.com as part of the 2023 rebrand and pointed it at RocketChips, because the company site should have been the front door to the store, not a dead end.'
+        'When I joined in 2022, Fusion’s website was a WordPress brochure, and every sale still started with a phone call or a quote form. RocketChips, a self-service store an agency had started, was supposed to change that... and it was only half finished. I rebuilt fusionww.com as part of the 2023 rebrand and pointed it straight at RocketChips. A company site should be the front door to the store, not a dead end.'
       }
     >
       <div className={s.pair}>
@@ -84,7 +84,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'02 — Prosemi'}
       title={'A second site in two weeks'}
       lead={
-        'Prosemi, an electronics testing company in Southeast Asia, had just joined Fusion and needed a site that showed off its facilities and made it easy to ask for a quote. I designed and built it on Gatsby in November 2022 and set it in Graphik, the same typeface as Fusion, so the two would read as family from day one. It shipped in two weeks.'
+        'Prosemi, an electronics testing company in Southeast Asia, had just joined Fusion and needed a site that showed off its facilities and made it easy to ask for a quote. I designed and built it on Gatsby in November 2022, set it in Graphik like Fusion so the two would read as family from day one, and had it live in two weeks.'
       }
     >
       <div className={s.row3}>
@@ -99,7 +99,7 @@ const FusionWorldwideBody = () => (
       eyebrow={'03 — The audit'}
       title={'Twenty-five problems in my first month'}
       lead={
-        'A month in, I sat down and used the store the way a buyer would, end to end, and wrote down everything that got in the way: inconsistent spacing and headings, a rough mobile experience, registration, filters, the account dashboard, and a checkout you could reach with an empty cart. I wrote it as a plan, not a complaint, and it became the team’s roadmap.'
+        'A month in, I sat down and used the store the way a buyer would, end to end, and wrote down everything that got in the way: inconsistent spacing and headings, a rough mobile experience, registration, filters, the account dashboard, and (my personal favorite) a checkout you could reach with an empty cart. I wrote it as a plan, not a complaint, and it became the team’s roadmap.'
       }
     >
       <ul className={s.audit}>
@@ -141,10 +141,11 @@ const fusionWorldwide = {
   meta: 'Product & UX · Electronics distribution · 2022–2023',
   summary: (
     <React.Fragment>
-      Fusion Worldwide sold $3 billion a year in electronic components, and almost every sale
-      started with a phone call and a WordPress brochure. In under a year I rebuilt fusionww.com in
-      its 2023 rebrand, designed and built a site for Prosemi, its testing company, and audited and
-      redesigned RocketChips, the store meant to make that phone call optional.
+      Fusion Worldwide sold $3 billion a year in electronic components, and almost every one of
+      those sales started with a phone call and a WordPress brochure. In under a year, I rebuilt
+      fusionww.com for its 2023 rebrand, designed and built a site for Prosemi (its testing
+      company), and audited and redesigned RocketChips, the store meant to make that phone call
+      optional.
     </React.Fragment>
   ),
   Body: FusionWorldwideBody,

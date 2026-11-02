@@ -17,7 +17,7 @@ const SolsticeBody = () => (
       eyebrow={'01 — The original site'}
       title={'Built in 2008 and never touched again'}
       lead={
-        'Someone else built the studio’s first site in 2008: a fixed column under 700 pixels wide, small orange type, and a booking button tucked into a corner later. It stayed that way for more than a decade, and then it went down without warning.'
+        'Someone else built the studio’s first site in 2008: a fixed column under 700 pixels wide, small orange type, and a booking button tucked into a corner later. It stayed that way for more than a decade (a few lifetimes, in website years), and then it went down without warning.'
       }
     />
 

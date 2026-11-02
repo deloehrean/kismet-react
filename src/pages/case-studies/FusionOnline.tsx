@@ -77,7 +77,7 @@ const FusionOnlineBody = () => (
       eyebrow={'01 — The system'}
       title={'Out of Tailwind, into a component library'}
       lead={
-        'The agency build styled most of its pages inline with utility classes, so no two headings or buttons quite matched, and every new page made it worse. I designed a component library and the architecture behind it, with a style module for each component. We agreed as a team not to rip everything out at once, and migrated one component at a time instead, so the store kept shipping while it changed underneath.'
+        'The agency build styled most of its pages inline with utility classes, so no two headings or buttons quite matched, and every new page made it a little worse. I designed a component library and the architecture behind it, with a style module for each component. Rather than rip everything out at once, my team and I migrated one component at a time, so the store kept shipping while it changed underneath. Nobody had to stop the car to change the tires.'
       }
     >
       <Stats items={SYSTEM} source={'From the repository, December 2022 to October 2023.'} />
@@ -117,7 +117,7 @@ const FusionOnlineBody = () => (
       eyebrow={'03 — The CMS'}
       title={'Content without a release'}
       lead={
-        'On the old sites, every word went through a developer and waited for the next release, which meant marketing was always waiting on engineering. I brought in a headless CMS and built pages from blocks the sales and marketing teams could fill in themselves: heroes, stats, features, lead-gen forms, benefit cards, and links across services, industries, and quality. When they hit publish, the change goes live on its own, with no build and no release.'
+        'On the old sites, every word went through a developer and waited for the next release. Marketing shouldn’t need a developer to fix a typo. I brought in a headless CMS and built pages from blocks the sales and marketing teams could fill in themselves: heroes, stats, features, lead-gen forms, benefit cards, and links across services, industries, and quality. When they hit publish, the change goes live on its own, with no build and no release.'
       }
     >
       <Stats items={CMS} source={'From the CMS integration in the codebase.'} />

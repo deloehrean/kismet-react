@@ -19,7 +19,7 @@ const FreshWaterBody = () => (
       eyebrow={'01 — Discovery'}
       title={'A mockup made of questions'}
       lead={
-        'I didn’t want to guess what the scientists needed, so the first layout, in April 2020, was mostly open questions set in place. False color or optical imagery? What belongs on the dashboard, and what on a dedicated data page? Is there room for citizen science? Each one went back to the science team before anything was built.'
+        'Scientists know their data better than any designer ever will, so I didn’t guess. The first layout, in April 2020, was mostly open questions set in place. False color or optical imagery? What belongs on the dashboard, and what on a dedicated data page? Is there room for citizen science? Each one went back to the science team before anything was built.'
       }
     >
       <div className={s.pair}>

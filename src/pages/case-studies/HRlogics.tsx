@@ -99,7 +99,7 @@ const HRlogicsBody = () => (
       eyebrow={'04 — The logo system'}
       title={'Every mark, at every size'}
       lead={
-        'The guide grew into the hive’s original logo system. Every product got a wordmark in both tiers and a bold standalone mark with an orange gradient, exported at every size, in full color and one color, for light and dark backgrounds, so nobody ever had to improvise one.'
+        'The guide grew into the hive’s original logo system. Every product got a wordmark in both tiers and a bold standalone mark with an orange gradient, exported at every size, in full color and one color, for light and dark backgrounds, so nobody ever had to improvise one (or stretch one to fit).'
       }
     >
       <Tile img={Logos2024} label={'The original logo system, v0.7, January 2024'} ratio={2.76} />
@@ -136,7 +136,7 @@ const HRlogicsBody = () => (
       eyebrow={'07 — The 2025 website'}
       title={'HR compliance, without the “corporate”'}
       lead={
-        'I redesigned hrlogics.com in the new colors the same year, and I wanted it to feel human rather than corporate. The hive stayed front and center, and each product page got an illustration pairing the software with a number that matters to the buyer.'
+        'Compliance software doesn’t have to look like a tax form. I redesigned hrlogics.com in the new colors the same year, and I wanted it to feel human rather than corporate. The hive stayed front and center, and each product page got an illustration pairing the software with a number that matters to the buyer.'
       }
     >
       <div className={s.library}>
@@ -164,7 +164,7 @@ const HRlogicsBody = () => (
       eyebrow={'08 — Out in the world'}
       title={'Booths, backgrounds, and print'}
       lead={
-        'The same system went everywhere the brand showed up: the trade-show booth, the team’s video-call backgrounds, and the company’s LinkedIn page.'
+        'If the brand showed up somewhere, the system came with it: the trade-show booth, the team’s video-call backgrounds, and the company’s LinkedIn page.'
       }
     >
       <div className={s.row4}>
