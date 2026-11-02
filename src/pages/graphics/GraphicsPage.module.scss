@@ -70,7 +70,7 @@
     border-radius: 999px;
     color: material.$olive-100;
     font-family: var(--font-compact);
-    font-size: 1.35rem;
+    font-size: 1.15rem;
     font-weight: 400;
     letter-spacing: 0.02em;
     padding: var(--size-1) var(--size-4);
@@ -79,7 +79,7 @@
 
     &:hover,
     &:focus-visible {
-      background: material.$olive-800;
+      background: color-mix(in srgb, material.$olive-900 70%, #000000);
       color: material.$olive-50;
     }
   }
