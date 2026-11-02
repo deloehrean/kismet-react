@@ -71,7 +71,7 @@ const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardP
         ))}
       </div>
       <LinkStyled className={s.button} to={to}>
-        View all
+        View all {title.toLowerCase()}
       </LinkStyled>
     </Container>
   </Container>
@@ -79,7 +79,7 @@ const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardP
 
 function GraphicsDashboard() {
   return (
-    <Column gap={4}>
+    <Column gap={4} className={s.cards}>
       <Typography variant={'body1'}>
         A few favorites from each collection. Every card links to the full set.
       </Typography>
@@ -146,7 +146,7 @@ function GraphicsDashboard() {
             </Row>
             <Container direction={'column'} full justify={'end'} variant={'static'}>
               <LinkStyled className={s.button} to={'/graphics/albums'}>
-                View all
+                View all albums
               </LinkStyled>
             </Container>
           </Container>
@@ -183,7 +183,7 @@ function GraphicsDashboard() {
               </div>
             </Row>
             <LinkStyled className={s.button} to={'/graphics/tees'}>
-              View all
+              View all tees
             </LinkStyled>
           </Container>
         </Container>

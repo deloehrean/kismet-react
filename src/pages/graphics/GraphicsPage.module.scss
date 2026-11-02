@@ -121,3 +121,9 @@
     }
   }
 }
+
+.cards {
+  @include m.breakpoint(md, max) {
+    gap: var(--size-2) !important;
+  }
+}
