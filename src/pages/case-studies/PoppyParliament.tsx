@@ -89,12 +89,14 @@ const PoppyParliamentBody = () => (
       </div>
       <div className={s.lockups}>
         <div className={s['lockup-light']}>
-          <Zoomable img={LogoBlack} title={'Full lockup, dark on light'}>
+          <Zoomable img={LogoBlack} title={'Full lockup, dark on light'} background={'#ffffff'}>
             <img src={LogoBlack} alt={'Full lockup, dark on light'} />
           </Zoomable>
         </div>
         <div className={s['lockup-dark']}>
-          <img src={MarkRed} alt={'Poppy mark'} />
+          <Zoomable img={MarkRed} title={'Poppy mark'}>
+            <img src={MarkRed} alt={'Poppy mark'} />
+          </Zoomable>
         </div>
       </div>
     </Section>
@@ -142,7 +144,7 @@ const PoppyParliamentBody = () => (
         <Tile img={MenuHutton} label={'Hutton & Smith takeover'} ratio={0.71} />
       </div>
       <figure className={s.banner}>
-        <Zoomable img={Banner} title={"St. Patrick's Day banner"}>
+        <Zoomable img={Banner} title={"St. Patrick's Day banner"} background={'#01a555'}>
           <img src={Banner} alt={"St Patrick's Day banner"} />
         </Zoomable>
         <figcaption>St. Patrick&rsquo;s Day banner, supplied as AI, EPS, PSD, and SVG</figcaption>

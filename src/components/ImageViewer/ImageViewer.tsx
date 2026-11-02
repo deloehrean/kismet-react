@@ -1,10 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { createPortal } from 'react-dom';
 
 import cn from 'clsx';
 
 import { ImageViewerStyles as s } from 'src/components';
 
-export type ViewerImage = { img: string; title: string; meta?: string };
+export type ViewerImage = { img: string; title: string; meta?: string; background?: string };
 
 type ImageViewerProps = {
   image: ViewerImage | null;
@@ -30,7 +31,7 @@ const ImageViewer = ({ image, onClose }: ImageViewerProps) => {
     };
   }, [image, onClose]);
 
-  return (
+  return createPortal(
     <div
       className={cn(s.root, image && s.active)}
       role={'dialog'}
@@ -47,7 +48,12 @@ const ImageViewer = ({ image, onClose }: ImageViewerProps) => {
           tabIndex={image ? 0 : -1}
           ref={closeRef}
         >
-          <img src={shown.img} alt={shown.title} />
+          <img
+            src={shown.img}
+            alt={shown.title}
+            className={cn(shown.background && s.matted)}
+            style={{ background: shown.background }}
+          />
           <span className={s.caption}>
             <strong>{shown.title}</strong>
             {shown.meta && ` · ${shown.meta}`}
@@ -57,7 +63,8 @@ const ImageViewer = ({ image, onClose }: ImageViewerProps) => {
           </span>
         </button>
       )}
-    </div>
+    </div>,
+    document.body,
   );
 };
 
@@ -65,11 +72,12 @@ type ZoomableProps = {
   img: string;
   title: string;
   meta?: string;
+  background?: string;
   className?: string;
   children: React.ReactNode;
 };
 
-export const Zoomable = ({ img, title, meta, className, children }: ZoomableProps) => {
+export const Zoomable = ({ img, title, meta, background, className, children }: ZoomableProps) => {
   const [open, setOpen] = useState(false);
   const close = React.useCallback(() => setOpen(false), []);
   return (
@@ -82,7 +90,7 @@ export const Zoomable = ({ img, title, meta, className, children }: ZoomableProp
       >
         {children}
       </button>
-      <ImageViewer image={open ? { img, title, meta } : null} onClose={close} />
+      <ImageViewer image={open ? { img, title, meta, background } : null} onClose={close} />
     </React.Fragment>
   );
 };

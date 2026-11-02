@@ -44,6 +44,11 @@
     object-fit: contain;
   }
 
+  .matted {
+    box-sizing: border-box;
+    padding: var(--size-4);
+  }
+
   &:focus-visible {
     outline: 2px solid var(--primary-main);
     outline-offset: -6px;
