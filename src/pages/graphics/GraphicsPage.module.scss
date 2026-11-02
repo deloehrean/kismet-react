@@ -127,3 +127,52 @@
     gap: var(--size-2) !important;
   }
 }
+
+.albums {
+  display: grid !important;
+  gap: var(--size-2);
+  grid-template-columns: repeat(4, 1fr);
+
+  .album-tile {
+    width: auto !important;
+  }
+}
+
+.tees {
+  display: grid;
+  gap: var(--size-2);
+  grid-template-columns: repeat(4, 1fr);
+
+  a {
+    display: block;
+    transition:
+      filter 0.25s ease,
+      transform 0.25s ease;
+
+    &:nth-child(odd) {
+      transform: rotate(-3deg);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(3deg);
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        filter: drop-shadow(0 12px 14px rgba(0, 0, 0, 0.45));
+        transform: translateY(-6px) rotate(0) scale(1.08);
+      }
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--primary-main);
+      outline-offset: 2px;
+    }
+  }
+
+  img {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+}

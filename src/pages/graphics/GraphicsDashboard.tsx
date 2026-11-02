@@ -19,7 +19,6 @@ import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parli
 import Ucm from 'src/assets/images/graphics/logos/ucm.jpg';
 import AxleSlickFront from 'src/assets/images/graphics/print/axle-slick-front.jpg';
 import GilbertExhibitFlyer from 'src/assets/images/graphics/print/gilbert-exhibit-flyer.jpg';
-import tee3 from 'src/assets/images/tees/alucard-black-tee.png';
 import tee1 from 'src/assets/images/tees/royden-spike-tee.png';
 import tee4 from 'src/assets/images/tees/skin-thread-tv-tee.png';
 import tee2 from 'src/assets/images/tees/weakend-bronto-tee.png';
@@ -28,11 +27,9 @@ import { Column, Container, Divider, LinkStyled, Row, Typography } from 'src/com
 import { GraphicsPageStyles as s } from 'src/pages';
 import albumStyles from 'src/pages/graphics/albums/AlbumsPage.module.scss';
 import AlucardAlbum from 'src/pages/graphics/albums/AlucardAlbum';
-import AndrewLoehrAlbum from 'src/pages/graphics/albums/AndrewLoehrAlbum';
 import AsecondtoolateAlbum from 'src/pages/graphics/albums/AsecondtoolateAlbum';
 import ElephantomAlbum from 'src/pages/graphics/albums/ElephantomAlbum';
 import RoydenAlbum from 'src/pages/graphics/albums/RoydenAlbum';
-import teesStyles from 'src/pages/graphics/tees/TeesPage.module.scss';
 
 type Thumb = { img: string; alt: string; contain?: boolean };
 
@@ -41,11 +38,12 @@ type GalleryCardProps = {
   overline: string;
   body: string;
   to: string;
-  thumbs: Thumb[];
+  thumbs?: Thumb[];
+  preview?: React.ReactNode;
   framed?: boolean;
 };
 
-const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardProps) => (
+const GalleryCard = ({ title, overline, body, to, thumbs, preview, framed }: GalleryCardProps) => (
   <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
     <Container direction={'column'} full gap={2}>
       <Column>
@@ -58,24 +56,40 @@ const GalleryCard = ({ title, overline, body, to, thumbs, framed }: GalleryCardP
       <Typography variant={'body2'} gutter>
         {body}
       </Typography>
-      <div className={cn(s.thumbs, framed && s.framed)}>
-        {thumbs.map(thumb => (
-          <Link
-            key={thumb.alt}
-            to={to}
-            className={cn(thumb.contain && s.contain)}
-            aria-label={`${thumb.alt}, view all ${title.toLowerCase()}`}
-          >
-            <img src={thumb.img} alt={thumb.alt} loading={'lazy'} />
-          </Link>
-        ))}
-      </div>
+      {preview ?? (
+        <div className={cn(s.thumbs, framed && s.framed)}>
+          {thumbs?.map(thumb => (
+            <Link
+              key={thumb.alt}
+              to={to}
+              className={cn(thumb.contain && s.contain)}
+              aria-label={`${thumb.alt}, view all ${title.toLowerCase()}`}
+            >
+              <img src={thumb.img} alt={thumb.alt} loading={'lazy'} />
+            </Link>
+          ))}
+        </div>
+      )}
       <LinkStyled className={s.button} to={to}>
         View all {title.toLowerCase()}
       </LinkStyled>
     </Container>
   </Container>
 );
+
+const ALBUMS = [
+  { name: 'Alucard', Album: AlucardAlbum },
+  { name: 'Elephantom', Album: ElephantomAlbum },
+  { name: 'A Second Too Late', Album: AsecondtoolateAlbum },
+  { name: 'Royden', Album: RoydenAlbum },
+];
+
+const TEES: Thumb[] = [
+  { img: tee1, alt: 'Royden spike tee' },
+  { img: tee2, alt: 'The Weakend brontosaurus tee' },
+  { img: tee4, alt: 'Skin & Thread TV tee' },
+  { img: tee5, alt: 'WHIV robot tee' },
+];
 
 function GraphicsDashboard() {
   return (
@@ -84,109 +98,47 @@ function GraphicsDashboard() {
         A few favorites from each collection. Every card links to the full set.
       </Typography>
       <Row gap={2} breakpoint={'md'}>
-        <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-          <Container direction={'column'} full gap={2}>
-            <Column>
-              <Typography variant={'h6'}>Album Artwork</Typography>
-              <Typography variant={'overline'} color={'secondary'}>
-                CD, Vinyl, Cassette
-              </Typography>
-            </Column>
-            <Divider />
-            <Typography variant={'body2'} gutter>
-              Starting in 2000, I designed album artwork for bands from all over the country. It let
-              me use both digital and illustrative skills and really stretch the imagination.
-            </Typography>
-            <Row className={albumStyles['content-frame-container']}>
-              <Link
-                to={'/graphics/albums'}
-                aria-label={'View all albums'}
-                className={cn(albumStyles['album-group'])}
-              >
-                <div className={albumStyles['active-reset']}>
-                  <AlucardAlbum />
-                </div>
-              </Link>
-              <Link
-                to={'/graphics/albums'}
-                aria-label={'View all albums'}
-                className={cn(albumStyles['album-group'])}
-              >
-                <div className={albumStyles['active-reset']}>
-                  <ElephantomAlbum />
-                </div>
-              </Link>
-              <Link
-                to={'/graphics/albums'}
-                aria-label={'View all albums'}
-                className={cn(albumStyles['album-group'])}
-              >
-                <div className={albumStyles['active-reset']}>
-                  <AsecondtoolateAlbum />
-                </div>
-              </Link>
-              <Link
-                to={'/graphics/albums'}
-                aria-label={'View all albums'}
-                className={cn(albumStyles['album-group'])}
-              >
-                <div className={albumStyles['active-reset']}>
-                  <AndrewLoehrAlbum />
-                </div>
-              </Link>
-              <Link
-                to={'/graphics/albums'}
-                aria-label={'View all albums'}
-                className={cn(albumStyles['album-group'])}
-              >
-                <div className={albumStyles['active-reset']}>
-                  <RoydenAlbum />
-                </div>
-              </Link>
-            </Row>
-            <Container direction={'column'} full justify={'end'} variant={'static'}>
-              <LinkStyled className={s.button} to={'/graphics/albums'}>
-                View all albums
-              </LinkStyled>
-            </Container>
-          </Container>
-        </Container>
-        <Container styled variant={'darkish'} rounded={'extra'} full elevation={8}>
-          <Container direction={'column'} full gap={2}>
-            <Column>
-              <Typography variant={'h6'}>Tee Shirt Designs</Typography>
-              <Typography variant={'overline'} color={'secondary'}>
-                From concept to wearable
-              </Typography>
-            </Column>
-            <Divider />
-            <Typography variant={'body2'} gutter>
-              I designed over 100 tee shirts for bands, companies, corporate outings, and events...
-              mostly bands. Working with artists on how they wanted to brand themselves was a
-              highlight of my career.
-            </Typography>
-            <Row className={teesStyles['content-frame-container']}>
-              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee1} alt={'Royden spike tee'} />
-              </div>
-              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee2} alt={'The Weakend brontosaurus tee'} />
-              </div>
-              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee3} alt={'Alucard black tee'} />
-              </div>
-              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee4} alt={'Skin & Thread TV tee'} />
-              </div>
-              <div className={cn(teesStyles['single-tee'], teesStyles.rotateLeft)}>
-                <img src={tee5} alt={'WHIV robot tee'} />
-              </div>
-            </Row>
-            <LinkStyled className={s.button} to={'/graphics/tees'}>
-              View all tees
-            </LinkStyled>
-          </Container>
-        </Container>
+        <GalleryCard
+          title={'Albums'}
+          overline={'CD, vinyl, and cassette'}
+          body={
+            'Starting in 2000, I designed album artwork for bands from all over the country. It let me use both digital and illustrative skills and really stretch the imagination.'
+          }
+          to={'/graphics/albums'}
+          preview={
+            <div className={cn(albumStyles['content-frame-container'], s.albums)}>
+              {ALBUMS.map(({ name, Album }) => (
+                <Link
+                  key={name}
+                  to={'/graphics/albums'}
+                  aria-label={`${name}, view all albums`}
+                  className={cn(albumStyles['album-group'], s['album-tile'])}
+                >
+                  <div className={albumStyles['active-reset']}>
+                    <Album />
+                  </div>
+                </Link>
+              ))}
+            </div>
+          }
+        />
+        <GalleryCard
+          title={'Tees'}
+          overline={'From concept to wearable'}
+          body={
+            'I designed over 100 tee shirts for bands, companies, corporate outings, and events... mostly bands. Working with artists on how they wanted to brand themselves was a highlight of my career.'
+          }
+          to={'/graphics/tees'}
+          preview={
+            <div className={s.tees}>
+              {TEES.map(tee => (
+                <Link key={tee.alt} to={'/graphics/tees'} aria-label={`${tee.alt}, view all tees`}>
+                  <img src={tee.img} alt={tee.alt} loading={'lazy'} />
+                </Link>
+              ))}
+            </div>
+          }
+        />
       </Row>
       <Row gap={2} breakpoint={'md'}>
         <GalleryCard
