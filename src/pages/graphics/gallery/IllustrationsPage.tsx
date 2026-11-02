@@ -33,11 +33,10 @@ import TrexInk from 'src/assets/images/graphics/illustrations/trex-ink.jpg';
 import TrexSketch from 'src/assets/images/graphics/illustrations/trex-sketch.jpg';
 import TvRobotInk from 'src/assets/images/graphics/illustrations/tv-robot-ink.jpg';
 import TvRobotSketch from 'src/assets/images/graphics/illustrations/tv-robot-sketch.jpg';
+import VampireKissColor from 'src/assets/images/graphics/illustrations/vampire-kiss-color.jpg';
 import VampireKissInk from 'src/assets/images/graphics/illustrations/vampire-kiss-ink.jpg';
-import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
 import WrappedHand from 'src/assets/images/graphics/illustrations/wrapped-hand.jpg';
 import ZombiesInk from 'src/assets/images/graphics/illustrations/zombies-ink.jpg';
-import VampireKissColor from 'src/assets/images/graphics/illustrations/vampire-kiss-color.jpg';
 import GalleryPage, { GalleryItem } from 'src/pages/graphics/gallery/GalleryPage';
 
 const ITEMS: GalleryItem[] = [
@@ -86,7 +85,6 @@ const ITEMS: GalleryItem[] = [
   { img: TapebotSketch, title: 'Tapebot, pencil sketch', meta: 'Andrew Michael · 2005' },
   { img: Tapebot, title: 'Tapebot', meta: 'Andrew Michael · 2005' },
   { img: RandomBooks, title: 'Stack of books', meta: 'Personal · 2005' },
-  { img: WhyRobotsLoveFish, title: 'Why Robots Love Fish, cover', meta: 'Personal · 2003' },
 ];
 
 function IllustrationsPage() {

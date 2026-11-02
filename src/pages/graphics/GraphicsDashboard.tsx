@@ -11,8 +11,8 @@ import FishbatInfluencer from 'src/assets/images/graphics/ads/fishbat-influencer
 import HosForeverCollection from 'src/assets/images/graphics/ads/hos-forever-collection.jpg';
 import EarlV1Color from 'src/assets/images/graphics/illustrations/earl-v1-color.jpg';
 import FlosMascot from 'src/assets/images/graphics/illustrations/flos-mascot.jpg';
+import ScreechingGriffin from 'src/assets/images/graphics/illustrations/screeching-griffin-color.jpg';
 import Tapebot from 'src/assets/images/graphics/illustrations/tapebot.jpg';
-import WhyRobotsLoveFish from 'src/assets/images/graphics/illustrations/why-robots-love-fish.jpg';
 import FishbatWhale from 'src/assets/images/graphics/logos/fishbat-whale-paper.jpg';
 import FreethoughtCoffee from 'src/assets/images/graphics/logos/freethought-coffee.jpg';
 import PoppyParliamentStacked from 'src/assets/images/graphics/logos/poppy-parliament-stacked.jpg';
@@ -249,7 +249,7 @@ function GraphicsDashboard() {
             { img: EarlV1Color, alt: 'Earl, the Zorn’s mascot' },
             { img: FlosMascot, alt: 'Flo’s mascot' },
             { img: Tapebot, alt: 'Tapebot' },
-            { img: WhyRobotsLoveFish, alt: 'Why Robots Love Fish cover' },
+            { img: ScreechingGriffin, alt: 'Royden screeching griffin' },
           ]}
         />
       </Row>
