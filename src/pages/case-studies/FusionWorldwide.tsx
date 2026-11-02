@@ -151,9 +151,10 @@ const fusionWorldwide = {
   meta: 'Product & UX · Electronics distribution · 2022–2023',
   summary: (
     <React.Fragment>
-      A $3 billion electronics distributor that sold by phone from a WordPress brochure. In one year
-      I rebuilt fusionww.com in its 2023 rebrand, designed and built a site for Prosemi, its testing
-      company, and audited and redesigned RocketChips, the store meant to replace the phone call.
+      Fusion Worldwide sold $3 billion a year in electronic components, and almost every sale
+      started with a phone call and a WordPress brochure. In under a year I rebuilt fusionww.com in
+      its 2023 rebrand, designed and built a site for Prosemi, its testing company, and audited and
+      redesigned RocketChips, the store meant to make that phone call optional.
     </React.Fragment>
   ),
   Body: FusionWorldwideBody,

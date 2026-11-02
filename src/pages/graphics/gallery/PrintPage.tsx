@@ -86,32 +86,32 @@ const ITEMS: GalleryItem[] = [
   { img: VoodooCocktailList, title: 'Cocktail list', meta: 'Voodoo Lounge · 2020' },
   { img: MajesticCatering, title: 'Catering menu sign', meta: 'The Majestic Theatre · 2022' },
   { img: EmoryTableTin, title: 'QR table tin', meta: 'The Emory · 2022' },
-  { img: AxleSlickFront, title: 'Gym slick, front', meta: 'Axle Workout · Fishbat, 2018' },
-  { img: AxleSlickBack, title: 'Gym slick, back', meta: 'Axle Workout · Fishbat, 2018' },
-  { img: AxleGxVsGt, title: 'GX vs. GT comparison', meta: 'Axle Workout · Fishbat, 2018' },
-  { img: AxleRaiseTheBar, title: 'Raise the Bar flyer', meta: 'Axle Workout · Fishbat, 2018' },
+  { img: AxleSlickFront, title: 'Gym slick, front', meta: 'Axle Workout · fishbat, 2018' },
+  { img: AxleSlickBack, title: 'Gym slick, back', meta: 'Axle Workout · fishbat, 2018' },
+  { img: AxleGxVsGt, title: 'GX vs. GT comparison', meta: 'Axle Workout · fishbat, 2018' },
+  { img: AxleRaiseTheBar, title: 'Raise the Bar flyer', meta: 'Axle Workout · fishbat, 2018' },
   {
     img: AssisiBannerStand,
     title: 'Three-banner stand',
-    meta: 'Assisi Animal Health · Fishbat, 2017',
+    meta: 'Assisi Animal Health · fishbat, 2017',
   },
-  { img: AssisiBackwall, title: 'Backwall banners', meta: 'Assisi Animal Health · Fishbat, 2017' },
+  { img: AssisiBackwall, title: 'Backwall banners', meta: 'Assisi Animal Health · fishbat, 2017' },
   {
     img: AssisiLoopAidFlyer,
     title: 'Loop-Aid flyer',
-    meta: 'Assisi Animal Health · Fishbat, 2017',
+    meta: 'Assisi Animal Health · fishbat, 2017',
   },
-  { img: FishbatTradeShowBanner, title: 'Trade-show banner', meta: 'Fishbat · 2017' },
-  { img: FishbatSocialChecklist, title: 'Social media checklist', meta: 'Fishbat · 2017' },
+  { img: FishbatTradeShowBanner, title: 'Trade-show banner', meta: 'fishbat · 2017' },
+  { img: FishbatSocialChecklist, title: 'Social media checklist', meta: 'fishbat · 2017' },
   { img: FreethoughtMug, title: 'Mug', meta: 'Freethought Coffee Co. · 2021' },
-  { img: LaundryStationWrap, title: 'Locker wrap', meta: 'Laundry Station · Fishbat, 2014' },
-  { img: ZornsMenu, title: 'Menu', meta: 'Zorn’s · Fishbat, 2014' },
-  { img: ZornsFamilyFlyer, title: 'Feed a family of four flyer', meta: 'Zorn’s · Fishbat, 2014' },
-  { img: CassoneBrochure, title: 'Brochure cover', meta: 'Cassone · Fishbat, 2016' },
+  { img: LaundryStationWrap, title: 'Locker wrap', meta: 'Laundry Station · fishbat, 2014' },
+  { img: ZornsMenu, title: 'Menu', meta: 'Zorn’s · fishbat, 2014' },
+  { img: ZornsFamilyFlyer, title: 'Feed a family of four flyer', meta: 'Zorn’s · fishbat, 2014' },
+  { img: CassoneBrochure, title: 'Brochure cover', meta: 'Cassone · fishbat, 2016' },
   {
     img: GilbertExhibitFlyer,
     title: 'Turn the volume up flyer',
-    meta: 'Gilbert Exhibition · Fishbat, 2016',
+    meta: 'Gilbert Exhibition · fishbat, 2016',
   },
   {
     img: SkinThreadStarryNights,
@@ -152,7 +152,7 @@ function PrintPage() {
     <GalleryPage
       title={'Print'}
       intro={
-        'Business cards, menus, signs, banners, flyers, and trade-show booths, from show flyers in 2005 to the HRlogics trade-show booth in 2025.'
+        'Business cards, menus, signs, banners, flyers, and trade-show booths I designed, from show flyers in 2005 to the HRlogics trade-show booth in 2025.'
       }
       items={ITEMS}
     />

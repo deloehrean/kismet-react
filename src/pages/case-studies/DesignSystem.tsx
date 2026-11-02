@@ -210,9 +210,9 @@ const designSystem = {
   meta: 'Product & Engineering · Design system · 2025–2026',
   summary: (
     <React.Fragment>
-      The React component library I designed and built for every new HRlogics app: tokens for light
-      and dark, fifty-two components with no outside UI dependencies, and rules the AI coding
-      assistants follow too.
+      The React component library I designed and built so every new HRlogics app would look and
+      behave like part of one suite: tokens for light and dark, fifty-two components with no outside
+      UI dependencies, and rules that even the AI coding assistants follow.
     </React.Fragment>
   ),
   Body: DesignSystemBody,

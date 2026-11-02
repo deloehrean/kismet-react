@@ -249,9 +249,10 @@ const hrlogics = {
   meta: 'Identity & Product · HR compliance suite · 2023–2026',
   summary: (
     <React.Fragment>
-      Two separate compliance brands became one suite. I was brought in to finish the hive and build
-      the brand around it, then carried it through a product system, a full logo set, a tax-credit
-      brand, a portal rebrand, and into the software itself.
+      Two compliance brands, each with its own site, colors, and voice, became one suite. I was
+      brought in to finish the hive and build the brand around it, then stayed with it through a
+      product system, a full logo set, a tax-credit brand, a portal rebrand, and finally into the
+      software itself.
     </React.Fragment>
   ),
   Body: HRlogicsBody,

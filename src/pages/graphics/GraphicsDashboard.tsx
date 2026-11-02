@@ -193,7 +193,7 @@ function GraphicsDashboard() {
           title={'Print'}
           overline={'Cards, menus, signs, and booths'}
           body={
-            'I designed business cards, menus, signage, and trade-show booths, from band flyers in 2005 to the HRlogics booth in 2025.'
+            'I’ve designed business cards, menus, signage, and trade-show booths, from band flyers in 2005 to the HRlogics booth in 2025.'
           }
           to={'/graphics/print'}
           thumbs={[
@@ -211,7 +211,7 @@ function GraphicsDashboard() {
           title={'Logos'}
           overline={'Marks and identity systems'}
           body={
-            'I designed the HRlogics mark and every product logo in its suite, along with marks for my own clients at Kismet and for agency clients at Fishbat.'
+            'I designed the HRlogics mark and every product logo in its suite, along with marks for my own clients at Kismet and for agency clients at fishbat.'
           }
           to={'/graphics/logos'}
           framed
@@ -228,12 +228,12 @@ function GraphicsDashboard() {
           title={'Ads & Social'}
           overline={'Social, display, and email'}
           body={
-            'I designed social posts, display ads, and email campaigns for Kismet clients, for agency clients at Fishbat, and for LocoX, each sized for the platform it ran on.'
+            'I’ve designed social posts, display ads, and email campaigns for Kismet clients, for agency clients at fishbat, and for LocoX, each one sized for the platform it ran on.'
           }
           to={'/graphics/ads'}
           thumbs={[
             { img: CampStPatricksDay, alt: 'The Poppy & Parliament St. Patrick’s Day post' },
-            { img: FishbatInfluencer, alt: 'Fishbat influencer marketing post' },
+            { img: FishbatInfluencer, alt: 'fishbat influencer marketing post' },
             { img: HosForeverCollection, alt: 'House of Staunton Forever Collection ad' },
             { img: AssisiHealingHome, alt: 'Assisi Animal Health holiday ad' },
           ]}
@@ -241,7 +241,9 @@ function GraphicsDashboard() {
         <GalleryCard
           title={'Illustrations'}
           overline={'Sketch to final color'}
-          body={'Mascots and characters, from the first pencil sketch to the finished color art.'}
+          body={
+            'Mascots and characters I drew, from the first pencil sketch to the finished color art.'
+          }
           to={'/graphics/illustrations'}
           thumbs={[
             { img: EarlV1Color, alt: 'Earl, the Zorn’s mascot' },

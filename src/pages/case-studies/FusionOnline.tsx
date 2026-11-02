@@ -194,8 +194,9 @@ const fusionOnline = {
     <React.Fragment>
       Once RocketChips was live, I moved it onto a component library, and it grew into Fusion
       Online: one store and company site on one codebase, in a new green brand, on a CMS marketing
-      could publish to. The team that took it to launch after I left kept the brand I proposed and
-      the foundation I set up, and it still runs on both today.
+      could publish to themselves. I left before launch, and the team that carried it the rest of
+      the way kept the brand I proposed and built on the foundation I set up. It still runs on both
+      today.
     </React.Fragment>
   ),
   Body: FusionOnlineBody,

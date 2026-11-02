@@ -83,9 +83,9 @@ const solstice = {
   meta: 'Web Design & Development · Massage studio · 2026',
   summary: (
     <React.Fragment>
-      A massage studio’s website had gone unchanged since 2008, then went down. I gathered the old
-      files and redesigned it as a modern, responsive site with full pricing, the therapist bio,
-      directions, and online booking.
+      A neighborhood massage studio’s website had gone unchanged since 2008, and then it went down.
+      I gathered what was left of the old files and redesigned it as a modern, responsive site with
+      full pricing, the therapist bio, directions, and online booking.
     </React.Fragment>
   ),
   Body: SolsticeBody,

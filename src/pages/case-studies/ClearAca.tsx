@@ -165,9 +165,9 @@ const clearAca = {
   gated: true,
   summary: (
     <React.Fragment>
-      Clear ACA started life as SyncStream and still looked like it. I audited the product,
-      redesigned it, and rebuilt the front end myself, and that front end became the first version
-      of the component library behind the whole HRlogics suite.
+      Clear ACA started life as SyncStream, and even after joining HRlogics it still looked like it.
+      I audited the product, redesigned it, and rebuilt the front end myself, and that front end
+      became the first version of the component library behind the whole HRlogics suite.
     </React.Fragment>
   ),
   Body: ClearAcaBody,

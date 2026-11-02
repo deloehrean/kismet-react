@@ -198,7 +198,7 @@ const poppyParliament = {
     <React.Fragment>
       I designed a full identity for a British pub: the mark, type system, menus, merch, print, and
       a year of social campaigns. Then March 2020 arrived, and the same system had to carry closure
-      notices and a takeout pivot.
+      notices and a takeout pivot within three weeks.
     </React.Fragment>
   ),
   Body: PoppyParliamentBody,
