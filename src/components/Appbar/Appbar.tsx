@@ -16,6 +16,7 @@ import {
 import { Resume } from 'src/components/Resume';
 import { ACCESS_PASSWORD, grantAccess } from 'src/lib/access';
 import { routes } from 'src/lib/routes/routes';
+import { useIsMobile } from 'src/lib/useBreakpoint';
 
 type AppbarProps = {
   // eslint-disable-next-line react/no-unused-prop-types
@@ -54,10 +55,7 @@ const Appbar = ({ color }: AppbarProps) => {
     }
   };
 
-  const isMobile = () => {
-    const width = document.body.offsetWidth.valueOf();
-    return width < 680;
-  };
+  const mobile = useIsMobile();
 
   return (
     <header className={s.root}>
@@ -92,7 +90,7 @@ const Appbar = ({ color }: AppbarProps) => {
               <Typography
                 variant={'overline'}
                 color={'primary'}
-                align={isMobile() ? 'center' : 'right'}
+                align={mobile ? 'center' : 'right'}
               >
                 Some client work is shown by invitation.
                 <br /> Download my resume and get in touch for the access link.
@@ -100,7 +98,7 @@ const Appbar = ({ color }: AppbarProps) => {
             </Column>
           </Column>
           <Container direction={'column'} className={s.divider}>
-            <Divider direction={isMobile() ? 'horizontal' : 'vertical'} />
+            <Divider direction={mobile ? 'horizontal' : 'vertical'} />
           </Container>
           <Column className={cn(s.resume, s['login-transition'])}>
             <Resume inAppbar />

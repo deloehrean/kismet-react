@@ -1,8 +1,9 @@
-import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import cn from 'clsx';
 
 import { Container, ImageViewer, Typography } from 'src/components';
+import { useIsMobile } from 'src/lib/useBreakpoint';
 import s from 'src/pages/graphics/gallery/GalleryPage.module.scss';
 
 export interface GalleryItem {
@@ -37,17 +38,8 @@ const interleave = (items: GalleryItem[]) => {
   return out;
 };
 
-const MOBILE = '(max-width: 600px)';
-
 function GalleryPage({ title, intro, items, framed, mixed }: GalleryPageProps) {
-  const [mobile, setMobile] = useState(() => window.matchMedia(MOBILE).matches);
-
-  useEffect(() => {
-    const query = window.matchMedia(MOBILE);
-    const update = () => setMobile(query.matches);
-    query.addEventListener('change', update);
-    return () => query.removeEventListener('change', update);
-  }, []);
+  const mobile = useIsMobile(600);
 
   const ordered = useMemo(
     () => (mixed && mobile ? interleave(items) : items),
