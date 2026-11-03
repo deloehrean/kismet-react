@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { flushSync } from 'react-dom';
 
 import { CaseStudy, Column, PageHeading } from 'src/components';
+import { useIsMobile } from 'src/lib/useBreakpoint';
 import { CaseStudiesStyles as s } from 'src/pages/case-studies';
 import clearAca from 'src/pages/case-studies/ClearAca';
 import designSystem from 'src/pages/case-studies/DesignSystem';
@@ -30,6 +31,7 @@ const caseTop = (id: string) =>
 function CaseStudiesPage() {
   const [openId, setOpenId] = useState<string | null>(null);
   const [switching, setSwitching] = useState(false);
+  const mobile = useIsMobile(767);
 
   const toggle = (id: string) => {
     if (!openId || openId === id) {
@@ -49,20 +51,27 @@ function CaseStudiesPage() {
   };
 
   return (
-    <Column className={s.root} gap={6}>
+    <Column className={s.root} gap={!mobile ? 6 : 3}>
       <PageHeading
         title={'Case Studies'}
         subtitle={'The problem, the work, and how it held up'}
         divider
       />
 
-      <div>
-        {CASES.map(({ Body, ...c }) => (
-          <CaseStudy key={c.id} {...c} open={openId === c.id} instant={switching} onToggle={toggle}>
+      <Column gap={1}>
+        {CASES.map(({ Body, ...c }, i) => (
+          <CaseStudy
+            key={c.id}
+            {...c}
+            open={openId === c.id}
+            instant={switching}
+            last={i === CASES.length - 1}
+            onToggle={toggle}
+          >
             <Body />
           </CaseStudy>
         ))}
-      </div>
+      </Column>
     </Column>
   );
 }

@@ -56,6 +56,10 @@ main {
     margin: 0 auto;
     max-width: 1600px;
     padding: var(--size-4) var(--size-3);
+
+    @media all and (max-width: 767px) {
+      padding: var(--size-2);
+    }
   }
 }
 

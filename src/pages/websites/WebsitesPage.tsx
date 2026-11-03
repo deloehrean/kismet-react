@@ -25,6 +25,7 @@ import {
   solsticeContent,
   wotcContent,
 } from 'src/components/WebsitesCard/WebsitesCardConstants';
+import { useIsMobile } from 'src/lib/useBreakpoint';
 
 const SITES: WebsiteContent[] = [
   hrlPortalContent,
@@ -61,6 +62,7 @@ const cards = SITES.reduce<
 
 function WebsitesPage() {
   const { hash } = useLocation();
+  const mobile = useIsMobile(767);
 
   useEffect(() => {
     if (!hash) {
@@ -73,7 +75,7 @@ function WebsitesPage() {
   }, [hash]);
 
   return (
-    <Column gap={6}>
+    <Column gap={!mobile ? 6 : 3}>
       <PageHeading
         title={'Websites'}
         subtitle={'Commerce, marketing, and compliance sites, from small business to enterprise'}
