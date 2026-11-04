@@ -88,6 +88,7 @@
 
 .zoomable {
   all: unset;
+  box-sizing: border-box;
   cursor: zoom-in;
   display: block;
   width: 100%;
