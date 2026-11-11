@@ -302,7 +302,7 @@ export const hrlPortalContent = {
   year: '2026',
   description:
     'The HRlogics Portal was the front door to the whole HRlogics suite: Clear I-9, Ryze, WOTC, Clear Verify, and UCM. Clients signed in once and launched every subscribed product from a hive of product tiles. Unsubscribed products opened a marketing panel instead, so the dashboard doubled as an introduction to the rest of the suite. Admins managed organizations, users, and per-product access, and clients could send payroll and census files into HRlogics securely. I designed it and led the build from the first commit to its April 2026 production launch, on the component library that became the suite’s design system.',
-  poweredBy: 'Laravel + Inertia.js / PostgreSQL / AWS',
+  poweredBy: 'Laravel + Inertia.js / PostgreSQL / AWS / Custom Design System',
   toolsUsed: 'React, TypeScript, PHP, Auth0, Redis, Docker, Playwright',
   logo: HrlPortalLogo,
   logoLight: HrlPortalLogoLight,
@@ -340,7 +340,7 @@ export const wotcContent = {
   year: '2025',
   description:
     'WOTC screened new hires for the federal Work Opportunity Tax Credit, filed qualifying applicants with each state workforce agency, read the determination letters automatically, and tracked every credit from the 120-hour mark to its maximum. I owned its product strategy and UX, and WOTC was the first product I moved onto the suite’s design system. I kept the redesign a one-for-one component swap, so clients kept the layouts they knew while the product finally matched the rest of the suite. It never shipped, and the original design files didn’t survive, so five core screens were rebuilt on the design system with demo data to show where it was headed.',
-  poweredBy: 'React + Inertia.js / Design System',
+  poweredBy: 'React + Inertia.js / Custom Design System',
   toolsUsed: 'React, TypeScript, SCSS Modules, Figma, Playwright',
   logo: WotcLogo,
   logoLight: WotcLogoLight,

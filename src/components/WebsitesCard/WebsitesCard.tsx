@@ -75,6 +75,27 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
     }, 1000);
   }, []);
 
+  const anchor = siteAnchor(content.title);
+
+  useEffect(() => {
+    if (activeIndex === null) {
+      return undefined;
+    }
+    const closeOnOutside = (event: MouseEvent) => {
+      const target = event.target as Element | null;
+      if (!target?.closest?.(`[data-site-shot="${anchor}"], [data-site-keep="${anchor}"]`)) {
+        setActiveIndex(null);
+      }
+    };
+    const closeOnEscape = (event: KeyboardEvent) => event.key === 'Escape' && setActiveIndex(null);
+    document.addEventListener('click', closeOnOutside);
+    window.addEventListener('keydown', closeOnEscape);
+    return () => {
+      document.removeEventListener('click', closeOnOutside);
+      window.removeEventListener('keydown', closeOnEscape);
+    };
+  }, [activeIndex, anchor]);
+
   const activeAction = (index: number, activeIndex: number | null) => {
     if (activeIndex === index) {
       setActiveIndex(null);
@@ -112,6 +133,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           active && s.active,
         )}
         key={index}
+        data-site-shot={anchor}
         role={'button'}
         tabIndex={0}
         onClick={() => activeAction(index, activeIndex)}
@@ -188,7 +210,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
         </Row>
       )}
       <Row
-        id={siteAnchor(content.title)}
+        id={anchor}
         className={cn(s.website, s.root, sides, content.gated && s.gated)}
         gap={3}
         breakpoint={'md'}
@@ -225,6 +247,7 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
               role={'switch'}
               aria-checked={siteDark}
               className={s['site-theme']}
+              data-site-keep={anchor}
               onClick={() => setSiteDark(dark => !dark)}
             >
               <span className={s['site-theme-track']}>
