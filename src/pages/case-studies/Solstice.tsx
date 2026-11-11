@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Mark from 'src/assets/images/case-studies/solstice/mark.svg';
+import Mark from 'src/assets/images/case-studies/solstice/mark.png';
 import OldHome from 'src/assets/images/case-studies/solstice/old-home.jpg';
 import OldServices from 'src/assets/images/case-studies/solstice/old-services.jpg';
 import OldTherapists from 'src/assets/images/case-studies/solstice/old-therapists.jpg';
@@ -68,9 +68,7 @@ const SolsticeBody = () => (
 const solstice = {
   id: 'solstice',
   mark: Mark,
-  markFill: '#FDF0DC',
-  markInset: true,
-  markAlt: 'A browser window',
+  markAlt: 'Solstice Massage Therapy logo',
   title: 'Solstice Massage Therapy',
   meta: 'Web Design & Development · Massage studio · 2026',
   summary: (
