@@ -160,30 +160,46 @@ const WebsitesCard: React.FC<WebsitesCardProps> = ({
           breakpoint={'md'}
         >
           <Container className={s['website-content']} justify={'center'}>
-            <div className={s['unlock-widget']}>
-              <div className={s['unlock-head']}>
-                <span className={s['unlock-lock']}>
-                  <Icon name={'lockIcon'} size={'medium'} />
-                </span>
+            <div className={s['unlock-head']}>
+              <span className={s['unlock-lock']}>
+                <Icon name={'lockIcon'} size={'x-large'} />
+              </span>
+              <div>
+                <Typography variant={'h4'} className={s['site-title']}>
+                  Locked {lockedCount === 1 ? 'Project' : 'Projects'}
+                </Typography>
                 <Typography variant={'subtitle1'} transform={'uppercase'}>
-                  {lockedCount} locked {lockedCount === 1 ? 'project' : 'projects'}
+                  {lockedCount} {lockedCount === 1 ? 'project' : 'projects'} · Shared by request
                 </Typography>
               </div>
-              <ol className={s['unlock-steps']}>
-                <li>
-                  <span className={s['unlock-num']}>1</span>
-                  <LinkStyled to={ResumePdf} target={'_blank'}>
-                    Download my resume
-                  </LinkStyled>
-                </li>
-                <li>
-                  <span className={s['unlock-num']}>2</span>
-                  <LinkStyled to={'mailto:andrew@kismet-ux.com?subject=Portfolio%20access'}>
-                    Email me for the access link
-                  </LinkStyled>
-                </li>
-              </ol>
             </div>
+            <Typography variant={'body2'} gutter>
+              Some of my work is shared privately. Download my resume, then email me and I’ll send
+              you a link that unlocks {lockedCount === 1 ? 'it' : 'them'} right here on this page.
+            </Typography>
+            <ol className={s['unlock-steps']}>
+              <li>
+                <LinkStyled to={ResumePdf} target={'_blank'} className={s['unlock-step']}>
+                  <span className={s['unlock-num']}>1</span>
+                  Download my resume
+                  <span className={s['unlock-arrow']} aria-hidden>
+                    &rarr;
+                  </span>
+                </LinkStyled>
+              </li>
+              <li>
+                <LinkStyled
+                  to={'mailto:andrew@kismet-ux.com?subject=Portfolio%20access'}
+                  className={s['unlock-step']}
+                >
+                  <span className={s['unlock-num']}>2</span>
+                  Email me for the access link
+                  <span className={s['unlock-arrow']} aria-hidden>
+                    &rarr;
+                  </span>
+                </LinkStyled>
+              </li>
+            </ol>
           </Container>
           <Container className={cn(s['website-screenshots'], s.active, s.prepared)}>
             {content.gallery.map((image, index) => (

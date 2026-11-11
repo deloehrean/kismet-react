@@ -36,7 +36,6 @@
 
 .website {
   &-content {
-    margin-bottom: 30px;
     width: 100%;
 
     @media (min-width: 768px) {
@@ -53,7 +52,7 @@
     transform-style: flat;
 
     @media (max-width: 767px) {
-      margin-bottom: 30px;
+      margin-bottom: var(--size-2);
       margin-inline: auto;
       padding-bottom: 50%;
       width: 100%;
@@ -397,49 +396,56 @@
   width: 100%;
 }
 
-.unlock-widget {
-  align-self: flex-start;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  border-radius: var(--size-2);
-  padding: var(--size-3);
-  position: relative;
+.unlock-lock {
+  align-items: center;
+  background: color-mix(in srgb, currentColor 10%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+  border-radius: 50%;
+  display: flex;
+  flex: none;
+  height: 56px;
+  justify-content: center;
+  width: 56px;
 }
 
 .unlock-head {
   align-items: center;
   display: flex;
-  gap: var(--size-1);
-  margin-bottom: var(--size-2);
-}
-
-.unlock-lock {
-  align-items: center;
-  background: rgba(255, 255, 255, 0.14);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  display: flex;
-  flex: none;
-  height: 34px;
-  justify-content: center;
-  width: 34px;
+  gap: var(--size-2);
+  margin-bottom: var(--size-1);
 }
 
 .unlock-steps {
   display: flex;
   flex-direction: column;
-  font-size: 0.9rem;
   gap: var(--size-1);
   list-style: none;
-  margin: 0;
+  margin: var(--size-1) 0 0;
+  max-width: 26rem;
   padding: 0;
+}
 
-  li {
-    align-items: center;
-    display: flex;
-    gap: var(--size-1);
+.unlock-step {
+  align-items: center;
+  background: color-mix(in srgb, currentColor 6%, transparent);
+  border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+  border-radius: var(--size-2);
+  display: flex;
+  gap: var(--size-2);
+  padding: var(--size-2);
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    background: color-mix(in srgb, currentColor 12%, transparent);
+    border-color: color-mix(in srgb, currentColor 40%, transparent);
+  }
+
+  &:hover .unlock-arrow {
+    transform: translateX(4px);
   }
 }
 
@@ -450,11 +456,16 @@
   color: var(--primary-contrast);
   display: flex;
   flex: none;
-  font-size: 0.72rem;
+  font-size: 0.85rem;
   font-weight: 700;
-  height: 20px;
+  height: 28px;
   justify-content: center;
-  width: 20px;
+  width: 28px;
+}
+
+.unlock-arrow {
+  margin-left: auto;
+  transition: transform 0.2s ease;
 }
 
 .website-content .site-title {
